@@ -43,14 +43,11 @@ query+=' limit 10000';
         try {
             database.SaveResult[] updateResults=database.update(userList,false);
             Id rtID = Schema.SObjectType.Metadata__c.getRecordTypeInfosByName().get('User History').getRecordTypeId();
-            List<Metadata__c> insertMetadataList = new List<Metadata__c>();
-            for(User user:[select Id,LAN_ID__c,EmployeeNumber,email from user where Id IN :userIds]){
+            List<User> usrs = [select Id,LAN_ID__c,EmployeeNumber,email from user where Id IN :userIds];
+            for(User user:usrs){
                 // Log action
-                Metadata__c m = new Metadata__C (RecordTypeId=rtID,name=user.email,action__c='Freeze',action_date__c=Datetime.now(),user__c=user.id,
-                                                 original_sf_id__c=user.id,label__c=user.LAN_ID__c,API_Name__c=user.EmployeeNumber);
-                insertMetadataList.add(m);
+                System.enqueueJob(new UserLogHandler(usrs,'Freeze','via Inactivity Job'));
             }
-            insert insertMetadataList;
             
             if(Test.isRunningTest()) {
                 CalloutException e = new CalloutException();

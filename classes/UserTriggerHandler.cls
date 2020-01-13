@@ -8,7 +8,7 @@ public class UserTriggerHandler {
         
         // If activation status hasnt change dont do anything
         if (oldMap[0].isActive != newMap[0].isActive){
-            System.enqueuejob(new UserLogHandler(Trigger.new));
+            System.enqueuejob(new UserLogHandler(Trigger.new,null,'Via User Trigger'));
         }
         //}
     }
