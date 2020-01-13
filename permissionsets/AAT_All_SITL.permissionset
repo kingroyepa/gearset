@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Basic access to for all SITL to AAT</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>AAT - All SITL</label>
+    <recordTypeVisibilities>
+        <recordType>Forms__c.Application_Review_Process_Tool</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <tabSettings>
+        <tab>Forms__c</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
+</PermissionSet>

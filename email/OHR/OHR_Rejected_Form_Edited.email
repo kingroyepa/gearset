@@ -1,0 +1,4 @@
+{!Forms__c.User_Supervisor__c}:<br><br>
+The {!Forms__c.Form_Type_Name__c} Form has been edited after being previously rejected.<br><br>
+Form Record Number: {!Forms__c.Name}<br>
+<b>Link to this Form:</b> {!Forms__c.Link}

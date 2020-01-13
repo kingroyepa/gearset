@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>TQB_Share_All_Records_with_Coordinators</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>TQB Share All Records with Coordinators</label>
+        <sharedTo>
+            <group>TQB_Coordinators</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Candidate Application,Letter of Intent (LOI),Candidate Submission</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

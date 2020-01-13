@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Must be available for teleconference during planned time frame, but do not ask them to reserve the week. If they are selected to serve, they will be contacted by the TQB Coordinator shortly after the due date. (Use attachment F‐2.) --></help>
+        <label><!-- Availability statements from four Ad hoc --></label>
+        <name>Availability_statements_from_four_Ad_hoc__c</name>
+    </fields>
+    <fields>
+        <help><!-- Biosketches/Abbreviated CVs for four Ad hocs. --></help>
+        <label><!-- Biosketches/CVs for four Ad hocs. Ad --></label>
+        <name>Biosketches_CVs_for_four_Ad__c</name>
+    </fields>
+    <fields>
+        <help><!-- This box will be checked it the Final Candidate Package has been uploaded to the record. --></help>
+        <label><!-- Candidate Package Finalized --></label>
+        <name>Candidate_Package_Finalized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate --></label>
+        <name>Candidate__c</name>
+        <relationshipLabel><!-- Candidate Applications (Requestor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Candidate’s Curriculum Vitae (CV) and Bibliography (See attachment B for format). Please use the suggested format. --></help>
+        <label><!-- Candidate’s CV and Bibliography --></label>
+        <name>Candidate_s_CV_and_Bi__c</name>
+    </fields>
+    <fields>
+        <help><!-- Candidate’s Essay (5-10 pages) with Responses to 4 (Research, Expert or Development) Evaluation Questions found in appropriate Appendix of ORD TQB Policy. (Questions in Appendix D, E or F.) --></help>
+        <label><!-- Candidate’s Essay with Responses --></label>
+        <name>Candidate_s_Essay_with_Responses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current GS Level --></label>
+        <name>Current_GS_Level__c</name>
+        <picklistValues>
+            <masterLabel>GS 13</masterLabel>
+            <translation><!-- GS 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS 14</masterLabel>
+            <translation><!-- GS 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS 15</masterLabel>
+            <translation><!-- GS 15 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Region --></label>
+        <name>Current_Region__c</name>
+        <picklistValues>
+            <masterLabel>Region 1</masterLabel>
+            <translation><!-- Region 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 10</masterLabel>
+            <translation><!-- Region 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 2</masterLabel>
+            <translation><!-- Region 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 3</masterLabel>
+            <translation><!-- Region 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 4</masterLabel>
+            <translation><!-- Region 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 5</masterLabel>
+            <translation><!-- Region 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 6</masterLabel>
+            <translation><!-- Region 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 7</masterLabel>
+            <translation><!-- Region 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 8</masterLabel>
+            <translation><!-- Region 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region 9</masterLabel>
+            <translation><!-- Region 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EAS Input Date --></label>
+        <name>EAS_Input_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Approved? --></label>
+        <name>Final_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Promotion Date --></label>
+        <name>Final_Promoton_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Line Supervisor --></label>
+        <name>First_Line_Supervisor__c</name>
+        <relationshipLabel><!-- Candidate Applications (First Line Supervisor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Include the 3 letters in this package before sending to TQB Counselor. (Each letter must be signed.) Do not submit more than 3 letters. --></help>
+        <label><!-- Include the 3 letters --></label>
+        <name>Include_the_3_letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intended Track --></label>
+        <name>Intended_Track__c</name>
+        <picklistValues>
+            <masterLabel>Development</masterLabel>
+            <translation><!-- Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expert</masterLabel>
+            <translation><!-- Expert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Research</masterLabel>
+            <translation><!-- Research --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- L/C/O Director --></label>
+        <name>L_C_O_Director__c</name>
+        <relationshipLabel><!-- Candidate Applications (L/C/O Director) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- List of 5 References and 5 Ad hocs. (Use Attachment F as a working document)
+NOTE: Candidates must not contact potential references or ad hocs. Ad
+hocs must meet conflict of interest (COI), criteria while letter writers do
+not. --></help>
+        <label><!-- List of 5 References and 5 Ad hocs --></label>
+        <name>List_of_5_References_and_5_Ad_hocs__c</name>
+    </fields>
+    <fields>
+        <help><!-- List of Major Scientific/Engineering/Technical Contributions (Other than publications; may be patents, leadership organizing Agency meetings, taskforces, committees, or workgroups, major awards, officers, advisory and editorial boards, etc.). --></help>
+        <label><!-- List of Major Contributions --></label>
+        <name>List_of_Major_Scientific_Engineering_Tec__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Position Description (PD) --></label>
+        <name>New_Position_Description_PD__c</name>
+    </fields>
+    <fields>
+        <help><!-- Nomination of 4 Adhoc Members. May be from the list in # 3 above, or may be different. If changes are made, ensure that Adhocs meet COI criteria and revise table in #3 above.Use Attachment F to request Adhocs’ participation, but don&apos;t include in package. --></help>
+        <label><!-- Nomination of 4 Ad hoc Members --></label>
+        <name>Nomination_of_4_Ad_hoc_Members__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the name of ORD Representative. --></help>
+        <label><!-- ORD Rep --></label>
+        <name>ORD_Rep_User__c</name>
+        <relationshipLabel><!-- Candidate Applications (ORD Rep) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter the name of the ORD representative. --></help>
+        <label><!-- ORD Rep --></label>
+        <name>ORD_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Status --></label>
+        <name>Package_Status__c</name>
+        <picklistValues>
+            <masterLabel>Status 1</masterLabel>
+            <translation><!-- Status 1 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Panel Member 1 (Ad-Hoc) --></label>
+        <name>Panel_Member_1_Ad_Hoc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Panel Member 2 (Ad-Hoc) --></label>
+        <name>Panel_Member_2_Ad_Hoc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Panel Recomendation --></label>
+        <name>Panel_Recomendation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Permanent Organization --></label>
+        <name>Permanent_Organization__c</name>
+        <picklistValues>
+            <masterLabel>Center for Computational Toxicology and Exposure (CCTE)</masterLabel>
+            <translation><!-- Center for Computational Toxicology and Exposure (CCTE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Center for Environmental Measurement and Modeling (CEMM)</masterLabel>
+            <translation><!-- Center for Environmental Measurement and Modeling (CEMM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Center for Environmental Solutions and Emergency Response (CESER)</masterLabel>
+            <translation><!-- Center for Environmental Solutions and Emergency Response (CESER) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Center for Public Health and Environmental Assessment (CPHEA)</masterLabel>
+            <translation><!-- Center for Public Health and Environmental Assessment (CPHEA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Center for Computational Toxicology</masterLabel>
+            <translation><!-- National Center for Computational Toxicology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Center for Environmental Assessment</masterLabel>
+            <translation><!-- National Center for Environmental Assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Center for Environmental Research</masterLabel>
+            <translation><!-- National Center for Environmental Research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Exposure Research Lab</masterLabel>
+            <translation><!-- National Exposure Research Lab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Health and Environmental Effects Research Laboratory</masterLabel>
+            <translation><!-- National Health and Environmental Effects Research Laboratory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Homeland Security Research Center</masterLabel>
+            <translation><!-- National Homeland Security Research Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Risk Management Research Lab</masterLabel>
+            <translation><!-- National Risk Management Research Lab --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Program/Region Representative --></label>
+        <name>ProgramRegion_Representative__c</name>
+        <relationshipLabel><!-- Candidate Applications (Program/Region Representative) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Promotion Decision --></label>
+        <name>Promotion_Decision__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promotion Effective Date --></label>
+        <name>Promotion_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Second Line Supervisor --></label>
+        <name>Second_Line_Supervisor__c</name>
+        <relationshipLabel><!-- Candidate Applications (Second Line Supervisor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Selection and request of 3 outside experts (from list in # 3 above) to write letters of reference. --></help>
+        <label><!-- Selection &amp; request of 3 outside experts --></label>
+        <name>Selection_request_of_3_outside_experts__c</name>
+    </fields>
+    <fields>
+        <help><!-- Signed COI Statements from 4 Ad hocs. See Notice below* (Use attachment F‐1). (Requires signature.) --></help>
+        <label><!-- Signed COI Statements from 4 Ad hocs --></label>
+        <name>Signed_COI_Statements_from_4_Ad_hocs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Awaiting 1st Line Supervisor Approval</masterLabel>
+            <translation><!-- Awaiting 1st Line Supervisor Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting 2nd Line Supervisor Approval</masterLabel>
+            <translation><!-- Awaiting 2nd Line Supervisor Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting TQB Chair Approval</masterLabel>
+            <translation><!-- Awaiting TQB Chair Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting TQB Coordinator Approval</masterLabel>
+            <translation><!-- Awaiting TQB Coordinator Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incomplete</masterLabel>
+            <translation><!-- Incomplete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOI Approved</masterLabel>
+            <translation><!-- LOI Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation><!-- Recalled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TQB Coordinator Review</masterLabel>
+            <translation><!-- TQB Coordinator Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TQB Held</masterLabel>
+            <translation><!-- TQB Held --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TQB Scheduled</masterLabel>
+            <translation><!-- TQB Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TQB Chair Comments --></label>
+        <name>TQB_Chair_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- TQB Chair Status --></label>
+        <name>TQB_Chair_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TQB Chair --></label>
+        <name>TQB_Chair__c</name>
+        <relationshipLabel><!-- Candidate Applications (TQB Chair) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TQB Coordinator 2 --></label>
+        <name>TQB_Coordinator_2__c</name>
+        <relationshipLabel><!-- Candidate Applications (TQB Coordinator 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TQB Coordinator --></label>
+        <name>TQB_Coordinator__c</name>
+        <relationshipLabel><!-- Candidate Applications (TQB Coordinator) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TQB Peer --></label>
+        <name>TQB_Peer__c</name>
+        <relationshipLabel><!-- Candidate Applications (TQB Peer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TQB Scheduled Date --></label>
+        <name>TQB_Scheduled_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Transmittal and certification memo from second‐level supervisor, through management to appropriate Associate Director.
+(Use Attachment G.) (Requires signature.) --></help>
+        <label><!-- Transmittal and certification memo --></label>
+        <name>Transmittal_and_certification_memo__c</name>
+    </fields>
+    <fields>
+        <help><!-- 3‐5 Recent Publications/Work Products.
+Coversheet describing the significance of the work is optional, but highly recommended. If candidate is not first author, please describe the candidate’s role in the work. --></help>
+        <label><!-- 3‐5 Recent Publications/Work Products --></label>
+        <name>X3_5_Recent_Publications_Work_Products__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Candidate Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Candidate Applications</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Candidate Submission</layout>
+        <sections>
+            <label><!-- Candidate Details --></label>
+            <section>Candidate Details</section>
+        </sections>
+        <sections>
+            <label><!-- Candidate Package Details --></label>
+            <section>Candidate Package Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Supervisors --></label>
+            <section>Supervisors</section>
+        </sections>
+        <sections>
+            <label><!-- TQB Details --></label>
+            <section>TQB Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Letter of Intent Layout</layout>
+        <sections>
+            <label><!-- Candidate Details --></label>
+            <section>Candidate Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Supervisor Details --></label>
+            <section>Supervisor Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Candidate Application Layout</layout>
+        <sections>
+            <label><!-- Candidate Details --></label>
+            <section>Candidate Details</section>
+        </sections>
+        <sections>
+            <label><!-- Candidate Package Details --></label>
+            <section>Candidate Package Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Supervisors --></label>
+            <section>Supervisors</section>
+        </sections>
+        <sections>
+            <label><!-- TQB Details --></label>
+            <section>TQB Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- TQB Checklist --></label>
+        <name>TQB_Checklist</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Candidate Application --></label>
+        <name>Candidate_Package</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For hiding Submit for Approval button after the 2nd  line supervisor has approved --></description>
+        <label><!-- Candidate Submission --></label>
+        <name>Candidate_Submission</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Letter of Intent (LOI) --></label>
+        <name>Letter_of_Intent_LOI</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- TQB Share TQB Record with Approver 1 --></label>
+        <name>TQB_Share_TQB_Record_with_Approver_1</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label><!-- TQB Share TQB Record with Approver 2 --></label>
+        <name>TQB_Share_TQB_Record_with_Approver_2</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label><!-- TQB Share with TQB Chair --></label>
+        <name>TQB_Share_with_TQB_Chair</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label><!-- TQB Share with TQB Coordinator 1 --></label>
+        <name>TQB_Share_with_TQB_Coordinator_1</name>
+    </sharingReasons>
+    <sharingReasons>
+        <label><!-- TQB Share with TQB Coordinator 2 --></label>
+        <name>TQB_Share_with_TQB_Coordinator_2</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- A TQB Candidate Package cannot be edited once it has been approved. --></errorMessage>
+        <name>Coordinator_Edit_Approved_Record_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Promotion Effective Date cannot be entered  before application is approved. --></errorMessage>
+        <name>TQB_Check_Promotion_Effective_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- TQB Scheduled Date is entered after the application is approved by TQB chair, --></errorMessage>
+        <name>TQB_Check_TQB_Scheduled_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The application is locked from editing. --></errorMessage>
+        <name>TQB_Lock_Record_For_Editing_On_Complete</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Generate_Pdf --></label>
+        <name>Generate_Pdf</name>
+    </webLinks>
+</CustomObjectTranslation>

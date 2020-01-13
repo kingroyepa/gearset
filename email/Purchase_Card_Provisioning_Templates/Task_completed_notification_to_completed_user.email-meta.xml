@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Purchase Card. Created to send the email notification to created user when task is completed.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Task completed notification to completed user</name>
+    <style>none</style>
+    <subject>Task &apos;{!Task.Subject}&apos; Completed</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

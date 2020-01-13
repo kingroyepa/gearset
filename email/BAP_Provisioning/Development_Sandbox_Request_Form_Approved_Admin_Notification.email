@@ -1,0 +1,16 @@
+<div style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#000000'>
+<br>
+Your new sandbox is ready for use.  {!Forms__c.Submitted_on_Behalf_Of__c} is the Delegated Administrator.
+<br><br>
+The following url will take you to your new sandbox:  {!Forms__c.SandboxURL__c}
+<br><br>
+If you have an EPA LAN ID/PIV, you can login using those by clicking ‘EPA Login’.  
+<br><br>
+The Application Deployment Guide (ADG) addresses common tasks. For example, Section 4 of the ADG addresses User Administration and will help the Delegated Administrator activate users and assign permissions for their sandbox.
+https://usepa.sharepoint.com/sites/oei_Community/BAP/Shared%20Documents/   
+<br><br>
+If you have any questions or need assistance, please contact BAP at BAP-Request@epa.gov
+<br><br>
+Thank You,<br>
+BAP Admins
+</div>

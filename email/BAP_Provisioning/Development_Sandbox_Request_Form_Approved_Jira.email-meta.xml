@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Create Jira stating that the developer sandbox request has been approved.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Development Sandbox Request Form Approved Jira</name>
+    <style>none</style>
+    <subject>Create Sandbox - {!Forms__c.HR_Organization__c}</subject>
+    <textOnly>Owner: {!Forms__c.Submitted_on_Behalf_Of__c}
+Sandbox Name: {!Forms__c.Name__c}
+Submitted on behalf of: {!Forms__c.Submitted_on_Behalf_Of__c}
+Quantity: {!Forms__c.Quantity__c}
+Type: {!Forms__c.Form_Type__c}
+BAPM Approval Link: {!Forms__c.Link}
+Form Status: {!Forms__c.Form_Status__c}
+Request Created By: {!Forms__c.CreatedBy}
+
+Description:
+
+
+Approver Info: Approved By: {!ApprovalRequest.Process_Approver}
+Approver Comments: {!ApprovalRequest.Comments}
+
+
+Once completed, click here to finalize the request: {!Forms__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

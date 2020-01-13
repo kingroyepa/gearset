@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Launches a help form that&apos;s used to populate a help request</description>
+    <flowDefinition>ARTT_Help_Email</flowDefinition>
+    <label>Help</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

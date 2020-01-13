@@ -1,0 +1,9 @@
+<p>
+Hello {!Forms__c.Unauthenticated_Owner__c}: <br/>
+Your Leave Bank Election Form  was processed by the EPA National Leave Bank Program Team on {!Forms__c.Processing_Date__c} and has an effective date of {!Forms__c.Effective_Date__c}.
+</p>
+<p>
+If you have any further questions, please contact the EPA National Leave Bank Program Team at ohrleavequestions@epa.gov.
+</p>
+<p>
+Form Record Number: {!Forms__c.Name}</p>

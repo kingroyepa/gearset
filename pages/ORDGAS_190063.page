@@ -1,0 +1,329 @@
+<apex:page standardController="Account" showHeader="false" extensions="ORDGAS_190063savePDF" sidebar="false" standardStylesheets="false"  applyBodyTag="false" applyHtmlTag="false" docType="html-5.0">
+
+    <!--<apex:outputPanel rendered="{!eroderToDisplay.size>0}">-->
+    <apex:form >
+        <apex:actionFunction name="saveAttachement" action="{!saveAttachement}" rerender="allPanel"/>
+        <apex:actionFunction name="getEordersForOrg" action="{!getEordersForOrg}" rerender="allPanel"/>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById("okbutton").style.display = "block";
+                document.getElementById("orgDetails").style.display = "block";
+            }, false);
+            function Generate1900()
+            {
+                saveAttachement();
+            };
+            function getEorderDetailsForOrg()
+            {
+                alert("*********Calling getEordersForOrg from getEorderDetailsForOrg");
+                getEordersForOrg();
+            };
+        </script>
+
+    </apex:form>
+
+    <!--</apex:outputPanel>-->
+
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        <apex:stylesheet value="{!$Resource.ORDGAS_190063}"/>
+        <style>
+            .button-ok {
+                position: relative;
+                display: inline-block;
+                padding: 0;
+                background: transparent;
+                background-clip: border-box;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                line-height: 1.875rem;
+                text-decoration: none;
+                color: #0070d2;
+                -webkit-appearance: none;
+                white-space: normal;
+                user-select: none;
+                font-family: Arial, Helvetica, sans-serif;
+
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-align: center;
+                vertical-align: middle;
+                border: 1px solid #dddbda;
+                transition: border 0.15s linear;
+                border-color: #dddbda;
+                background-color: white;
+                font-size: .8125rem;
+            }
+
+
+
+        </style>
+
+    </head>
+    <apex:pageMessages />
+    <body>
+
+    <apex:outputPanel rendered="{!eroderToDisplay.size>0}">
+        <!-- Start Top Table -->
+        <table id="toptable" width="100%" border="1">
+            <!--Table Header-->
+            <tr>
+                <td>
+                    <table id="toptableheader" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="20%">
+                                <div style="padding:10px"><apex:image url="{!$Resource.EPAlogo_black}" height="55px"/></div>
+                            </td>
+                            <td width="60%" style="text-align:center;" valign="bottom"><div id="form-title">United States Environmental Protection Agency<br/> Washington, DC 20460</div></td>
+                            <td width="20%"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!--Table Subtitle-->
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td ><div id="subtitle-text">MONTHLY REQUISITION AND/OR RECEIVING REPORT FOR BLANKET PURCHASE ORDER CALLS</div></td>
+                        </tr>
+                        <tr>
+
+                            <td >
+                                <div class="slds-scope buttonlist-right" id="orgDetails" style="display:none; padding: 10px;">
+
+                                    <apex:form >
+                                        <center>
+                                            Enter Organization Name: &nbsp;
+                                            <apex:input value="{!organizationName}"/>
+                                            &nbsp;
+                                            <apex:CommandLink styleClass="button-ok" style="margin:0 auto;" action="{!getEordersForOrg}" target="_parent">OK
+                                            </apex:CommandLink>
+                                        </center>
+                                    </apex:form>
+
+                                </div>
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!--Table Vendor-->
+            <tr>
+                <td>
+
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="33%" valign="top"><div class="vendor-table-cell"><span class="vendor-table-label">1. Blanket Purchase Order Number :</span><span class="vendor-table-data">{!Account.Vendor_BPA__c}</span></div></td>
+                            <td width="34%" valign="top"><div class="vendor-table-cell"><span class="vendor-table-label">3. Requisitioning Office :</span><span class="vendor-table-data">
+        {!Account.Requisitioning_Office__c}
+        
+        </span></div></td>
+                            <td rowspan="2" width="33%" valign="top"><div class="vendor-table-cell"><span class="vendor-table-label">5. Vendor:</span><span class="vendor-table-data">{!Account.Name}</span></div></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><div class="vendor-table-cell"><span class="vendor-table-label">2. Month:</span><span class="vendor-table-data"><apex:outputText value="{0,date,MMMM yyyy}"> <apex:param value="{!TODAY()}" /> </apex:outputText></span></div></td>
+                            <td valign="top"><div class="vendor-table-cell"><span class="vendor-table-label">4. Funds listed below are available and reserved for this month. SIGNED (Commitment Clerk)</span></div></td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+
+            <!--Table Cylinder Information-->
+            <tr>
+                <td>
+
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" id ="eorderDetails">
+                        <tr>
+                            <td><div class="cylinder-table-header">Line</div></td>
+                            <td><div class="cylinder-table-header">6. Call #</div></td>
+                            <td><div class="cylinder-table-header">7. Org Name</div></td>
+                            <td><div class="cylinder-table-header">8. Date - MM-DD-YY</div></td>
+                            <td><div class="cylinder-table-header">9. Description of Items or Services</div></td>
+                            <td><div class="cylinder-table-header">10. Qty.</div></td>
+                            <td><div class="cylinder-table-header">11. Unit</div></td>
+                            <td><div class="cylinder-table-header">12. Unit Price</div></td>
+                            <td><div class="cylinder-table-header">13. TOTAL</div></td>
+                            <td><div class="cylinder-table-header">14. Signature of Ordering Officer</div></td>
+                            <td><div class="cylinder-table-header">15. Date Received</div></td>
+                            <td><div class="cylinder-table-header">16. Signature of Receiving Officer</div></td>
+                        </tr>
+
+
+                        <!--eOrder Item Loop-->
+                        <apex:variable value="{!0}" var="LineNum"/>
+                        <apex:variable value="{!0}" var="SubTotal"/>
+                        <apex:repeat value="{!eroderToDisplay}" var="item" rendered="{!eroderToDisplay.size>0}">
+                            <tr>
+                                <td><div class="cylinder-table-data"><apex:variable var="LineNum" value="{!LineNum + 1}"/>{!LineNum}</div></td>
+                                <td><div class="cylinder-table-data">{!item.eOrder__r.Call_Number__c}</div></td>
+                                <td><div class="cylinder-table-data">{!item.Order_Request__r.Requester_Org__c}</div></td>
+                                <td><div class="cylinder-table-data"><apex:outputText value="{0,date,MM/dd/yy}"> <apex:param value="{!TODAY()}" /> </apex:outputText></div></td>
+                                <td><div class="cylinder-table-data">{!item.Product__r.Name}</div></td>
+                                <td><div class="cylinder-table-data">{!item.Quantity__c}</div></td>
+                                <td><div class="cylinder-table-data">each</div></td>
+                                <td><div class="cylinder-table-data"><apex:outputText value="{0, Number, Currency}"><apex:param value="{!item.Product_List_Price__c}" /></apex:outputText></div></td>
+                                <td><div class="cylinder-table-data"><apex:outputText value="{0, Number, Currency}"><apex:param value="{!item.Total_Price__c }" /></apex:outputText></div>
+                                    <apex:variable var="SubTotal" value="{!SubTotal + item.Total_Price__c}"/>
+                                </td>
+                                <td><div class="cylinder-table-data">{!item.eOrder__r.CreatedBy.Name}</div></td>
+                                <td><div class="cylinder-table-data"><apex:outputText value="{0,date,MM/dd/yy}"> <apex:param value="{!item.X1900_63_Generated_Date__c}" /> </apex:outputText></div></td>
+                                <td><div class="cylinder-table-data">{!item.Order_Request__r.Requester__c}</div></td>
+
+                            </tr>
+                        </apex:repeat>
+
+                        <tr>
+                            <td class="deadspace" colspan="5">&nbsp;</td>
+                            <td colspan="2"><div class="cylinder-table-header">16. Sum Total of All Orders</div></td>
+                            <td colspan="1"><div class="cylinder-table-data"><apex:outputText value="{0, Number, Currency}"><apex:param value="{!SubTotal}" /></apex:outputText></div></td>
+                            <td class="deadspace" colspan="3">&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+        <!-- End Top Table -->
+
+        <p>&nbsp;</p>
+
+        <div id="FA-title">17. Financial and Accounting Data</div>
+
+        <!-- Start Second Table -->
+
+        <table id="secondtable" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">Line</td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">DCN<br/>(Max 6)</td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">Budget/FYs<br/>(Max 4)</td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">Appropriation<br/>Code (Max 6)</td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">Budget Org/Code<br/>(Max 7)</td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">Program<br/>Element<br/>(Max 8)</td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">Object Class<br/>(Max 4)</td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">Amount</td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header">Site/Project<br/>(Max 8)
+                </td>
+                <td id="infocell" width="10px">&nbsp;</td>
+                <td id="datacell-header-end">Cost Org/Code<br/>(Max 7)</td>
+            </tr>
+
+            <apex:variable value="{!0}" var="LineNum2"/>
+            <apex:repeat value="{!eroderToDisplay}" var="item2" rendered="{!eroderToDisplay.size>0}">
+                <tr>
+
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info"><div class="datacell-info-data"><apex:variable var="LineNum2" value="{!LineNum2 + 1}"/>{!LineNum2}</div></td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info">&nbsp;</td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info">&nbsp;</td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info">&nbsp;</td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info">&nbsp;</td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info">&nbsp;</td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info">&nbsp;</td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info">&nbsp;</td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info">&nbsp;</td>
+                    <td id="infocell">&nbsp;</td>
+                    <td id="datacell-info-end">&nbsp;</td>
+
+                </tr>
+            </apex:repeat>
+            <tr>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info"><div class="datacell-info-data"><apex:variable var="LineNum2" value="{!LineNum2 + 1}"/>{!LineNum2}</div></td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info-end">&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info"><div class="datacell-info-data"><apex:variable var="LineNum2" value="{!LineNum2 + 1}"/>{!LineNum2}</div></td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info">&nbsp;</td>
+                <td id="infocell">&nbsp;</td>
+                <td id="datacell-info-end">&nbsp;</td>
+            </tr>
+        </table>
+
+        <!-- End Second Table -->
+
+
+        <p>
+        <div class="slds-scope" id="okbutton" style="display:none;">
+            <apex:form >
+                <center>
+                    <!--<apex:outputLink styleClass="button-ok" style="margin:0 auto;" onclick="Generate1900()" value="{!URLFOR($Action.Account.View,Account.id)}" target="_parent">Generate 1900-63</apex:outputLink>-->
+                    <!--&nbsp;<apex:outputLink styleClass="button-ok" style="margin:0 auto;" value="{!URLFOR($Action.Account.View,Account.id)}" target="_parent">Cancel</apex:outputLink>-->
+                    <apex:CommandLink styleClass="button-ok" style="margin:0 auto;" action="{!saveAttachement}" target="_parent">Generate 1900-63
+                    </apex:CommandLink>
+                    &nbsp;<apex:CommandLink styleClass="button-ok" style="margin:0 auto;" action="{!Cancel}" target="_parent">Cancel
+                    </apex:CommandLink>
+                </center>
+            </apex:form>
+        </div>
+        </p>
+    </apex:outputPanel>
+
+
+    <apex:outputPanel rendered="{!eroderToDisplay.size=0}">
+        <div style="text-align:center;">
+            <br/>
+            <apex:outputLink styleClass="button-ok" style="margin:0 auto;" value="{!URLFOR($Action.Account.View,Account.id)}" target="_parent">Back</apex:outputLink>
+        </div>
+    </apex:outputPanel>
+
+
+    </body>
+    </html>
+
+</apex:page>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>EPA-3160-6v5 Leave Bank Approved</name>
+    <style>none</style>
+    <subject>BAP Forms {!Forms__c.Form_Type_Name__c}: Approved! Record ID: {!Forms__c.Form_Record_Name__c}</subject>
+    <textOnly>Hello {!Forms__c.Unauthenticated_Owner__c}:
+Your Leave Bank Election Form  was processed by the EPA National Leave Bank Program Team on {!Forms__c.Processing_Date__c} and has an effective date of {!Forms__c.Effective_Date__c}.
+
+If you have any further questions, please contact the EPA National Leave Bank Program Team at ohrleavequestions@epa.gov.
+
+Form Record Number: {!Forms__c.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

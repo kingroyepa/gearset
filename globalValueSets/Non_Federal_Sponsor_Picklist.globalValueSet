@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Arkema Inc</fullName>
+        <default>false</default>
+        <label>Arkema Inc</label>
+    </customValue>
+    <customValue>
+        <fullName>Ashtabula City Port Authority</fullName>
+        <default>false</default>
+        <label>Ashtabula City Port Authority</label>
+    </customValue>
+    <customValue>
+        <fullName>Atlantic Richfield Company</fullName>
+        <default>false</default>
+        <label>Atlantic Richfield Company</label>
+    </customValue>
+    <customValue>
+        <fullName>BASF Corporation</fullName>
+        <default>false</default>
+        <label>BASF Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>BP-Husky Refining LLC</fullName>
+        <default>false</default>
+        <label>BP-Husky Refining LLC</label>
+    </customValue>
+    <customValue>
+        <fullName>BP Products North America Inc</fullName>
+        <default>false</default>
+        <label>BP Products North America Inc</label>
+    </customValue>
+    <customValue>
+        <fullName>Bridgestone</fullName>
+        <default>false</default>
+        <label>Bridgestone</label>
+    </customValue>
+    <customValue>
+        <fullName>Buffalo Niagara Riverkeeper</fullName>
+        <default>false</default>
+        <label>Buffalo Niagara Riverkeeper</label>
+    </customValue>
+    <customValue>
+        <fullName>Chevron USA Inc</fullName>
+        <default>false</default>
+        <label>Chevron USA Inc</label>
+    </customValue>
+    <customValue>
+        <fullName>City of Sheboygan WI</fullName>
+        <default>false</default>
+        <label>City of Sheboygan WI</label>
+    </customValue>
+    <customValue>
+        <fullName>City of Waukegan</fullName>
+        <default>false</default>
+        <label>City of Waukegan</label>
+    </customValue>
+    <customValue>
+        <fullName>Cleveland-Cuyahoga County Port</fullName>
+        <default>false</default>
+        <label>Cleveland-Cuyahoga County Port</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumers Energy Company</fullName>
+        <default>false</default>
+        <label>Consumers Energy Company</label>
+    </customValue>
+    <customValue>
+        <fullName>East Chicago Waterway Management District</fullName>
+        <default>false</default>
+        <label>East Chicago Waterway Management District</label>
+    </customValue>
+    <customValue>
+        <fullName>Ford Motor Company</fullName>
+        <default>false</default>
+        <label>Ford Motor Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Fraser Shipyards Inc</fullName>
+        <default>false</default>
+        <label>Fraser Shipyards Inc</label>
+    </customValue>
+    <customValue>
+        <fullName>Freeport – McMoran (Phelps Dodge Corporation)</fullName>
+        <default>false</default>
+        <label>Freeport – McMoran (Phelps Dodge Corporation)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gary Sanitary District</fullName>
+        <default>false</default>
+        <label>Gary Sanitary District</label>
+    </customValue>
+    <customValue>
+        <fullName>Honeywell International Inc</fullName>
+        <default>false</default>
+        <label>Honeywell International Inc</label>
+    </customValue>
+    <customValue>
+        <fullName>Indiana Department of Environmental Management</fullName>
+        <default>false</default>
+        <label>Indiana Department of Environmental Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Indiana Department of Natural Resources</fullName>
+        <default>false</default>
+        <label>Indiana Department of Natural Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Legacy Refining Operations a series of Evergreen Resources Group LLC</fullName>
+        <default>false</default>
+        <label>Legacy Refining Operations a series of Evergreen Resources Group LLC</label>
+    </customValue>
+    <customValue>
+        <fullName>Michigan Department of Natural Resources and Environment</fullName>
+        <default>false</default>
+        <label>Michigan Department of Natural Resources and Environment</label>
+    </customValue>
+    <customValue>
+        <fullName>Milwaukee County Department of Parks Recreation and Culture</fullName>
+        <default>false</default>
+        <label>Milwaukee County Department of Parks Recreation and Culture</label>
+    </customValue>
+    <customValue>
+        <fullName>Niagara County Soil &amp; Water Conservation District</fullName>
+        <default>false</default>
+        <label>Niagara County Soil &amp; Water Conservation District</label>
+    </customValue>
+    <customValue>
+        <fullName>Northern Indiana Public Service Company</fullName>
+        <default>false</default>
+        <label>Northern Indiana Public Service Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Ohio Environmental Protection Agency</fullName>
+        <default>false</default>
+        <label>Ohio Environmental Protection Agency</label>
+    </customValue>
+    <customValue>
+        <fullName>Ottawa River Group</fullName>
+        <default>false</default>
+        <label>Ottawa River Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Phelps Dodge Corporation</fullName>
+        <default>false</default>
+        <label>Phelps Dodge Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Pilkington North America Inc.</fullName>
+        <default>false</default>
+        <label>Pilkington North America Inc.</label>
+    </customValue>
+    <customValue>
+        <fullName>Pollution Risk Services LLC</fullName>
+        <default>false</default>
+        <label>Pollution Risk Services LLC</label>
+    </customValue>
+    <customValue>
+        <fullName>Sheboygan County</fullName>
+        <default>false</default>
+        <label>Sheboygan County</label>
+    </customValue>
+    <customValue>
+        <fullName>State of Illinois</fullName>
+        <default>false</default>
+        <label>State of Illinois</label>
+    </customValue>
+    <customValue>
+        <fullName>State of Indiana</fullName>
+        <default>false</default>
+        <label>State of Indiana</label>
+    </customValue>
+    <customValue>
+        <fullName>State of Michigan</fullName>
+        <default>false</default>
+        <label>State of Michigan</label>
+    </customValue>
+    <customValue>
+        <fullName>State of Minnesota</fullName>
+        <default>false</default>
+        <label>State of Minnesota</label>
+    </customValue>
+    <customValue>
+        <fullName>State of New York</fullName>
+        <default>false</default>
+        <label>State of New York</label>
+    </customValue>
+    <customValue>
+        <fullName>State of Ohio</fullName>
+        <default>false</default>
+        <label>State of Ohio</label>
+    </customValue>
+    <customValue>
+        <fullName>State of Wisconsin</fullName>
+        <default>false</default>
+        <label>State of Wisconsin</label>
+    </customValue>
+    <customValue>
+        <fullName>Sunoco Inc. (R&amp;M)</fullName>
+        <default>false</default>
+        <label>Sunoco Inc. (R&amp;M)</label>
+    </customValue>
+    <customValue>
+        <fullName>TCC</fullName>
+        <default>false</default>
+        <label>TCC</label>
+    </customValue>
+    <customValue>
+        <fullName>Tyco Fire Products LP</fullName>
+        <default>false</default>
+        <label>Tyco Fire Products LP</label>
+    </customValue>
+    <customValue>
+        <fullName>Union Carbide Corporation</fullName>
+        <default>false</default>
+        <label>Union Carbide Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>US Steel Corporation</fullName>
+        <default>false</default>
+        <label>US Steel Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>WE Energies</fullName>
+        <default>false</default>
+        <label>WE Energies</label>
+    </customValue>
+    <customValue>
+        <fullName>Wisconsin Department of Natural Resources</fullName>
+        <default>false</default>
+        <label>Wisconsin Department of Natural Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Wisconsin Public Service Corporation</fullName>
+        <default>false</default>
+        <label>Wisconsin Public Service Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>XIK Corporation</fullName>
+        <default>false</default>
+        <label>XIK Corporation</label>
+    </customValue>
+    <masterLabel>Non-Federal Sponsor Picklist</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

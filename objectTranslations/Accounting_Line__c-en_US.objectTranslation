@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- App Code --></label>
+        <name>App_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the &apos;Budget Org Code&apos; for the order request. --></help>
+        <label><!-- Budget Org Code --></label>
+        <name>Budget_Org_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the &apos;Calender Year&apos; in the format YYYY. --></help>
+        <label><!-- Calendar Year --></label>
+        <name>Calender_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Org --></label>
+        <name>Cost_Org__c</name>
+    </fields>
+    <fields>
+        <label><!-- DCN Number --></label>
+        <name>DCN_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- EPA License --></label>
+        <name>EPA_License__c</name>
+        <relationshipLabel><!-- Royalties --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please enter the comments for the funding items. --></help>
+        <label><!-- FCO Notes --></label>
+        <name>FCO_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Fiscal Year(s) --></label>
+        <name>Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund/ Appropriation Code --></label>
+        <name>Fund__c</name>
+    </fields>
+    <fields>
+        <label><!-- IT Code --></label>
+        <name>IT_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Class --></label>
+        <name>Object_Class__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organization Code --></label>
+        <name>Oraganization_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Request --></label>
+        <name>Order_Request__c</name>
+        <relationshipLabel><!-- Funding --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PRC --></label>
+        <name>PRC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Amount --></label>
+        <name>Payment_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Date --></label>
+        <name>Payment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Due Date --></label>
+        <name>Payment_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Number --></label>
+        <name>Payment_Number__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payment Type --></label>
+        <name>Payment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Annual Minimum</masterLabel>
+            <translation><!-- Annual Minimum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ERI</masterLabel>
+            <translation><!-- ERI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Up Front Fee</masterLabel>
+            <translation><!-- Up Front Fee --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Period Ending --></label>
+        <name>Period_Ending__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Received? --></label>
+        <name>Report_Received__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SFO --></label>
+        <name>SFO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Site/ Project/ IT Code --></label>
+        <name>Site_Project__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Accounting Line</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Accounting Lines</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>FTTA Royalties Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PCORS Funding Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- FTTA Royalties --></label>
+        <name>FTTA_Royalties</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PCORS Funding --></label>
+        <name>PCORS_Funding</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Invalid Year : Enter in the format YYYY. --></errorMessage>
+        <name>Validate_FTTA_Calender_Year</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Budget Fiscal Year(s). --></errorMessage>
+        <name>Validate_Funding_Fiscal_Year</name>
+    </validationRules>
+</CustomObjectTranslation>

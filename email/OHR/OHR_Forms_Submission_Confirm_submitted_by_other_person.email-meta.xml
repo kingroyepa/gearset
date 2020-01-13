@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>HR System Access Request form prepared for another user</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OHR Forms Submission Confirm - submitted by other person</name>
+    <style>none</style>
+    <subject>An HR System Access Request form has been prepared for your review</subject>
+    <textOnly>An HR System Access Request form has been prepared for your review by {!Forms__c.Form_Owner__c}!
+
+When you are ready, please go to https://forms.epa.gov. Then click on &quot;My Forms&quot; and look for the form with the Record ID {!Forms__c.Name}. Click &quot;Open Form&quot; and review the information prepared for you. Once complete, submit the form for approval using the Submit button on the form.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

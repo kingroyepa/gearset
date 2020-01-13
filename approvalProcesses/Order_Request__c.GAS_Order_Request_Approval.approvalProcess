@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Description__c</field>
+        <field>Requester_Org__c</field>
+        <field>Delivery_facilities__c</field>
+        <field>Delivery_Date__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>GAS_Admins</name>
+                <type>queue</type>
+            </approver>
+            <approver>
+                <name>Branch_Chief_Name__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval Official step</description>
+        <label>Approval Official</label>
+        <name>Approval_Official</name>
+    </approvalStep>
+    <description>GAS Order Request Approval Process</description>
+    <emailTemplate>GAS_Application/GAS_Order_Approval_Request_BC</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Order_Request__c.RecordType</field>
+            <operation>equals</operation>
+            <value>GAS Order Request</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Email_to_Owner_Notification_of_Approval</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>ORDGAS_Set_Stage_to_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Email_to_Owner_Notification_of_Rejection</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>ORD_GASRejected_Set_Stage_to_New_Order</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Order_Submitted_for_Approval</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>ORDGAS_Set_Stage_to_Pending</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>GAS Order Request Approval</label>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,345 @@
+<apex:page id="e450SinglePageForm" StandardController="Forms__c" extensions="e450FormCreatorController_Type3" applyBodyTag="false" showHeader="false" sideBar="false" renderAs="PDF" Language="en">
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                @bottom-center {
+                    content: element(footer);
+                }
+            }
+
+            div.footer {
+                display: block;
+                padding: 5px;
+                text-align: center;
+                font-size: 10px;
+                position: running(footer);
+            }
+            
+            .col1 {width: 70%;}
+            .col2 {width: 30%;}
+            .col1a {width: 20%;}
+            .col2a {width: 80%;}
+            .col1b {width: 50%;}
+            .col2b {width: 50%;}
+            
+            .tableTitle {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            
+            }
+        </style>       
+    </head>
+
+    <!-- <apex:form> -->
+    <apex:panelGrid width="100%" columns="2" cellPadding="5%">
+        <apex:outputPanel id="epaLogo">
+            <apex:image id="logoImage" value="{!$Resource.EPALogo}" alt="EPA Logo" />
+        </apex:outputPanel>
+        <apex:outputPanel id="instructions">
+            <div style="text-align:center">
+                <h2>ENVIRONMENTAL PROTECTION AGENCY</h2>
+                <h3>Confidential Financial Disclosure Report</h3>
+            </div>
+        </apex:outputPanel>
+    </apex:panelGrid>
+    <hr />
+    
+    <div style="page-break-after:always;">
+    <apex:panelGrid columns="2" width="100%">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="CONFIDENTIAL FINANCIAL DISCLOSURE REPORT: " />   
+            <apex:outputText value="{!Forms__c.CONFIDENTIAL_FINANCIAL_DISCLOSURE_REPORT__c}" />
+        </apex:outputPanel>
+    </apex:panelGrid>
+    
+    <apex:panelGrid columns="2" width="100%">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="Why Must I File?" />
+            <br/>   
+            <apex:outputField value="{!Forms__c.Why_Must_I_File__c}" />
+        </apex:outputPanel>
+    </apex:panelGrid>
+    
+    <apex:panelGrid columns="2" width="100%">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="When Must I File?" />
+            <br/>   
+            <apex:outputField value="{!Forms__c.When_Must_I_File__c}"/> 
+        </apex:outputPanel>    
+    </apex:panelGrid>
+    
+    <apex:panelGrid columns="2" width="100%">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="What is the Reporting Period?" /> 
+            <br/>  
+            <apex:outputField value="{!Forms__c.What_is_the_Reporting_Period__c}"/> 
+        </apex:outputPanel>    
+    </apex:panelGrid> 
+    
+    <apex:panelGrid columns="2" width="100%">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="What if I Have Questions?" />
+            <br/>   
+            <apex:outputField value="{!Forms__c.What_if_I_Have_Questions__c}" /> 
+        </apex:outputPanel>   
+    </apex:panelGrid>
+    
+    <apex:panelGrid columns="2" width="100%">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="PENALTIES: " />
+            <br/>
+            <apex:outputField value="{!Forms__c.PENALTIES__c}" /> 
+        </apex:outputPanel>  
+    </apex:panelGrid>
+    
+    <apex:panelGrid columns="2" width="100%">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="Privacy Act Statement: " />
+            <br/>   
+            <apex:outputField value="{!Forms__c.Privacy_Act_Statement__c}" /> 
+        </apex:outputPanel>    
+    </apex:panelGrid> 
+    
+    <apex:panelGrid columns="2" width="100%">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="Public Burden Information: " />
+            <br/>   
+            <apex:outputField value="{!Forms__c.Public_Burden_Information__c}" /> 
+        </apex:outputPanel>    
+    </apex:panelGrid>
+
+    <hr/><br/>
+
+    <apex:panelGrid columns="2" width="100%" columnClasses="col1b, col2b" border="1"  cellpadding="5" cellspacing="3"> 
+        <apex:outputText style="font-weight: bold" value="Applicant Name: " />
+        <apex:outputField value="{!Forms__c.Applicant_Name_Last_First_MI2__c}" /> 
+           
+        <apex:outputText style="font-weight: bold" value="Work Email Address: " />
+        <apex:outputField value="{!Forms__c.Work_Email_Address2__c}" /> 
+      
+        <apex:outputText style="font-weight: bold" value="Position Title: " />
+        <apex:outputField value="{!Forms__c.Position_Title__c}" /> 
+    
+        <apex:outputText style="font-weight: bold" value="Grade: " />
+        <apex:outputField value="{!Forms__c.Grade__c}" /> 
+      
+        <apex:outputText style="font-weight: bold" value="Agency: " />
+        <apex:outputField value="{!Forms__c.Agency__c}" /> 
+       
+        <apex:outputText style="font-weight: bold" value="Branch/Unit and Address: " />
+        <apex:outputField value="{!Forms__c.Branch_Unit_and_Address__c}" /> 
+     
+        <apex:outputText style="font-weight: bold" value="Office Telephone: " />
+        <apex:outputField value="{!Forms__c.Office_Telephone2__c}" /> 
+    </apex:panelGrid>
+    
+    <br/>
+    
+    <apex:panelGrid columns="2" width="100%" columnClasses="col1b, col2b" border="1"  cellpadding="5" cellspacing="3">
+            <apex:outputText style="font-weight: bold" value="Reporting Status: " />
+            <apex:outputField value="{!Forms__c.Reporting_Status__c}" /> 
+            
+            <apex:outputText style="font-weight: bold" value="If New Entrant, Date of Appt to Position: " />
+            <apex:outputField value="{!Forms__c.If_New_Entrant_Date_of_Appt_to_Position__c}" />    
+    </apex:panelGrid>
+    
+    </div>
+    
+    <div style="page-break-after:always;"><br/>
+    <apex:panelGrid columns="2" width="100%" columnClasses="col1a, col2a" border="1"  cellpadding="5" cellspacing="3">
+            <apex:outputText style="font-weight: bold" value="Step 1: " />
+            <apex:outputField value="{!Forms__c.Step_1__c}" />  
+    </apex:panelGrid>
+    
+    <apex:panelGrid columns="2" width="100%" columnClasses="col1, col2" border="1"  cellpadding="5" cellspacing="3">
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="I. " />
+            <apex:outputField value="{!Forms__c.I__c}" /> 
+        </apex:outputPanel>
+        <apex:outputPanel >     
+            <apex:outputText style="font-weight: bold" value="Response I: " />
+            <apex:outputField value="{!Forms__c.Response_1__c}" />    
+        </apex:outputPanel>    
+        
+        <apex:outputPanel >              
+            <apex:outputText style="font-weight: bold" value="II. " />
+            <apex:outputField value="{!Forms__c.II__c}" /> 
+        </apex:outputPanel>
+        <apex:outputPanel >     
+            <apex:outputText style="font-weight: bold" value="Response II: " />
+            <apex:outputField value="{!Forms__c.Response_2__c}" />    
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="III. " />
+            <apex:outputField value="{!Forms__c.III__c}" /> 
+        </apex:outputPanel>
+        <apex:outputPanel >    
+            <apex:outputText style="font-weight: bold" value="Response III: " />
+            <apex:outputField value="{!Forms__c.Response_3__c}" />    
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="IV. " />
+            <apex:outputField value="{!Forms__c.IV__c}" /> 
+        </apex:outputPanel>
+        <apex:outputPanel >
+            <apex:outputText style="font-weight: bold" value="Response IV: " />
+            <apex:outputField value="{!Forms__c.Response_4__c}" />    
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!Forms__c.Reporting_Status__c=='Annual'}">
+            <apex:outputText style="font-weight: bold" value="V. " />
+            <apex:outputField value="{!Forms__c.V__c}" /> 
+        </apex:outputPanel>    
+        <apex:outputPanel rendered="{!Forms__c.Reporting_Status__c=='Annual'}">
+            <apex:outputText style="font-weight: bold" value="Response V: " />
+            <apex:outputField value="{!Forms__c.Response_5__c}" />    
+        </apex:outputPanel>
+        
+    </apex:panelGrid>
+    
+    <apex:panelGrid columns="2" width="100%" columnClasses="col1a, col2a" border="1"  cellpadding="5" cellspacing="3">
+            <apex:outputText style="font-weight: bold" value="Step 2: " />
+            <apex:outputField value="{!Forms__c.Step_2__c}" />  
+    
+            <apex:outputText style="font-weight: bold" value="Step 3: " />
+            <apex:outputField value="{!Forms__c.Step_3__c}" />  
+    
+            <apex:outputText style="font-weight: bold" value="Step 4: " />
+            <apex:outputField value="{!Forms__c.Step_4__c}" />  
+    </apex:panelGrid>    
+    </div>
+    
+    <apex:pageBlock >
+        
+        <div class="tableTitle">Part 1 - Assets and Income</div>
+        <div style="page-break-after:always; {!IF(lineItems1.size==0, 'display:none', 'display:block')}">
+            <apex:pageBlockTable value="{!lineItems1}" var="line1" columnsWidth="15%,15%,35%,35%" width="100%" border="1" cellspacing="3" cellpadding="5">
+                <apex:column value="{!line1.Item_Description__c}" />
+                <apex:column value="{!line1.No_Longer_Held__c}" />
+                <apex:column value="{!line1.Approver_Comment__c}" />
+                <apex:column value="{!line1.Filer_s_Response__c}" />
+            </apex:pageBlockTable>
+        </div>
+        <div style="page-break-after:always; {!IF(lineItems1.size!=0, 'display:none', 'display:block')}">
+            <br/>
+            No Reportable Information
+        </div>
+        
+        <div class="tableTitle">Part 2 - Liabilities</div> 
+        <div style="page-break-after:always; {!IF(lineItems2.size==0, 'display:none', 'display:block')}">
+            <apex:pageBlockTable value="{!lineItems2}" var="line2" columnsWidth="15%,15%,35%,35%" width="100%" border="1" cellspacing="3" cellpadding="5">
+                <apex:column value="{!line2.Name_of_Creditor__c}" />
+                <apex:column value="{!line2.Type_of_Liability__c}" />
+                <apex:column value="{!line2.Approver_Comment__c}" />
+                <apex:column value="{!line2.Filer_s_Response__c}" />
+            </apex:pageBlockTable>
+        </div>
+        <div style="page-break-after:always; {!IF(lineItems2.size!=0, 'display:none', 'display:block')}">
+            <br/>
+            No Reportable Information
+        </div>
+        
+        <div class="tableTitle">Part 3 - Outside Positions</div>
+        <div style="page-break-after:always; {!IF(lineItems3.size==0, 'display:none', 'display:block')}">
+            <apex:pageBlockTable value="{!lineItems3}" var="line3" columnsWidth="12%,12%,12%,10%,27%,27%" width="100%" border="1" cellspacing="3" cellpadding="5">
+                <apex:column value="{!line3.Organization__c}" />
+                <apex:column value="{!line3.Type_of_Organization__c}" />
+                <apex:column value="{!line3.Position__c}" />
+                <apex:column value="{!line3.No_Longer_Held__c}" />
+                <apex:column value="{!line3.Approver_Comment__c}" />
+                <apex:column value="{!line3.Filer_s_Response__c}" />
+            </apex:pageBlockTable>
+        </div>
+        <div style="page-break-after:always; {!IF(lineItems3.size!=0, 'display:none', 'display:block')}">
+            <br/>
+            No Reportable Information
+        </div>
+        
+        <div class="tableTitle">Part 4 - Agreements or Arrangements</div>
+        <div style="page-break-after:always; {!IF(lineItems4.size==0, 'display:none', 'display:block')}">
+            <apex:pageBlockTable value="{!lineItems4}" var="line4" columnsWidth="12%,18%,35%,35%" width="100%" border="1" cellspacing="3" cellpadding="5">
+                <apex:column value="{!line4.Entity__c}" />
+                <apex:column value="{!line4.Terms_of_Agreement_or_Arrangement__c}" />
+                <apex:column value="{!line4.Approver_Comment__c}" />
+                <apex:column value="{!line4.Filer_s_Response__c}" />
+            </apex:pageBlockTable>
+        </div>
+        <div style="page-break-after:always; {!IF(lineItems4.size!=0, 'display:none', 'display:block')}">
+            <br/>
+            No Reportable Information
+        </div>
+        
+        <div style="page-break-after:always; {!IF(lineItems5.size==0 || Forms__c.Reporting_Status__c!="Annual", 'display:none', 'display:block')}">
+        <div class="tableTitle">Part 5 - Gifts and Travel Reimbursements</div>
+            <apex:pageBlockTable value="{!lineItems5}" var="line5" columnsWidth="12%,18%,35%,35%" width="100%" border="1" cellspacing="3" cellpadding="5">
+                <apex:column value="{!line5.Source__c}" />
+                <apex:column value="{!line5.Description__c}" />
+                <apex:column value="{!line5.Approver_Comment__c}" />
+                <apex:column value="{!line5.Filer_s_Response__c}" />
+            </apex:pageBlockTable>
+        </div>
+        <div style="page-break-after:always; {!IF(lineItems5.size!=0 || Forms__c.Reporting_Status__c!='Annual', 'display:none', 'display:block')}">
+            <div class="tableTitle">Part 5 - Gifts and Travel Reimbursements</div>
+            <br/>
+            No Reportable Information
+        </div>
+        
+    </apex:pageBlock>
+    
+    <br/><hr/><br/>
+ <!--   
+    <div id="approvalHistory" style="page-break-after:always;">
+        <apex:outputPanel >
+           <div style="text-align:center">
+               <h3>Approval History</h3>
+           </div>
+        </apex:outputPanel>
+
+        <apex:dataTable var="history" value="{!approvalHistory}" cellPadding="2pt">
+            <apex:column >
+                <apex:facet name="header">Actor</apex:facet>
+                <apex:outputText value="{!history.Actor.Name}" />
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Date</apex:facet>
+                <apex:outputText value="{!history.CreatedDate}" />
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Status</apex:facet>
+                <apex:outputText value="{!history.StepStatus}" />
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Comments</apex:facet>
+                <apex:outputText value="{!history.Comments}" />
+            </apex:column>
+        </apex:dataTable>
+    </div>
+  -->  
+            <apex:pageBlock >
+            <apex:pageBlockTable value="{!approvalHistory}" var="history" width="100%" border="1" cellspacing="3" cellpadding="5">
+                
+                
+      <!--          <apex:dataTable value="{!history.StepsAndWorkitems}" var="step" columnsWidth="20%,20%,20%,10%,30%">   -->
+                    <apex:column >  
+                    <apex:pageBlockTable value="{!history.StepsAndWorkitems}" var="step" columnsWidth="23%,17%,12%,15%,33%">
+                    <apex:column value="{!step.processnode.name}" />
+                    <apex:column value="{!step.Actor.Name}" />
+                    <apex:column value="{!step.StepStatus}" />
+                    <apex:column value="{!step.CreatedDate}" />
+                    <apex:column value="{!step.Comments}" />
+                    </apex:pageBlockTable>
+                    </apex:column>
+       <!--         </apex:datatable> -->
+     
+     <!--          <apex:column value="{!history.processnode.name}" /> 
+                <apex:column value="{!history.Actor.Name}" />      
+                <apex:column value="{!history.StepStatus}" />         
+                <apex:column value="{!history.Comments}" />        -->
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    
+</apex:page>

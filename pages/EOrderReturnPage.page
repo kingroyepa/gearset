@@ -1,0 +1,183 @@
+<apex:page standardController="eOrders__c" showHeader="false" extensions="ORDGAS_savePDF" sidebar="false" standardStylesheets="false"  applyBodyTag="false" applyHtmlTag="false" docType="html-5.0">
+
+   
+  <apex:form >
+    <apex:actionFunction name="saveAttachement" action="{!saveAttachement}" rerender="allPanel"/>
+
+
+        <script>
+           window.onload=function()
+           {
+             saveAttachement();
+             window.document.getElementById("okbutton").style.display = 'block';
+           };
+        </script>
+
+  </apex:form>
+  
+  
+  
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+    <apex:stylesheet value="{!$Resource.GAScss}"/>
+
+<style>
+.deadspace{
+    background:#ccc;
+    }
+.cylinder-sub-total{
+     font-weight: bold;
+    }
+       .button-ok {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        background: transparent;
+        background-clip: border-box;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        line-height: 1.875rem;
+        text-decoration: none;
+        color: #0070d2;
+        -webkit-appearance: none;
+        white-space: normal;
+        user-select: none;
+        
+        
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #dddbda;
+        transition: border 0.15s linear;
+        border-color: #dddbda;
+        background-color: white;
+        font-size: .8125rem;
+    }
+</style>
+
+
+    </head>
+    <body class="eorderpdf">
+    <!--Report Reproduction-->
+    <!--Header-->
+    <h1>Combined Cylinder Pickup Request Form</h1>
+    
+    <div id="orderinfobox1" class="topinfoboxes">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" valign="top">
+                    <span class="topinfolabel">ATTN:</span><span class="topinfodata">{!eOrders__c.Vendor_Name__r.Primary_Contact__r.FirstName} {!eOrders__c.Vendor_Name__r.Primary_Contact__r.LastName} ({!eOrders__c.Vendor_Name__r.Primary_Contact__r.Email})</span><br/>
+                    <span class="topinfolabel">Vendor:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Vendor_Name__r.Name}"/></span><br/>
+                    <span class="topinfolabel">Email Address:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Vendor_Name__r.Email__c}"/></span>
+                </td>
+           </tr>
+        </table> 
+
+    </div>
+    
+     <table cellspacing="0" cellpadding="0" style="width:100%">
+      <tr>
+        <td style="width:50%">
+            <div id="vendorinfobox" class="topinfoboxes">
+                <span class="topinfolabel">EPA BPA/Contract Number:</span><span class="topinfodata">{!eOrders__c.Contract__r.Name}</span><br/>
+                <span class="topinfolabel">EPA Call Number: </span><span class="topinfodata">{!eOrders__c.Call_Number__c}</span><br/>
+                <span class="topinfolabel">EPA Customer Number:</span><span class="topinfodata">{!eOrders__c.Vendor_Name__r.Vendor_Customer_Number__c} </span><br/>
+            </div>
+        </td>
+        <td style="width:50%; vertical-align: top;">
+            <div id="contractinfobox" class="topinfoboxes">
+                <span class="topinfolabel">Date Request Created:</span><span class="topinfodata"><apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!TODAY()}" /> </apex:outputText></span><br/>
+                <span class="topinfolabel">Requested Pickup Date:</span><span class="topinfodata">  <apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!eOrders__c.Requested_Pickup_Date__c}" /></apex:outputText> </span><br/>
+                <span class="topinfolabel">Total Number of Items:</span><span class="topinfodata"><apex:variable value="{!0}" var="SubTotal1"/><apex:repeat value="{!eOrders__c.Line_Items_eOrder_Return__r}" var="line1"><apex:variable var="SubTotal1" value="{!SubTotal1 + 1}"/></apex:repeat>{!SubTotal1}</span>
+            
+            </div>
+        </td> 
+      </tr>
+    </table>
+    <!--Requestor Information-->
+    <div id="orderinfobox2" class="topinfoboxes">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" valign="top">
+                    <span class="topinfolabel">Call Ordering Official:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Owner.Name}"/></span><br/>
+                    <span class="topinfolabel">Email Address:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Owner.Email}"/></span><br/>
+                    <span class="topinfolabel">Phone Number:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Owner.Phone}"/></span>
+                </td>
+           </tr>
+        </table> 
+
+    </div>
+    
+   
+    <!--Table 1-->
+    <div id="tablecontainer">
+    <table id="deliverytable" style="width=100%">
+        <thead>
+        <tr style="width=100%;background-color: darkgray !important;">
+         <th style="width=8%">
+        <div title="PickUp Location">PickUp Location</div>
+        </th>
+        <th style="width=8%">
+        <div title="Cylinder No.">Cylinder Serial Number</div>
+        </th>
+        
+        <th style="width=8%">
+        <div title="Requestor">Requester Name</div>
+        </th>
+        <th style="width=8%">
+        <div title="Order Number">EPA Internal Request Number</div>
+        </th>
+        <th style="width=8%">
+        <div title="Organization">Organization</div>
+        </th>
+        <th style="width=8%">
+            <div title="Serial Number">EPA Internal Requested Pickup Date</div>
+        </th>
+        <th style="width=8%">
+        <div title="Status">Status</div>
+        </th>
+        </tr>
+        </thead>
+        <tbody>
+        <apex:variable value="{!0}" var="SubTotal"/>
+        <apex:repeat value="{!eOrders__c.Line_Items_eOrder_Return__r}" var="line">
+            <apex:variable var="SubTotal" value="{!SubTotal + 1}"/>
+            <tr style="width=100%">
+                
+                <td>{!line.Order_Request__r.Delivery_facilities__c} - {!line.Cylinder_Return_Location__c}</td>
+                <td data-label="Serial Number" style="width=8%">{!line.Serial_Number__c}</td>
+                <td>{!line.Order_Request__r.Requester__c}</td>
+                <td>{!line.Order_Request__r.Name}</td>
+                
+                <td>{!line.Order_Request__r.Requester_Org__c}</td>
+                <td data-label="Requested Date" style="width=8%">
+                 <div><apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!line.Cylinder_Return_Date__c}" /> </apex:outputText>
+                   </div>
+                </td>  
+                <td>{!line.Status__c}</td>
+            </tr>
+        </apex:repeat>
+               
+        
+        
+        </tbody>
+    </table>
+    </div>
+    
+    
+    <!--Table 2-->
+    <p>
+    <div class="slds-scope"  id="okbutton" style="display:none;">
+        <apex:form >
+    <center> <apex:outputLink styleClass="button-ok" style="margin:0 auto;" value="{!URLFOR($Action.eOrders__c.View,eOrders__c.id)}" target="_parent">OK</apex:outputLink></center>
+    
+    </apex:form>
+    
+    </div>
+    </p>
+
+    </body>
+   </html>  
+
+</apex:page>

@@ -1,0 +1,77 @@
+<messaging:emailTemplate recipientType="User" 
+    relatedToType="Line_Item__c"
+    subject="GAS Cylinder for Order Request: {!relatedTo.eOrder_Item__r.Order_Request__r.Name} is Ready for Pick-Up ">
+    <messaging:htmlEmailBody >
+    <html>
+    <head>
+    <style type="text/css">
+    body{
+        width:600px;
+        font-size: large; 
+        font-family: Arial, sans-serif;
+    }
+    
+    #logo-section{
+        text-align:right;
+    }
+    #email-body{
+        width:500px;
+        margin: 0 auto;
+    }
+    
+    .label-email-details{
+        font-weight: bold;
+    }
+    #cylinder-box{
+        padding:10px 20px;
+        margin:10px;
+        border:1px solid #0071bc;
+    }
+    #donot-reply{
+        font-size:12px;
+    }
+    </style>
+    <apex:stylesheet value="{!$Resource.GAScss}"/>
+    </head>
+    <body>
+   
+  
+   
+ <div id="email-body">
+ 
+ <div id="logo-section">
+ <img src="https://epaoei--ordgas--c.visualforce.com/resource/1528391434000/EPAlogo_full?isdtp=p1"/>
+ </div> 
+ 
+ 
+ <p>Hello {!relatedTo.eOrder_Item__r.Order_Request__r.CreatedBy.FirstName} {!relatedTo.eOrder_Item__r.Order_Request__r.CreatedBy.LastName},</p>
+ 
+ <p>The cylinder for your Gas Order Request is ready for to be picked up.</p>
+
+<div id="cylinder-box">   
+<p><span class="label-email-details">Pick-Up Location:</span> {!relatedTo.eOrder_Item__r.Order_Request__r.Facility_Location__c}</p>
+
+<p><span class="label-email-details">Product ID:</span> {!relatedTo.Product__r.Name}</p>
+
+<p><span class="label-email-details">Product Name:</span> {!relatedTo.Product__r.Product_Name__c}</p>
+
+<p><span class="label-email-details">Product Size:</span> {!relatedTo.Product__r.Size__c}</p>
+</div>
+
+<p>
+Please confirm your cylinder delivery by clicking the link below:<br/>
+
+<a href="{!LEFT($Api.Partner_Server_URL_290,FIND('services',$Api.Partner_Server_URL_290)-1)}{!relatedTo.eOrder_Item__r.Order_Request__r.Id}">{!relatedTo.eOrder_Item__r.Order_Request__r.Name}</a>
+</p>
+
+    <p>Thank You,</p>
+    <p>Gas Acquisition System</p>
+  
+  <p id="donot-reply">
+____________<br/>
+Please do not reply to this email. This mailbox is unmonitored</p>  
+ </div>   
+        </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

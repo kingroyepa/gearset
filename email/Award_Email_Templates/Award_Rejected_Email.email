@@ -1,0 +1,5 @@
+Dear {!ApprovalRequest.Process_Assignee},
+
+An award you submitted for approval has been rejected by {!Approval_Requesting_User.Name}  with the following comments: {!ApprovalRequest.Comments}.
+
+You can update an award and re-submit if necessary. For any questions or issues, please contact your OARS-HRD representative.

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AAT - Owning SITL - 15 Day Reminder</name>
+    <style>none</style>
+    <subject>REMINDER - Action: Lead SITL Group Review of Application Review Form for {!Forms__c.Application_Name__c} {!Forms__c.Name}</subject>
+    <textOnly>This is a reminder that as the Owning SITL you should have completed the Review Group deliberations. Please go to the application in the link provided below and approve or reject the application on behalf of the Review Group. If the Review Group has not come to consensus within 10 business days then the CIO will work with the Review Group and others to determine how to proceed.
+
+To access the form use this link: {!Forms__c.Link}
+
+Application Review Form Summary:
+
+-   Application Name: {!Forms__c.Application_Name__c}
+-   Application Owner: {!Forms__c.Application_Owner__c}
+-   Form number: {!Forms__c.Name}
+-   Application Description: {!Forms__c.Application_Description__c}
+-   Approval Status: {!Forms__c.Approval_Step__c}
+
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&amp;e=x91vhQ.
+
+End of Message
+
+Email template #8</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

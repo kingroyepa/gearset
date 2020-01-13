@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notify Form Owner Approver Reassigned</name>
+    <style>none</style>
+    <subject>The Approver of Your {!Forms__c.Form_Type_Name__c} Form has Changed  - Record ID: {!Forms__c.Form_Record_Name__c}</subject>
+    <textOnly>Your {!Forms__c.Form_Type_Name__c} Form approval has been reassigned.
+
+{!Forms__c.Last_Approval_Reassignment__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

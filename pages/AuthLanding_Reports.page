@@ -1,0 +1,18 @@
+<apex:page controller="AuthLanding_Reports" action="{!onLoad}" showheader="false" sidebar="false" cache="false">
+
+  <div style="margin-left: 20px;">
+    <p>
+        Your session may have timed out. Please log in again.
+    </p>    
+    <p>
+        Temporary header display:
+    </p>   
+    <p>    
+        <apex:repeat value="{!headers}" var="hed">
+      <apex:outputText value="{!hed}" /> -- 
+      <apex:outputText value="{!headers[hed]}" /><br/>
+      </apex:repeat>
+    </p>
+  </div>
+    
+</apex:page>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>DCR_OAP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DCR OAP Sharing</description>
+        <label>DCR OAP</label>
+        <sharedTo>
+            <group>DCR_OAR_OAP_PMO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>DCR Bankcard Purchase Line Item,DCR Travel Line Item,DCR IA Line Item,DCR Contract Line Item (O),DCR Grant Line Item,DCR Contract Line Item,DCR Other Line Item</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Allowance_Holder__c</field>
+            <operation>equals</operation>
+            <value>58 - OAP</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DCR_OTAQ</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DCR OTAQ Sharing</description>
+        <label>DCR OTAQ</label>
+        <sharedTo>
+            <group>DCR_OAR_OTAQ</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>DCR Bankcard Purchase Line Item,DCR Travel Line Item,DCR IA Line Item,DCR Contract Line Item (O),DCR Grant Line Item,DCR Contract Line Item,DCR Other Line Item</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Allowance_Holder__c</field>
+            <operation>equals</operation>
+            <value>56 - OTAQ</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>FTTA_Products</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>FTTA Products</label>
+        <sharedTo>
+            <group>FTTA_Lab_Contacts</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>FTTA Products</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>GAS_Cylinders</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>GAS application. Shares the cylinders with GAS application Admins.</description>
+        <label>GAS Cylinders</label>
+        <sharedTo>
+            <group>GAS_Application_Admin</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>GAS Cylinders Return,GAS Cylinders</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PCORS_Line_Items</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Read Access</description>
+        <label>PCORS Line Items</label>
+        <sharedTo>
+            <group>PCORS_App_Admins</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PCOR Items</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Purchase_Card_Provisioning_Team_Share</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Purchase Card Provisioning Team Share</label>
+        <sharedTo>
+            <group>Purchase_Card_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Course_Title__c</field>
+            <operation>equals</operation>
+            <value>PCard Agency Supplemental Training,GSA SmartPay Purchase Card Training</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>TQB_Contacts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>TQB. Shares the TQB Contacts with Coordinators.</description>
+        <label>TQB Contacts</label>
+        <sharedTo>
+            <group>TQB_Coordinators</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>TQB Contact</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Training_Records</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Access to see all training records</description>
+        <label>Training Records</label>
+        <sharedTo>
+            <group>e450_Ethics_Official</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

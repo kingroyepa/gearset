@@ -1,0 +1,28 @@
+<h3>Public Notice Posting Request has been Approved by OCGR  </h3> 
+<h3> Newspaper Format of Public Notice - Recommended Local Newspaper for Public Notice {!Forms__c.PN_Newspaper__c}</h3>
+<h2> Public Notice: {!Forms__c.Facility_Name_or_Applicant__c} - 
+{!Forms__c.City__c}, {!Forms__c.State__c} </h2> <br> 
+ 
+
+<b>DATE OF THIS NOTICE: {!Forms__c.Publication_Date__c} </b><br>
+<p>
+
+<b> PURPOSE OF THIS NOTICE: </B> {!Forms__c.Public_Notice_Purpose__c}
+</p>
+<p>
+<b>Summary of Proposed Action: </b>  <br> 
+{!Forms__c.Public_Notice_Proposed_Action__c}
+</p>
+<p>
+<b> FACILITY DESCRIPTION: </b> {!Forms__c.Facility_Description__c}
+</p>
+<p>
+<b> INFORMATION AVAILABILITY: </b>  Information regarding EPA’s proposed remedy is available on EPA’s website at <u> {!Forms__c.Facility_Factsheet_URL__c} </u> .   The Administrative Record, which contains all the information considered in EPA’s proposed remedy, is available at U.S. EPA Mid-Atlantic Region,  Mail Code: {!User.Mail_Stop__c},  1650 Arch Street, Philadelphia, PA. 19103. Office hours are: Mon-Fri, 8:00 AM – 5:00 PM. For additional information, contact: Project Manager,<b> {!Forms__c.OwnerFullName} </b>  at EPA Mid-Atlantic’s address listed above; Phone: {!Forms__c.OwnerPhone} or Email: 
+ {!Forms__c.Email_Address__c} .
+</p>
+<p>
+<b>COMMENT PROCESS: </b> Persons to comment on EPA’s proposed decision must submit comments to EPA within the {!Forms__c.PublicNotice_Comment_Period__c}-day comment period ending <b> {!Forms__c.Public_Notice_Comments_Due__c} </b>. Interested persons may also request a public hearing on this proposed remedy.  All comments and/or requests for a hearing must be submitted in writing via mail, fax, or email to the EPA Project Manager,   {!Forms__c.OwnerFullName}  as listed above, and must be received prior to <b>{!Forms__c.Public_Notice_Comments_Due__c} </b>.  All comments will be considered in making a final decision.   
+</p>
+ <p>
+<b>FINAL DECISION: </b> EPA will make a final decision after considering all comments, consistent with applicable RCRA requirements and regulations. If the remedy is substantially unchanged from the one in this notice, EPA will issue a final decision and inform all persons who submitted written comments or requested notice of EPA’s final determination. If the remedy is significantly different from the one proposed, EPA will issue a public notice explaining the new remedy and will reopen the comment period.
+</p>

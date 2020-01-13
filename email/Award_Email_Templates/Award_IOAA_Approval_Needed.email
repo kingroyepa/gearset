@@ -1,0 +1,5 @@
+<p>{!ApprovalRequest.Process_Approver},</p>
+
+<p>An employee award needs your approval. Please visit this link to log into the BAP approve or deny the request: {!ApprovalRequest.Internal_URL}.</p>
+
+<p>Please contact your BAP administrator if you have any questions.</p>

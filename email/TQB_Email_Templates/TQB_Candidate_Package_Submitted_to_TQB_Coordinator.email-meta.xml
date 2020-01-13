@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>TQB Candidate Package  Submitted to TQB Coordinator</name>
+    <style>none</style>
+    <subject>Candidate Package Submitted to TQB Coordinator</subject>
+    <textOnly>Dear {!Candidate_Application__c.Candidate__c},
+
+Your TQB package has been reviewed by your 2nd Line Supervisor and forwarded to your organization&apos;s TQB Coordinator.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

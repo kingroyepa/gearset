@@ -1,0 +1,10 @@
+<p>
+The HR System Access Request Form submitted by 
+{!Forms__c.Unauthenticated_Owner__c} has the approvals of the employee’s supervisor:  {!Forms__c.User_Supervisor__c} and PMO/RHRO: {!Forms__c.Approver_1__c}.
+</p>
+
+<p>
+To access, review, and process the request, use this link: {!Forms__c.Link}
+<br><br>
+Record ID: {!Forms__c.Form_Record_Name__c}
+</p>

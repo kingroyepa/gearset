@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- DCR PRC --></label>
+        <name>DCR_PRC__c</name>
+        <picklistValues>
+            <masterLabel>000A04</masterLabel>
+            <translation><!-- 000A04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A17</masterLabel>
+            <translation><!-- 000A17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A45</masterLabel>
+            <translation><!-- 000A45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A46</masterLabel>
+            <translation><!-- 000A46 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A46X53</masterLabel>
+            <translation><!-- 000A46X53 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A46X54</masterLabel>
+            <translation><!-- 000A46X54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A46X55</masterLabel>
+            <translation><!-- 000A46X55 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A46XP3</masterLabel>
+            <translation><!-- 000A46XP3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A46XP4</masterLabel>
+            <translation><!-- 000A46XP4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A46XQ3</masterLabel>
+            <translation><!-- 000A46XQ3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A59</masterLabel>
+            <translation><!-- 000A59 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A61</masterLabel>
+            <translation><!-- 000A61 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A61X53</masterLabel>
+            <translation><!-- 000A61X53 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A61X54</masterLabel>
+            <translation><!-- 000A61X54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A61X55</masterLabel>
+            <translation><!-- 000A61X55 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A73</masterLabel>
+            <translation><!-- 000A73 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000A73X54</masterLabel>
+            <translation><!-- 000A73X54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000AC4</masterLabel>
+            <translation><!-- 000AC4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000AC5</masterLabel>
+            <translation><!-- 000AC5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000AH4</masterLabel>
+            <translation><!-- 000AH4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>000AL2</masterLabel>
+            <translation><!-- 000AL2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A46</masterLabel>
+            <translation><!-- 101A46 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A46X53</masterLabel>
+            <translation><!-- 101A46X53 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A46X54</masterLabel>
+            <translation><!-- 101A46X54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A46X55</masterLabel>
+            <translation><!-- 101A46X55 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A46XP3</masterLabel>
+            <translation><!-- 101A46XP3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A46XP4</masterLabel>
+            <translation><!-- 101A46XP4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A46XQ3</masterLabel>
+            <translation><!-- 101A46XQ3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A46XW1</masterLabel>
+            <translation><!-- 101A46XW1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A59</masterLabel>
+            <translation><!-- 101A59 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A61</masterLabel>
+            <translation><!-- 101A61 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A61X53</masterLabel>
+            <translation><!-- 101A61X53 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A61X54</masterLabel>
+            <translation><!-- 101A61X54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101A61X55</masterLabel>
+            <translation><!-- 101A61X55 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A04</masterLabel>
+            <translation><!-- 102A04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A17</masterLabel>
+            <translation><!-- 102A17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A45</masterLabel>
+            <translation><!-- 102A45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A45XW1</masterLabel>
+            <translation><!-- 102A45XW1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A58</masterLabel>
+            <translation><!-- 102A58 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A59</masterLabel>
+            <translation><!-- 102A59 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A61</masterLabel>
+            <translation><!-- 102A61 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A61X53</masterLabel>
+            <translation><!-- 102A61X53 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A61X54</masterLabel>
+            <translation><!-- 102A61X54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102A61X55</masterLabel>
+            <translation><!-- 102A61X55 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102AH4</masterLabel>
+            <translation><!-- 102AH4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102AJ9</masterLabel>
+            <translation><!-- 102AJ9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102AL2</masterLabel>
+            <translation><!-- 102AL2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102AL2X53</masterLabel>
+            <translation><!-- 102AL2X53 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102AL2X54</masterLabel>
+            <translation><!-- 102AL2X54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102AL2X55</masterLabel>
+            <translation><!-- 102AL2X55 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>103AC4</masterLabel>
+            <translation><!-- 103AC4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>103AC4XPS</masterLabel>
+            <translation><!-- 103AC4XPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>103AC4XW1</masterLabel>
+            <translation><!-- 103AC4XW1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>103AC5</masterLabel>
+            <translation><!-- 103AC5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZZZA73</masterLabel>
+            <translation><!-- ZZZA73 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZZZA73X54</masterLabel>
+            <translation><!-- ZZZA73X54 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PCORS PRC --></label>
+        <name>PCORS_PRC__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>DCR - PCORS PRC</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DCR - PCORS PRC</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,73 @@
+The HR System Access Request Form has been submitted for your approval by {!Forms__c.Form_Owner__c}.
+
+<p>
+To access, review, and approve the form use this link:  {!Forms__c.Link}
+</p>
+
+<p>
+<b>Record ID:</b> {!Forms__c.Form_Record_Name__c}<br>
+<b>Submitter Name:</b> {!Forms__c.Applicant_Name_Last_First_MI2__c}<br>
+{!if(Forms__c.Prepare_Form_for__c="","","<b>Prepare Form As Person Other Than Self:</b> "&Forms__c.Prepare_Form_for__c)}
+</p>
+
+<p>
+<b>Organization Access Needed: </b>
+{!if(Forms__c.Nationwide__c, "Nationwide<br>"&"Justification:</b> "&Forms__c.Nationwide_Access_Justification__c,"<br>HR Organization:</b> "&Forms__c.HR_Organization__c)}
+</p>
+
+<p>
+<b>FPPS Access Requirements:</b><br>
+{!if(Forms__c.Initiator__c,"Initiator<br>","")}
+{!if(Forms__c.Concurrer__c,"Concurrer<br>","")}
+{!if(Forms__c.Requestor__c,"Requestor<br>","")}
+{!if(Forms__c.Authorizer__c,"Authorizer<br>","")}
+{!if(Forms__c.SPO_Assistant__c,"SPO Assistant<br>","")}
+{!if(Forms__c.SPO_Legal_Approval_LGAP__c,"SPO Legal Approval (LGAP)<br>","")}
+{!if(Forms__c.SPO_Signature_Authority_PROC__c,"SPO Signature Authority (PROC)<br>","")}
+{!if(Forms__c.Labor_Employee_Relations_LER__c,"Labor Employee Relations (LER)<br>","")}
+{!if(Forms__c.Workman_s_Comp__c,"Workman's Comp<br>","")}
+{!if(Forms__c.Leave_Bank__c,"Leave Bank<br>","")}
+{!if(Forms__c.Personnel_Security_Branch_PSB__c,"Personnel Security Branch (PSB)<br>","")}
+{!if(Forms__c.HR_Support__c,"HR Support<br>","")}
+{!if(Forms__c.Payroll_Support__c,"Payroll Support<br>","")}
+{!if(Forms__c.Accounting_Support__c,"Accounting Support<br>","")}
+{!if(Forms__c.Security_Administrator__c,"Security Administrator<br>","")}
+{!if(Forms__c.ITD_Project_Support__c,"ITD Project Support<br>","")}
+{!if(Forms__c.FPPS_Investigator__c,"FPPS Investigator<br>","")}
+</p>
+
+<p>
+<b>WTTS Access Requirements:</b><br>
+{!if(Forms__c.Requesting_Office__c,"Requesting Office<br>","")}
+{!if(Forms__c.Servicing_Personnel_Office1__c,"Servicing Personnel Office<br>","")}
+{!if(Forms__c.Personnel_Security_Branch_PSB1__c,"Personnel Security Branch (PSB)	<br>","")}
+{!if(Forms__c.View_Reports_Only1__c,"View/Reports Only<br>","")}
+{!if(Forms__c.HR_Security_Team1__c,"HR Security Team	<br>","")}
+</p>
+
+<p>
+<b>Datamart Access Requirements:</b><br>
+{!if(Forms__c.Consumer_Role__c,"Consumer Role<br>","")}
+{!if(Forms__c.Author_Role__c,"Author Role<br>","")}
+{!if(Forms__c.EEO_Access_PII__c,"EEO Access (PII)<br>","")}
+</p>
+
+<p>
+<b>EZ-HIRE Access Requirements:</b><br>
+{!if(Forms__c.HR_Assistant__c,"HR Assistant<br>","")}
+{!if(Forms__c.HR_Specialist__c,"HR Specialist<br>","")}
+{!if(Forms__c.Ad_Hoc_Reports__c,"Ad-Hoc Reports<br>","")}
+{!if(Forms__c.OCR_Reports__c,"OCR Reports<br>","")}
+{!if(Forms__c.Standard_Reports__c,"Standard Reports<br>","")}
+{!if(Forms__c.Vacancy_Auditor__c,"Vacancy Auditor<br>","")}
+{!if(Forms__c.Supervisor_Manager__c,"Supervisor/Manager<br>","")}
+{!if(Forms__c.HR_Liaison_program_office__c,"HR Liaison (program office)<br>","")}
+{!if(Forms__c.Subject_Matter_Expert_SME__c,"Subject Matter Expert (SME)<br>","")}
+</p>
+
+<p>
+<b>eOPF Access Requirements:</b><br>
+{!if(Forms__c.HR_Specialist1__c,"HR Specialist<br>","")}
+{!if(Forms__c.Investigator__c,"Investigator<br>","")}
+{!if(Forms__c.Transfer__c,"Transfer<br>","")}
+</p>

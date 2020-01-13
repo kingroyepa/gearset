@@ -1,0 +1,26 @@
+<p>
+Your submission of BAP Forms Public Notice Posting Request for <br>
+<h4>{!Forms__c.Public_Notice_Title__c} </h4>
+
+<h3> was REJECTED by
+{!ApprovalRequest.Process_Assignee} </h3>
+
+
+To access the form use this link: {!Forms__c.Link} 
+<BR>
+ Record ID {!Forms__c.Form_Record_Name__c} ! <BR> 
+Approver Comments: {!ApprovalRequest.Comments} 
+
+</p>
+
+<h4> Instructions for Submitter</h4>
+<p>
+1. Scroll Down the Form Window to  Review <BR>
+2. To view complete approver history including comments:<BR> 
+ Select "view all" in Approval History Section <BR>
+3. Please address these comments by "Select Edit Tab" and <BR> 
+Update the form and then "Submit for Approval"
+
+
+
+</p>

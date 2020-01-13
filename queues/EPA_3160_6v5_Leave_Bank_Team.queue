@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>EPA-3160-6v5 Leave Bank Team</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>EPA_3160_6v5_Leave_Bank_Team</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Forms__c</sobjectType>
+    </queueSobject>
+</Queue>

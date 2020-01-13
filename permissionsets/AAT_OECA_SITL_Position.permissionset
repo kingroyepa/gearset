@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives OECA SITL Position access to OECA SITL Position picklist field on Forms__c and Senior IT Leader and Local SIO fields on Organizations. Used for Application Approval forms. John Jenkins. 2019.04.26.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>AAT - OECA SITL Position</label>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Local_SIO__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Senior_IT_Leader__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Forms__c.Additional_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Forms__c.OECA_SITL_Position__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Forms__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <tabSettings>
+        <tab>Forms__c</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
+</PermissionSet>

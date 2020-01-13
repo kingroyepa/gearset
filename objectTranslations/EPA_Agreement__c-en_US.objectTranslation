@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Uncheck the record for Soft Delete. --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the &apos;Additional Fees&apos;. --></help>
+        <label><!-- Additional Fees --></label>
+        <name>Additional_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agreement Type --></label>
+        <name>Agreement_Type__c</name>
+        <picklistValues>
+            <masterLabel>Amendment</masterLabel>
+            <translation><!-- Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRADA</masterLabel>
+            <translation><!-- CRADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funded MTA</masterLabel>
+            <translation><!-- Funded MTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MTA</masterLabel>
+            <translation><!-- MTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Materials CRADA</masterLabel>
+            <translation><!-- Materials CRADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NDA</masterLabel>
+            <translation><!-- NDA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Related Amendments --></help>
+        <label><!-- Parent Record --></label>
+        <name>Agreement__c</name>
+        <relationshipLabel><!-- Amendment/s --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Allowance Holder --></label>
+        <name>Allowance_Holder__c</name>
+        <picklistValues>
+            <masterLabel>56 - OTAQ</masterLabel>
+            <translation><!-- 56 - OTAQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58 - OAP</masterLabel>
+            <translation><!-- 58 - OAP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Alt_COR_Name --></label>
+        <name>Alt_COR_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the alternate COR for the contract vehicle. --></help>
+        <label><!-- Alt Contracting Officer&apos;s Rep. (Alt COR) --></label>
+        <name>Alt_Contracting_Officer_s_Rep_Alt_COR__c</name>
+        <relationshipLabel><!-- DCR EPA Agreements (Alt Contracting Officer&apos;s Rep. (Alt COR)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Alt PO Name --></label>
+        <name>Alt_PO_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Alternate Project Officer lookup. --></help>
+        <label><!-- Alternate Project Officer --></label>
+        <name>Alternate_Project_Officer__c</name>
+        <relationshipLabel><!-- EPA Agreements (Alternate Project Officer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please enter the  &apos;Annual Minimum Fee&apos;. --></help>
+        <label><!-- Annual Minimum Fee --></label>
+        <name>Annual_Minimum_Fee__c</name>
+    </fields>
+    <fields>
+        <help><!-- Required, alph-numeric. &lt;=140 characters. --></help>
+        <label><!-- Area of Tech Transfer --></label>
+        <name>Area_of_Tech_Transfer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Account Number --></label>
+        <name>Budget_Account_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Up to 1000 Characters --></help>
+        <label><!-- Budget Comments --></label>
+        <name>Budget_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- COR Name --></label>
+        <name>COR_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- CO Name --></label>
+        <name>CO_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Id 2 --></label>
+        <name>Case_Id_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Auto Generated Case Id --></help>
+        <label><!-- EPA Case Id --></label>
+        <name>Case_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the contract-level ceiling amount --></help>
+        <label><!-- Contract Ceiling --></label>
+        <name>Contract_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- Second contract description field. --></help>
+        <label><!-- Contract Description 2 --></label>
+        <name>Contract_Description_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- First Contract Description Field. --></help>
+        <label><!-- Contract Description --></label>
+        <name>Contract_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract/Grant/IA Number --></label>
+        <name>Contract_Grant_IA_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the contract number without dashes or special characters. --></help>
+        <label><!-- Contract Number (No Dashes) --></label>
+        <name>Contract_Number_No_Dashes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the CO for the contract --></help>
+        <label><!-- Contract Officer (CO) --></label>
+        <name>Contract_Officer_CO__c</name>
+        <relationshipLabel><!-- DCR EPA Agreements (Contract Officer CO) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Procurement Office --></label>
+        <name>Contract_Procurement_Office__c</name>
+        <picklistValues>
+            <masterLabel>CPOD - Cincinnati Procurement Operations Division</masterLabel>
+            <translation><!-- CPOD - Cincinnati Procurement Operations Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HPOD - Headquarters</masterLabel>
+            <translation><!-- HPOD - Headquarters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTPPOD - Research Triangle Park</masterLabel>
+            <translation><!-- RTPPOD - Research Triangle Park --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SACO - Ann Arbor</masterLabel>
+            <translation><!-- SACO - Ann Arbor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the contract title. --></help>
+        <label><!-- Contract Title --></label>
+        <name>Contract_Title__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the type of contract. --></help>
+        <label><!-- Contract Type --></label>
+        <name>Contract_Type__c</name>
+        <picklistValues>
+            <masterLabel>BPA</masterLabel>
+            <translation><!-- BPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost-Reimbursement</masterLabel>
+            <translation><!-- Cost-Reimbursement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed-Price</masterLabel>
+            <translation><!-- Fixed-Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incentive Contracts</masterLabel>
+            <translation><!-- Incentive Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indefinite-Delivery</masterLabel>
+            <translation><!-- Indefinite-Delivery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time-and-Materials</masterLabel>
+            <translation><!-- Time-and-Materials --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the COR for this contract vehicle --></help>
+        <label><!-- Contracting Officer&apos;s Rep. (COR) --></label>
+        <name>Contracting_Officer_Rep_COR__c</name>
+        <relationshipLabel><!-- EPA Agreements (Contracting Officer&apos;s Rep. (COR)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date Signed --></label>
+        <name>Date_Signed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Generic Description Field --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <label><!-- EPA Amendment # --></label>
+        <name>EPA_Amendment_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- EPA File # --></label>
+        <name>EPA_File_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- EPA File # 2 --></label>
+        <name>EPA_File__c</name>
+    </fields>
+    <fields>
+        <label><!-- EPA Goal --></label>
+        <name>EPA_Goal__c</name>
+        <picklistValues>
+            <masterLabel>Goal 1</masterLabel>
+            <translation><!-- Goal 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Goal 2</masterLabel>
+            <translation><!-- Goal 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Goal 3</masterLabel>
+            <translation><!-- Goal 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Goal 4</masterLabel>
+            <translation><!-- Goal 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Goal 5</masterLabel>
+            <translation><!-- Goal 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead the agency through improved processes and adhere to the rule of law</masterLabel>
+            <translation><!-- Lead the agency through improved processes and adhere to the rule of law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refocus the agency back to its core mission</masterLabel>
+            <translation><!-- Refocus the agency back to its core mission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restore power to the states through cooperative federalism</masterLabel>
+            <translation><!-- Restore power to the states through cooperative federalism --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please select the valid &apos;EPA Inventor&apos;. --></help>
+        <label><!-- EPA Inventor --></label>
+        <name>EPA_Inventor__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select participant&apos;s office. --></help>
+        <label><!-- EPA Participant --></label>
+        <name>EPA_Participant__c</name>
+        <picklistValues>
+            <masterLabel>EPA ORD</masterLabel>
+            <translation><!-- EPA ORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA Office</masterLabel>
+            <translation><!-- EPA Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA Region</masterLabel>
+            <translation><!-- EPA Region --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EPA in-kind contribution --></label>
+        <name>EPA_in_kind_contribution__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiration Date --></label>
+        <name>Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Report Recv&apos;d? --></label>
+        <name>Final_Report_Recv_d__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Master Contract Allowance Holder --></label>
+        <name>Funding_Period_Allowance_Holder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Ceiling amount for the funding period. --></help>
+        <label><!-- Funding Period Ceiling --></label>
+        <name>Funding_Period_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- Description for the funding period. --></help>
+        <label><!-- Funding Period Description --></label>
+        <name>Funding_Period_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- End date of the contract funding period. --></help>
+        <label><!-- Funding Period End Date --></label>
+        <name>Funding_Period_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date of the contract funding period. --></help>
+        <label><!-- Funding Period Start Date --></label>
+        <name>Funding_Period_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Contract Funding Period. --></help>
+        <label><!-- Funding Period --></label>
+        <name>Funding_Period__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Ceiling for a Grant agreement --></help>
+        <label><!-- Grant Ceiling --></label>
+        <name>Grant_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- 8 character Grant #. --></help>
+        <label><!-- Grant Number --></label>
+        <name>Grant_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Grant Tile. --></help>
+        <label><!-- Grant Title --></label>
+        <name>Grant_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grant Type --></label>
+        <name>Grant_Type__c</name>
+        <picklistValues>
+            <masterLabel>Air</masterLabel>
+            <translation><!-- Air --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brownfields</masterLabel>
+            <translation><!-- Brownfields --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental Education</masterLabel>
+            <translation><!-- Environmental Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fellowships</masterLabel>
+            <translation><!-- Fellowships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pollution Prevention</masterLabel>
+            <translation><!-- Pollution Prevention --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STAG</masterLabel>
+            <translation><!-- STAG --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hardcopy Recv&apos;d Date --></label>
+        <name>Hardcopy_Recv_d_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Ceiling for Interagency Agreement --></help>
+        <label><!-- IA Ceiling --></label>
+        <name>IA_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- Interagency Agreement Number. Only the middle 8 numbers of the full IA string. Example, input 92396201 for DW-89-92396201-08. --></help>
+        <label><!-- IA Number --></label>
+        <name>IA_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Interagency Agreement title. --></help>
+        <label><!-- IA Title --></label>
+        <name>IA_Title__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the lab contact for the EPA Agreement. --></help>
+        <label><!-- Lab Contact --></label>
+        <name>Lab_Contact__c</name>
+        <relationshipLabel><!-- EPA Agreements (Lab Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lab --></label>
+        <name>Lab__c</name>
+        <picklistValues>
+            <masterLabel>Ann Arbor</masterLabel>
+            <translation><!-- Ann Arbor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Athens</masterLabel>
+            <translation><!-- Athens --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cincinnati</masterLabel>
+            <translation><!-- Cincinnati --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corvallis</masterLabel>
+            <translation><!-- Corvallis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duluth</masterLabel>
+            <translation><!-- Duluth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edison</masterLabel>
+            <translation><!-- Edison --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gulf Breeze</masterLabel>
+            <translation><!-- Gulf Breeze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Las Vegas</masterLabel>
+            <translation><!-- Las Vegas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCCT</masterLabel>
+            <translation><!-- NCCT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NERL</masterLabel>
+            <translation><!-- NERL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NHEERL</masterLabel>
+            <translation><!-- NHEERL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NHSRC</masterLabel>
+            <translation><!-- NHSRC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NRMRL</masterLabel>
+            <translation><!-- NRMRL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NVFEL</masterLabel>
+            <translation><!-- NVFEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OSP</masterLabel>
+            <translation><!-- OSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office of Air and Radiation</masterLabel>
+            <translation><!-- Office of Air and Radiation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office of Compliance and Enforcement Assurance</masterLabel>
+            <translation><!-- Office of Compliance and Enforcement Assurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office of Prevention - Pesticides and Toxic Substances</masterLabel>
+            <translation><!-- Office of Prevention - Pesticides and Toxic Substances --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office of Water</masterLabel>
+            <translation><!-- Office of Water --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office of the Administrator</masterLabel>
+            <translation><!-- Office of the Administrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R10</masterLabel>
+            <translation><!-- R10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTP</masterLabel>
+            <translation><!-- RTP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please select the license type. --></help>
+        <label><!-- License Type --></label>
+        <name>License_Type__c</name>
+        <picklistValues>
+            <masterLabel>Amendment</masterLabel>
+            <translation><!-- Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-exclusive</masterLabel>
+            <translation><!-- Co-exclusive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exclusive</masterLabel>
+            <translation><!-- Exclusive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-exclusive</masterLabel>
+            <translation><!-- Non-exclusive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Research</masterLabel>
+            <translation><!-- Research --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Line Item Total --></label>
+        <name>Line_Item_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract Alt COR --></label>
+        <name>Master_Contract_Alt_COR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract COR --></label>
+        <name>Master_Contract_COR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract CO --></label>
+        <name>Master_Contract_CO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract Ceiling --></label>
+        <name>Master_Contract_Ceiling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract End Date --></label>
+        <name>Master_Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract Number --></label>
+        <name>Master_Contract_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract Start Date --></label>
+        <name>Master_Contract_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract Title --></label>
+        <name>Master_Contract_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract Type --></label>
+        <name>Master_Contract_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Contract Vendor --></label>
+        <name>Master_Contract_Vendor__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lookup the Master Contract record. --></help>
+        <label><!-- Master Contract --></label>
+        <name>Master_Contract__c</name>
+        <relationshipLabel><!-- EPA Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select OGC Attorney --></help>
+        <label><!-- OGC Attorney --></label>
+        <name>OGC_Attorney__c</name>
+        <relationshipLabel><!-- EPA Agreements (OGC Attorney) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please Select if OGC Review is needed --></help>
+        <label><!-- OGC Review Needed --></label>
+        <name>OGC_Review_Needed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Required - Select One --></help>
+        <label><!-- ORD National Program --></label>
+        <name>ORD_National_Program__c</name>
+        <picklistValues>
+            <masterLabel>Air/Climate/Energy</masterLabel>
+            <translation><!-- Air/Climate/Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemical Safety Sustainability</masterLabel>
+            <translation><!-- Chemical Safety Sustainability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Homeland Security</masterLabel>
+            <translation><!-- Homeland Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human Health Risk Assessment</masterLabel>
+            <translation><!-- Human Health Risk Assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-ORD</masterLabel>
+            <translation><!-- Non-ORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safe and Sustainable Waters</masterLabel>
+            <translation><!-- Safe and Sustainable Waters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sustainable and Healthy Communities</masterLabel>
+            <translation><!-- Sustainable and Healthy Communities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Pick the Office/Region/Lab/Division --></help>
+        <label><!-- Office --></label>
+        <name>Office_Reg_Lab_Div__c</name>
+        <relationshipLabel><!-- EPA Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Used to track outside funding on contracts or other agreements --></help>
+        <label><!-- Outside Funding --></label>
+        <name>Outside_Funding__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the owner. --></help>
+        <label><!-- Owner --></label>
+        <name>Owner_Contact__c</name>
+        <relationshipLabel><!-- EPA Agreements (Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PO Name --></label>
+        <name>PO_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name of the partner of the epa agreement. --></help>
+        <label><!-- Partner Name --></label>
+        <name>Partner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner cash contribution --></label>
+        <name>Partner_cash_contribution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner in-kind contribution --></label>
+        <name>Partner_in_kind_contribution__c</name>
+    </fields>
+    <fields>
+        <help><!-- Performance Period End Date for the contract. --></help>
+        <label><!-- Performance Period End Date --></label>
+        <name>Perf_Per_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Performance Period Start Date for the contract. --></help>
+        <label><!-- Performance Period Start Date --></label>
+        <name>Perf_Per_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select a Principal Investigator --></help>
+        <label><!-- Primary Principal Investigator --></label>
+        <name>Principal_Investigator_1__c</name>
+        <relationshipLabel><!-- EPA Agreements (Primary Principal Investigator) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select additional Investigator --></help>
+        <label><!-- Secondary Principal Investigator --></label>
+        <name>Principal_Investigator_2__c</name>
+        <relationshipLabel><!-- EPA Agreements (Secondary Principal Investigator) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select a Program Manager --></help>
+        <label><!-- Primary Program Manager --></label>
+        <name>Program_Manager_1__c</name>
+        <relationshipLabel><!-- EPA Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select Additional PM --></help>
+        <label><!-- Secondary Program Manager --></label>
+        <name>Program_Manager_2__c</name>
+        <relationshipLabel><!-- EPA Agreements (Secondary Program Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter Benefits up to 1000 characters --></help>
+        <label><!-- Project Benefits --></label>
+        <name>Project_Benefits__c</name>
+    </fields>
+    <fields>
+        <help><!-- Project Officer lookup. --></help>
+        <label><!-- Project Officer --></label>
+        <name>Project_Officer__c</name>
+        <relationshipLabel><!-- DCR EPA Agreement (Project Officer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <relationshipLabel><!-- EPA Agreements (Region) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Required - Select One --></help>
+        <label><!-- Related EPA Program Office(s) --></label>
+        <name>Related_EPA_Program_Office_s__c</name>
+        <picklistValues>
+            <masterLabel>AO</masterLabel>
+            <translation><!-- AO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OAR</masterLabel>
+            <translation><!-- OAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OCFO</masterLabel>
+            <translation><!-- OCFO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OCSPP</masterLabel>
+            <translation><!-- OCSPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OECA</masterLabel>
+            <translation><!-- OECA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OGC</masterLabel>
+            <translation><!-- OGC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OIG</masterLabel>
+            <translation><!-- OIG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OITA</masterLabel>
+            <translation><!-- OITA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OLEM</masterLabel>
+            <translation><!-- OLEM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMS</masterLabel>
+            <translation><!-- OMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORD</masterLabel>
+            <translation><!-- ORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OW</masterLabel>
+            <translation><!-- OW --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Related EPA Program regulations --></label>
+        <name>Related_EPA_Program_regulations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Note 1 --></label>
+        <name>Related_Note_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Note 2 --></label>
+        <name>Related_Note_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Note 3 --></label>
+        <name>Related_Note_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Note 4 --></label>
+        <name>Related_Note_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Note 5 --></label>
+        <name>Related_Note_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Record 1 --></label>
+        <name>Related_Record_1__c</name>
+        <relationshipLabel><!-- EPA Agreements (Related Record 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Record 2 --></label>
+        <name>Related_Record_2__c</name>
+        <relationshipLabel><!-- EPA Agreements (Related Record 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Record 3 --></label>
+        <name>Related_Record_3__c</name>
+        <relationshipLabel><!-- EPA Agreements (Related Record 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Record 4 --></label>
+        <name>Related_Record_4__c</name>
+        <relationshipLabel><!-- EPA Agreements (Related Record 4) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Record 5 --></label>
+        <name>Related_Record_5__c</name>
+        <relationshipLabel><!-- EPA Agreements (Related Record 5) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Remaining Ceiling to be Ordered --></label>
+        <name>Remaining_Ceiling_to_be_Ordered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Contract Ceiling to be Funded --></label>
+        <name>Remaining_Contract_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days remaining on the contract based on the End Date entered. --></help>
+        <label><!-- Remaining Days --></label>
+        <name>Remaining_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Days in Funding Period --></label>
+        <name>Remaining_Days_in_Funding_Period__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days remaining on the contract based on the Contract End Date entered. --></help>
+        <label><!-- Remaining Days on Contract --></label>
+        <name>Remaining_Days_on_Contract__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Grant Ceiling --></label>
+        <name>Remaining_Grant_Ceiling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining IA Ceiling --></label>
+        <name>Remaining_IA_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the Royalty &apos;Fee/Rate&apos;. --></help>
+        <label><!-- Royalty Fee/Rate --></label>
+        <name>Royalty_Fee_Rate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checked if the vendor is a small business. --></help>
+        <label><!-- Small Business Contract? --></label>
+        <name>Small_Business_Contract__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Agreement Status --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation><!-- Assigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>At Signature</masterLabel>
+            <translation><!-- At Signature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Created</masterLabel>
+            <translation><!-- Created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Pursued</masterLabel>
+            <translation><!-- Not Pursued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OGC Concurrence</masterLabel>
+            <translation><!-- OGC Concurrence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OGC review</masterLabel>
+            <translation><!-- OGC review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out for Sign</masterLabel>
+            <translation><!-- Out for Sign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review in process</masterLabel>
+            <translation><!-- Review in process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signature Prep</masterLabel>
+            <translation><!-- Signature Prep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signed</masterLabel>
+            <translation><!-- Signed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terminated</masterLabel>
+            <translation><!-- Terminated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Termination date of the EPA Agreement. --></help>
+        <label><!-- Termination Date --></label>
+        <name>Termination_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Research Title up to 255 characters --></help>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total EPA Inventor Amount --></label>
+        <name>Total_EPA_Inventor_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Lab / Office Amount --></label>
+        <name>Total_Lab_Office_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Ordered --></label>
+        <name>Total_Ordered__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Royalties Amount --></help>
+        <label><!-- Total Royalties Amount --></label>
+        <name>Total_Royalties__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total partner contribution --></label>
+        <name>Total_partner_contribution__c</name>
+    </fields>
+    <fields>
+        <label><!-- USTR Completed? --></label>
+        <name>USTR_Completed__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- USTR Needed? --></label>
+        <name>USTR_Needed__c</name>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter &apos;Up-Front Fee&apos; for the EPA license. --></help>
+        <label><!-- Up-Front Fee --></label>
+        <name>Up_Front_Fee__c</name>
+    </fields>
+    <fields>
+        <help><!-- Referenced from the Vendor Record reference (will not calculate until after the record is saved). --></help>
+        <label><!-- Vendor Name --></label>
+        <name>Vendor_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Record --></label>
+        <lookupFilter>
+            <errorMessage><!-- Vendor lookup entry does not exist or does not match filter criteria. --></errorMessage>
+        </lookupFilter>
+        <name>Vendor_Record__c</name>
+        <relationshipLabel><!-- DCR EPA Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Vendor --></label>
+        <lookupFilter>
+            <errorMessage><!-- Vendor lookup entry does not exist or does not match filter criteria. --></errorMessage>
+        </lookupFilter>
+        <name>Vendor__c</name>
+        <relationshipLabel><!-- DCR EPA Agreements --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>EPA Agreement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>EPA Agreements</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>DCR - Contract Funding Period</layout>
+        <sections>
+            <label><!-- Contacts --></label>
+            <section>Contacts</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Overview --></label>
+            <section>Contract Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DCR Agreement Layout</layout>
+        <sections>
+            <label><!-- Contacts --></label>
+            <section>Contacts</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Overview --></label>
+            <section>Contract Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DCR Contract Layout</layout>
+        <sections>
+            <label><!-- Contacts --></label>
+            <section>Contacts</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Overview --></label>
+            <section>Contract Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DCR Grant Layout</layout>
+        <sections>
+            <label><!-- Contacts --></label>
+            <section>Contacts</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Overview --></label>
+            <section>Contract Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DCR IA Layout</layout>
+        <sections>
+            <label><!-- Contacts --></label>
+            <section>Contacts</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Overview --></label>
+            <section>Contract Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FTTA Agreement Layout</layout>
+        <sections>
+            <label><!-- Benefits --></label>
+            <section>Benefits</section>
+        </sections>
+        <sections>
+            <label><!-- Budget --></label>
+            <section>Budget</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Research Information --></label>
+            <section>Research Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FTTA License Layout</layout>
+        <sections>
+            <label><!-- Benefits --></label>
+            <section>Benefits</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- General Information --></label>
+            <section>General Information</section>
+        </sections>
+        <sections>
+            <label><!-- License Information --></label>
+            <section>License Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Association/s --></label>
+        <name>Association_s</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Budget Section --></label>
+        <name>Budget_Section</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create a New Order --></label>
+        <name>Create_a_New_Order</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Funding Period --></label>
+        <name>New_Funding_Period</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- DCR Contract Record Form --></description>
+        <label><!-- DCR - Contract Vehicle --></label>
+        <name>DCR_Contract_Vehicle</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Captures separate funding periods on a contract. Child record to DCR - Contract Vehicle records. --></description>
+        <label><!-- DCR - Contract Vehicle Funding Period --></label>
+        <name>DCR_Contract_Vehicle_Funding_Period</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- DCR Grant Record Form --></description>
+        <label><!-- DCR - Grant --></label>
+        <name>DCR_Grant</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- DCR IA Record Form --></description>
+        <label><!-- DCR - IA --></label>
+        <name>DCR_IA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- FTTA Agreement/Amendment --></label>
+        <name>FTTA_EPA_Agreement</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- FTTA License --></description>
+        <label><!-- FTTA License --></label>
+        <name>FTTA_License</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please select the &apos;Date Signed&apos;,&apos;Hardcopy Recv&apos;d Date&apos; for the agreement/license. --></errorMessage>
+        <name>FTTA_Check_Dates_When_Active</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the &apos;OGC Attorney&apos;, &apos;OGC Review Needed&apos;, &apos;Lab contact&apos;, PM and PI for the agreement. --></errorMessage>
+        <name>FTTA_Check_OGC_Fields_When_Pending</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the &apos;Owner&apos; for the agreement/license. --></errorMessage>
+        <name>FTTA_Check_Owner_When_Assigned</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Agreement/License type. Only Amendment can be selected. --></errorMessage>
+        <name>FTTA_Validate_Amendment</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Amendments cannot be created for an amendment. --></errorMessage>
+        <name>FTTA_Validate_Amendment_to_Amendment</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the &apos;OGC Attorney&apos; for the license. --></errorMessage>
+        <name>License_Check_OGC_Fields_When_Pending</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- FTTA_User_Guide --></label>
+        <name>FTTA_User_Guide</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Static_Hot_Link_to_CDW_on_form --></label>
+        <name>Static_Hot_Link_to_CDW_on_form</name>
+    </webLinks>
+</CustomObjectTranslation>

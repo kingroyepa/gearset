@@ -1,0 +1,9 @@
+Hi,
+
+You have received an award in the amount of {!Award__c.OTS_Amount__c} from {!Award__c.RO_HR_Org2__c}. The award is planned to be paid out during pay period: {!Award__c.Pay_Period__c} ({!Award__c.ARTT_Paid_Date_Cash__c}).
+The Requesting Official provided the following justification for your award:
+"{!Award__c.Supervisor_Justification__c}"
+
+Please see your supervisor if you have any questions.
+
+Congratulations!

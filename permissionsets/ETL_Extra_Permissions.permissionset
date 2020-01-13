@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Add rights that only apply in prod, such as sandboxes.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ETL Extra Permissions</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>DataExport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageSandboxes</name>
+    </userPermissions>
+</PermissionSet>

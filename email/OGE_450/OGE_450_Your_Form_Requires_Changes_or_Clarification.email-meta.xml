@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OGE-450 Your Form Requires Changes or Clarification</name>
+    <style>none</style>
+    <subject>Your OGE 450 Form Requires Changes or Clarification</subject>
+    <textOnly>Dear {!Forms__c.Type_1_Owner_Contact__c},
+
+{!User.Name} has request changes or clarification to your e450 report as part of their review.
+
+Note from your reviewer: {!ApprovalRequest.Comments}
+
+When you open your report, requests for changes to line items will in the reportable information sections for each type of interest reported. These will appear in the fields alongside each line item. They may be requests for further information or corrections to incorrectly reported line items. Please access your report  going into the EPA Business Application Platform and selecting “My Forms”, make the requested changes or clarifications, and then re-submit your form.
+
+Questions
+If you have questions about the changes or clarifications being requested, then please check out the e450 training materials available in FedTalent. You may also contact the reviewer with questions directly.
+
+Troubleshooting
+If you have any technical issues with the application, then please contact e450 Tech Support.
+
+Thank you for filing your report and for your continued attention to ethics issues.
+
+Regards,
+Your EPA Ethics Officials</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

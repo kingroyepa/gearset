@@ -1,0 +1,8 @@
+An Application Approval form has been submitted. Please complete the pre-review process within two (2) business days of receipt of this message.<br><br>
+Application Approval Form Summary:<br><br>
+-	Application Name: {!Forms__c.Application_Name__c}<br>
+-	Application Owner: {!Forms__c.Application_Owner__c}<br>
+-	Form number: {!Forms__c.Name}<br>
+-	Application Description: {!Forms__c.Application_Description__c}<br>
+-	Approval Status: Pre-review<br><br>
+To access, review and approve the form use this link: {!Forms__c.Link} <br>

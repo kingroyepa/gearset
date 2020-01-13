@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Delivery Date by Vendor --></help>
+        <label><!-- Delivery Date --></label>
+        <name>Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Price --></label>
+        <name>Item_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Request --></label>
+        <name>Order_Request__c</name>
+        <relationshipLabel><!-- Order Request Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Cylinder Pick up Date by user. --></help>
+        <label><!-- Pickup Date --></label>
+        <name>Pickup_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Active? --></label>
+        <name>Product_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Code --></label>
+        <name>Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Description --></label>
+        <name>Product_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Unit Price --></label>
+        <name>Product_List_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Size --></label>
+        <name>Product_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Vendor --></label>
+        <name>Product_Vendor__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose a Product by searching for Product details --></help>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- eOrder Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Number of cylinders requested --></help>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- The current state of this item --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Added to 1900-63</masterLabel>
+            <translation><!-- Added to 1900-63 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Added to Order</masterLabel>
+            <translation><!-- Added to Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Order</masterLabel>
+            <translation><!-- New Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Delivered</masterLabel>
+            <translation><!-- Order Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Placed</masterLabel>
+            <translation><!-- Order Placed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Received</masterLabel>
+            <translation><!-- Order Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Request Approved</masterLabel>
+            <translation><!-- Request Approved --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Price --></label>
+        <name>Total_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Name --></label>
+        <name>Vendor_Name__c</name>
+        <relationshipLabel><!-- eOrder Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 1900-63 Generated Date --></label>
+        <name>X1900_63_Generated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1900-63 --></label>
+        <name>X1900_63__c</name>
+    </fields>
+    <fields>
+        <label><!-- eOrder --></label>
+        <name>eOrder__c</name>
+        <relationshipLabel><!-- eOrder Items --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>eOrder Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>eOrder Items</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>GAS eOrder Item Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- GAS Aquisition System --></description>
+        <label><!-- GAS eOrder Item --></label>
+        <name>GAS_eOrder_Item</name>
+    </recordTypes>
+</CustomObjectTranslation>

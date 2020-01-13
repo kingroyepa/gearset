@@ -1,0 +1,5 @@
+Hello,
+
+The following Purchase Card Provisioning request, {!Forms__c.RecordType}, has been approved by Approver 1. The request has now been routed to Approver 2 for review.
+
+Please click on the following link to view additional details: {!Forms__c.Link}

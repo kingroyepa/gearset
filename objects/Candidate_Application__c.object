@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayouts>
+        <fullName>Candidate_Package_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Candidate__c</fields>
+        <fields>Status__c</fields>
+        <label>Candidate Package Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>LOI_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Candidate__c</fields>
+        <fields>Status__c</fields>
+        <label>LOI Compact Layout</label>
+    </compactLayouts>
+    <fields>
+        <fullName>Availability_statements_from_four_Ad_hoc__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Must be available for teleconference during planned time frame, but do not ask them to reserve the week. If they are selected to serve, they will be contacted by the TQB Coordinator shortly after the due date. (Use attachment F‐2.)</inlineHelpText>
+        <label>Availability statements from four Ad hoc</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Biosketches_CVs_for_four_Ad__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Biosketches/Abbreviated CVs for four Ad hocs.</inlineHelpText>
+        <label>Biosketches/CVs for four Ad hocs. Ad</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Candidate_Package_Finalized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Candidate Package Finalized, TQB, 8.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This box will be checked it the Final Candidate Package has been uploaded to the record.</inlineHelpText>
+        <label>Candidate Package Finalized</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Candidate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Candidate</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Candidate Applications (Requestor)</relationshipLabel>
+        <relationshipName>Candidate_Applications5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Candidate_s_CV_and_Bi__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Candidate’s Curriculum Vitae (CV) and Bibliography (See attachment B for format). Please use the suggested format.</inlineHelpText>
+        <label>Candidate’s CV and Bibliography</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Candidate_s_Essay_with_Responses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB Application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Candidate’s Essay (5-10 pages) with Responses to 4 (Research, Expert or Development) Evaluation Questions found in appropriate Appendix of ORD TQB Policy. (Questions in Appendix D, E or F.)</inlineHelpText>
+        <label>Candidate’s Essay with Responses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Current_GS_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Current GS Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>GS 13</fullName>
+                    <default>false</default>
+                    <label>GS 13</label>
+                </value>
+                <value>
+                    <fullName>GS 14</fullName>
+                    <default>false</default>
+                    <label>GS 14</label>
+                </value>
+                <value>
+                    <fullName>GS 15</fullName>
+                    <default>false</default>
+                    <label>GS 15</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Current_Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Region 1</fullName>
+                    <default>false</default>
+                    <label>Region 1</label>
+                </value>
+                <value>
+                    <fullName>Region 2</fullName>
+                    <default>false</default>
+                    <label>Region 2</label>
+                </value>
+                <value>
+                    <fullName>Region 3</fullName>
+                    <default>false</default>
+                    <label>Region 3</label>
+                </value>
+                <value>
+                    <fullName>Region 4</fullName>
+                    <default>false</default>
+                    <label>Region 4</label>
+                </value>
+                <value>
+                    <fullName>Region 5</fullName>
+                    <default>false</default>
+                    <label>Region 5</label>
+                </value>
+                <value>
+                    <fullName>Region 6</fullName>
+                    <default>false</default>
+                    <label>Region 6</label>
+                </value>
+                <value>
+                    <fullName>Region 7</fullName>
+                    <default>false</default>
+                    <label>Region 7</label>
+                </value>
+                <value>
+                    <fullName>Region 8</fullName>
+                    <default>false</default>
+                    <label>Region 8</label>
+                </value>
+                <value>
+                    <fullName>Region 9</fullName>
+                    <default>false</default>
+                    <label>Region 9</label>
+                </value>
+                <value>
+                    <fullName>Region 10</fullName>
+                    <default>false</default>
+                    <label>Region 10</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EAS_Input_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>EAS Input Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Final_Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Hidden field to be checked after final approved. Used for the validation rule to allow TQB Coordinators to edit but nobody else.</description>
+        <externalId>false</externalId>
+        <label>Final Approved?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Final_Promoton_Date__c</fullName>
+        <description>TQB Application.</description>
+        <externalId>false</externalId>
+        <label>Final Promotion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Line_Supervisor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>First Line Supervisor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Include_the_3_letters__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Include the 3 letters in this package before sending to TQB Counselor. (Each letter must be signed.) Do not submit more than 3 letters.</inlineHelpText>
+        <label>Include the 3 letters</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Intended_Track__c</fullName>
+        <externalId>false</externalId>
+        <label>Intended Track</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Development</fullName>
+                    <default>false</default>
+                    <label>Development</label>
+                </value>
+                <value>
+                    <fullName>Research</fullName>
+                    <default>false</default>
+                    <label>Research</label>
+                </value>
+                <value>
+                    <fullName>Expert</fullName>
+                    <default>false</default>
+                    <label>Expert</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>L_C_O_Director__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>L/C/O Director</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications9</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>List_of_5_References_and_5_Ad_hocs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB Checklist.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of 5 References and 5 Ad hocs. (Use Attachment F as a working document)
+NOTE: Candidates must not contact potential references or ad hocs. Ad
+hocs must meet conflict of interest (COI), criteria while letter writers do
+not.</inlineHelpText>
+        <label>List of 5 References and 5 Ad hocs</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>List_of_Major_Scientific_Engineering_Tec__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of Major Scientific/Engineering/Technical Contributions (Other than publications; may be patents, leadership organizing Agency meetings, taskforces, committees, or workgroups, major awards, officers, advisory and editorial boards, etc.).</inlineHelpText>
+        <label>List of Major Contributions</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>New_Position_Description_PD__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <label>New Position Description (PD)</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Nomination_of_4_Ad_hoc_Members__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Nomination of 4 Adhoc Members. May be from the list in # 3 above, or may be different. If changes are made, ensure that Adhocs meet COI criteria and revise table in #3 above.Use Attachment F to request Adhocs’ participation, but don't include in package.</inlineHelpText>
+        <label>Nomination of 4 Ad hoc Members</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ORD_Rep_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of ORD Representative.</inlineHelpText>
+        <label>ORD Rep</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications7</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ORD_Rep__c</fullName>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the ORD representative.</inlineHelpText>
+        <label>ORD Rep</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Package_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Package Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Status 1</fullName>
+                    <default>false</default>
+                    <label>Status 1</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Panel_Member_1_Ad_Hoc__c</fullName>
+        <externalId>false</externalId>
+        <label>Panel Member 1 (Ad-Hoc)</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Panel_Member_2_Ad_Hoc__c</fullName>
+        <externalId>false</externalId>
+        <label>Panel Member 2 (Ad-Hoc)</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Panel_Recomendation__c</fullName>
+        <externalId>false</externalId>
+        <label>Panel Recomendation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Permanent_Organization__c</fullName>
+        <externalId>false</externalId>
+        <label>Permanent Organization</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>National Health and Environmental Effects Research Laboratory</fullName>
+                    <default>false</default>
+                    <label>National Health and Environmental Effects Research Laboratory</label>
+                </value>
+                <value>
+                    <fullName>National Exposure Research Lab</fullName>
+                    <default>false</default>
+                    <label>National Exposure Research Lab</label>
+                </value>
+                <value>
+                    <fullName>National Risk Management Research Lab</fullName>
+                    <default>false</default>
+                    <label>National Risk Management Research Lab</label>
+                </value>
+                <value>
+                    <fullName>National Center for Environmental Assessment</fullName>
+                    <default>false</default>
+                    <label>National Center for Environmental Assessment</label>
+                </value>
+                <value>
+                    <fullName>National Center for Computational Toxicology</fullName>
+                    <default>false</default>
+                    <label>National Center for Computational Toxicology</label>
+                </value>
+                <value>
+                    <fullName>National Center for Environmental Research</fullName>
+                    <default>false</default>
+                    <label>National Center for Environmental Research</label>
+                </value>
+                <value>
+                    <fullName>National Homeland Security Research Center</fullName>
+                    <default>false</default>
+                    <label>National Homeland Security Research Center</label>
+                </value>
+                <value>
+                    <fullName>Center for Environmental Measurement and Modeling (CEMM)</fullName>
+                    <default>false</default>
+                    <label>Center for Environmental Measurement and Modeling (CEMM)</label>
+                </value>
+                <value>
+                    <fullName>Center for Computational Toxicology and Exposure (CCTE)</fullName>
+                    <default>false</default>
+                    <label>Center for Computational Toxicology and Exposure (CCTE)</label>
+                </value>
+                <value>
+                    <fullName>Center for Public Health and Environmental Assessment (CPHEA)</fullName>
+                    <default>false</default>
+                    <label>Center for Public Health and Environmental Assessment (CPHEA)</label>
+                </value>
+                <value>
+                    <fullName>Center for Environmental Solutions and Emergency Response (CESER)</fullName>
+                    <default>false</default>
+                    <label>Center for Environmental Solutions and Emergency Response (CESER)</label>
+                </value>
+                <value>
+                    <fullName>Homeland Security</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Homeland Security</label>
+                </value>
+                <value>
+                    <fullName>Immediate Office of the Assistant Administrator</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Immediate Office of the Assistant Administrator</label>
+                </value>
+                <value>
+                    <fullName>National Research Programs</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>National Research Programs</label>
+                </value>
+                <value>
+                    <fullName>Office of Administration and Research Support</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Office of Administration and Research Support</label>
+                </value>
+                <value>
+                    <fullName>Office of Program Accountability and Resource Management</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Office of Program Accountability and Resource Management</label>
+                </value>
+                <value>
+                    <fullName>Office of Science Information Management</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Office of Science Information Management</label>
+                </value>
+                <value>
+                    <fullName>Office of Science Policy</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Office of Science Policy</label>
+                </value>
+                <value>
+                    <fullName>Office of the Science Adviser</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Office of the Science Adviser</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ProgramRegion_Representative__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Program/Region Representative</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Promotion_Decision__c</fullName>
+        <externalId>false</externalId>
+        <label>Promotion Decision</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Promotion_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Promotion Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Second_Line_Supervisor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Second Line Supervisor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Selection_request_of_3_outside_experts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selection and request of 3 outside experts (from list in # 3 above) to write letters of reference.</inlineHelpText>
+        <label>Selection &amp; request of 3 outside experts</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Signed_COI_Statements_from_4_Ad_hocs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Signed COI Statements from 4 Ad hocs. See Notice below* (Use attachment F‐1). (Requires signature.)</inlineHelpText>
+        <label>Signed COI Statements from 4 Ad hocs</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>true</default>
+                    <label>Not Started</label>
+                </value>
+                <value>
+                    <fullName>LOI Approved</fullName>
+                    <default>false</default>
+                    <label>LOI Approved</label>
+                </value>
+                <value>
+                    <fullName>Awaiting 1st Line Supervisor Approval</fullName>
+                    <default>false</default>
+                    <label>Awaiting 1st Line Supervisor Approval</label>
+                </value>
+                <value>
+                    <fullName>Awaiting 2nd Line Supervisor Approval</fullName>
+                    <default>false</default>
+                    <label>Awaiting 2nd Line Supervisor Approval</label>
+                </value>
+                <value>
+                    <fullName>Awaiting TQB Coordinator Approval</fullName>
+                    <default>false</default>
+                    <label>Awaiting TQB Coordinator Approval</label>
+                </value>
+                <value>
+                    <fullName>Awaiting TQB Chair Approval</fullName>
+                    <default>false</default>
+                    <label>Awaiting TQB Chair Approval</label>
+                </value>
+                <value>
+                    <fullName>TQB Coordinator Review</fullName>
+                    <default>false</default>
+                    <label>TQB Coordinator Review</label>
+                </value>
+                <value>
+                    <fullName>TQB Scheduled</fullName>
+                    <default>false</default>
+                    <label>TQB Scheduled</label>
+                </value>
+                <value>
+                    <fullName>TQB Held</fullName>
+                    <default>false</default>
+                    <label>TQB Held</label>
+                </value>
+                <value>
+                    <fullName>Recalled</fullName>
+                    <default>false</default>
+                    <label>Recalled</label>
+                </value>
+                <value>
+                    <fullName>Incomplete</fullName>
+                    <default>false</default>
+                    <label>Incomplete</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Approved By 1st Line Supervisor</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Approved By 1st Line Supervisor</label>
+                </value>
+                <value>
+                    <fullName>Approved By 2nd Line Supervisor</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Approved By 2nd Line Supervisor</label>
+                </value>
+                <value>
+                    <fullName>Approved_by_TQB_Chair</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Approved by TQB Chair</label>
+                </value>
+                <value>
+                    <fullName>Awaiting L/C/O Approval</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Awaiting L/C/O Approval</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>LOI Submitted</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LOI Submitted</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Returned</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Returned</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>TQB Completed</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>TQB Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TQB_Chair_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>TQB Chair Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TQB_Chair_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>TQB Chair Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>false</default>
+                    <label>Not Started</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TQB_Chair__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TQB Chair</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TQB_Coordinator_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TQB Coordinator 2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications6</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TQB_Coordinator__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TQB Coordinator</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TQB_Peer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TQB Peer</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Candidate_Applications4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TQB_Scheduled_Date__c</fullName>
+        <description>TQB Application.</description>
+        <externalId>false</externalId>
+        <label>TQB Scheduled Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Transmittal_and_certification_memo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Transmittal and certification memo from second‐level supervisor, through management to appropriate Associate Director.
+(Use Attachment G.) (Requires signature.)</inlineHelpText>
+        <label>Transmittal and certification memo</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>X3_5_Recent_Publications_Work_Products__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TQB application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>3‐5 Recent Publications/Work Products.
+Coversheet describing the significance of the work is optional, but highly recommended. If candidate is not first author, please describe the candidate’s role in the work.</inlineHelpText>
+        <label>3‐5 Recent Publications/Work Products</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Candidate Application</label>
+    <nameField>
+        <displayFormat>TQBR-{00000000}</displayFormat>
+        <label>Candidate Application ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Candidate Applications</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Candidate__c</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>TQB_Candidates_with_HR_Org</fullName>
+        <columns>NAME</columns>
+        <columns>Candidate__c</columns>
+        <columns>Permanent_Organization__c</columns>
+        <columns>Current_GS_Level__c</columns>
+        <columns>Status__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>TQB Candidates</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Candidate_Package</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>Candidate_Package_Compact_Layout</compactLayoutAssignment>
+        <label>Candidate Application</label>
+        <picklistValues>
+            <picklist>Current_GS_Level__c</picklist>
+            <values>
+                <fullName>GS 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GS 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GS 15</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Region__c</picklist>
+            <values>
+                <fullName>Region 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intended_Track__c</picklist>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Research</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Package_Status__c</picklist>
+            <values>
+                <fullName>Status 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Panel_Recomendation__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Permanent_Organization__c</picklist>
+            <values>
+                <fullName>Center for Computational Toxicology and Exposure %28CCTE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Environmental Measurement and Modeling %28CEMM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Environmental Solutions and Emergency Response %28CESER%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Public Health and Environmental Assessment %28CPHEA%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Center for Computational Toxicology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Center for Environmental Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Center for Environmental Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Exposure Research Lab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Health and Environmental Effects Research Laboratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Homeland Security Research Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Risk Management Research Lab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promotion_Decision__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Awaiting 1st Line Supervisor Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting 2nd Line Supervisor Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting TQB Chair Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting TQB Coordinator Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOI Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TQB Coordinator Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TQB Held</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TQB Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TQB_Chair_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Candidate_Submission</fullName>
+        <active>true</active>
+        <description>For hiding Submit for Approval button after the 2nd  line supervisor has approved</description>
+        <label>Candidate Submission</label>
+        <picklistValues>
+            <picklist>Current_GS_Level__c</picklist>
+            <values>
+                <fullName>GS 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GS 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GS 15</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Region__c</picklist>
+            <values>
+                <fullName>Region 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intended_Track__c</picklist>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Research</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Package_Status__c</picklist>
+            <values>
+                <fullName>Status 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Panel_Recomendation__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Permanent_Organization__c</picklist>
+            <values>
+                <fullName>National Center for Computational Toxicology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Center for Environmental Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Center for Environmental Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Exposure Research Lab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Health and Environmental Effects Research Laboratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Homeland Security Research Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Risk Management Research Lab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promotion_Decision__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Awaiting 1st Line Supervisor Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting 2nd Line Supervisor Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting TQB Chair Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting TQB Coordinator Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOI Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TQB Coordinator Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TQB Held</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TQB Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TQB_Chair_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Letter_of_Intent_LOI</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>LOI_Compact_Layout</compactLayoutAssignment>
+        <label>Letter of Intent (LOI)</label>
+        <picklistValues>
+            <picklist>Current_GS_Level__c</picklist>
+            <values>
+                <fullName>GS 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GS 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GS 15</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Region__c</picklist>
+            <values>
+                <fullName>Region 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Region 9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intended_Track__c</picklist>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Research</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Package_Status__c</picklist>
+            <values>
+                <fullName>Status 1</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Panel_Recomendation__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Permanent_Organization__c</picklist>
+            <values>
+                <fullName>Center for Computational Toxicology and Exposure %28CCTE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Environmental Measurement and Modeling %28CEMM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Environmental Solutions and Emergency Response %28CESER%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Public Health and Environmental Assessment %28CPHEA%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Center for Computational Toxicology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Center for Environmental Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Center for Environmental Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Exposure Research Lab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Health and Environmental Effects Research Laboratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Homeland Security Research Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Risk Management Research Lab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Promotion_Decision__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Awaiting 1st Line Supervisor Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOI Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TQB_Chair_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingReasons>
+        <fullName>TQB_Share_TQB_Record_with_Approver_1__c</fullName>
+        <label>TQB Share TQB Record with Approver 1</label>
+    </sharingReasons>
+    <sharingReasons>
+        <fullName>TQB_Share_TQB_Record_with_Approver_2__c</fullName>
+        <label>TQB Share TQB Record with Approver 2</label>
+    </sharingReasons>
+    <sharingReasons>
+        <fullName>TQB_Share_with_TQB_Chair__c</fullName>
+        <label>TQB Share with TQB Chair</label>
+    </sharingReasons>
+    <sharingReasons>
+        <fullName>TQB_Share_with_TQB_Coordinator_1__c</fullName>
+        <label>TQB Share with TQB Coordinator 1</label>
+    </sharingReasons>
+    <sharingReasons>
+        <fullName>TQB_Share_with_TQB_Coordinator_2__c</fullName>
+        <label>TQB Share with TQB Coordinator 2</label>
+    </sharingReasons>
+    <validationRules>
+        <fullName>Coordinator_Edit_Approved_Record_Rule</fullName>
+        <active>true</active>
+        <description>Only Coordinators with super use permission set can edit records that have been final approved.</description>
+        <errorConditionFormula>AND(
+Final_Approved__c,
+NOT(( $Permission.TQB_Edit_Approved_Records ) || ($Profile.Name="System Administrator") || $User.Alias="ETL.BAP"
+)
+)</errorConditionFormula>
+        <errorMessage>A TQB Candidate Package cannot be edited once it has been approved.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TQB_Check_Promotion_Effective_Date</fullName>
+        <active>false</active>
+        <description>TQB Application. Checks if the promotion effective date is entered before the approval.</description>
+        <errorConditionFormula>AND(
+ RecordType.DeveloperName ='Candidate_Package',
+ TEXT(Status__c)&lt;&gt; 'Approved_by_TQB_Chair',
+ TEXT(Status__c)&lt;&gt; 'Completed',
+ NOT(ISBLANK( Promotion_Effective_Date__c )) 
+)</errorConditionFormula>
+        <errorMessage>Promotion Effective Date cannot be entered  before application is approved.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TQB_Check_TQB_Scheduled_Date</fullName>
+        <active>true</active>
+        <description>TQB Application. Checks if the TQB Scheduled Date is entered before the approval.</description>
+        <errorConditionFormula>AND(
+ RecordType.DeveloperName ='Candidate_Package',
+ TEXT(Status__c)&lt;&gt; 'Approved_by_TQB_Chair',
+ TEXT(Status__c)&lt;&gt; 'TQB Scheduled',
+ TEXT(Status__c)&lt;&gt; 'TQB Held',
+ TEXT(Status__c)&lt;&gt; 'Rejected',
+ TEXT(Status__c)&lt;&gt; 'Recalled',
+ TEXT(Status__c)&lt;&gt; 'Completed',
+ NOT(ISBLANK( TQB_Scheduled_Date__c )) 
+)</errorConditionFormula>
+        <errorDisplayField>TQB_Scheduled_Date__c</errorDisplayField>
+        <errorMessage>TQB Scheduled Date is entered after the application is approved by TQB chair,</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TQB_Lock_Record_For_Editing_On_Complete</fullName>
+        <active>true</active>
+        <description>TQB Application. Locks the record for editing for everyone except system administrator upon status complete.</description>
+        <errorConditionFormula>AND(
+ $Profile.Name &lt;&gt; 'System Administrator',
+ $User.Alias &lt;&gt; 'ETL.BAP',
+ RecordType.DeveloperName ='Candidate_Package',
+ TEXT(Status__c)= 'Completed',
+OR(
+ ISCHANGED( Candidate__c ), 
+ ISCHANGED( Current_GS_Level__c ), 
+ ISCHANGED( Permanent_Organization__c ), 
+ ISCHANGED( Intended_Track__c ), 
+ ISCHANGED( Status__c ), 
+ ISCHANGED( Promotion_Effective_Date__c ), 
+ ISCHANGED( Comments__c ), 
+ ISCHANGED( First_Line_Supervisor__c ), 
+ ISCHANGED( Second_Line_Supervisor__c ), 
+ ISCHANGED( TQB_Chair__c ), 
+ ISCHANGED( TQB_Chair_Comments__c ), 
+ ISCHANGED( ProgramRegion_Representative__c ), 
+ISCHANGED(  TQB_Coordinator__c ), 
+ ISCHANGED(  TQB_Coordinator_2__c ), 
+ ISCHANGED(  TQB_Peer__c ), 
+ ISCHANGED(  Panel_Member_1_Ad_Hoc__c ), 
+ ISCHANGED(  Panel_Member_2_Ad_Hoc__c ), 
+ ISCHANGED(  Promotion_Decision__c ), 
+ ISCHANGED(  Panel_Recomendation__c )
+)
+)</errorConditionFormula>
+        <errorMessage>The application is locked from editing.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Generate_Pdf</fullName>
+        <availability>online</availability>
+        <description>Generates PDF document with candidate package details.</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Generate Pdf</masterLabel>
+        <openType>newWindow</openType>
+        <page>TQB_GeneratePdf</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>SequenceNumber__c</fullName>
+        <description>FTTA Application. It holds the MIn,Max and current sequence for agreements, licenses and patents.</description>
+        <externalId>false</externalId>
+        <label>SequenceNumber</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <description>FTTA Application. This custom setting is used for ftta agreements, licenses and patents to auto generate Epa file number sequence.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>EPAFileNumberCS</label>
+    <visibility>Public</visibility>
+</CustomObject>

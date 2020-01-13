@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Public Notice Submission Confirmation to RPM</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Public Notice Posting Request Forms Submission__ Confirmation</name>
+    <style>none</style>
+    <subject>BAP Forms- Public Notice Request Submission Confirmation for {!Forms__c.Public_Notice_Title__c}</subject>
+    <textOnly>Your submission of BAP Forms Public Notice Request
+was successfully submitted for Supervisor Review
+
+{!Forms__c.Public_Notice_Title__c}
+
+With Target Publication Date  {!Forms__c.Publication_Date__c}
+
+
+To access, review, the form use this link: {!Forms__c.Link}
+
+Record ID: {!Forms__c.Form_Record_Name__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

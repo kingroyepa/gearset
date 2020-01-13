@@ -1,0 +1,12 @@
+Your Application Approval form was rejected by [insert party that rejected the form (this could be the pre-Reviewer, Local SITL or the SITL Group)].<br><br>
+Please review the form to determine the next action.<br><br>
+Application Approval Form Summary:<br><br>
+- Application Name: {!Forms__c.Application_Name__c}<br>
+- Application Owner: {!Forms__c.Application_Owner__c}<br>
+- Form number: {!Forms__c.Name}<br>
+- Application Description: {!Forms__c.Application_Description__c}<br>
+- Comments: {!Forms__c.Comments_1__c}<br>
+- Approval Status: SITL Group review<br>
+- Modification Date: {!Forms__c.LastModifiedDate}<br>
+- Modified By: {!Forms__c.LastModifiedBy}<br><br>
+To access, review, and approve the form use this link: {!Forms__c.Link} <br>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BAP Forms Generic Submission Confirmation</name>
+    <style>none</style>
+    <subject>BAP Forms Submission Confirmation:  {!Forms__c.Form_Type_Name__c} - Record ID: {!Forms__c.Form_Record_Name__c}</subject>
+    <textOnly>We have received your submission of Business Automation Platform (BAP) Forms {!Forms__c.Form_Type_Name__c}!
+
+Form Record ID: {!Forms__c.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,20 @@
+A new request, {!Forms__c.Form_Type__c}: "{!Forms__c.Name__c}", has been submitted for your approval.<br>
+<br>
+Owner: {!Forms__c.Submitted_on_Behalf_Of__c}<br>
+Sandbox Name: {!Forms__c.Name__c}<br>
+Submitted on behalf of: {!Forms__c.Submitted_on_Behalf_Of__c}<br>
+Quantity: {!Forms__c.Quantity__c}<br>
+Type: {!Forms__c.Form_Type__c}<br>
+Form Status: {!Forms__c.Form_Status__c}<br>
+Request Created By: {!Forms__c.CreatedBy}<br>
+<br>
+Description:<br>
+{!Forms__c.comments__c}<br>
+<br>
+Approver Info: Approved By: {!ApprovalRequest.Process_Approver}<br>
+Approver Comments: {!ApprovalRequest.Comments}<br>
+<br>
+Please click <a href="{!ApprovalRequest.External_URL}">here</a> to be taken to the form.<br>
+<br>
+Approve, Reject, and Reassign buttons are at the top right of the Approval Tab.<br>
+<br><br>

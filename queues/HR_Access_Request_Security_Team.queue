@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HR Access Request Security Team</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>HR_Access_Request_Security_Team</publicGroup>
+        </publicGroups>
+        <users>
+            <user>woodard.cynthia2@epa.gov</user>
+            <user>freeman.patricia2@epa.gov</user>
+            <user>kirkland.william2@epa.gov</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Forms__c</sobjectType>
+    </queueSobject>
+</Queue>

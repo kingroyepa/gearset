@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Purchase Card Email Template – Notify Approver</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Purchase Card Email Template – Notify Approver</name>
+    <style>none</style>
+    <subject>New Purchase Card Provisioning Request:{!Forms__c.Purchase_Card_Request_Type__c} for {!Forms__c.Cardholder_AO_Name__c}</subject>
+    <textOnly>A new purchase card provisioning request for {!Forms__c.Purchase_Card_Request_Type__c}  has been submitted for {!Forms__c.Cardholder_AO_Name__c} and it is waiting for your approval.
+
+Please click the following link to access the form for approval. {!Forms__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

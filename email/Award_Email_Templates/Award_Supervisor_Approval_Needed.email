@@ -1,0 +1,12 @@
+<p>Hi,</p>
+
+<p>An employee award needs your approval. Please visit this link to log into the BAP approve or deny the request: <a href={!ApprovalRequest.Internal_URL}>approval request</a>.</p>
+
+<p>Please contact your BAP administrator if you have any questions.</p>
+
+<p><u>Information about the award awaiting approval:</u><br/>
+Cash Award Amount: {!Award__c.Cash_Award_Amount__c} <br />
+Total Cash Awards this Fiscal Year: {!Award__c.Total_Award_Amount_on_Submit__c} <br />
+Time Off Award Amount: {!Award__c.Time_Off_Amount__c} <br />
+Total Time Off this Calendar Year: {!Award__c.Total_Time_Off_on_Submit__c}
+</p>

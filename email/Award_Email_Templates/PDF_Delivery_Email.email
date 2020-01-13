@@ -1,0 +1,3 @@
+Requesting Official Org: {!Award__c.RO_HR_Org2__c}
+Awardee: {!Award__c.RO_HR_Org2__c}
+Award Id: {!Award__c.Id}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Has_Multiple_Line_Item_Record_Types__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Checkbox to indicate Form Record Type has multiple corresponding Line Item Record Types. John Jenkins. 2019.04.05.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Has Multiple Line Item Record Types</label>
+        <type>Checkbox</type>
+    </fields>
+    <description>Records to identify which Forms have Line Items with multiple record types.  John Jenkins. 2019.04.05.</description>
+    <label>Line Item with Multiple RTs</label>
+    <pluralLabel>Line Items with Multiple RTs</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

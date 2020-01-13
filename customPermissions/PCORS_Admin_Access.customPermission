@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>PCORS application. Created to provide ability for the super users to  edit the completed record.</description>
+    <label>PCORS Admin Access</label>
+</CustomPermission>

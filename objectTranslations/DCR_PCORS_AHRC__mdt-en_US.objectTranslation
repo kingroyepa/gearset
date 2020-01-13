@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- DCR AHRC --></label>
+        <name>DCR_AHRC__c</name>
+        <picklistValues>
+            <masterLabel>561</masterLabel>
+            <translation><!-- 561 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>56A - IO-DC</masterLabel>
+            <translation><!-- 56A - IO-DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>56C - CD</masterLabel>
+            <translation><!-- 56C - CD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>56D - TATD</masterLabel>
+            <translation><!-- 56D - TATD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>56E - IO-AA</masterLabel>
+            <translation><!-- 56E - IO-AA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>56F - TCD</masterLabel>
+            <translation><!-- 56F - TCD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>56H - ASD</masterLabel>
+            <translation><!-- 56H - ASD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58 - OAP</masterLabel>
+            <translation><!-- 58 - OAP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58A - IO</masterLabel>
+            <translation><!-- 58A - IO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58C - SPD</masterLabel>
+            <translation><!-- 58C - SPD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58D - CAMD</masterLabel>
+            <translation><!-- 58D - CAMD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58E - CPPD</masterLabel>
+            <translation><!-- 58E - CPPD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58F - CCD</masterLabel>
+            <translation><!-- 58F - CCD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PCORS AHRC --></label>
+        <name>PCORS_AHRC__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>DCR - PCORS AHRC</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DCR - PCORS AHRC</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

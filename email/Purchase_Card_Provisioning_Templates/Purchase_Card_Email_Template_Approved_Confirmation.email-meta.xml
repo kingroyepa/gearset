@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Purchase Card Email Template - Approved Confirmation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Purchase Card Email Template - Approved Confirmation</name>
+    <style>none</style>
+    <subject>Purchase card request is approved</subject>
+    <textOnly>Hello,
+
+Congratulations! Your Purchase Card request has been approved by all necessary approvers. The request has been sent to the Purchase Card Provisioning Team for processing.
+
+
+Please click on the following link to view additional details: {!Forms__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

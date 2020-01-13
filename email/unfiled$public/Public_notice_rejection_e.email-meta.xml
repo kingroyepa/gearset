@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Public Notice Post Request Rejection Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Public Notice Rejection Email</name>
+    <style>none</style>
+    <subject>BAP Forms Public Notice Request was Rejected in{!Forms__c.Approval_Step__c}</subject>
+    <textOnly>Your submission of BAP Forms Public Notice Posting Request for
+
+{!Forms__c.Public_Notice_Title__c}   was REJECTED by {!ApprovalRequest.Process_Assignee}  To access the form use this link: {!Forms__c.Link}
+Record ID {!Forms__c.Form_Record_Name__c} !
+
+Approver Comments: {!ApprovalRequest.Comments}
+
+Instructions for Submitter
+
+1. Scroll Down the Form Window to  Review
+2. To view complete approver history including comments:
+Select &quot;view all&quot; in Approval History Section
+3. Please address these comments by &quot;Select Edit Tab&quot; and
+Update the form and then &quot;Submit for Approval&quot;</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

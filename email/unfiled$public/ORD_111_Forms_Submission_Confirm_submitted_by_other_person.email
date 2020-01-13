@@ -1,0 +1,7 @@
+<p>
+An ORD-111 form has been prepared for your review by {!Forms__c.Form_Owner__c}!
+</p>
+
+<p>
+When you are ready, please go to https://forms.epa.gov. Then click on "My Forms" and look for the form with the Record ID {!Forms__c.Name}. Click "Open Form" and review the information prepared for you. Once complete, submit the form for approval using the Submit button on the form.
+</p>

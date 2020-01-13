@@ -1,0 +1,19 @@
+<p>
+An SF-182 form has been prepared for your review by {!Forms__c.Form_Owner__c}!
+</p>
+
+<p>
+When you are ready, please go to https://forms.epa.gov. Then click on "My Forms" and look for the form with the Record ID {!Forms__c.Name}. Click "Open Form" and review the information prepared for you. Once complete, submit the form for approval using the Submit button on the form.
+</p>
+
+<p>
+Below is some summary information from the form. For complete information, please access the form. </p>
+
+<p>
+<b>Record ID</b>: {!Forms__c.Name}<br>
+<b>Location of Training Site</b>: {!Forms__c.Location_of_Training_Site__c}<br>
+<b>Course Title</b>: {!Forms__c.Course_Title__c}<br>
+<b>Training Start Date</b>: {!Forms__c.Training_Start_Date__c}<br>
+<b>Training End Date</b>: {!Forms__c.Training_End_Date__c}<br>
+<b>Training Purpose Type</b>: {!Forms__c.Training_Purpose_Type__c}<br>
+<b>Training Objective</b>: {!Forms__c.Training_Objective__c}<br>

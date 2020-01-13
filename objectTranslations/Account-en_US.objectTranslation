@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Access</value>
+        </caseValues>
+        <name>account_access</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Access Level</value>
+        </caseValues>
+        <name>account_access_level</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Contact Role</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Contact Roles</value>
+        </caseValues>
+        <name>account_contact_role</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Creator</value>
+        </caseValues>
+        <name>account_creator</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Currency</value>
+        </caseValues>
+        <name>account_currency</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Description</value>
+        </caseValues>
+        <name>account_description</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Detail Page</value>
+        </caseValues>
+        <name>account_detail_page</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Division</value>
+        </caseValues>
+        <name>account_division</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Edit</value>
+        </caseValues>
+        <name>account_edit</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Fax</value>
+        </caseValues>
+        <name>account_fax</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Field</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Fields</value>
+        </caseValues>
+        <name>account_field</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization General</value>
+        </caseValues>
+        <name>account_general</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Hierarchy</value>
+        </caseValues>
+        <name>account_hierarchy</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization History</value>
+        </caseValues>
+        <name>account_history</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization History Archive</value>
+        </caseValues>
+        <name>account_history_archive</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization History Report</value>
+        </caseValues>
+        <name>account_history_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization ID</value>
+        </caseValues>
+        <name>account_id</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Information</value>
+        </caseValues>
+        <name>account_information</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Name</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Names</value>
+        </caseValues>
+        <name>account_name</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Number</value>
+        </caseValues>
+        <name>account_number</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Owner</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Owners</value>
+        </caseValues>
+        <name>account_owner</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Owner Alias</value>
+        </caseValues>
+        <name>account_owner_alias</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Owner Report</value>
+        </caseValues>
+        <name>account_owner_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Owner Role</value>
+        </caseValues>
+        <name>account_owner_role</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Ownership</value>
+        </caseValues>
+        <name>account_ownership</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Phone</value>
+        </caseValues>
+        <name>account_phone</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Rating</value>
+        </caseValues>
+        <name>account_rating</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Record</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Records</value>
+        </caseValues>
+        <name>account_record</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Record Type</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Record Types</value>
+        </caseValues>
+        <name>account_record_type</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Report</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Reports</value>
+        </caseValues>
+        <name>account_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Sharing</value>
+        </caseValues>
+        <name>account_sharing</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Site</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Sites</value>
+        </caseValues>
+        <name>account_site</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Source</value>
+        </caseValues>
+        <name>account_source</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Stage ID</value>
+        </caseValues>
+        <name>account_stage_id</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Team</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Teams</value>
+        </caseValues>
+        <name>account_team</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Team Member</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Team Members</value>
+        </caseValues>
+        <name>account_team_member</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Team Member ID</value>
+        </caseValues>
+        <name>account_team_member_id</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Team Report</value>
+        </caseValues>
+        <name>account_team_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Territory</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Territories</value>
+        </caseValues>
+        <name>account_territory</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Tool</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Tools</value>
+        </caseValues>
+        <name>account_tool</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization Type</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Types</value>
+        </caseValues>
+        <name>account_type</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Organization View</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Organization Views</value>
+        </caseValues>
+        <name>account_view</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Parent Organization</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Parent Organizations</value>
+        </caseValues>
+        <name>parent_account</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Parent Organization Division</value>
+        </caseValues>
+        <name>parent_account_division</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Parent Organization ID</value>
+        </caseValues>
+        <name>parent_account_id</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Parent Organization Site</value>
+        </caseValues>
+        <name>parent_account_site</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Person Organization Record</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Person Organization Records</value>
+        </caseValues>
+        <name>person_account_record</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <help><!-- Active Vendors are CHECKED by default. --></help>
+        <label><!-- Active? --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Addresses --></label>
+        <name>Additional_Addresses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approver --></label>
+        <name>Approver__c</name>
+        <relationshipLabel><!-- Organizations (Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Identifies Assistant Approver responsible for Ethics advice &amp; approvals for the organization and all sub-organizations. --></help>
+        <label><!-- Assistant Deputy Ethics Official 1 --></label>
+        <name>Assistant_Deputy_Ethics_Official_1__c</name>
+        <relationshipLabel><!-- Organizations (Assistant Designated Ethics Official1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Identifies Assistant Approver responsible for Ethics advice &amp; approvals for the organization and all sub-organizations. --></help>
+        <label><!-- Assistant Deputy Ethics Official 2 --></label>
+        <name>Assistant_Deputy_Ethics_Official_2__c</name>
+        <relationshipLabel><!-- Organizations (Assistant Designated Ethics Official2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Code --></label>
+        <name>Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- County --></label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current User is Ethics Official --></label>
+        <name>Current_User_is_Ethics_Official__c</name>
+    </fields>
+    <fields>
+        <label><!-- DEO is Specially Designated --></label>
+        <name>DEO_is_Specially_Designated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted --></label>
+        <name>Deleted__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies Approver responsible for Ethics advice &amp; approvals for the organization and all sub-organizations. --></help>
+        <label><!-- Deputy Ethics Official --></label>
+        <name>Deputy_Ethics_Official__c</name>
+        <relationshipLabel><!-- Organizations (Designated Ethics Official) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- EPA Lean Management System (ELMS) Coordinator for the organization --></help>
+        <label><!-- ELMS Coordinator --></label>
+        <name>ELMS_Coordinator__c</name>
+        <relationshipLabel><!-- Organizations (ELMS Coordinator) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Record Id --></label>
+        <name>EPA_Agreement__c</name>
+        <relationshipLabel><!-- Collaborator/Partner --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please click on the link to go to the agreement. --></help>
+        <label><!-- EPA File # --></label>
+        <name>EPA_File__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foreign/Domestic --></label>
+        <name>Foreign_Domestic__c</name>
+        <picklistValues>
+            <masterLabel>Domestic</masterLabel>
+            <translation><!-- Domestic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International</masterLabel>
+            <translation><!-- International --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Used to set the Approval Process parameters for OGE-450 forms. --></help>
+        <label><!-- Intermediate Review Method --></label>
+        <name>Intermediate_Review_Method__c</name>
+        <picklistValues>
+            <masterLabel>1st Line Supervisor, ADEO, DEO</masterLabel>
+            <translation><!-- 1st Line Supervisor, ADEO, DEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1st Line Supervisor, DEO</masterLabel>
+            <translation><!-- 1st Line Supervisor, DEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2nd Line Supervisor, ADEO, DEO</masterLabel>
+            <translation><!-- 2nd Line Supervisor, ADEO, DEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2nd Line Supervisor, DEO</masterLabel>
+            <translation><!-- 2nd Line Supervisor, DEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADEO, DEO</masterLabel>
+            <translation><!-- ADEO, DEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEO Only</masterLabel>
+            <translation><!-- DEO Only --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Identifies approver for Application Approval form based on submitter&apos;s region/organization. --></help>
+        <label><!-- Local SIO --></label>
+        <name>Local_SIO__c</name>
+        <relationshipLabel><!-- Accounts (Local SIO) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Long Name --></label>
+        <name>Long_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lookup Tags --></label>
+        <name>Lookup_Tags__c</name>
+    </fields>
+    <fields>
+        <help><!-- Unofficial name, or nickname, of the organization used locally, e.g., within a region or program office --></help>
+        <label><!-- Organization Nickname --></label>
+        <name>Organization_Nickname__c</name>
+    </fields>
+    <fields>
+        <label><!-- PMO/RHRO --></label>
+        <name>PMO_RHRO__c</name>
+        <relationshipLabel><!-- Organizations (PMO/RHRO) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+        <relationshipLabel><!-- Organizations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>OA</masterLabel>
+            <translation><!-- OA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OAR</masterLabel>
+            <translation><!-- OAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OARM</masterLabel>
+            <translation><!-- OARM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OCFO</masterLabel>
+            <translation><!-- OCFO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OECA</masterLabel>
+            <translation><!-- OECA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEI</masterLabel>
+            <translation><!-- OEI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OGC</masterLabel>
+            <translation><!-- OGC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OIA</masterLabel>
+            <translation><!-- OIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OIG</masterLabel>
+            <translation><!-- OIG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPPTS</masterLabel>
+            <translation><!-- OPPTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORD</masterLabel>
+            <translation><!-- ORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OSWER</masterLabel>
+            <translation><!-- OSWER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OW</masterLabel>
+            <translation><!-- OW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 1</masterLabel>
+            <translation><!-- REG 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 10</masterLabel>
+            <translation><!-- REG 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 2</masterLabel>
+            <translation><!-- REG 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 3</masterLabel>
+            <translation><!-- REG 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 4</masterLabel>
+            <translation><!-- REG 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 5</masterLabel>
+            <translation><!-- REG 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 6</masterLabel>
+            <translation><!-- REG 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 7</masterLabel>
+            <translation><!-- REG 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 8</masterLabel>
+            <translation><!-- REG 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REG 9</masterLabel>
+            <translation><!-- REG 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requisitioning Office --></label>
+        <name>Requisitioning_Office__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifies approver for Application Approval form based on submitter&apos;s region/organization. --></help>
+        <label><!-- Senior IT Leader --></label>
+        <name>Senior_IT_Leader__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Short Description --></label>
+        <name>Short_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Site Type --></label>
+        <name>Site_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Size of Business --></label>
+        <name>Size_of_Business__c</name>
+        <picklistValues>
+            <masterLabel>Large Business (greater than 1,000)</masterLabel>
+            <translation><!-- Large Business (greater than 1,000) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium Business (500 - 999)</masterLabel>
+            <translation><!-- Medium Business (500 - 999) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small Business (less than 500)</masterLabel>
+            <translation><!-- Small Business (less than 500) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Small business size designation. --></help>
+        <label><!-- Small Business Designation --></label>
+        <name>Small_Business_Designation__c</name>
+        <picklistValues>
+            <masterLabel>8(a)</masterLabel>
+            <translation><!-- 8(a) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUBZone</masterLabel>
+            <translation><!-- HUBZone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service-disabled Veteran Owned Small Business</masterLabel>
+            <translation><!-- Service-disabled Veteran Owned Small Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small Disadvantaged Business</masterLabel>
+            <translation><!-- Small Disadvantaged Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Women-Owned Small Business</masterLabel>
+            <translation><!-- Women-Owned Small Business --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Startup (&lt; 5 yrs) --></label>
+        <name>Startup_5_yrs__c</name>
+        <picklistValues>
+            <masterLabel>No (over 5 years)</masterLabel>
+            <translation><!-- No (over 5 years) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes (less than 5 years)</masterLabel>
+            <translation><!-- Yes (less than 5 years) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submitted by --></label>
+        <name>Submitted_by__c</name>
+        <picklistValues>
+            <masterLabel>Center</masterLabel>
+            <translation><!-- Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA</masterLabel>
+            <translation><!-- EPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA/Partner</masterLabel>
+            <translation><!-- EPA/Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Organizations (User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Vendor BPA Number --></help>
+        <label><!-- Vendor BPA # --></label>
+        <name>Vendor_BPA__c</name>
+    </fields>
+    <fields>
+        <help><!-- Vendor Assigned Customer Number. --></help>
+        <label><!-- Vendor/Customer Number --></label>
+        <name>Vendor_Customer_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Vendor Purchase Order Number --></help>
+        <label><!-- Vendor PO # --></label>
+        <name>Vendor_PO__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates if the record is a Vendor Record Type. --></help>
+        <label><!-- Vendor Record --></label>
+        <name>Vendor_Record__c</name>
+    </fields>
+    <fields>
+        <help><!-- Vendor Contract General Terms --></help>
+        <label><!-- Vendor Terms --></label>
+        <name>Vendor_Terms__c</name>
+        <picklistValues>
+            <masterLabel>1 Year BPA</masterLabel>
+            <translation><!-- 1 Year BPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Year PO</masterLabel>
+            <translation><!-- 1 Year PO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Year BPA</masterLabel>
+            <translation><!-- 2 Year BPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Year PO</masterLabel>
+            <translation><!-- 2 Year PO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Year BPA</masterLabel>
+            <translation><!-- 3 Year BPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Year PO</masterLabel>
+            <translation><!-- 3 Year PO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Year BPA</masterLabel>
+            <translation><!-- 5 Year BPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Year PO</masterLabel>
+            <translation><!-- 5 Year PO --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Organization</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Organizations</value>
+    </caseValues>
+    <startsWith>Vowel</startsWith>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Account Summary --></label>
+            <section>Account Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FTTA Licensee Layout</layout>
+        <sections>
+            <label><!-- Account Summary --></label>
+            <section>Account Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FTTA Partner Layout</layout>
+        <sections>
+            <label><!-- Account Summary --></label>
+            <section>Account Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>GAS Vendor Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vendor Page Layout</layout>
+        <sections>
+            <label><!-- Account Summary --></label>
+            <section>Account Summary</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Dummy accounts --></description>
+        <label><!-- Dummy Account --></label>
+        <name>Dummy_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Facility Registration system (FRS).  Draft.  Contact hinds.timothy@epa.gov for more info --></description>
+        <label><!-- FRS --></label>
+        <name>FRS</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- FTTA License Collaborators/Partners --></description>
+        <label><!-- FTTA Licensee --></label>
+        <name>FTTA_Licensee</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- FTTA Application Collaborators/Partners --></description>
+        <label><!-- FTTA Partner --></label>
+        <name>FTTA_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Capture GAS Vendor information --></description>
+        <label><!-- GAS Vendors --></label>
+        <name>GAS_Vendors</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- General Accounts --></label>
+        <name>General_Accounts</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- HR Organizations --></description>
+        <label><!-- HR Org --></label>
+        <name>HR_Org</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- States and Territories --></description>
+        <label><!-- State/Territory --></label>
+        <name>State</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Outside organizations that do business with the EPA. --></description>
+        <label><!-- Vendor --></label>
+        <name>Vendor</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Code is required --></errorMessage>
+        <name>Code_reqd</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the DEO, ADEO1, or ADEO2 of this Organization may change the Intermediate Review Method. --></errorMessage>
+        <name>IntermReviewMethod_RestrictedTo_DEO_ADEO</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Generate_1900_63 --></label>
+        <name>Generate_1900_63</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+</CustomObjectTranslation>

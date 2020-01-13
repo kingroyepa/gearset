@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Purchase Card Email Template – PCTeam Status Update</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Purchase Card Email Template – PCTeam Status Update</name>
+    <style>none</style>
+    <subject>Status Update for New Purchase Card Provisioning Request:{!Forms__c.Purchase_Card_Request_Type__c} for {!Forms__c.Cardholder_AO_Name__c}</subject>
+    <textOnly>The Purchase Card Team has reviewed your training information and certificate associated to your Purchase Card Account.  This process is currently {!Forms__c.PC_Team_Status__c}.
+
+Click the following link to access the form {!Forms__c.Link}
+For Purchase Card Program assistance, please email:  OARM-OAM-PURCHASE_CARD_TEAM@epa.gov
+
+Thank You.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

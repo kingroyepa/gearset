@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <description>Create the share record associated with the public group from which the adjustment is being debited.</description>
+        <name>create_PublicGroupMinusShare</name>
+        <label>Create Public Group Minus Share</label>
+        <locationX>888</locationX>
+        <locationY>54</locationY>
+        <assignmentItems>
+            <assignToReference>record_PublicGroupMinusShare.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>variable_AdjustmentId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>record_PublicGroupMinusShare.UserOrGroupId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>record_PublicGroupMinus.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>record_PublicGroupMinusShare.AccessLevel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Read</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>insert_PlusAdjustmentShare</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Create the adjustment share for the public group associated with the HR Org Plus record.</description>
+        <name>record_AdjustmentRecordPlus</name>
+        <label>Create Adjustment Share Plus</label>
+        <locationX>721</locationX>
+        <locationY>54</locationY>
+        <assignmentItems>
+            <assignToReference>record_PublicGroupPlusShare.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>variable_AdjustmentId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>record_PublicGroupPlusShare.UserOrGroupId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>record_PublicGroupPlus.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>record_PublicGroupPlusShare.AccessLevel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Read</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>create_PublicGroupMinusShare</targetReference>
+        </connector>
+    </assignments>
+    <description>Creates share records with public groups associated with an ARTT adjustment.</description>
+    <interviewLabel>ARTT Create Adjustment Share {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ARTT Create Adjustment Share</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>insert_MinusAdjustmentShare</name>
+        <label>Insert Minus Share</label>
+        <locationX>1315</locationX>
+        <locationY>55</locationY>
+        <inputReference>record_PublicGroupMinusShare</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>insert_PlusAdjustmentShare</name>
+        <label>Insert Plus Share</label>
+        <locationX>1101</locationX>
+        <locationY>54</locationY>
+        <connector>
+            <targetReference>insert_MinusAdjustmentShare</targetReference>
+        </connector>
+        <inputReference>record_PublicGroupPlusShare</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>Get the public group associated with the HR Org from which the adjustment amount is getting debited.</description>
+        <name>get_HrOrgMinusGroup</name>
+        <label>Get HR Org Minus Group</label>
+        <locationX>305</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>get_HrOrgPlusGroup</targetReference>
+        </connector>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>variable_HROrgMinus</elementReference>
+            </value>
+        </filters>
+        <object>Group</object>
+        <outputReference>record_PublicGroupMinus</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the public group record associated with the HR Org for which the amount is being credited.</description>
+        <name>get_HrOrgPlusGroup</name>
+        <label>Get HR Org Plus Group</label>
+        <locationX>519</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>record_AdjustmentRecordPlus</targetReference>
+        </connector>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>variable_HrOrgPlus</elementReference>
+            </value>
+        </filters>
+        <object>Group</object>
+        <outputReference>record_PublicGroupPlus</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <startElementReference>get_HrOrgMinusGroup</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>The public group associated with the HR Org from which the amount is being deducted.</description>
+        <name>record_PublicGroupMinus</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Group</objectType>
+    </variables>
+    <variables>
+        <name>record_PublicGroupMinusShare</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Adjustment__Share</objectType>
+    </variables>
+    <variables>
+        <description>The public group associated with the HR Org for which the adjustment amount is being credited.</description>
+        <name>record_PublicGroupPlus</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Group</objectType>
+    </variables>
+    <variables>
+        <name>record_PublicGroupPlusShare</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Adjustment__Share</objectType>
+    </variables>
+    <variables>
+        <description>Adjustment Id that is inserted.</description>
+        <name>variable_AdjustmentId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>The HR Org from which the amount is being deducted.</description>
+        <name>variable_HROrgMinus</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Name of the HR Org for which the adjustment amount is being credited.</description>
+        <name>variable_HrOrgPlus</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

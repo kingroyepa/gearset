@@ -1,0 +1,5 @@
+<p>
+{!Forms__c.Unauthenticated_Owner__c}: <br><br>Your {!Forms__c.Form_Type_Name__c} Form has been approved by your supervisor and has been sent to {!Forms__c.Approver_1__c} for approval. 
+</p>
+<p>
+Form Record Number: {!Forms__c.Name}</p>

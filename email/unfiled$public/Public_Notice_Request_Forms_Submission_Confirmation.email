@@ -1,0 +1,15 @@
+<p>
+Your submission of <b>BAP Forms Public Notice Request</b><br>
+ was successfully submitted for Supervisor Review <br>
+<h3> {!Forms__c.Public_Notice_Title__c} </h3>
+</p>
+With Target Publication Date  {!Forms__c.Publication_Date__c} 
+<br>
+<p>
+To access, review, the form use this link: {!Forms__c.Link}
+<p>
+
+Record ID: {!Forms__c.Form_Record_Name__c}
+</p>
+
+<p>

@@ -1,0 +1,5 @@
+<p>An SF-182 Form has been approved. A link has been provided below to access any related information or documents on the form.</p>
+
+<p>Record ID: {!Forms__c.Form_Record_Name__c}</p>
+
+<p>{!Forms__c.Link}</p>

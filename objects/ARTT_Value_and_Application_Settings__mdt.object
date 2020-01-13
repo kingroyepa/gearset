@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Maximum_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Maximum amount allowed for the value and application type.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Maximum Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Minimum_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>The minimum amount for the value and application type.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Minimum Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Picklist_Value__c</fullName>
+        <description>The actual picklist value for the Value and Application setting field on Award. The custom metadata label and name fields cut off some of the picklist string, so we can't use it.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Picklist Value</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Floor and ceiling value and application values for the ARTT application. Will be used to calculate if a cash award value is valid – the cash award amount should sit in between the floor and ceiling values according to its name.</description>
+    <label>ARTT Value and Application Setting</label>
+    <pluralLabel>ARTT Value and Application Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

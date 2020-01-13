@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to the direct supervisor of an employee who is receiving an award from outside that employee&apos;s organization but within ORD.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Direct Supervisor Approval Needed</name>
+    <style>none</style>
+    <subject>Your approval is needed for an award nominated to one of your employees.</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

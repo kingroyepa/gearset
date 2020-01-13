@@ -1,0 +1,17 @@
+<p>
+Your submission of {!Forms__c.Form_Type_Name__c}, Record ID {!Forms__c.Form_Record_Name__c} Form has been rejected!
+</p>
+
+<p>
+<b>Please review these comments from your approver: </b>
+</p>
+
+<p>
+{!ApprovalRequest.Comments}
+<br /><br />
+</p>
+
+
+<p>
+Please go to https://forms.epa.gov. Then click on "My Forms" and look for the form with the Record ID {form ID number}. Click "Open Form" and address the above comments and resubmit your form.
+</p>

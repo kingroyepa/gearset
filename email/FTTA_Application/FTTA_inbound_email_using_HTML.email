@@ -1,0 +1,7 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div><br></div><div><br></div><div>To access the agreement/amendment, please click the below link. <br></div><div><br></div><div><a href="{!EPA_Agreement__c.Link}">{!EPA_Agreement__c.EPA_File_2__c}</a><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><font color="#ffffff"><span style="font-size: x-small;">ref:{!EPA_Agreement__c.Id}:ref</span><a href="https://epaoei--ordftta--c.cs32.content.force.com/email/{!EPA_Agreement__c.Link}" style="font-size: 12pt;"><br></a></font><div style="font-size: 12pt;"><br style="background-color: rgb(255, 255, 255);"></div></div>
+<a href="https://epaoei--ordftta--c.cs32.content.force.com/email/{!EPA_Agreement__c.Link}"><br></a><div><br></div><div><br></div>]]></td>
+</tr>
+</table>

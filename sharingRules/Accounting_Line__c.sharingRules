@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>FTTA_Lab_Contacts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>FTTA Lab Contacts</label>
+        <sharedTo>
+            <group>FTTA_Lab_Contacts</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>FTTA Royalties</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>FTTA_Royalties</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>FTTA Application</description>
+        <label>FTTA Royalties</label>
+        <sharedTo>
+            <group>FTTA_Super_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>FTTA Royalties</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Pcor_Funding</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>PCOR Application.</description>
+        <label>Pcor Funding</label>
+        <sharedTo>
+            <group>PCORS_App_Admins</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PCORS Funding</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

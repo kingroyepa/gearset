@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BAP Forms OHR Submission Confirmation</name>
+    <style>none</style>
+    <subject>Submission Confirmation:  {!Forms__c.Form_Type_Name__c} Form - Record ID: {!Forms__c.Form_Record_Name__c}</subject>
+    <textOnly>We have received your submission of the {!Forms__c.Form_Type_Name__c} Form!
+
+The form is currently under review by {!Forms__c.User_Supervisor__c}
+
+Form Record ID: {!Forms__c.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

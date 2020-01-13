@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notifies Requester that the BAP Provisioning Request Has Been Completed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BAP Provisioning Approval Notification</name>
+    <style>none</style>
+    <subject>BAP {!Forms__c.Form_Type__c} Request Has Been Completed - {!Forms__c.CreatedBy}</subject>
+    <textOnly>The BAP {!Forms__c.Form_Type__c} Request has been successfully completed. If you have any questions regarding this request, please contact the BAP Admin team BAP_Admins@epa.gov.
+
+Type: {!Forms__c.Form_Type__c}
+Quantity: {!Forms__c.Quantity__c}
+Description: {!Forms__c.comments__c}
+
+Thanks,
+BAP Admin</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

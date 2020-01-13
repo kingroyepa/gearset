@@ -1,0 +1,7 @@
+Your requested QSI award for {!Award__c.Emp_Name__c} is planned to be effective as of pay period: {!Award__c.Pay_Period__c} ({!Award__c.ARTT_Paid_Date_Cash__c}). Please be advised that the recipient has received confirmation in a separate email. 
+
+The award can be found here: {!Award__c.Link}
+
+Please reach out to your OARS-HRD representative with any questions. 
+
+Congratulations!

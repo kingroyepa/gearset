@@ -1,0 +1,23 @@
+<!--
+ - Custom page and button to direct users to the DCR Help Community Site.
+ -->
+
+<apex:page id="DCRHelpCommunity" lightningStylesheets="true" applyHtmlTag="false" showHeader="false">
+    <html>
+    <body>
+    <div style="padding-top: 50px; text-align: center">
+        <apex:form >
+            <apex:commandButton style="font-size: 18pt; height: 50px; width: 450px;" value="Go to DCR Help Community" onClick="gotoDCRHelpCommunity(); return false;"/>
+        </apex:form>
+    </div>
+    </body>
+
+
+    <script>
+        function gotoDCRHelpCommunity() {
+            var win = window.open('https://epaoei.force.com/DCRHelp/s/', '_blank');
+            win.focus();
+        }
+    </script>
+    </html>
+</apex:page>

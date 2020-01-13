@@ -1,0 +1,13 @@
+Hi {!Task.CreatedBy},
+
+Task '{!Task.Subject}' with below details has been completed by {!Task.LastModifiedBy}.
+
+Priority: {!Task.Priority}
+Comments: {!Task.Description}
+Comments by Assignee :{!Task.Comments_Assignee__c}
+
+To access the task, please click the below link.
+
+{!Task.Link}
+
+Thank You.

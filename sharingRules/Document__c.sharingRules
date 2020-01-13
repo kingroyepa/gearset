@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ARTT_Budget_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share ARTT Budgets with the Budget Group</description>
+        <label>ARTT Budget Group</label>
+        <sharedTo>
+            <group>ARTT_Budget_Access</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Document - Award Budget Control,Document - Award Budget</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DCR_OAP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DCR OAP Sharing</description>
+        <label>DCR OAP</label>
+        <sharedTo>
+            <group>DCR_OAR_OAP_PMO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Document - Travel,Document - IA,Document - Bankcard Purchase,Document - Other,Document - Contract,Document - Grant,Op Plan,Division Sub-Allocation,Document - Contract (Outside Funding)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Allowance_Holder__c</field>
+            <operation>equals</operation>
+            <value>58 - OAP</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DCR_OAR_OTAQ</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Keep budgets private</description>
+        <label>DCR-OAR-OTAQ</label>
+        <sharedTo>
+            <group>DCR_OAR_OTAQ</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Document - Travel,Document - IA,Document - Bankcard Purchase,Document - Other,Document - Contract,Document - Grant,Op Plan,Division Sub-Allocation,Document - Contract (Outside Funding)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Allowance_Holder__c</field>
+            <operation>equals</operation>
+            <value>56 - OTAQ</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

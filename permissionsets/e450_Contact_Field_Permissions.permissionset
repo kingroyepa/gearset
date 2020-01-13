@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives users Read access to Contact fields: Ethics Disclosure Filing Due Date
+Ethics Disclosure Filing Submitted Date
+Ethics Disclosure Notification Sent
+Ethics Disclosure Notification Sent Date
+
+Read/Write access to the Contact field Send Reminder Email</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>e450 Contact Field Permissions</label>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Ethics_Disclosure_Filing_Due_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.OGE_450_Form_Submitted_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.OGE_450_Notification_Last_Sent_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.OGE_450_Notification_Sent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Send_Reminder_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

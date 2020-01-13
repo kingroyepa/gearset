@@ -1,0 +1,15 @@
+<div style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#000000'>
+
+The BAP {!Forms__c.Form_Type__c} Request has been successfully completed. If you have any questions regarding this request, please contact the BAP Admin team BAP_Admins@epa.gov.<br>
+<br>
+Type: {!Forms__c.Form_Type__c}<br>
+Quantity: {!Forms__c.Quantity__c}<br>
+Requester: {!Forms__c.Type_1_Owner_Contact__c} <br>
+Person: {!Forms__c.Technical_Contact__c}<br>
+Authorization Reason: {!Forms__c.Authorization_Reason__c} <br>
+Role: {!Forms__c.Role__c}<br>
+Description:<br>
+{!Forms__c.comments__c}<br><br><br>
+
+Thank You,
+BAP Admins

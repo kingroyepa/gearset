@@ -1,0 +1,17 @@
+<p>
+Your submission of BAP Forms {!Forms__c.Form_Type_Name__c}, Record ID {!Forms__c.Form_Record_Name__c}  has been rejected!
+</p>
+
+<p>
+<b>Please review these comments from your approver: </b>
+</p>
+
+<p>
+{!ApprovalRequest.Comments}
+<br /><br />
+</p>
+
+
+<p>
+Please address these comments and resubmit your form https://forms.epa.gov.
+</p>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email notification to supervisor when an award needs supervisor approval.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Award Supervisor Approval Needed</name>
+    <style>none</style>
+    <subject>Employee award needs your approval.</subject>
+    <textOnly>Hi,  
+
+An employee award needs your approval. Please visit this link to log into  the Awards Reporting and Tracking Tool (ARTT) to approve or deny the request: {!ApprovalRequest.Internal_URL}.  
+
+Please contact your OARS-HRD representative if you have any questions.
+
+Information about the award awaiting approval:
+Cash Award Amount: {!Award__c.Cash_Award_Amount__c} 
+Total Cash Awards this Fiscal Year: {!Award__c.Total_Award_Amount_on_Submit__c} 
+Time Off Award Amount: {!Award__c.Time_Off_Amount__c}
+Total Time Off this Calendar Year: {!Award__c.Total_Time_Off_on_Submit__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

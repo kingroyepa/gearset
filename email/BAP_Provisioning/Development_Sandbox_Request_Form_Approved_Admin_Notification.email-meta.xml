@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification to requestor that the developer sandbox request has been created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Development Sandbox Request Form Approved Admin Notification</name>
+    <style>none</style>
+    <subject>Your Development Sandbox Has Been Approved</subject>
+    <textOnly>Your new sandbox is ready for use.  {!Forms__c.Submitted_on_Behalf_Of__c} is the Delegated Administrator.
+
+The following url will take you to your new sandbox:  {!Forms__c.SandboxURL__c}
+
+If you have an EPA LAN ID/PIV, you can login using those by clicking ‘EPA Login’.
+
+The Application Deployment Guide (ADG) addresses common tasks. For example, Section 4 of the ADG addresses User Administration and will help the Delegated Administrator activate users and assign permissions for their sandbox. https://usepa.sharepoint.com/sites/oei_Community/BAP/Shared%20Documents/
+
+If you have any questions or need assistance, please contact BAP at BAP-Request@epa.gov
+
+Thank You,
+BAP Admins</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

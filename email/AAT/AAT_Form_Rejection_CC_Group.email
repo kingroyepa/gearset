@@ -1,0 +1,13 @@
+Note: A copy of the message sent to the Application Owner is below. No action is required by you.<br><br><hr><br> 
+Your Application Review form was rejected by {!User.Name}. Please review the form to determine the next action.<br><br>
+Rejection comments: {!ApprovalRequest.Comments}.<br><br>
+<b>To access the form use this link:</b> {!Forms__c.Link}<br><br>
+Application Review Form Summary:<br><br>
+- &nbsp;&nbsp;Application Name: {!Forms__c.Application_Name__c}<br>
+- &nbsp;&nbsp;Application Owner: {!Forms__c.Application_Owner__c}<br>
+- &nbsp;&nbsp;Form number: {!Forms__c.Name}<br>
+- &nbsp;&nbsp;Application Description: {!Forms__c.Application_Description__c}<br>
+- &nbsp;&nbsp;Approval Status: Rejected<br><br>
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&e=x91vhQ. <br><br>
+End of Message<br><br>
+Email template #13

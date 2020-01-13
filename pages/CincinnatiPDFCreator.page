@@ -1,0 +1,6 @@
+<apex:page id="CincinnatiPDFCreator"
+           showHeader="true"
+           standardController="Award__c"
+           extensions="PDFFormCreatorController"
+           action="{!createCincinnatiForm}">
+</apex:page>

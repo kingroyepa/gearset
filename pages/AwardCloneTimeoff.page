@@ -1,0 +1,10 @@
+<!--
+    This page is used to guide a custom button on a page layout to execute the Award__c deep clone functionality
+    in AwardCloneController.
+-->
+<apex:page showHeader="true"
+        id="AwardCloneTimeoff"
+        standardController="Award__c"
+        extensions="AwardCloneController"
+        action="{!timeoffAwardClone}">
+</apex:page>

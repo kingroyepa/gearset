@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>ARTT_Help_Email_Send</name>
+        <label>ARTT_Help_Email_Send</label>
+        <locationX>563</locationX>
+        <locationY>51</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>ARTT_Help_Email_Success</targetReference>
+        </connector>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>ARTT_Help_Request_Text</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>ARTT_Help_Recipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>ARTT_Help_Subject</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <constants>
+        <name>ARTT_Help_Recipients</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ben.anderson@fedsight.com, justin.dove@fedsight.com, dillon.mullis@fedsight, kanet.audrey@epa.gov,  vanhorn.steve@epa.gov</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>ARTT_Help_Subject</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ARTT Help Request</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>ARTT_HELP_TEST</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>anderson.ben@epa.gov</stringValue>
+        </value>
+    </constants>
+    <description>Flow that allows ARTT users to send a help email related to a specific award record.</description>
+    <formulas>
+        <name>Org_Url</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Partner_Server_URL_260}, FIND( &apos;/services&apos;, {!$Api.Partner_Server_URL_260}))</expression>
+    </formulas>
+    <formulas>
+        <name>v_final_sender_email</name>
+        <dataType>String</dataType>
+        <expression>IF( {!Var_ARTT_Help_User_Email_Address}&lt;&gt;{!var_user_input_email},  {!var_user_input_email},  {!Var_ARTT_Help_User_Email_Address})</expression>
+    </formulas>
+    <formulas>
+        <name>vUserId</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <interviewLabel>ARTT Help Email {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ARTT Help Email</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_ARTT_Help_User_Email</name>
+        <label>Get ARTT Help User Email</label>
+        <locationX>218</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ARTT_Help_Request</targetReference>
+        </connector>
+        <filters>
+            <field>User__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vUserId</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputAssignments>
+            <assignToReference>Var_ARTT_Help_User_Email_Address</assignToReference>
+            <field>Email</field>
+        </outputAssignments>
+        <sortField>Email</sortField>
+        <sortOrder>Asc</sortOrder>
+    </recordLookups>
+    <screens>
+        <description>Text indicating that the ARTT Help email has been sent</description>
+        <name>ARTT_Help_Email_Success</name>
+        <label>ARTT_Help_Email_Success</label>
+        <locationX>736</locationX>
+        <locationY>51</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ARTT_Help_Email_Success_Text</name>
+            <fieldText>Your email has been sent</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Simple form for users to contact the ARTT support team.</description>
+        <name>ARTT_Help_Request</name>
+        <label>ARTT Help Request</label>
+        <locationX>403</locationX>
+        <locationY>50</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>ARTT_Help_Email_Send</targetReference>
+        </connector>
+        <fields>
+            <name>ARTT_Help_Request_Text</name>
+            <defaultValue>
+                <stringValue>
+
+{!ARTT_Help_RecordLink}</stringValue>
+            </defaultValue>
+            <fieldText>ARTT Help Request Text</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Please describe your issue.</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Get_ARTT_Help_User_Email</startElementReference>
+    <status>Active</status>
+    <textTemplates>
+        <name>ARTT_Help_RecordLink</name>
+        <text>Regarding: {!Org_Url}{!recordId}</text>
+    </textTemplates>
+    <variables>
+        <description>Record Id of the specific help request</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Flow.CurrentRecord</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <description>Current user email</description>
+        <name>User</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Var_ARTT_Help_User_Email_Address</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>populated if the user changes the senders email</description>
+        <name>var_user_input_email</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

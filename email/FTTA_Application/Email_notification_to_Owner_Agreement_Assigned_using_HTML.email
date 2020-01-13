@@ -1,0 +1,12 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<br><div>Hi {!EPA_Agreement__c.Owner_Contact__c},
+</div>
+<br>You have been assigned to manage EPA File #&nbsp; {!EPA_Agreement__c.EPA_File_2__c}.
+<br>
+<br>To access the agreement/amendment, please click the below link.
+<br>
+<div><br></div><div><a href="{!EPA_Agreement__c.Link}">{!EPA_Agreement__c.EPA_File_2__c}.</a></div><div><br></div>Thank you.]]></td>
+</tr>
+</table>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FTTA. Created for the email notification to owner that the license has been assigned.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EPA_Email_Notification</letterhead>
+    <name>Email notification to Owner - License Assigned using HTML</name>
+    <style>freeForm</style>
+    <subject>EPA File # {!EPA_Agreement__c.EPA_File_2__c} - Assigned</subject>
+    <textOnly>Hi {!EPA_Agreement__c.OGC_Attorney__c},
+
+EPA File # {!EPA_Agreement__c.00Nr0000001VPB9} is ready for OGC Review. Please email FTTA@epa.gov with any questions.
+
+To access the agreement, please click the below link.
+
+{!EPA_Agreement__c.Link}
+
+Thank you.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

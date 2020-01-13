@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FTTA. Created for the email notification to Lab Contact that OGC concurs on Agreement.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EPA_Email_Notification</letterhead>
+    <name>Email notification to Lab Contact- At Signature Using HTML</name>
+    <style>freeForm</style>
+    <subject>EPA File # {!EPA_Agreement__c.EPA_File_2__c} - At Signature</subject>
+    <textOnly>Hi {!EPA_Agreement__c.Lab_Contact__c},
+
+OGC concurs on EPA File # {!EPA_Agreement__c.EPA_File_2__c} with {!EPA_Agreement__c.Partner_Name__c}. Once you have a fully executed agreement/amendment, upload the final PDF version and click on the Signed button. Please email FTTA@epa.gov with any questions..
+
+To access the agreement/amendment, please click the below link.
+
+{!EPA_Agreement__c.EPA_File_2__c}.
+
+Thank you.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

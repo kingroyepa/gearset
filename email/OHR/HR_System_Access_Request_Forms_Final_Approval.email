@@ -1,0 +1,19 @@
+<p>
+Your submission of {!Forms__c.Form_Type_Name__c} Form has been approved!
+</p>
+
+<p>
+Record ID: {!Forms__c.Form_Record_Name__c}<br>
+</p>
+
+<p>
+Comments from your approver: 
+</p>
+
+<p>
+{!ApprovalRequest.Comments}
+<br />
+<br />
+</p>
+
+<p>To review your form, please go to https://forms.epa.gov. Then click on "My Forms" and look for the form with the Record ID {!Forms__c.Name} and click "Open Form".</p>

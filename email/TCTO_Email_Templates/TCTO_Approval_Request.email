@@ -1,0 +1,11 @@
+A Travel Comp Time Off Request for {!Forms__c.TCTO_Request_Type__c} has been submitted for your approval.  
+
+User: {!Forms__c.Employee_Name_SF_182__c}
+Travel Start: {!Forms__c.Start_Date_TCTO__c}
+Travel End: {!Forms__c.End_Date_TCTO__c}
+Destination: {!Forms__c.Destination__c}
+Total Proposed TCTO Hours: {!Forms__c.Proposed_Travel_Comp_Hours_Total__c} 
+Total Earned TCTO Hours: {!Forms__c.Earned_Travel_Comp_Hours_Total__c}
+
+
+Please click on the link below to review the request {!Forms__c.Link}

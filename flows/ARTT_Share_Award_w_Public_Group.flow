@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <description>Create the award share record.</description>
+        <name>Create_Award_Share_Record</name>
+        <label>Create Award Share Record</label>
+        <locationX>443</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>Award_Share.UserOrGroupId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>HR_Org_Public_Group.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Award_Share.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Award_Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Award_Share.AccessLevel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Edit</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Insert_Award_Share</targetReference>
+        </connector>
+    </assignments>
+    <description>Share an award record with the public group associated with the requesting official&apos;s HR org.</description>
+    <interviewLabel>ARTT Share Award w Public Group {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ARTT Share Award w Public Group</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Insert the award share record.</description>
+        <name>Insert_Award_Share</name>
+        <label>Insert Award Share`</label>
+        <locationX>652</locationX>
+        <locationY>50</locationY>
+        <inputReference>Award_Share</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>Get the public group by using the HR Org Name provided.</description>
+        <name>Get_Public_Group</name>
+        <label>Get Public Group</label>
+        <locationX>240</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Award_Share_Record</targetReference>
+        </connector>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>HR_Org_Name</elementReference>
+            </value>
+        </filters>
+        <object>Group</object>
+        <outputReference>HR_Org_Public_Group</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <startElementReference>Get_Public_Group</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>The award&apos;s Id.</description>
+        <name>Award_Id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>The award&apos;s new sharing record.</description>
+        <name>Award_Share</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Award__Share</objectType>
+    </variables>
+    <variables>
+        <description>The name of the requesting official&apos;s HR Org.</description>
+        <name>HR_Org_Name</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>The public group associated with the HR Org based on a shared name.</description>
+        <name>HR_Org_Public_Group</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Group</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AAT Form Rejection</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AAT - Form Rejection - cc SITL</name>
+    <style>none</style>
+    <subject>Rejection Notice of Application Review Form for {!Forms__c.Application_Name__c} {!Forms__c.Name}</subject>
+    <textOnly>Your Application Review form was rejected by {!User.Name}. Please review the form to determine the next action.
+
+Rejection comments: {!ApprovalRequest.Comments}
+
+Note: A copy of this email was sent to the Owning SITL so they are aware of the applicaiton status.
+
+To access the form use this link: {!Forms__c.Link}
+
+Application Review Form Summary:
+
+-   Application Name: {!Forms__c.Application_Name__c}
+-   Application Owner: {!Forms__c.Application_Owner__c}
+-   Form number: {!Forms__c.Name}
+-   Application Description: {!Forms__c.Application_Description__c}
+-   Approval Status: Rejected
+
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&amp;e=x91vhQ.
+
+End of Message
+
+Email template #12b</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

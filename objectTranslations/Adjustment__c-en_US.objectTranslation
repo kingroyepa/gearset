@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Op Plan Account Name from the record having funds added. --></help>
+        <label><!-- Account Name (+) --></label>
+        <name>Account_Name_Pos__c</name>
+    </fields>
+    <fields>
+        <help><!-- Op Plan Account Name from the record having funds removed. --></help>
+        <label><!-- Account Name (-) --></label>
+        <name>Account_Name_neg__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatically set once the record is finalized. --></help>
+        <label><!-- Adjustment Date --></label>
+        <name>Adjustment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjustment Executed? --></label>
+        <name>Adjustment_Executed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Timestamp of the adjustment set by process builder. --></help>
+        <label><!-- Adjustment Timestamp --></label>
+        <name>Adjustment_Timestamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allowance Holder --></label>
+        <name>Allowance_Holder__c</name>
+        <picklistValues>
+            <masterLabel>56 - OTAQ</masterLabel>
+            <translation><!-- 56 - OTAQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58 - OAP</masterLabel>
+            <translation><!-- 58 - OAP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Award Adjustment Amount --></label>
+        <name>Award_Adjustment_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicate which budget you&apos;re adjusting. --></help>
+        <label><!-- Award Budget Adjustment Type --></label>
+        <name>Award_Budget_Adjustment_Type__c</name>
+        <picklistValues>
+            <masterLabel>QSI</masterLabel>
+            <translation><!-- QSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S-Award</masterLabel>
+            <translation><!-- S-Award --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Title-42/SL/ST</masterLabel>
+            <translation><!-- Title-42/SL/ST --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Award Budget (-) From --></label>
+        <name>Award_Budget_From_Neg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Award Budget (+) From --></label>
+        <name>Award_Budget_From_Pos__c</name>
+    </fields>
+    <fields>
+        <help><!-- Award Budget Record that the funds are being moved from. --></help>
+        <label><!-- Award Budget (-) --></label>
+        <name>Award_Budget_Neg__c</name>
+        <relationshipLabel><!-- Adjustments (Award Budget (-)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Award Budget record that the funds are being moved to. --></help>
+        <label><!-- Award Budget (+) --></label>
+        <name>Award_Budget_Pos__c</name>
+        <relationshipLabel><!-- Adjustments (Award Budget (+)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Award Budget (-) To --></label>
+        <name>Award_Budget_To_Neg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Award Budget (+) To --></label>
+        <name>Award_Budget_To_Pos__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please categorize the Op Plan adjustment. --></help>
+        <label><!-- Budget Adjustment Type --></label>
+        <name>Budget_Adjustment_Type__c</name>
+        <picklistValues>
+            <masterLabel>New Authority</masterLabel>
+            <translation><!-- New Authority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reprogramming</masterLabel>
+            <translation><!-- Reprogramming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sweep</masterLabel>
+            <translation><!-- Sweep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer</masterLabel>
+            <translation><!-- Transfer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Justification --></label>
+        <name>Justification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Op Plan (-) From Set? --></label>
+        <name>Op_Plan_Neg_From_Set__c</name>
+    </fields>
+    <fields>
+        <help><!-- The amount that the Op Plan (-) was prior to the execution of the adjustment. --></help>
+        <label><!-- Op Plan (-) From --></label>
+        <name>Op_Plan_Neg_From__c</name>
+    </fields>
+    <fields>
+        <help><!-- The amount that the Op Plan (-) changed to after the execution of the adjustment. --></help>
+        <label><!-- Op Plan (-) To --></label>
+        <name>Op_Plan_Neg_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Op Plan (-) --></label>
+        <lookupFilter>
+            <errorMessage><!-- Please select a Document record with an Op Plan or Division Sub-Allocation record type. --></errorMessage>
+        </lookupFilter>
+        <name>Op_Plan_Negative__c</name>
+        <relationshipLabel><!-- Adjustments (Op Plan (-)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Op Plan (+) From Set? --></label>
+        <name>Op_Plan_Pos_From_Set__c</name>
+    </fields>
+    <fields>
+        <help><!-- The amount that the Op Plan (+) was prior to the execution of the adjustment. --></help>
+        <label><!-- Op Plan (+) From --></label>
+        <name>Op_Plan_Pos_From__c</name>
+    </fields>
+    <fields>
+        <help><!-- The amount that the Op Plan (+) record changed to after the execution of the adjustment. --></help>
+        <label><!-- Op Plan (+) To --></label>
+        <name>Op_Plan_Pos_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Op Plan (+) --></label>
+        <lookupFilter>
+            <errorMessage><!-- Please select either a Document with either an Op Plan or Division Sub-Allocation record type. --></errorMessage>
+        </lookupFilter>
+        <name>Op_Plan_Positive__c</name>
+        <relationshipLabel><!-- Adjustments (Op Plan (+)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Project/Task/SubTask that is being adjusted downward. --></help>
+        <label><!-- Project/Task/Sub-Task (-) --></label>
+        <name>Project_Task_Sub_Task_Neg__c</name>
+    </fields>
+    <fields>
+        <help><!-- Project/Task/Sub-Task that is having funds added. --></help>
+        <label><!-- Project/Task/Sub-Task (+) --></label>
+        <name>Project_Task_Sub_Task_Pos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final</masterLabel>
+            <translation><!-- Final --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Adjustment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Adjustments</value>
+    </caseValues>
+    <startsWith>Vowel</startsWith>
+    <layouts>
+        <layout>ARTT Adjustment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- History --></label>
+            <section>History</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DCR Adjustment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- History --></label>
+            <section>History</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Execute Adjustment --></label>
+        <name>Execute_Adjustment</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Record type for making an adjustment to an ARTT budget document. --></description>
+        <label><!-- ARTT Budget Adjustment --></label>
+        <name>ARTT_Budget_Adjustment</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Adjustments for op plans (Documents). --></description>
+        <label><!-- DCR Op Plan Adjustment --></label>
+        <name>DCR_Op_Plan_Adjustment</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Adjustments for suballocations (Documents). --></description>
+        <label><!-- DCR Suballocation Adjustment --></label>
+        <name>DCR_Suballocation_Adjustment</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The Adjustment record cannot be changed after it has been marked as final (i.e. processed). --></errorMessage>
+        <name>DCR_Op_Plan_Adjustments_Final</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Op Plan (+) and Op Plan (-) fields cannot reference the same document. Please adjust one of the fields or cancel the operation. --></errorMessage>
+        <name>DCR_Op_Plans_Cannot_be_Same</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Op Plan (-) and (+) fields cannot both be null when trying to execute an adjustment. Please enter Op Plan or Suballocation records one of the fields. --></errorMessage>
+        <name>Op_Plan_Adjustment_Values_Cannot_be_Null</name>
+    </validationRules>
+</CustomObjectTranslation>

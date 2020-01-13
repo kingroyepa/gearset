@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OHR Form Approved - Security Team Notification</name>
+    <style>none</style>
+    <subject>An HR System Access Request Form from {!Forms__c.Unauthenticated_Owner__c} has been Approved! Record ID: {!Forms__c.Form_Record_Name__c}</subject>
+    <textOnly>The HR System Access Request Form submitted by {!Forms__c.Unauthenticated_Owner__c} has the approvals of the employee’s supervisor:  {!Forms__c.User_Supervisor__c} and PMO/RHRO: {!Forms__c.Approver_1__c}.
+
+To access, review, and process the request, use this link: {!Forms__c.Link}
+
+Record ID: {!Forms__c.Form_Record_Name__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

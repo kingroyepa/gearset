@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Descriptor__c</fullName>
+        <description>Keyword(s) used by APEX to keep business logic out of code itself, e.g. "Grid". John Jenkins. 2019.09.05.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Descriptor</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Type_Name__c</fullName>
+        <description>Name of Forms__c Record Type Name (DeveloperName), e.g. "EPA_100". John Jenkins. 2019.09.05.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Record Type Name</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Used to store information about specific Forms__c record types to assist APEX code.</description>
+    <label>BAP Form Descriptor</label>
+    <pluralLabel>BAP Form Descriptors</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

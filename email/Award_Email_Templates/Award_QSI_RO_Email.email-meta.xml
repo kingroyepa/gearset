@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email that is sent to Req Off when their requested QSI award is completed.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Award QSI Req Off Email</name>
+    <style>none</style>
+    <subject>ORD Award Notification</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

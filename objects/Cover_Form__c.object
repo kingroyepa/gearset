@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Citation__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use “Initial Caps” format.  For example, “Effect of Benzene on Adult Population”.  Do not use the title of the publication, do not exceed 120 characters including spaces.</inlineHelpText>
+        <label>Citation</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EPA_EIP__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.EmployeeNumber</formula>
+        <label>EPA Employee ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eligibility_Criteria_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The nominated publication(s) has not been submitted to a previous STAA competition.</description>
+        <externalId>false</externalId>
+        <label>Eligibility Criteria 1</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Eligibility_Criteria_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The nominated publication(s) was published on or before January 1, 2019, and on or after January 1, 2013.</description>
+        <externalId>false</externalId>
+        <label>Eligibility Criteria 2</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Eligibility_Criteria_3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The principal author was an EPA employee or a PHS employee assigned to EPA when the research was performed.</description>
+        <externalId>false</externalId>
+        <label>Eligibility Criteria 3</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Eligibility_Criteria_4__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The EPA author has submitted a "Record of Agreement" to attest that credit has been correctly assigned.</description>
+        <externalId>false</externalId>
+        <label>Eligibility Criteria 4</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Justification_1__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Explain how the nominated  paper's represent research that is innovative and important in advancing the scientific knowledge or technology relevant to EPA's mission. It is, important to provide a clear and compelling explanation of the relevance.</inlineHelpText>
+        <label>Justification 1</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>50</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Justification_2A__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Justification 2a: If multiple publications are submitted, provide a comprehensive explanation of the relationship and lengths between subject matter among the different nominated publications (Limit to 16,000 characters) Enter n/a if blank</inlineHelpText>
+        <label>Justification 2A</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>50</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Justification_2B__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Justification 2b  List the previous 5 year's of STAA nominations and associated publications for each EPA author. Categorize the list by author and include publication title, year, and award.(Limit to 16,000 characters including spaces) Enter n/a if blank</inlineHelpText>
+        <label>Justification 2B</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>50</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Justification_2C__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Justification 2c  Provide a description of how this nomination's publication(s) differ from previous (last 5 years) and current nominations by the author(s). (Limit to 16,000 characters including spaces.) Enter n/a if blank.</inlineHelpText>
+        <label>Justification 2C</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Justification_2D__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Justification 2d Indicate whether previously submitted supplemental information is listed as supplemental information for the current nomination. (Limit to 16,000 characters including spaces.) Enter n/a if blank.</inlineHelpText>
+        <label>Justification 2D</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Justification_2E__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Justification 2e If any of the authors have submitted a concurrent nomination to another research category, provide sufficient justification to distinguish the differnce between nominations. (Limit to 16,000 characters including spaces) Enter n/a if blank</inlineHelpText>
+        <label>Justification 2E</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Justification_3A__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Justification 3a Provide evidence of recognition of the contribution from outside. (Limit to 16,000 characters including spaces.)</inlineHelpText>
+        <label>Justification 3A</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>50</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Justification_3B__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Justification 3b Provide an explanation of the external peer review process used to evaluate the scientific merit of the nominated publication(s). (Limit to 16,000 characters including spaces.)</inlineHelpText>
+        <label>Justification 3B</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>50</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Laboratory_Office_Name__c</fullName>
+        <defaultValue>$User.CompanyName</defaultValue>
+        <description>STAA Application</description>
+        <externalId>false</externalId>
+        <label>Laboratory/Office Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nominating_Author_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName  &amp; " " &amp;   Owner:User.LastName</formula>
+        <label>Nominating Author</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nominating_Author__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <label>Nominating Author</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cover Forms</relationshipLabel>
+        <relationshipName>Cover_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Nominating_Official__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <label>Nominating Official</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>User.Contact.User__c</field>
+                <operation>equals</operation>
+                <value>$User.Supervisor__c</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cover_Forms</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Nominating_Official_s_Comments__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <label>Nominating Official's Comments</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Nomination_ID__c</fullName>
+        <displayFormat>{YY}-{000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Nomination ID</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Nominator_Official_Requirement_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>I attest that this nomination is placed in the appropriate Research Category.</description>
+        <externalId>false</externalId>
+        <label>Nominator Official Requirement 1</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Nominator_Official_Requirement_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The Nominating Official has verified author eligibility and % contribution of each author and the total adds to 100%.</description>
+        <externalId>false</externalId>
+        <label>Nominator Official Requirement 2</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Organization_NA__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Department</formula>
+        <label>Organization</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Research_Category__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <label>Primary Research Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Control Systems and Technology (CS)</fullName>
+                    <default>false</default>
+                    <label>Control Systems and Technology (CS)</label>
+                </value>
+                <value>
+                    <fullName>Ecological Research (ER)</fullName>
+                    <default>false</default>
+                    <label>Ecological Research (ER)</label>
+                </value>
+                <value>
+                    <fullName>Health Effects Research and Human Health Risk Assessment (HE)</fullName>
+                    <default>false</default>
+                    <label>Health Effects Research and Human Health Risk Assessment (HE)</label>
+                </value>
+                <value>
+                    <fullName>Monitoring and Measurement Methods (MM)</fullName>
+                    <default>false</default>
+                    <label>Monitoring and Measurement Methods (MM)</label>
+                </value>
+                <value>
+                    <fullName>Transport and Fate (TF)</fullName>
+                    <default>false</default>
+                    <label>Transport and Fate (TF)</label>
+                </value>
+                <value>
+                    <fullName>Review Articles (RA)</fullName>
+                    <default>false</default>
+                    <label>Review Articles (RA)</label>
+                </value>
+                <value>
+                    <fullName>Risk Management and Ecosystem Restoration (RM)</fullName>
+                    <default>false</default>
+                    <label>Risk Management and Ecosystem Restoration (RM)</label>
+                </value>
+                <value>
+                    <fullName>Integrated Risk Assessment (IR)</fullName>
+                    <default>false</default>
+                    <label>Integrated Risk Assessment (IR)</label>
+                </value>
+                <value>
+                    <fullName>Environmental Policy and Decision-Making Studies (EP)</fullName>
+                    <default>false</default>
+                    <label>Environmental Policy and Decision-Making Studies (EP)</label>
+                </value>
+                <value>
+                    <fullName>Homeland Security (HS)</fullName>
+                    <default>false</default>
+                    <label>Homeland Security (HS)</label>
+                </value>
+                <value>
+                    <fullName>Industry and the Environment (IE)</fullName>
+                    <default>false</default>
+                    <label>Industry and the Environment (IE)</label>
+                </value>
+                <value>
+                    <fullName>Energy and the Environment (EE)</fullName>
+                    <default>false</default>
+                    <label>Energy and the Environment (EE)</label>
+                </value>
+                <value>
+                    <fullName>Sustainability and Innovation (SI)</fullName>
+                    <default>false</default>
+                    <label>Sustainability and Innovation (SI)</label>
+                </value>
+                <value>
+                    <fullName>Other Environmental Research (OR)</fullName>
+                    <default>false</default>
+                    <label>Other Environmental Research (OR)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>STAA_Coordinator_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>STAA_Coordinator__r.FirstName &amp; " " &amp;  STAA_Coordinator__r.LastName</formula>
+        <label>STAA Coordinator Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>STAA_Coordinator_Telephone_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>STAA_Coordinator__r.Phone</formula>
+        <label>STAA Coordinator Telephone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>STAA_Coordinator__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <label>STAA Coordinator</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cover_Forms1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>STAA_Coordinator_eMail__c</fullName>
+        <externalId>false</externalId>
+        <formula>STAA_Coordinator__r.Email</formula>
+        <label>STAA Coordinator eMail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>STAA_Coordinator_s_Comments__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <label>STAA Coordinator's Comments</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Secondary_Research_Category__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select up to two categories</inlineHelpText>
+        <label>Secondary Research Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Control Systems and Technology (CS)</fullName>
+                    <default>false</default>
+                    <label>Control Systems and Technology (CS)</label>
+                </value>
+                <value>
+                    <fullName>Ecological Research (ER)</fullName>
+                    <default>false</default>
+                    <label>Ecological Research (ER)</label>
+                </value>
+                <value>
+                    <fullName>Health Effects Research and Human Health Risk Assessment (HE)</fullName>
+                    <default>false</default>
+                    <label>Health Effects Research and Human Health Risk Assessment (HE)</label>
+                </value>
+                <value>
+                    <fullName>Monitoring and Measurement Methods (MM)</fullName>
+                    <default>false</default>
+                    <label>Monitoring and Measurement Methods (MM)</label>
+                </value>
+                <value>
+                    <fullName>Transport and Fate (TF)</fullName>
+                    <default>false</default>
+                    <label>Transport and Fate (TF)</label>
+                </value>
+                <value>
+                    <fullName>Review Articles (RA)</fullName>
+                    <default>false</default>
+                    <label>Review Articles (RA)</label>
+                </value>
+                <value>
+                    <fullName>Risk Management and Ecosystem Restoration (RM)</fullName>
+                    <default>false</default>
+                    <label>Risk Management and Ecosystem Restoration (RM)</label>
+                </value>
+                <value>
+                    <fullName>Integrated Risk Assessment (IR)</fullName>
+                    <default>false</default>
+                    <label>Integrated Risk Assessment (IR)</label>
+                </value>
+                <value>
+                    <fullName>Environmental Policy and Decision-Making Studies (EP)</fullName>
+                    <default>false</default>
+                    <label>Environmental Policy and Decision-Making Studies (EP)</label>
+                </value>
+                <value>
+                    <fullName>Homeland Security (HS)</fullName>
+                    <default>false</default>
+                    <label>Homeland Security (HS)</label>
+                </value>
+                <value>
+                    <fullName>Industry and the Environment (IE)</fullName>
+                    <default>false</default>
+                    <label>Industry and the Environment (IE)</label>
+                </value>
+                <value>
+                    <fullName>Energy and the Environment (EE)</fullName>
+                    <default>false</default>
+                    <label>Energy and the Environment (EE)</label>
+                </value>
+                <value>
+                    <fullName>Sustainability and Innovation (SI)</fullName>
+                    <default>false</default>
+                    <label>Sustainability and Innovation (SI)</label>
+                </value>
+                <value>
+                    <fullName>Other Environmental Research (OR)</fullName>
+                    <default>false</default>
+                    <label>Other Environmental Research (OR)</label>
+                </value>
+                <value>
+                    <fullName>Ecological Research</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Ecological Research</label>
+                </value>
+                <value>
+                    <fullName>Environmental Futures</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Environmental Futures</label>
+                </value>
+                <value>
+                    <fullName>Environmental Statistics</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Environmental Statistics</label>
+                </value>
+                <value>
+                    <fullName>HEResearch and HHRisk Assessment</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Health Effects Research &amp; HHRA</label>
+                </value>
+                <value>
+                    <fullName>Integrated Risk Assessment</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Integrated Risk Assessment</label>
+                </value>
+                <value>
+                    <fullName>Monitoring and Measuring Methods</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Monitoring and Measuring Methods</label>
+                </value>
+                <value>
+                    <fullName>Other Environmental Research</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Other Environmental Research</label>
+                </value>
+                <value>
+                    <fullName>Review Articles</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Review Articles</label>
+                </value>
+                <value>
+                    <fullName>Social Sciences</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Social Sciences</label>
+                </value>
+                <value>
+                    <fullName>Transport and Fate</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Transport and Fate</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>STAA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The package stays in DRAFT mode until STAA Coordinator Marks FINAL.</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DRAFT</fullName>
+                    <default>true</default>
+                    <label>DRAFT</label>
+                </value>
+                <value>
+                    <fullName>LOCKED</fullName>
+                    <default>false</default>
+                    <label>LOCKED - Pending Nominating Official Approval</label>
+                </value>
+                <value>
+                    <fullName>LOCKED2</fullName>
+                    <default>false</default>
+                    <label>LOCKED - Pending STAA Coordinator Approval</label>
+                </value>
+                <value>
+                    <fullName>FINAL</fullName>
+                    <default>false</default>
+                    <label>FINAL</label>
+                </value>
+                <value>
+                    <fullName>AWARDED</fullName>
+                    <default>false</default>
+                    <label>AWARDED</label>
+                </value>
+                <value>
+                    <fullName>NOT AWARDED</fullName>
+                    <default>false</default>
+                    <label>NOT AWARDED</label>
+                </value>
+                <value>
+                    <fullName>EXPIRED</fullName>
+                    <default>false</default>
+                    <label>EXPIRED</label>
+                </value>
+                <value>
+                    <fullName>Package Ready</fullName>
+                    <default>false</default>
+                    <label>Package Ready</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Initially created as an overflow object for the increasingly utilized Forms object, this object is oriented more toward forms intended to relegate most substantial content to attachments or other objects, as would a routing slip on top of a document.  Used initially in STAA, but available for other purposes, too.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Cover Form</label>
+    <nameField>
+        <displayFormat>EPA-CF-{0000000000}</displayFormat>
+        <label>ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cover Forms</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Laboratory_Office_Name__c</columns>
+        <columns>Primary_Research_Category__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Nominations</fullName>
+        <columns>NAME</columns>
+        <columns>Nominating_Official_s_Comments__c</columns>
+        <columns>Laboratory_Office_Name__c</columns>
+        <columns>Primary_Research_Category__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Nominations</label>
+    </listViews>
+    <recordTypes>
+        <fullName>STAA_Application</fullName>
+        <active>true</active>
+        <description>EPA Scientific and Technological Achievement Awards</description>
+        <label>STAA Application</label>
+        <picklistValues>
+            <picklist>Primary_Research_Category__c</picklist>
+            <values>
+                <fullName>Control Systems and Technology %28CS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ecological Research %28ER%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy and the Environment %28EE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental Policy and Decision-Making Studies %28EP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Effects Research and Human Health Risk Assessment %28HE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homeland Security %28HS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry and the Environment %28IE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrated Risk Assessment %28IR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoring and Measurement Methods %28MM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Environmental Research %28OR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Review Articles %28RA%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Management and Ecosystem Restoration %28RM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability and Innovation %28SI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transport and Fate %28TF%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Secondary_Research_Category__c</picklist>
+            <values>
+                <fullName>Control Systems and Technology %28CS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ecological Research %28ER%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy and the Environment %28EE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental Policy and Decision-Making Studies %28EP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Effects Research and Human Health Risk Assessment %28HE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homeland Security %28HS%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry and the Environment %28IE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrated Risk Assessment %28IR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoring and Measurement Methods %28MM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Environmental Research %28OR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Review Articles %28RA%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Management and Ecosystem Restoration %28RM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability and Innovation %28SI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transport and Fate %28TF%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>AWARDED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DRAFT</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>EXPIRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FINAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOCKED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOCKED2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NOT AWARDED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Package Ready</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>Citation_Length</fullName>
+        <active>true</active>
+        <errorConditionFormula>LEN(Citation__c) &gt; 120</errorConditionFormula>
+        <errorDisplayField>Citation__c</errorDisplayField>
+        <errorMessage>Citation Required. Length must not exceed 120 characters</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Limit_2_Category_Selection</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(INCLUDES( Secondary_Research_Category__c , "	Ecological Research"),1,0) + 
+IF(INCLUDES( Secondary_Research_Category__c, "Environmental Futures"),1,0) + 
+IF(INCLUDES( Secondary_Research_Category__c, "Environmental Statistics"),1,0) + 
+IF(INCLUDES( Secondary_Research_Category__c, "HEResearch and HHRisk Assessment"),1,0) + 
+IF(INCLUDES( Secondary_Research_Category__c, "Integrated Risk Assessment"),1,0) + 
+IF(INCLUDES( Secondary_Research_Category__c, "Monitoring and Measuring Methods"),1,0) + 
+IF(INCLUDES( Secondary_Research_Category__c, "Other Environmental Research"),1,0) + 
+IF(INCLUDES( Secondary_Research_Category__c, "Review Articles"),1,0) + 
+IF(INCLUDES( Secondary_Research_Category__c, "Social Sciences"),1,0) +
+IF(INCLUDES( Secondary_Research_Category__c, "Transport and Fate"),1,0) &gt; 2</errorConditionFormula>
+        <errorDisplayField>Secondary_Research_Category__c</errorDisplayField>
+        <errorMessage>Limit of two categories</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>STAA_Locked_Record_based_on_Status</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(AND(
+
+OR(
+TEXT(Status__c) = 'FINAL',
+TEXT(Status__c) = 'AWARDED',
+TEXT(Status__c) = 'NOT AWARDED',
+TEXT(Status__c) = 'EXPIRED'),
+
+OR(
+ ISCHANGED(Primary_Research_Category__c),
+ ISCHANGED(Secondary_Research_Category__c), 
+ ISCHANGED(Nominating_Official__c),
+ ISCHANGED(STAA_Coordinator__c), 
+ ISCHANGED(OwnerId),
+ ISCHANGED(Laboratory_Office_Name__c),
+ ISCHANGED(Citation__c),
+ ISCHANGED(Eligibility_Criteria_1__c),
+ ISCHANGED(Eligibility_Criteria_2__c),
+ ISCHANGED(Eligibility_Criteria_3__c),
+ ISCHANGED(Eligibility_Criteria_4__c),
+ ISCHANGED(Justification_1__c),
+ ISCHANGED(Justification_2A__c),
+ ISCHANGED(Justification_2B__c),
+ ISCHANGED(Justification_2C__c),
+ ISCHANGED(Justification_2D__c),
+ ISCHANGED(Justification_2E__c),
+ ISCHANGED(Justification_3A__c),
+ ISCHANGED(Justification_3B__c)
+)),
+
+TRUE, 
+FALSE)</errorConditionFormula>
+        <errorMessage>This record is currently LOCKED from editing</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Generate_Pdf</fullName>
+        <availability>online</availability>
+        <description>This button generated the Pdf with cover form content.Created by Mounika.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Generate Pdf</masterLabel>
+        <openType>sidebar</openType>
+        <page>STAA_ReportsForCoverForm</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_Application</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Submit Application</masterLabel>
+        <openType>sidebar</openType>
+        <page>STAAAplicationFinalValidationPage</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

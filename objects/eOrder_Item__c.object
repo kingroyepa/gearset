@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Delivery_Date__c</fullName>
+        <description>GAS Application</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Delivery Date by Vendor</inlineHelpText>
+        <label>Delivery Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Item_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product__r.List_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Item Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Order_Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Order Request</label>
+        <referenceTo>Order_Request__c</referenceTo>
+        <relationshipLabel>Order Request Items</relationshipLabel>
+        <relationshipName>eOrder_Items</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pickup_Date__c</fullName>
+        <description>GAS Application</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cylinder Pick up Date by user.</inlineHelpText>
+        <label>Pickup Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Product_Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product__r.Active__c , TRUE, FALSE)</formula>
+        <label>Product Active?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product__r.Product_Code__c</formula>
+        <label>Product Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product__r.Description__c</formula>
+        <label>Product Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_List_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product__r.List_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Product_Size__c</fullName>
+        <description>Gas Application. Gets the parent product size.</description>
+        <externalId>false</externalId>
+        <formula>Product__r.Size__c</formula>
+        <label>Product Size</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Product__r.Product_Type__c)</formula>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Vendor__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product__r.Vendor__r.Name</formula>
+        <label>Product Vendor</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Choose a Product by searching for Product details</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose a Product by searching for Product details</inlineHelpText>
+        <label>Product</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>EPA_Product__c.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>EPA_Product__c.Vendor__r.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>EPA_Product__c</referenceTo>
+        <relationshipLabel>eOrder Items</relationshipLabel>
+        <relationshipName>eOrder_Items</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <description>Number of cylinders requested</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of cylinders requested</inlineHelpText>
+        <label>Quantity</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>The current state of this item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The current state of this item</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Order</fullName>
+                    <default>true</default>
+                    <label>New Order</label>
+                </value>
+                <value>
+                    <fullName>Pending Approval</fullName>
+                    <default>false</default>
+                    <label>Pending Approval</label>
+                </value>
+                <value>
+                    <fullName>Request Approved</fullName>
+                    <default>false</default>
+                    <label>Request Approved</label>
+                </value>
+                <value>
+                    <fullName>Added to Order</fullName>
+                    <default>false</default>
+                    <label>Added to Order</label>
+                </value>
+                <value>
+                    <fullName>Order Placed</fullName>
+                    <default>false</default>
+                    <label>Order Placed</label>
+                </value>
+                <value>
+                    <fullName>Order Received</fullName>
+                    <default>false</default>
+                    <label>Order Received</label>
+                </value>
+                <value>
+                    <fullName>Order Delivered</fullName>
+                    <default>false</default>
+                    <label>Order Delivered</label>
+                </value>
+                <value>
+                    <fullName>Added to 1900-63</fullName>
+                    <default>false</default>
+                    <label>Added to 1900-63</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product__r.List_Price__c * Quantity__c</formula>
+        <label>Total Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Name__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Vendor Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>eOrder Items</relationshipLabel>
+        <relationshipName>eOrder_Items</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>X1900_63_Generated_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>1900-63 Generated Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>X1900_63__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>1900-63</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>eOrder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>eOrder</label>
+        <referenceTo>eOrders__c</referenceTo>
+        <relationshipLabel>eOrder Items</relationshipLabel>
+        <relationshipName>eOrder_Items</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Specific or detailed items within an order tracked in the eOrders document, initially for the GAS application.  (Similar to Line Items, into which this item might be merged someday.)</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>eOrder Item</label>
+    <nameField>
+        <displayFormat>EPA-EOI-{000000000}</displayFormat>
+        <label>eOrder Item ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>eOrder Items</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Product__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Vendor__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Active__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Product__c</searchFilterFields>
+        <searchFilterFields>Product_Active__c</searchFilterFields>
+        <searchFilterFields>Product_Description__c</searchFilterFields>
+        <searchFilterFields>Product_Vendor__c</searchFilterFields>
+        <searchResultsAdditionalFields>Product__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Vendor__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Active__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>GAS_All_eOrder_Items</fullName>
+        <columns>NAME</columns>
+        <filterScope>Mine</filterScope>
+        <label>GAS All eOrder Items</label>
+    </listViews>
+    <listViews>
+        <fullName>GAS_eOrder_Items</fullName>
+        <columns>NAME</columns>
+        <columns>eOrder__c</columns>
+        <columns>Order_Request__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Total_Price__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>GAS eOrder Items</label>
+    </listViews>
+    <recordTypes>
+        <fullName>GAS_eOrder_Item</fullName>
+        <active>true</active>
+        <description>GAS Aquisition System</description>
+        <label>GAS eOrder Item</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Added to 1900-63</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Added to Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Order</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Order Delivered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Placed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Approved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

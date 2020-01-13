@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ARTT_Control_Budget_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Shares adjustment records with team members responsible for managing control budget records.</description>
+        <label>ARTT Control Budget Sharing</label>
+        <sharedTo>
+            <group>ARTT_Budget_Access</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ARTT Budget Adjustment</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DCR_OAP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DCR OAP Sharing</description>
+        <label>DCR OAP</label>
+        <sharedTo>
+            <group>DCR_OAR_OAP_PMO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Allowance_Holder__c</field>
+            <operation>equals</operation>
+            <value>58 - OAP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>DCR Op Plan Adjustment,DCR Suballocation Adjustment</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DCR_OTAQ</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DCR OTAQ Sharing</description>
+        <label>DCR OTAQ</label>
+        <sharedTo>
+            <group>DCR_OAR_OTAQ</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Allowance_Holder__c</field>
+            <operation>equals</operation>
+            <value>56 - OTAQ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>DCR Op Plan Adjustment,DCR Suballocation Adjustment</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

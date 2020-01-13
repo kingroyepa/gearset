@@ -1,0 +1,269 @@
+<messaging:emailTemplate recipientType="User"
+    relatedToType="eOrders__c"
+    subject="New Order Consolidated Request {!relatedTo.Order_Number__c} for {!relatedTo.Vendor_Name__r.Name}"
+    replyTo="support@acme.com">
+
+    <messaging:htmlEmailBody >
+    <html>
+<style type="text/css">
+    body{
+        width:600px;
+        font-size: large; 
+        font-family: Arial, sans-serif;
+    }
+    
+    #logo-section{
+        text-align:right;
+    }
+    #email-body{
+        width:500px;
+        margin: 0 auto;
+    }
+    
+    .label-email-details{
+        font-weight: bold;
+    }
+    #cylinder-box{
+        padding:10px 20px;
+        margin:10px;
+        border:1px solid #0071bc;
+    }
+    #delivery-table{
+        width:100%;
+        border:1px solid #0071bc;
+    }
+    #delivery-table thead{
+        background:#0071bc;
+        color:#fff;
+        text-align:center;
+    }
+     #delivery-table tr{
+        text-align:center;
+    }
+    .delivery-table-label, .delivery-table-data{
+        padding: 5px;
+    }
+    #delivery-table tr, #delivery-table th{
+        border:1px solid #0071bc;
+    }
+    #donot-reply{
+        font-size:12px;
+    }
+    .cylinder-sub-total{
+        font-weight:bold;
+        padding:10px 0px;
+        border-top:1px solid #0071bc;
+    }
+
+</style>    
+    
+    <body>
+  <div id="email-body">
+ 
+ <div id="logo-section">
+ <img src="https://epaoei--ordgas--c.visualforce.com/resource/1528391434000/EPAlogo_full?isdtp=p1"/>
+ </div>    
+    
+    
+        <p>To: {!relatedTo.Vendor_Name__r.Name}:</p>
+        
+         <p>The following is a Combined Cylinder Return Request. Please refer the to attached PDF for further details.</p>
+        
+ <!-- Start eOrder Table-->
+
+<div id="tablecontainer">
+    <table id="delivery-table">
+        <thead>
+        <tr>
+        <th>
+        <div title="Category Number"><div class="delivery-table-label">Cylinder No.</div></div>
+        </th>
+        <th>
+        <div title="Quantity"><div class="delivery-table-label">Product Description</div></div>
+        </th>
+        <th>
+        <div title="Total"><div class="delivery-table-label">Requestor</div></div>
+        </th>
+        <th>
+        <div title="Pick-up Location"><div class="delivery-table-label">Pick-up Location</div></div>
+        </th>
+        </tr>
+        </thead>
+        <tbody>
+        <apex:variable value="{!0}" var="SubTotalA"/>
+        <apex:repeat value="{!relatedTo.Line_Items_eOrder_Return__r}" var="line">
+        <apex:variable var="SubTotalA" value="{!SubTotalA + 1}"/>
+            <tr>
+                <td data-label="Cylinder No.">
+                <div class="delivery-table-data" title="{!line.Serial_Number__c}">{!line.Serial_Number__c}</div>
+                </td>
+                <td data-label="Product Description">
+                <div class="delivery-table-data" title="{!line.Product__r.Description__c}">{!line.Product__r.Description__c}</div>
+                </td>   
+                <td data-label="Requestor">
+                <div class="delivery-table-data" title="{!line.Order_Request__r.Requester__c}">{!line.Order_Request__r.Requester__c}</div>
+                </td> 
+                <td data-label="Pick-up Location">
+                <div class="delivery-table-data" title="Pick-up Location">{!line.Cylinder_Return_Location__c}</div>
+                </td>                            
+            </tr>
+        </apex:repeat>
+        
+            <tr>
+            <td colspan="3"><div class="cylinder-sub-total" style="text-align:right;">Number of Cylinders:</div></td>
+            <td colspan="1"><div class="cylinder-sub-total">{!SubTotalA}</div></td>
+            </tr> 
+    </tbody>
+    </table>
+</div>
+
+
+ <!-- End eOrder Table-->
+        
+        <p>Thank You,</p>
+        <p>EPA Gas Acquisition System</p>
+        
+        <p id="donot-reply">
+____________<br/>
+Please do not reply to this email. This mailbox is unmonitored</p>  
+        
+ </div>       
+        
+        
+        
+        
+        
+        </body>
+        </html>
+    </messaging:htmlEmailBody>
+    
+    
+<!--Attachment-->    
+    <messaging:attachment renderAs="PDF" filename="{!relatedTo.Order_Number__c}.pdf">
+
+
+<html>
+    <head>
+    <apex:stylesheet value="{!$Resource.GAScss}"/>
+
+    </head>
+ <body class="eorderpdf">
+    <!--Report Reproduction-->
+    <!--Header-->
+    <h1>Combined Cylinder Pickup Request Form</h1>
+    
+     <!--Vendor Information--> 
+    <div id="orderinfobox1" class="topinfoboxes">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" valign="top">
+                    <span class="topinfolabel">ATTN:</span><span class="topinfodata">{!relatedTo.Vendor_Name__r.Primary_Contact__r.FirstName} {!relatedTo.Vendor_Name__r.Primary_Contact__r.LastName} ({!relatedTo.Vendor_Name__r.Primary_Contact__r.Email})</span><br/>
+                    <span class="topinfolabel">Vendor:</span><span class="topinfodata"><apex:outputText value="{!relatedTo.Vendor_Name__r.Name}"/></span><br/>
+                    <span class="topinfolabel">Email Address:</span><span class="topinfodata"><apex:outputText value="{!relatedTo.Vendor_Name__r.Email__c}"/></span>
+                </td>
+           </tr>
+        </table> 
+
+    </div>
+    
+     <table cellspacing="0" cellpadding="0" style="width:100%">
+      <tr>
+        <td style="width:50%">
+            <div id="vendorinfobox" class="topinfoboxes">
+                <span class="topinfolabel">EPA BPA/Contract Number:</span><span class="topinfodata">{!relatedTo.Contract__r.Name}</span><br/>
+                <span class="topinfolabel">EPA Call Number: </span><span class="topinfodata">{!relatedTo.Call_Number__c}</span><br/>
+                <span class="topinfolabel">EPA Customer Number:</span><span class="topinfodata">{!relatedTo.Vendor_Name__r.Vendor_Customer_Number__c} </span><br/>
+            </div>
+        </td>
+        <td style="width:50%; vertical-align: top;">
+            <div id="contractinfobox" class="topinfoboxes">
+                <span class="topinfolabel">Date Request Created:</span><span class="topinfodata"><apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!TODAY()}" /> </apex:outputText></span><br/>
+                <span class="topinfolabel">Requested Pickup Date:</span><span class="topinfodata">  <apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!relatedTo.Requested_Pickup_Date__c}" /></apex:outputText> </span><br/>
+                <span class="topinfolabel">Total Number of Items:</span><span class="topinfodata"><apex:variable value="{!0}" var="SubTotal1"/><apex:repeat value="{!relatedTo.Line_Items_eOrder_Return__r}" var="line1"><apex:variable var="SubTotal1" value="{!SubTotal1 + 1}"/></apex:repeat>{!SubTotal1}</span>
+            
+            </div>
+        </td> 
+      </tr>
+    </table>
+    <!--Requestor Information-->
+    <div id="orderinfobox2" class="topinfoboxes">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" valign="top">
+                    <span class="topinfolabel">Call Ordering Official:</span><span class="topinfodata"><apex:outputText value="{!relatedTo.Owner.Name}"/></span><br/>
+                    <span class="topinfolabel">Email Address:</span><span class="topinfodata"><apex:outputText value="{!relatedTo.Owner.Email}"/></span><br/>
+                    <span class="topinfolabel">Phone Number:</span><span class="topinfodata"><apex:outputText value="{!relatedTo.Owner.Phone}"/></span>
+                </td>
+           </tr>
+        </table> 
+
+    </div>
+    
+   
+    <!--Table 1-->
+    <div id="tablecontainer">
+    <table id="deliverytable" style="width=100%">
+        <thead>
+        <tr style="width=100%;background-color: darkgray !important;">
+         <th style="width=8%">
+        <div title="PickUp Location">PickUp Location</div>
+        </th>
+        <th style="width=8%">
+        <div title="Cylinder No.">Cylinder Serial Number</div>
+        </th>
+        
+        <th style="width=8%">
+        <div title="Requestor">Requester Name</div>
+        </th>
+        <th style="width=8%">
+        <div title="Order Number">EPA Internal Request Number</div>
+        </th>
+        <th style="width=8%">
+        <div title="Organization">Organization</div>
+        </th>
+        <th style="width=8%">
+            <div title="Serial Number">EPA Internal Requested Pickup Date</div>
+        </th>
+        <th style="width=8%">
+        <div title="Status">Status</div>
+        </th>
+        </tr>
+        </thead>
+        <tbody>
+        <apex:variable value="{!0}" var="SubTotal"/>
+        <apex:repeat value="{!relatedTo.Line_Items_eOrder_Return__r}" var="line">
+            <apex:variable var="SubTotal" value="{!SubTotal + 1}"/>
+            <tr style="width=100%">
+                
+                <td>{!line.Order_Request__r.Delivery_facilities__c} - {!line.Cylinder_Return_Location__c}</td>
+                <td data-label="Serial Number" style="width=8%">{!line.Serial_Number__c}</td>
+                <td>{!line.Order_Request__r.Requester__c}</td>
+                <td>{!line.Order_Request__r.Name}</td>
+                
+                <td>{!line.Order_Request__r.Requester_Org__c}</td>
+                 <td data-label="Requested Date" style="width=8%">
+                 <div><apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!line.Cylinder_Return_Date__c}" /> </apex:outputText>
+                   </div>
+                </td>  
+                <td>{!line.Status__c}</td>
+            </tr>
+        </apex:repeat>
+               
+        
+        
+        </tbody>
+    </table>
+    </div>
+    
+
+    </body>
+   </html>  
+
+    </messaging:attachment>  
+    
+    
+    
+    
+    
+    
+</messaging:emailTemplate>

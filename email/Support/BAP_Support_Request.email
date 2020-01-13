@@ -1,0 +1,21 @@
+Thank you for contacting the Business Automation Platform (BAP) Administration email group.   <br>
+ <br>
+The purpose of the BAP_Admins email group is to receive requests for administrative actions in the Agency’s BAP.  We are not able to respond to inquiries or requests for action on specific forms and other applications that are running on the BAP, so we recommend contacting the form owner or other application owner directly to expedite resolution of your request.<br>
+<br> 
+To access the Agency Forms Site component of the BAP where you can submit workflow forms, please click here (you'll need an EPA LAN ID & password). <br>
+<br> 
+To access the main Force.com component of the BAP where you can approve workflow forms and access other BAP applications, please click here (you'll need an EPA LAN ID and password and you’ll need to have been activated as a Salesforce user).<br>
+<br> 
+In order to request that a user be activated in Salesforce, go to https://forms.epa.gov and click "New Form" for BAP Provisioning.  Please select ‘Starter User’, the Authorization Reason (like Supervisor & Time Keeper) and what their Role is.  Then submit for approval.<br>
+ <br>
+If your e-mail pertains to a specific form, application, or technical issue, please contact the EPA Call Center (866-411-4EPA, epacallcenter@epa.gov) or the cognizant individual below:  <br>
+ <br>
+•	For EPA-100 Episodic Flexiplace Form, contact Detha McNeal. (202-564-6707, McNeal.detha@Epa.gov) <br>
+•	For SF-182 Training Form, contact your local Training Officer or Training Coordinator<br>
+•	For EPA-3160 Leave Bank Election Form, contact Bisa Cunningham. (202-564-6635, OHRLeaveQuestions@epa.gov) <br>
+•	For ORD-111 ORD Quality Assurance Review Form, contact Lora Johnson. (513-569-7299, Johnson.lora@epa.gov)<br>
+<br>
+If your message is a request for platform administration action on the Agency’s BAP, a member of our BAP Administration team will respond to you as soon as possible.  We appreciate your patience and understanding.<br>
+<br><br>
+ {!Case.Thread_Id}
+<br>

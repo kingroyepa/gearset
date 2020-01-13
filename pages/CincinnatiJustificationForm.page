@@ -1,0 +1,372 @@
+<!--
+ - Justification form used by the Cincinnati ORD offices.
+ -->
+
+<apex:page id="CincinnatiJustificationForm" standardController="Award__c" extensions="PDFFormCreatorController" standardStylesheets="true" renderAs="pdf" applyHtmlTag="false" showHeader="false">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Cinc Union - S Award Nom Form[7636]</title>
+        <meta name="author" content="Janet Thompson" />
+        <style type="text/css">
+            * {margin:0; padding:0; text-indent:0; }
+            h1 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12pt; }
+            .s1 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+            .s2 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+            .s3 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 12pt; }
+            p { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 12pt; margin:0pt; }
+            .s4 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 1pt; }
+            .s5 { color: black; font-family:TimesNewRomanPS-BoldItalicMT, serif; font-style: italic; font-weight: bold; text-decoration: underline; font-size: 12pt; }
+            .s6 { color: black; font-family:TimesNewRomanPS-BoldItalicMT, serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 12pt; }
+            .s7 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+            li {display: block; }
+            .short { width: 75%; margin-right: 0; }
+            #l1 {padding-left: 0pt;counter-reset: c1 1; }
+            #l1> li:before {counter-increment: c1; content: counter(c1, decimal)". "; color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+            #l1> li:first-child:before {counter-increment: c1 0; }
+        </style>
+    </head>
+
+    <body>
+    <h1 style="text-align: center;">SUPERIOR ACHIEVEMENT NOMINATION FORM</h1>
+    <p class="s1" style="text-align: center;">U.S. ENVIRONMENTAL PROTECTION AGENCY</p>
+    <p class="s1" style="padding-bottom: 5pt;text-align: center;">Cincinnati, Ohio/Edison, New Jersey</p>
+
+    <p class="s2" style="text-align: center;">***<u> Form to be used where Bargaining Unit Employee “S” Award or Team Aggregate is at least $600 </u>***</p><br />
+
+    <table id="nameAndDateTable" cellspacing="0pt" style="padding-left: 23pt; width: 100%;">
+        <tr style="height: 11pt;">
+            <td style="width: 75pt">
+                <h1 style="text-align: left;">Name(s) of Nominee: </h1>
+            </td>
+            <td style="width: 150pt; border-bottom: 1px solid black;">
+                <span class="s1">{!employeeName}</span>
+            </td>
+            <td style="width: 50pt">
+                <h1 style="text-align: left; padding-left: 10pt;">Date Submitted: </h1>
+            </td>
+            <td style="width: 50pt; border-bottom: 1px solid black;">
+                <span class="s1">{!submittedDate}</span>
+            </td>
+        </tr>
+    </table>
+    <table id="teamNameTable" cellspacing="0pt" style="padding-left: 23pt; padding-top: 2pt; width: 100%;">
+        <tr style="height: 11pt;">
+            <td style="width: 60pt;">
+                <h1>Name of Team: </h1>
+            </td>
+            <td style="padding-left: 10pt; width: 80%; border-bottom: 1px solid black">
+            </td>
+        </tr>
+    </table>
+    <p class="s1" style="padding-left: 23pt;text-indent: 37pt;text-align: left;">(For Team award nominations, attach list of nominees/organization/location/phone nos.)</p>
+    <table id="labAndPhoneTable" cellspacing="0pt" style="padding-left: 23pt; padding-top: 2pt; width: 100%;">
+        <tr>
+            <td width="30%">
+                <h1>Labratory/Center: </h1>
+            </td>
+            <td width="70%" style="border-bottom: 1px solid black;">
+                <span class="s1">{!employeeOrganization}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1>Phone No. of Nominee(s): </h1>
+            </td>
+            <td style="border-bottom: 1px solid black;">
+                <span class="s1">{!employeePhoneNumber}</span>
+            </td>
+        </tr>
+    </table>
+
+    <h1 style="padding-left: 23pt; padding-top: 5pt; text-align: left;">Checklist:</h1>
+    <ol id="l1">
+        <li style="padding-left: 74pt;text-indent: -15pt;text-align: left;"><p class="s1" style="display: inline;">Superior Achievement Nomination Form</p></li>
+        <li style="padding-left: 74pt;text-indent: -15pt;text-align: left;"><p class="s1" style="display: inline;">Narrative</p></li>
+        <li style="padding-left: 74pt;text-indent: -15pt;text-align: left;"><p class="s1" style="display: inline;">EPA Form 3130-1a (Rev. 6/98) Recommendation for Incentive Recognition</p></li>
+    </ol>
+
+    <table id="recommendedAwardAmountTable" width="70%" cellspacing="0" style="padding-top: 10pt; padding-left: 23pt;">
+        <tr>
+            <td width="50%">
+                <h1>Recommended Award Amount: </h1>
+            </td>
+            <td width="50%" style="padding-left: 10pt; border-bottom: 1px solid black">
+                <span class="s1">${!awardAmount}</span>
+            </td>
+        </tr>
+    </table>
+
+    <h1 style="padding-top: 10pt;padding-left: 59pt;text-indent: -36pt;text-align: left;">Detailed Narrative on How the Achievement(s) of the Nominee(s) Merit Recognition</h1>
+    <p class="s1" style="padding-left: 59pt;">Must be attached and based on one or more of the 8 criteria elements for “S” Awards.</p>
+    <p class="s1" style="padding-left: 59pt;">Cite EPA criteria on nomination. Limit narrative to two (2) pages.</p>
+
+    <table id="signatureTable" style="padding-top: 10pt; padding-left: 23pt; padding-bottom: 10pt;" cellspacing="0" width="100%">
+        <tr>
+            <td style="border-bottom: 1px solid black; text-align: center" width="80%">
+                <span class="s1" style="font-style: italic">{!requestingOfficialName}</span>
+            </td>
+            <td width="3%">
+                <!-- Empty Cell -->
+            </td>
+            <td style="padding-left: 10pt; border-bottom: 1px solid black; text-align: center" width="17%">
+                <span class="s1">{!currentDate}</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center">
+                <h1>Signature of Nominator</h1>
+            </td>
+            <td>
+                <!-- Empty Cell -->
+            </td>
+            <td style="text-align: center">
+                <h1>Date</h1>
+            </td>
+        </tr>
+    </table>
+    <hr />
+
+
+    <div style="page-break-after: always">
+        <h1 style="padding-top: 5pt;padding-left: 23pt; text-align: left;">NTEU Chapter 279 Comments:</h1>
+        <table id="chapterAgreeCommentsTable" width="100%" style="padding-top: 10pt; padding-left: 23pt;" cellspacing="0">
+            <tr style="height: 11pt;">
+                <td style="text-align: right;" width="10%">
+                    <apex:image value="/img/checkbox_unchecked.gif" />
+                </td>
+                <td width="5%">
+                    <!-- Empty cell to split checkbox and text -->
+                </td>
+                <td style="text-align: left">
+                    <span class="s1">Agree with Nomination</span>
+                </td>
+            </tr>
+            <tr style="height: 15pt;">
+                <td style="text-align: left;">
+                    <span class="s1">Comments: </span>
+                </td>
+                <td>
+                    <!-- Empty cell to split comments and comments line -->
+                </td>
+                <td style="border-bottom: 1px solid black">
+                    <!-- Empty for comments line -->
+                </td>
+            </tr>
+            <tr style="height: 20pt;">
+                <td>
+                    <!-- Empty cell underneath Comments text -->
+                </td>
+                <td>
+                    <!-- Empty cell -->
+                </td>
+                <td style="border-bottom: 1px solid black">
+                    <!-- Empty cell for comments line -->
+                </td>
+            </tr>
+        </table>
+        <table id="chapterDisgreeCommentsTable" width="100%" style="padding-top: 2pt; padding-bottom: 15pt; padding-left: 23pt;" cellspacing="0">
+            <tr style="height: 11pt;">
+                <td style="text-align: right;" width="10%">
+                    <apex:image value="/img/checkbox_unchecked.gif" />
+                </td>
+                <td width="5%">
+                    <!-- Empty cell to split checkbox and text -->
+                </td>
+                <td style="text-align: left">
+                    <span class="s1">Disagree with Nomination</span>
+                </td>
+            </tr>
+            <tr style="height: 15pt;">
+                <td style="text-align: left;">
+                    <span class="s1">Comments: </span>
+                </td>
+                <td>
+                    <!-- Empty cell to split comments and comments line -->
+                </td>
+                <td style="border-bottom: 1px solid black">
+                    <!-- Empty for comments line -->
+                </td>
+            </tr>
+            <tr style="height: 20pt;">
+                <td>
+                    <!-- Empty cell underneath Comments text -->
+                </td>
+                <td>
+                    <!-- Empty cell -->
+                </td>
+                <td style="border-bottom: 1px solid black">
+                    <!-- Empty cell for comments line -->
+                </td>
+            </tr>
+        </table>
+        <apex:panelGrid columns="2" cellspacing="10px" width="80%" style="padding-bottom: -10pt;">
+            <apex:outputPanel >
+                <div style="border-top: 1px solid black; padding-top: -10px;">
+                    <h1 style="padding-left: 23pt; text-align: center;">Signature of NTEU Chapter 279 Awards POC</h1>
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel >
+                <div style="border-top: 1px solid black; padding-top: -15px;">
+                    <h1 style="padding-left: 0pt; text-align: center;">     Date     </h1>
+                </div>
+            </apex:outputPanel>
+        </apex:panelGrid>
+        <!-- Put a Comment line here -->
+        <hr />
+        <h1 style="padding-top: 5pt;padding-left: 23pt; text-align: left;">Approving Official's Comments:</h1>
+        <table id="chapterAgreeCommentsTable" width="100%" style="padding-top: 10pt; padding-left: 23pt;" cellspacing="0">
+            <tr style="height: 11pt;">
+                <td style="text-align: right;" width="10%">
+                    <apex:image value="/img/checkbox_unchecked.gif" />
+                </td>
+                <td width="5%">
+                    <!-- Empty cell to split checkbox and text -->
+                </td>
+                <td style="text-align: left">
+                    <span class="s1">Agree with NTEU's Recommendation</span>
+                </td>
+            </tr>
+            <tr style="height: 15pt;">
+                <td style="text-align: left;">
+                    <span class="s1">Comments: </span>
+                </td>
+                <td>
+                    <!-- Empty cell to split comments and comments line -->
+                </td>
+                <td style="border-bottom: 1px solid black">
+                    <!-- Empty for comments line -->
+                </td>
+            </tr>
+            <tr style="height: 20pt;">
+                <td>
+                    <!-- Empty cell underneath Comments text -->
+                </td>
+                <td>
+                    <!-- Empty cell -->
+                </td>
+                <td style="border-bottom: 1px solid black">
+                    <!-- Empty cell for comments line -->
+                </td>
+            </tr>
+        </table>
+        <table id="chapterDisgreeCommentsTable" width="100%" style="padding-top: 2pt; padding-bottom: 15pt; padding-left: 23pt;" cellspacing="0">
+            <tr style="height: 11pt;">
+                <td style="text-align: right;" width="10%">
+                    <apex:image value="/img/checkbox_unchecked.gif" />
+                </td>
+                <td width="5%">
+                    <!-- Empty cell to split checkbox and text -->
+                </td>
+                <td style="text-align: left">
+                    <span class="s1">Disagree with NTEU's Recommendation</span>
+                </td>
+            </tr>
+            <tr style="height: 15pt;">
+                <td style="text-align: left;">
+                    <span class="s1">Comments: </span>
+                </td>
+                <td>
+                    <!-- Empty cell to split comments and comments line -->
+                </td>
+                <td style="border-bottom: 1px solid black">
+                    <!-- Empty for comments line -->
+                </td>
+            </tr>
+            <tr style="height: 20pt;">
+                <td>
+                    <!-- Empty cell underneath Comments text -->
+                </td>
+                <td>
+                    <!-- Empty cell -->
+                </td>
+                <td style="border-bottom: 1px solid black">
+                    <!-- Empty cell for comments line -->
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h1 style="text-align: center;">"S" Award Criteria</h1><br />
+
+    <p class="s5" style="padding-left: 18pt; text-align: left;">Please check one or more of the boxes below corresponding to the criterion/criteria on which you have based your award nomination.</p><br />
+
+    <table style="border-collapse:collapse;margin-left:5.77pt" cellspacing="0">
+        <tr style="height:11pt">
+            <td style="width:18pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style=" text-align: center;">{!employeeAchievement}</p></td>
+            <td style="width:6pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p style=" text-align: left;"><br/></p></td>
+            <td style="width:517pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s7" style="padding-left: 2pt; line-height: 9pt;text-align: left;">The achievement of the employee or group/team of employees substantially surpasses established performance goals.</p></td>
+        </tr>
+        <tr style="height:11pt">
+            <td style="width:18pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style=" text-align: center;">{!materialImprovement}</p></td>
+            <td style="width:6pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p style=" text-align: left;"><br/></p></td>
+            <td style="width:517pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s7" style="padding-left: 2pt; line-height: 9pt;text-align: left;">The employee or group/team materially improves its performance over the prior comparable period.</p></td>
+        </tr>
+        <tr style="height:32pt">
+            <td style="width:18pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style=" text-align: center;">{!unitCostReduction}</p>
+            </td>
+            <td style="width:6pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p style=" text-align: left;"><br/></p>
+            </td>
+            <td style="width:517pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s7" style="padding-left: 2pt; line-height: 10pt;text-align: left;">Unit costs are reduced by such direct action as minimizing waste or spoilage of materials, highly expert and efficient performance of
+                    assigned tasks, better utilization of manpower or facilities, better office layout or more efficient arrangement of work flow, or revised operating
+                    procedures or unusual skill in the application of present procedures.</p>
+            </td>
+        </tr>
+        <tr style="height:11pt">
+            <td style="width:18pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style="text-align: center;">{!significantContribution}</p>
+            </td>
+            <td style="width:6pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p style=" text-align: left;"><br/></p>
+            </td>
+            <td style="width:517pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s7" style="padding-left: 2pt; line-height: 9pt;text-align: left;">Makes significant contributions to the accomplishment of EPA and group/team.</p>
+            </td>
+        </tr>
+        <tr style="height:11pt">
+            <td style="width:18pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style="text-align: center;">{!exhibitsBehavior}</p></td>
+            <td style="width:6pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p style=" text-align: left;"><br/></p></td>
+            <td style="width:517pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s7" style="padding-left: 2pt; line-height: 9pt;text-align: left;">Exhibits behavior that exemplifies the core values of the EPA.</p></td>
+        </tr>
+        <tr style="height:11pt">
+            <td style="width:18pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style=" text-align: center;">{!scientificAdvancement}</p></td>
+            <td style="width:6pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p style=" text-align: left;"><br/></p></td>
+            <td style="width:517pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s7" style="padding-left: 2pt; line-height: 9pt;text-align: left;">Achieves specific scientific advancements.</p></td>
+        </tr>
+        <tr style="height:11pt">
+            <td style="width:18pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style=" text-align: center;">{!noteworthyPublication}</p></td>
+            <td style="width:6pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p style=" text-align: left;"><br/></p></td>
+            <td style="width:517pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s7" style="padding-left: 2pt; line-height: 9pt;text-align: left;">Prepares outstanding or noteworthy publications.</p></td>
+        </tr>
+        <tr style="height:11pt">
+            <td style="width:18pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style="text-align: center;">{!improvesService}</p></td>
+            <td style="width:6pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p style=" text-align: left;"><br/></p></td>
+            <td style="width:517pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s7" style="padding-left: 2pt; line-height: 9pt;text-align: left;">Improves service to public.</p></td>
+        </tr>
+    </table>
+    <p style=" text-align: left;"><br/></p>
+    <p class="s3" style="padding-left: 26pt; text-align: center;">Provide award narrative statement below. You may add additional page(s) if necessary.</p>
+    <p class="s1" style="padding-top: 4pt;padding-left: 26pt; text-align: left;"> {!justification} </p>
+    </body>
+    </html>
+</apex:page>

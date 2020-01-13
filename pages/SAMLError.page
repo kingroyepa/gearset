@@ -1,0 +1,29 @@
+<apex:page showheader="false" sidebar="false" lightningStyleSheets="true">
+    <head>
+        <title>BAP Help Page</title>
+        <apex:slds />
+    </head>
+    
+    
+<div id="container" style="margin:15px 15px;">
+  
+<table id="theGrid">
+    <tbody>
+        <tr>
+            <td valign="top"><center><span class="slds-text-heading_large">Welcome to the Business Automation Platform </span></center></td>
+        </tr>
+    </tbody>
+</table>
+
+ <div style="border:1px solid #ccc;margin:105px; padding:100px;">
+ <center>
+ <p style="font-size: 125%; ">
+    The EPA's Web Access Management service has responded with a message indicating that your user ID is not authorized for access to the Business Automation Platform (BAP). It is possible that you do not yet have an activated account for the BAP. If you have never logged in to BAP before  <a href="https://forms.epa.gov" target="_blank"><strong>click here</strong></a> to be taken to the BAP Provisioning Form to request account activation by submitting a new BAP Provisioning form for a Starter User account.
+  <br/>
+  </p>
+  </center>
+  </div>
+  
+  </div>
+
+</apex:page>

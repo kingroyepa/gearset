@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>46.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>VF Page for OGE-450 Liabilities Line Items viewing and entry. John Jenkins. 2019.05.02.</description>
+    <label>LineItemsGrid Liabilities</label>
+</ApexPage>

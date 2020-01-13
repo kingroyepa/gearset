@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification to Supervisor that a Public Notice form has been submitted for them to approve/reject.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Public Notice Submission Supervisor Notification Template</name>
+    <style>none</style>
+    <subject>Public Notice Posting Request  Has Been Submitted For Your Approval From {!Forms__c.Form_Owner__c} - Record ID: {!Forms__c.Form_Record_Name__c}</subject>
+    <textOnly>To:  {!Contact.Supervisor__c}
+A Public Notice Posting Request form has been submitted for your approval by {!Forms__c.Form_Owner__c}.
+for  {!Forms__c.Public_Notice_Title__c}  Target Publication Date of  {!Forms__c.Publication_Date__c}
+
+
+Instructions
+
+1. To access the form use this link:  {!Forms__c.Link}
+2. Review the form using Details Tab , and Attachments using Attachment Tab &gt;BR&gt; 3. In Approval History Section : Approve or Reject Form
+4. Optional - add Comments in Pop-up Comments Section
+
+Record ID: {!Forms__c.Form_Record_Name__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,2864 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Uncheck to remove this record. --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Additional workflow requirement, i.e., addition of workflow to a heretofore fill and print form. --></help>
+        <label><!-- Addition of Workflow Requirement --></label>
+        <name>Addition_of_Workflow_Requirement__c</name>
+        <picklistValues>
+            <masterLabel>0: Not Required</masterLabel>
+            <translation><!-- 0: Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1: Desired if no cost to owner</masterLabel>
+            <translation><!-- 1: Desired if no cost to owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2: Required and owner willing to pay</masterLabel>
+            <translation><!-- 2: Required and owner willing to pay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AppID/Name --></label>
+        <name>AppID_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Person responsible for approving activation of users of the application. --></help>
+        <label><!-- Application User Approver --></label>
+        <name>Application_Approver__c</name>
+        <relationshipLabel><!-- Applications (Application User Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Application Description --></label>
+        <name>Application_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application Name --></label>
+        <name>Application_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text to include in the BAP Auto-reply email --></help>
+        <label><!-- AutoReply Text --></label>
+        <name>AutoReply_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Board Member --></label>
+        <name>Board_Member__c</name>
+        <relationshipLabel><!-- Applications (Board Member) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Satisfaction --></label>
+        <name>Customer_Satisfaction__c</name>
+        <picklistValues>
+            <masterLabel>Highly Dissatisfied</masterLabel>
+            <translation><!-- Highly Dissatisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Highly Satisfied</masterLabel>
+            <translation><!-- Highly Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slightly Dissatisfied</masterLabel>
+            <translation><!-- Slightly Dissatisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please provide additional requirements for data availability --></help>
+        <label><!-- Data Availability Comments --></label>
+        <name>Data_Availability_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Does the data need to be exported or integrated into another system? Is searching, bulk upload, etc. required? --></help>
+        <label><!-- Data Availability External Requirement --></label>
+        <name>Data_Availability_External_Requirement__c</name>
+        <picklistValues>
+            <masterLabel>0: Not Required</masterLabel>
+            <translation><!-- 0: Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1: Desired if no cost to owner</masterLabel>
+            <translation><!-- 1: Desired if no cost to owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2: Required and owner willing to pay</masterLabel>
+            <translation><!-- 2: Required and owner willing to pay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Total # of Full Users --></help>
+        <label><!-- EPA Full Users --></label>
+        <name>EPA_Full_Users__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total # of Starter Users (6790 licenses available in the Agency)
+Includes accounts, contacts, documents, reports, dashboards, employee cases, ideas and up to 10 custom objects --></help>
+        <label><!-- EPA Starter Users --></label>
+        <name>EPA_Starter_Users__c</name>
+    </fields>
+    <fields>
+        <help><!-- Electronic signature requirement. --></help>
+        <label><!-- Electronic Signature Requirement --></label>
+        <name>Electronic_Signature_Requirement__c</name>
+        <picklistValues>
+            <masterLabel>0: Not Required</masterLabel>
+            <translation><!-- 0: Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1: Desired if no cost to owner</masterLabel>
+            <translation><!-- 1: Desired if no cost to owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2: Required and owner willing to pay</masterLabel>
+            <translation><!-- 2: Required and owner willing to pay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FY 16 Usage Count --></label>
+        <name>FY_16_Usage__c</name>
+    </fields>
+    <fields>
+        <label><!-- FY 17 Usage Count --></label>
+        <name>FY_17_Usage_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- Project manager at the federal level in the case of projects being managed by a Contractor Project Manager at the contractor level. --></help>
+        <label><!-- Federal Project Manager --></label>
+        <name>Federal_Project_Manager__c</name>
+        <relationshipLabel><!-- Applications (Federal Project Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Financial Status --></label>
+        <name>Financial_Status__c</name>
+        <picklistValues>
+            <masterLabel>Burning Cool</masterLabel>
+            <translation><!-- Burning Cool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Burning Hot</masterLabel>
+            <translation><!-- Burning Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Track</masterLabel>
+            <translation><!-- On Track --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Over Budget</masterLabel>
+            <translation><!-- Over Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Form Number --></label>
+        <name>Form_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Users --></label>
+        <name>Full_Users__c</name>
+    </fields>
+    <fields>
+        <help><!-- Highly formatted data entry requirement. --></help>
+        <label><!-- Highly Formatted Input Requirement --></label>
+        <name>Highly_Formatted_Input_Requirement__c</name>
+        <picklistValues>
+            <masterLabel>0: Not required</masterLabel>
+            <translation><!-- 0: Not required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1: Desired if no cost to owner</masterLabel>
+            <translation><!-- 1: Desired if no cost to owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2: Required and owner is willing to pay</masterLabel>
+            <translation><!-- 2: Required and owner is willing to pay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Print to .pdf in exactly the same layout of the form? --></help>
+        <label><!-- Highly Formatted Output Requirement --></label>
+        <name>Highly_Formatted_Output_Requirement__c</name>
+        <picklistValues>
+            <masterLabel>0: Not Required</masterLabel>
+            <translation><!-- 0: Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1: Desired if no cost to owner</masterLabel>
+            <translation><!-- 1: Desired if no cost to owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2: Required and owner willing to pay</masterLabel>
+            <translation><!-- 2: Required and owner willing to pay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Version In Development contains a value greater than zero --></help>
+        <label><!-- In Development --></label>
+        <name>In_Development__c</name>
+    </fields>
+    <fields>
+        <help><!-- Production Version contains a value greater than zero --></help>
+        <label><!-- In Production --></label>
+        <name>In_Production__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is this application included in the BAP Auto-reply email --></help>
+        <label><!-- Included in Support --></label>
+        <name>Included_in_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migration Priority --></label>
+        <name>Migration_Priority__c</name>
+        <picklistValues>
+            <masterLabel>0: Not a Priority - Will Not Migrate</masterLabel>
+            <translation><!-- 0: Not a Priority - Will Not Migrate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1: High Priority - Will Definitely Migrate</masterLabel>
+            <translation><!-- 1: High Priority - Will Definitely Migrate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2: Medium Priority - Will Probably Migrate</masterLabel>
+            <translation><!-- 2: Medium Priority - Will Probably Migrate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3: Low Priority - Probably Will Not Migrate</masterLabel>
+            <translation><!-- 3: Low Priority - Probably Will Not Migrate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Migration Status --></label>
+        <name>Migration_Status__c</name>
+        <picklistValues>
+            <masterLabel>BAP Downloadable Planned</masterLabel>
+            <translation><!-- BAP Downloadable Planned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAP Workflow Planned</masterLabel>
+            <translation><!-- BAP Workflow Planned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAP Workflow Under Development</masterLabel>
+            <translation><!-- BAP Workflow Under Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delete</masterLabel>
+            <translation><!-- Delete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deleted</masterLabel>
+            <translation><!-- Deleted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Migrate</masterLabel>
+            <translation><!-- Do Not Migrate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FormSmart Downloadable Planned</masterLabel>
+            <translation><!-- FormSmart Downloadable Planned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Known</masterLabel>
+            <translation><!-- Known --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orphan</masterLabel>
+            <translation><!-- Orphan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Office --></label>
+        <name>Office__c</name>
+        <relationshipLabel><!-- Applications (Office) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Organization Full Name (Primary Contact) --></label>
+        <name>Organization_Full_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Full name of the organization responsible for the application. --></help>
+        <label><!-- Owning Organization Full Name --></label>
+        <name>Owning_Organization_Full_Name__c</name>
+        <relationshipLabel><!-- Applications (Owning Organization Full Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PM Assessment --></label>
+        <name>PM_Assessment__c</name>
+    </fields>
+    <fields>
+        <help><!-- Platform that will primarily be hosting the application. --></help>
+        <label><!-- Platform --></label>
+        <name>Platform__c</name>
+        <picklistValues>
+            <masterLabel>Business Automation Platform</masterLabel>
+            <translation><!-- Business Automation Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informatica PowerCenter</masterLabel>
+            <translation><!-- Informatica PowerCenter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oracle Application Express</masterLabel>
+            <translation><!-- Oracle Application Express --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oracle Business Intelligence</masterLabel>
+            <translation><!-- Oracle Business Intelligence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other (identify in Application Description)</masterLabel>
+            <translation><!-- Other (identify in Application Description) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Primary Contact is the application owner. Additional contacts may be added in the application contacts related list. --></help>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Version Currently in Production --></help>
+        <label><!-- Production Version --></label>
+        <name>Production_Version__c</name>
+    </fields>
+    <fields>
+        <help><!-- Project Manager responsible for the project. --></help>
+        <label><!-- Project Manager --></label>
+        <name>Project_Manager__c</name>
+        <relationshipLabel><!-- Applications (Project Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RPIO Name (Primary Contact) --></label>
+        <name>RPIO_Names_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Application Name --></label>
+        <name>Related_Application_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Application --></label>
+        <name>Related_Application__c</name>
+        <relationshipLabel><!-- Application Management --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The team delivers working software into the production environment frequently. --></help>
+        <label><!-- Release Frequency --></label>
+        <name>Release_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>1 : infrequent (3+ months)</masterLabel>
+            <translation><!-- 1 : infrequent (3+ months) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 :</masterLabel>
+            <translation><!-- 2 : --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 : frequent (1-3 weeks)</masterLabel>
+            <translation><!-- 3 : frequent (1-3 weeks) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Responsible Org --></label>
+        <name>Responsible_Org__c</name>
+        <relationshipLabel><!-- Applications (Responsible Org) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Objects Used --></label>
+        <name>Salesforce_Objects_Used__c</name>
+        <picklistValues>
+            <masterLabel>AcceptedEventRelation</masterLabel>
+            <translation><!-- AcceptedEventRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Account</masterLabel>
+            <translation><!-- Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AccountContactRelation</masterLabel>
+            <translation><!-- AccountContactRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AccountContactRole</masterLabel>
+            <translation><!-- AccountContactRole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AccountFeed</masterLabel>
+            <translation><!-- AccountFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AccountHistory</masterLabel>
+            <translation><!-- AccountHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AccountPartner</masterLabel>
+            <translation><!-- AccountPartner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AccountShare</masterLabel>
+            <translation><!-- AccountShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accounting Lines</masterLabel>
+            <translation><!-- Accounting Lines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ActionLinkGroupTemplate</masterLabel>
+            <translation><!-- ActionLinkGroupTemplate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ActionLinkTemplate</masterLabel>
+            <translation><!-- ActionLinkTemplate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ActivityHistory</masterLabel>
+            <translation><!-- ActivityHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AdditionalNumber</masterLabel>
+            <translation><!-- AdditionalNumber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adjustment__c</masterLabel>
+            <translation><!-- Adjustment__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AggregateResult</masterLabel>
+            <translation><!-- AggregateResult --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agreement</masterLabel>
+            <translation><!-- Agreement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Announcement</masterLabel>
+            <translation><!-- Announcement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexClass</masterLabel>
+            <translation><!-- ApexClass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexComponent</masterLabel>
+            <translation><!-- ApexComponent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexEmailNotification</masterLabel>
+            <translation><!-- ApexEmailNotification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexLog</masterLabel>
+            <translation><!-- ApexLog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexPage</masterLabel>
+            <translation><!-- ApexPage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexPageInfo</masterLabel>
+            <translation><!-- ApexPageInfo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexTestQueueItem</masterLabel>
+            <translation><!-- ApexTestQueueItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexTestResult</masterLabel>
+            <translation><!-- ApexTestResult --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexTestResultLimits</masterLabel>
+            <translation><!-- ApexTestResultLimits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexTestRunResult</masterLabel>
+            <translation><!-- ApexTestRunResult --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexTestSuite</masterLabel>
+            <translation><!-- ApexTestSuite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexTrigger</masterLabel>
+            <translation><!-- ApexTrigger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AppDefinition</masterLabel>
+            <translation><!-- AppDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AppMenuItem</masterLabel>
+            <translation><!-- AppMenuItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AppTabMember</masterLabel>
+            <translation><!-- AppTabMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application_Contact__History</masterLabel>
+            <translation><!-- Application_Contact__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application_Contact__c</masterLabel>
+            <translation><!-- Application_Contact__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application__Feed</masterLabel>
+            <translation><!-- Application__Feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application__History</masterLabel>
+            <translation><!-- Application__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application__c</masterLabel>
+            <translation><!-- Application__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approval</masterLabel>
+            <translation><!-- Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asset</masterLabel>
+            <translation><!-- Asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssetFeed</masterLabel>
+            <translation><!-- AssetFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssetHistory</masterLabel>
+            <translation><!-- AssetHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssetRelationship</masterLabel>
+            <translation><!-- AssetRelationship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssetRelationshipFeed</masterLabel>
+            <translation><!-- AssetRelationshipFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssetRelationshipHistory</masterLabel>
+            <translation><!-- AssetRelationshipHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssetShare</masterLabel>
+            <translation><!-- AssetShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssetTokenEvent</masterLabel>
+            <translation><!-- AssetTokenEvent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AssignmentRule</masterLabel>
+            <translation><!-- AssignmentRule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AsyncApexJob</masterLabel>
+            <translation><!-- AsyncApexJob --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AttachedContentDocument</masterLabel>
+            <translation><!-- AttachedContentDocument --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AttachedContentNote</masterLabel>
+            <translation><!-- AttachedContentNote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attachment</masterLabel>
+            <translation><!-- Attachment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AuraDefinition</masterLabel>
+            <translation><!-- AuraDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AuraDefinitionBundle</masterLabel>
+            <translation><!-- AuraDefinitionBundle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AuraDefinitionBundleInfo</masterLabel>
+            <translation><!-- AuraDefinitionBundleInfo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AuraDefinitionInfo</masterLabel>
+            <translation><!-- AuraDefinitionInfo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AuthConfig</masterLabel>
+            <translation><!-- AuthConfig --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AuthConfigProviders</masterLabel>
+            <translation><!-- AuthConfigProviders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AuthSession</masterLabel>
+            <translation><!-- AuthSession --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Award__Feed</masterLabel>
+            <translation><!-- Award__Feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Award__History</masterLabel>
+            <translation><!-- Award__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Award__Share</masterLabel>
+            <translation><!-- Award__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Award__c</masterLabel>
+            <translation><!-- Award__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awards_HRD_Recipients__mdt</masterLabel>
+            <translation><!-- Awards_HRD_Recipients__mdt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awards_IOAA_Approver__mdt</masterLabel>
+            <translation><!-- Awards_IOAA_Approver__mdt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAP_Fill_and_Print_List__mdt</masterLabel>
+            <translation><!-- BAP_Fill_and_Print_List__mdt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BackgroundOperation</masterLabel>
+            <translation><!-- BackgroundOperation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BrandTemplate</masterLabel>
+            <translation><!-- BrandTemplate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BusinessHours</masterLabel>
+            <translation><!-- BusinessHours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BusinessProcess</masterLabel>
+            <translation><!-- BusinessProcess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CallCenter</masterLabel>
+            <translation><!-- CallCenter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign</masterLabel>
+            <translation><!-- Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CampaignFeed</masterLabel>
+            <translation><!-- CampaignFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CampaignHistory</masterLabel>
+            <translation><!-- CampaignHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CampaignMember</masterLabel>
+            <translation><!-- CampaignMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CampaignMemberStatus</masterLabel>
+            <translation><!-- CampaignMemberStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CampaignShare</masterLabel>
+            <translation><!-- CampaignShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseComment</masterLabel>
+            <translation><!-- CaseComment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseContactRole</masterLabel>
+            <translation><!-- CaseContactRole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseFeed</masterLabel>
+            <translation><!-- CaseFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseHistory</masterLabel>
+            <translation><!-- CaseHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseShare</masterLabel>
+            <translation><!-- CaseShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseSolution</masterLabel>
+            <translation><!-- CaseSolution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseStatus</masterLabel>
+            <translation><!-- CaseStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseTeamMember</masterLabel>
+            <translation><!-- CaseTeamMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseTeamRole</masterLabel>
+            <translation><!-- CaseTeamRole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseTeamTemplate</masterLabel>
+            <translation><!-- CaseTeamTemplate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseTeamTemplateMember</masterLabel>
+            <translation><!-- CaseTeamTemplateMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CaseTeamTemplateRecord</masterLabel>
+            <translation><!-- CaseTeamTemplateRecord --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CategoryData</masterLabel>
+            <translation><!-- CategoryData --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CategoryNode</masterLabel>
+            <translation><!-- CategoryNode --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ChatterActivity</masterLabel>
+            <translation><!-- ChatterActivity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ChatterExtension</masterLabel>
+            <translation><!-- ChatterExtension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ChatterExtensionConfig</masterLabel>
+            <translation><!-- ChatterExtensionConfig --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ClientBrowser</masterLabel>
+            <translation><!-- ClientBrowser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CollaborationGroup</masterLabel>
+            <translation><!-- CollaborationGroup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CollaborationGroupFeed</masterLabel>
+            <translation><!-- CollaborationGroupFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CollaborationGroupMember</masterLabel>
+            <translation><!-- CollaborationGroupMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CollaborationGroupMemberRequest</masterLabel>
+            <translation><!-- CollaborationGroupMemberRequest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CollaborationGroupRecord</masterLabel>
+            <translation><!-- CollaborationGroupRecord --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CollaborationInvitation</masterLabel>
+            <translation><!-- CollaborationInvitation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ColorDefinition</masterLabel>
+            <translation><!-- ColorDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CombinedAttachment</masterLabel>
+            <translation><!-- CombinedAttachment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community</masterLabel>
+            <translation><!-- Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ConnectedApplication</masterLabel>
+            <translation><!-- ConnectedApplication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation><!-- Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContactFeed</masterLabel>
+            <translation><!-- ContactFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContactHistory</masterLabel>
+            <translation><!-- ContactHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContactShare</masterLabel>
+            <translation><!-- ContactShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContactUserRelation__c</masterLabel>
+            <translation><!-- ContactUserRelation__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact_Approvers__c</masterLabel>
+            <translation><!-- Contact_Approvers__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentAsset</masterLabel>
+            <translation><!-- ContentAsset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentBody</masterLabel>
+            <translation><!-- ContentBody --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentDistribution</masterLabel>
+            <translation><!-- ContentDistribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentDistributionView</masterLabel>
+            <translation><!-- ContentDistributionView --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentDocument</masterLabel>
+            <translation><!-- ContentDocument --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentDocumentFeed</masterLabel>
+            <translation><!-- ContentDocumentFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentDocumentHistory</masterLabel>
+            <translation><!-- ContentDocumentHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentDocumentLink</masterLabel>
+            <translation><!-- ContentDocumentLink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentDocumentSubscription</masterLabel>
+            <translation><!-- ContentDocumentSubscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentFolder</masterLabel>
+            <translation><!-- ContentFolder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentFolderItem</masterLabel>
+            <translation><!-- ContentFolderItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentFolderLink</masterLabel>
+            <translation><!-- ContentFolderLink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentFolderMember</masterLabel>
+            <translation><!-- ContentFolderMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentNote</masterLabel>
+            <translation><!-- ContentNote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentNotification</masterLabel>
+            <translation><!-- ContentNotification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentTagSubscription</masterLabel>
+            <translation><!-- ContentTagSubscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentUserSubscription</masterLabel>
+            <translation><!-- ContentUserSubscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentVersion</masterLabel>
+            <translation><!-- ContentVersion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentVersionComment</masterLabel>
+            <translation><!-- ContentVersionComment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentVersionHistory</masterLabel>
+            <translation><!-- ContentVersionHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentVersionRating</masterLabel>
+            <translation><!-- ContentVersionRating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentWorkspace</masterLabel>
+            <translation><!-- ContentWorkspace --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentWorkspaceDoc</masterLabel>
+            <translation><!-- ContentWorkspaceDoc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentWorkspaceMember</masterLabel>
+            <translation><!-- ContentWorkspaceMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentWorkspacePermission</masterLabel>
+            <translation><!-- ContentWorkspacePermission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContentWorkspaceSubscription</masterLabel>
+            <translation><!-- ContentWorkspaceSubscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation><!-- Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContractContactRole</masterLabel>
+            <translation><!-- ContractContactRole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContractFeed</masterLabel>
+            <translation><!-- ContractFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContractHistory</masterLabel>
+            <translation><!-- ContractHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ContractStatus</masterLabel>
+            <translation><!-- ContractStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CorsWhitelistEntry</masterLabel>
+            <translation><!-- CorsWhitelistEntry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost_Share_Contribution__History</masterLabel>
+            <translation><!-- Cost_Share_Contribution__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost_Share_Contribution__c</masterLabel>
+            <translation><!-- Cost_Share_Contribution__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost_Share_Review__c</masterLabel>
+            <translation><!-- Cost_Share_Review__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cover_Form_c</masterLabel>
+            <translation><!-- Cover_Form_c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CronJobDetail</masterLabel>
+            <translation><!-- CronJobDetail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CronTrigger</masterLabel>
+            <translation><!-- CronTrigger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CustomBrand</masterLabel>
+            <translation><!-- CustomBrand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CustomBrandAsset</masterLabel>
+            <translation><!-- CustomBrandAsset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CustomHttpHeader</masterLabel>
+            <translation><!-- CustomHttpHeader --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CustomObjectUserLicenseMetrics</masterLabel>
+            <translation><!-- CustomObjectUserLicenseMetrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CustomPermission</masterLabel>
+            <translation><!-- CustomPermission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CustomPermissionDependency</masterLabel>
+            <translation><!-- CustomPermissionDependency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dashboard</masterLabel>
+            <translation><!-- Dashboard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DashboardComponent</masterLabel>
+            <translation><!-- DashboardComponent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DashboardComponentFeed</masterLabel>
+            <translation><!-- DashboardComponentFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DashboardFeed</masterLabel>
+            <translation><!-- DashboardFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DataIntegrationRecordPurchasePermission</masterLabel>
+            <translation><!-- DataIntegrationRecordPurchasePermission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DataStatistics</masterLabel>
+            <translation><!-- DataStatistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DataType</masterLabel>
+            <translation><!-- DataType --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DatacloudAddress</masterLabel>
+            <translation><!-- DatacloudAddress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DeclinedEventRelation</masterLabel>
+            <translation><!-- DeclinedEventRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document</masterLabel>
+            <translation><!-- Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DocumentAttachmentMap</masterLabel>
+            <translation><!-- DocumentAttachmentMap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document__History</masterLabel>
+            <translation><!-- Document__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document__Share</masterLabel>
+            <translation><!-- Document__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document__c</masterLabel>
+            <translation><!-- Document__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Domain</masterLabel>
+            <translation><!-- Domain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DomainSite</masterLabel>
+            <translation><!-- DomainSite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DuplicateJob</masterLabel>
+            <translation><!-- DuplicateJob --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DuplicateJobDefinition</masterLabel>
+            <translation><!-- DuplicateJobDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DuplicateJobMatchingRule</masterLabel>
+            <translation><!-- DuplicateJobMatchingRule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DuplicateJobMatchingRuleDefinition</masterLabel>
+            <translation><!-- DuplicateJobMatchingRuleDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DuplicateRecordItem</masterLabel>
+            <translation><!-- DuplicateRecordItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DuplicateRecordSet</masterLabel>
+            <translation><!-- DuplicateRecordSet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DuplicateRule</masterLabel>
+            <translation><!-- DuplicateRule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA_Agreement__c</masterLabel>
+            <translation><!-- EPA_Agreement__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA_Order__c</masterLabel>
+            <translation><!-- EPA_Order__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmailCapture</masterLabel>
+            <translation><!-- EmailCapture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmailMessage</masterLabel>
+            <translation><!-- EmailMessage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmailMessageRelation</masterLabel>
+            <translation><!-- EmailMessageRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmailServicesAddress</masterLabel>
+            <translation><!-- EmailServicesAddress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmailServicesFunction</masterLabel>
+            <translation><!-- EmailServicesFunction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmailStatus</masterLabel>
+            <translation><!-- EmailStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmailTemplate</masterLabel>
+            <translation><!-- EmailTemplate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmbeddedServiceDetail</masterLabel>
+            <translation><!-- EmbeddedServiceDetail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EntityDefinition</masterLabel>
+            <translation><!-- EntityDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EntityParticle</masterLabel>
+            <translation><!-- EntityParticle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EntitySubscription</masterLabel>
+            <translation><!-- EntitySubscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event</masterLabel>
+            <translation><!-- Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EventBusSubscriber</masterLabel>
+            <translation><!-- EventBusSubscriber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EventFeed</masterLabel>
+            <translation><!-- EventFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EventLogFile</masterLabel>
+            <translation><!-- EventLogFile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EventRelation</masterLabel>
+            <translation><!-- EventRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EventWhoRelation</masterLabel>
+            <translation><!-- EventWhoRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ExternalDataSource</masterLabel>
+            <translation><!-- ExternalDataSource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ExternalDataUserAuth</masterLabel>
+            <translation><!-- ExternalDataUserAuth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedAttachment</masterLabel>
+            <translation><!-- FeedAttachment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedComment</masterLabel>
+            <translation><!-- FeedComment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedItem</masterLabel>
+            <translation><!-- FeedItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedLike</masterLabel>
+            <translation><!-- FeedLike --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedPollChoice</masterLabel>
+            <translation><!-- FeedPollChoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedPollVote</masterLabel>
+            <translation><!-- FeedPollVote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedRevision</masterLabel>
+            <translation><!-- FeedRevision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedSignal</masterLabel>
+            <translation><!-- FeedSignal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FeedTrackedChange</masterLabel>
+            <translation><!-- FeedTrackedChange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FieldDefinition</masterLabel>
+            <translation><!-- FieldDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FieldPermissions</masterLabel>
+            <translation><!-- FieldPermissions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FileSearchActivity</masterLabel>
+            <translation><!-- FileSearchActivity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FiscalYearSettings</masterLabel>
+            <translation><!-- FiscalYearSettings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FlexQueueItem</masterLabel>
+            <translation><!-- FlexQueueItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FlowInterview</masterLabel>
+            <translation><!-- FlowInterview --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FlowInterviewShare</masterLabel>
+            <translation><!-- FlowInterviewShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FlowStageRelation</masterLabel>
+            <translation><!-- FlowStageRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Folder</masterLabel>
+            <translation><!-- Folder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FolderedContentDocument</masterLabel>
+            <translation><!-- FolderedContentDocument --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastShare</masterLabel>
+            <translation><!-- ForecastShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingAdjustment</masterLabel>
+            <translation><!-- ForecastingAdjustment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingCategoryMapping</masterLabel>
+            <translation><!-- ForecastingCategoryMapping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingDisplayedFamily</masterLabel>
+            <translation><!-- ForecastingDisplayedFamily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingFact</masterLabel>
+            <translation><!-- ForecastingFact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingItem</masterLabel>
+            <translation><!-- ForecastingItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingOwnerAdjustment</masterLabel>
+            <translation><!-- ForecastingOwnerAdjustment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingQuota</masterLabel>
+            <translation><!-- ForecastingQuota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingType</masterLabel>
+            <translation><!-- ForecastingType --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingTypeToCategory</masterLabel>
+            <translation><!-- ForecastingTypeToCategory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ForecastingUserPreference</masterLabel>
+            <translation><!-- ForecastingUserPreference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forms_URL__c</masterLabel>
+            <translation><!-- Forms_URL__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forms__History</masterLabel>
+            <translation><!-- Forms__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forms__Share</masterLabel>
+            <translation><!-- Forms__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forms__c</masterLabel>
+            <translation><!-- Forms__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLLA_Agreement__History</masterLabel>
+            <translation><!-- GLLA_Agreement__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLLA_Project__History</masterLabel>
+            <translation><!-- GLLA_Project__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLLA_Project__c</masterLabel>
+            <translation><!-- GLLA_Project__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GrantedByLicense</masterLabel>
+            <translation><!-- GrantedByLicense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation><!-- Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GroupMember</masterLabel>
+            <translation><!-- GroupMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group_Award__c</masterLabel>
+            <translation><!-- Group_Award__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holiday</masterLabel>
+            <translation><!-- Holiday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IconDefinition</masterLabel>
+            <translation><!-- IconDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idea</masterLabel>
+            <translation><!-- Idea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IdeaComment</masterLabel>
+            <translation><!-- IdeaComment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Init_Session_URL__c</masterLabel>
+            <translation><!-- Init_Session_URL__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>InstalledMobileApp</masterLabel>
+            <translation><!-- InstalledMobileApp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KnowledgeableUser</masterLabel>
+            <translation><!-- KnowledgeableUser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LeadFeed</masterLabel>
+            <translation><!-- LeadFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LeadHistory</masterLabel>
+            <translation><!-- LeadHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LeadShare</masterLabel>
+            <translation><!-- LeadShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LeadStatus</masterLabel>
+            <translation><!-- LeadStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LightningComponentBundle</masterLabel>
+            <translation><!-- LightningComponentBundle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LightningComponentResource</masterLabel>
+            <translation><!-- LightningComponentResource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LightningComponentTag</masterLabel>
+            <translation><!-- LightningComponentTag --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LightningToggleMetrics</masterLabel>
+            <translation><!-- LightningToggleMetrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LightningUsageByAppTypeMetrics</masterLabel>
+            <translation><!-- LightningUsageByAppTypeMetrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LightningUsageByBrowserMetrics</masterLabel>
+            <translation><!-- LightningUsageByBrowserMetrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LightningUsageByFlexiPageMetrics</masterLabel>
+            <translation><!-- LightningUsageByFlexiPageMetrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LightningUsageByPageMetrics</masterLabel>
+            <translation><!-- LightningUsageByPageMetrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Line Item</masterLabel>
+            <translation><!-- Line Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Line_Item__Share</masterLabel>
+            <translation><!-- Line_Item__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Line_Item__c</masterLabel>
+            <translation><!-- Line_Item__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ListEmail</masterLabel>
+            <translation><!-- ListEmail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ListEmailRecipientSource</masterLabel>
+            <translation><!-- ListEmailRecipientSource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ListEmailShare</masterLabel>
+            <translation><!-- ListEmailShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ListView</masterLabel>
+            <translation><!-- ListView --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ListViewChart</masterLabel>
+            <translation><!-- ListViewChart --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ListViewChartInstance</masterLabel>
+            <translation><!-- ListViewChartInstance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LoginGeo</masterLabel>
+            <translation><!-- LoginGeo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LoginHistory</masterLabel>
+            <translation><!-- LoginHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LoginIp</masterLabel>
+            <translation><!-- LoginIp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LookedUpFromActivity</masterLabel>
+            <translation><!-- LookedUpFromActivity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Macro</masterLabel>
+            <translation><!-- Macro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MacroHistory</masterLabel>
+            <translation><!-- MacroHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MacroInstruction</masterLabel>
+            <translation><!-- MacroInstruction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MacroShare</masterLabel>
+            <translation><!-- MacroShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MailmergeTemplate</masterLabel>
+            <translation><!-- MailmergeTemplate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mass_Mailing_Campaign__History</masterLabel>
+            <translation><!-- Mass_Mailing_Campaign__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mass_Mailing_Campaign__Share</masterLabel>
+            <translation><!-- Mass_Mailing_Campaign__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mass_Mailing_Campaign__c</masterLabel>
+            <translation><!-- Mass_Mailing_Campaign__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MatchingRule</masterLabel>
+            <translation><!-- MatchingRule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MatchingRuleItem</masterLabel>
+            <translation><!-- MatchingRuleItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Name</masterLabel>
+            <translation><!-- Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NamedCredential</masterLabel>
+            <translation><!-- NamedCredential --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NavigationLinkSet</masterLabel>
+            <translation><!-- NavigationLinkSet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NavigationMenuItem</masterLabel>
+            <translation><!-- NavigationMenuItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network</masterLabel>
+            <translation><!-- Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NetworkActivityAudit</masterLabel>
+            <translation><!-- NetworkActivityAudit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NetworkAffinity</masterLabel>
+            <translation><!-- NetworkAffinity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NetworkMember</masterLabel>
+            <translation><!-- NetworkMember --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NetworkMemberGroup</masterLabel>
+            <translation><!-- NetworkMemberGroup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NetworkModeration</masterLabel>
+            <translation><!-- NetworkModeration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NetworkPageOverride</masterLabel>
+            <translation><!-- NetworkPageOverride --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NetworkSelfRegistration</masterLabel>
+            <translation><!-- NetworkSelfRegistration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NetworkUserHistoryRecent</masterLabel>
+            <translation><!-- NetworkUserHistoryRecent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Note</masterLabel>
+            <translation><!-- Note --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NoteAndAttachment</masterLabel>
+            <translation><!-- NoteAndAttachment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OauthToken</masterLabel>
+            <translation><!-- OauthToken --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ObjectPermissions</masterLabel>
+            <translation><!-- ObjectPermissions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpenActivity</masterLabel>
+            <translation><!-- OpenActivity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation><!-- Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityCompetitor</masterLabel>
+            <translation><!-- OpportunityCompetitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityContactRole</masterLabel>
+            <translation><!-- OpportunityContactRole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityFeed</masterLabel>
+            <translation><!-- OpportunityFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityFieldHistory</masterLabel>
+            <translation><!-- OpportunityFieldHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityHistory</masterLabel>
+            <translation><!-- OpportunityHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityLineItem</masterLabel>
+            <translation><!-- OpportunityLineItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityPartner</masterLabel>
+            <translation><!-- OpportunityPartner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityShare</masterLabel>
+            <translation><!-- OpportunityShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OpportunityStage</masterLabel>
+            <translation><!-- OpportunityStage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order</masterLabel>
+            <translation><!-- Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Request</masterLabel>
+            <translation><!-- Order Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OrderFeed</masterLabel>
+            <translation><!-- OrderFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OrderHistory</masterLabel>
+            <translation><!-- OrderHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OrderItem</masterLabel>
+            <translation><!-- OrderItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OrderItemFeed</masterLabel>
+            <translation><!-- OrderItemFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OrderItemHistory</masterLabel>
+            <translation><!-- OrderItemHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OrderShare</masterLabel>
+            <translation><!-- OrderShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order_Request_c</masterLabel>
+            <translation><!-- Order_Request_c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OrgLifecycleNotification</masterLabel>
+            <translation><!-- OrgLifecycleNotification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OrgWideEmailAddress</masterLabel>
+            <translation><!-- OrgWideEmailAddress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Organization</masterLabel>
+            <translation><!-- Organization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OutgoingEmail</masterLabel>
+            <translation><!-- OutgoingEmail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OutgoingEmailRelation</masterLabel>
+            <translation><!-- OutgoingEmailRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OwnedContentDocument</masterLabel>
+            <translation><!-- OwnedContentDocument --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OwnerChangeOptionInfo</masterLabel>
+            <translation><!-- OwnerChangeOptionInfo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PartnerRole</masterLabel>
+            <translation><!-- PartnerRole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Period</masterLabel>
+            <translation><!-- Period --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PermissionSet</masterLabel>
+            <translation><!-- PermissionSet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PermissionSetAssignment</masterLabel>
+            <translation><!-- PermissionSetAssignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PermissionSetLicense</masterLabel>
+            <translation><!-- PermissionSetLicense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PermissionSetLicenseAssign</masterLabel>
+            <translation><!-- PermissionSetLicenseAssign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PicklistValueInfo</masterLabel>
+            <translation><!-- PicklistValueInfo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PlatformAction</masterLabel>
+            <translation><!-- PlatformAction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PlatformCachePartition</masterLabel>
+            <translation><!-- PlatformCachePartition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PlatformCachePartitionType</masterLabel>
+            <translation><!-- PlatformCachePartitionType --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricebook2</masterLabel>
+            <translation><!-- Pricebook2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricebook2History</masterLabel>
+            <translation><!-- Pricebook2History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PricebookEntry</masterLabel>
+            <translation><!-- PricebookEntry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProcessDefinition</masterLabel>
+            <translation><!-- ProcessDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProcessInstance</masterLabel>
+            <translation><!-- ProcessInstance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProcessInstanceHistory</masterLabel>
+            <translation><!-- ProcessInstanceHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProcessInstanceNode</masterLabel>
+            <translation><!-- ProcessInstanceNode --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProcessInstanceStep</masterLabel>
+            <translation><!-- ProcessInstanceStep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProcessInstanceWorkitem</masterLabel>
+            <translation><!-- ProcessInstanceWorkitem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProcessNode</masterLabel>
+            <translation><!-- ProcessNode --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product2</masterLabel>
+            <translation><!-- Product2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product2Feed</masterLabel>
+            <translation><!-- Product2Feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product2History</masterLabel>
+            <translation><!-- Product2History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profile</masterLabel>
+            <translation><!-- Profile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkill</masterLabel>
+            <translation><!-- ProfileSkill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillEndorsement</masterLabel>
+            <translation><!-- ProfileSkillEndorsement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillEndorsementFeed</masterLabel>
+            <translation><!-- ProfileSkillEndorsementFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillEndorsementHistory</masterLabel>
+            <translation><!-- ProfileSkillEndorsementHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillFeed</masterLabel>
+            <translation><!-- ProfileSkillFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillHistory</masterLabel>
+            <translation><!-- ProfileSkillHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillShare</masterLabel>
+            <translation><!-- ProfileSkillShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillUser</masterLabel>
+            <translation><!-- ProfileSkillUser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillUserFeed</masterLabel>
+            <translation><!-- ProfileSkillUserFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfileSkillUserHistory</masterLabel>
+            <translation><!-- ProfileSkillUserHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project__History</masterLabel>
+            <translation><!-- Project__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project__Share</masterLabel>
+            <translation><!-- Project__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project__c</masterLabel>
+            <translation><!-- Project__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Publisher</masterLabel>
+            <translation><!-- Publisher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PushTopic</masterLabel>
+            <translation><!-- PushTopic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions_c</masterLabel>
+            <translation><!-- Questions_c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QueueSobject</masterLabel>
+            <translation><!-- QueueSobject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickText</masterLabel>
+            <translation><!-- QuickText --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickTextHistory</masterLabel>
+            <translation><!-- QuickTextHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickTextShare</masterLabel>
+            <translation><!-- QuickTextShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote</masterLabel>
+            <translation><!-- Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuoteDocument</masterLabel>
+            <translation><!-- QuoteDocument --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuoteFeed</masterLabel>
+            <translation><!-- QuoteFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuoteLineItem</masterLabel>
+            <translation><!-- QuoteLineItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuoteShare</masterLabel>
+            <translation><!-- QuoteShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuoteTemplateRichTextData</masterLabel>
+            <translation><!-- QuoteTemplateRichTextData --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RecentlyViewed</masterLabel>
+            <translation><!-- RecentlyViewed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RecordAction</masterLabel>
+            <translation><!-- RecordAction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RecordType</masterLabel>
+            <translation><!-- RecordType --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RelationshipDomain</masterLabel>
+            <translation><!-- RelationshipDomain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RelationshipInfo</masterLabel>
+            <translation><!-- RelationshipInfo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report</masterLabel>
+            <translation><!-- Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ReportFeed</masterLabel>
+            <translation><!-- ReportFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ReputationLevel</masterLabel>
+            <translation><!-- ReputationLevel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ReputationPointsRule</masterLabel>
+            <translation><!-- ReputationPointsRule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SamlSsoConfig</masterLabel>
+            <translation><!-- SamlSsoConfig --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scontrol</masterLabel>
+            <translation><!-- Scontrol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SearchActivity</masterLabel>
+            <translation><!-- SearchActivity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SearchLayout</masterLabel>
+            <translation><!-- SearchLayout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SecureAgentsCluster</masterLabel>
+            <translation><!-- SecureAgentsCluster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SessionPermSetActivation</masterLabel>
+            <translation><!-- SessionPermSetActivation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SetupAuditTrail</masterLabel>
+            <translation><!-- SetupAuditTrail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SetupEntityAccess</masterLabel>
+            <translation><!-- SetupEntityAccess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site</masterLabel>
+            <translation><!-- Site --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SiteFeed</masterLabel>
+            <translation><!-- SiteFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SiteHistory</masterLabel>
+            <translation><!-- SiteHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snippet__History</masterLabel>
+            <translation><!-- Snippet__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Snippet__c</masterLabel>
+            <translation><!-- Snippet__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution</masterLabel>
+            <translation><!-- Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SolutionFeed</masterLabel>
+            <translation><!-- SolutionFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SolutionHistory</masterLabel>
+            <translation><!-- SolutionHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SolutionStatus</masterLabel>
+            <translation><!-- SolutionStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stamp</masterLabel>
+            <translation><!-- Stamp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StampAssignment</masterLabel>
+            <translation><!-- StampAssignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StaticResource</masterLabel>
+            <translation><!-- StaticResource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StreamingChannel</masterLabel>
+            <translation><!-- StreamingChannel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StreamingChannelShare</masterLabel>
+            <translation><!-- StreamingChannelShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submission_Topic__Share</masterLabel>
+            <translation><!-- Submission_Topic__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submission_Topic__c</masterLabel>
+            <translation><!-- Submission_Topic__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submission__History</masterLabel>
+            <translation><!-- Submission__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submission__Share</masterLabel>
+            <translation><!-- Submission__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submission__c</masterLabel>
+            <translation><!-- Submission__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TabDefinition</masterLabel>
+            <translation><!-- TabDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task</masterLabel>
+            <translation><!-- Task --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TaskFeed</masterLabel>
+            <translation><!-- TaskFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TaskPriority</masterLabel>
+            <translation><!-- TaskPriority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TaskRelation</masterLabel>
+            <translation><!-- TaskRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TaskStatus</masterLabel>
+            <translation><!-- TaskStatus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TaskWhoRelation</masterLabel>
+            <translation><!-- TaskWhoRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TenantUsageEntitlement</masterLabel>
+            <translation><!-- TenantUsageEntitlement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TestSuiteMembership</masterLabel>
+            <translation><!-- TestSuiteMembership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ThirdPartyAccountLink</masterLabel>
+            <translation><!-- ThirdPartyAccountLink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TodayGoal</masterLabel>
+            <translation><!-- TodayGoal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TodayGoalShare</masterLabel>
+            <translation><!-- TodayGoalShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Topic</masterLabel>
+            <translation><!-- Topic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TopicAssignment</masterLabel>
+            <translation><!-- TopicAssignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TopicFeed</masterLabel>
+            <translation><!-- TopicFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TopicUserEvent</masterLabel>
+            <translation><!-- TopicUserEvent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Topic__Feed</masterLabel>
+            <translation><!-- Topic__Feed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Topic__History</masterLabel>
+            <translation><!-- Topic__History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Topic__Share</masterLabel>
+            <translation><!-- Topic__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Topic__c</masterLabel>
+            <translation><!-- Topic__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UndecidedEventRelation</masterLabel>
+            <translation><!-- UndecidedEventRelation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User</masterLabel>
+            <translation><!-- User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserAppInfo</masterLabel>
+            <translation><!-- UserAppInfo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserAppMenuCustomization</masterLabel>
+            <translation><!-- UserAppMenuCustomization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserAppMenuCustomizationShare</masterLabel>
+            <translation><!-- UserAppMenuCustomizationShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserAppMenuItem</masterLabel>
+            <translation><!-- UserAppMenuItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserCustomBadge</masterLabel>
+            <translation><!-- UserCustomBadge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserEntityAccess</masterLabel>
+            <translation><!-- UserEntityAccess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserFeed</masterLabel>
+            <translation><!-- UserFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserFieldAccess</masterLabel>
+            <translation><!-- UserFieldAccess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserLicense</masterLabel>
+            <translation><!-- UserLicense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserListView</masterLabel>
+            <translation><!-- UserListView --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserListViewCriterion</masterLabel>
+            <translation><!-- UserListViewCriterion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserLogin</masterLabel>
+            <translation><!-- UserLogin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserPermissionAccess</masterLabel>
+            <translation><!-- UserPermissionAccess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserPreference</masterLabel>
+            <translation><!-- UserPreference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserRecordAccess</masterLabel>
+            <translation><!-- UserRecordAccess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserRole</masterLabel>
+            <translation><!-- UserRole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UserShare</masterLabel>
+            <translation><!-- UserShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VerificationHistory</masterLabel>
+            <translation><!-- VerificationHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vote</masterLabel>
+            <translation><!-- Vote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WAM_URL__c</masterLabel>
+            <translation><!-- WAM_URL__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkAccess</masterLabel>
+            <translation><!-- WorkAccess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkAccessShare</masterLabel>
+            <translation><!-- WorkAccessShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkBadge</masterLabel>
+            <translation><!-- WorkBadge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkBadgeDefinition</masterLabel>
+            <translation><!-- WorkBadgeDefinition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkBadgeDefinitionFeed</masterLabel>
+            <translation><!-- WorkBadgeDefinitionFeed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkBadgeDefinitionHistory</masterLabel>
+            <translation><!-- WorkBadgeDefinitionHistory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkBadgeDefinitionShare</masterLabel>
+            <translation><!-- WorkBadgeDefinitionShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkThanks</masterLabel>
+            <translation><!-- WorkThanks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkThanksShare</masterLabel>
+            <translation><!-- WorkThanksShare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eOrder</masterLabel>
+            <translation><!-- eOrder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eOrder_Item</masterLabel>
+            <translation><!-- eOrder_Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ltngsharing__PrivateTestObject__Share</masterLabel>
+            <translation><!-- ltngsharing__PrivateTestObject__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ltngsharing__PrivateTestObject__c</masterLabel>
+            <translation><!-- ltngsharing__PrivateTestObject__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ltngsharing__ReadOnlyTestObject__Share</masterLabel>
+            <translation><!-- ltngsharing__ReadOnlyTestObject__Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ltngsharing__ReadOnlyTestObject__c</masterLabel>
+            <translation><!-- ltngsharing__ReadOnlyTestObject__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Record Types Used --></label>
+        <name>Salesforce_Record_Types_Used__c</name>
+        <picklistValues>
+            <masterLabel>Agile Maturity Assessment FITARA Review</masterLabel>
+            <translation><!-- Agile Maturity Assessment FITARA Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agile Maturity Assessment Portfolio Review</masterLabel>
+            <translation><!-- Agile Maturity Assessment Portfolio Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amendment</masterLabel>
+            <translation><!-- Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application</masterLabel>
+            <translation><!-- Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAP Admin Cases</masterLabel>
+            <translation><!-- BAP Admin Cases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAP De-Provisioning</masterLabel>
+            <translation><!-- BAP De-Provisioning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAP Provisioning</masterLabel>
+            <translation><!-- BAP Provisioning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bristol Bay</masterLabel>
+            <translation><!-- Bristol Bay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash Contribution</masterLabel>
+            <translation><!-- Cash Contribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document - Bankcard Purchase</masterLabel>
+            <translation><!-- Document - Bankcard Purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document - Contract</masterLabel>
+            <translation><!-- Document - Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document - Grant</masterLabel>
+            <translation><!-- Document - Grant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document - IA</masterLabel>
+            <translation><!-- Document - IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document - Other</masterLabel>
+            <translation><!-- Document - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document - Travel</masterLabel>
+            <translation><!-- Document - Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dummy Account</masterLabel>
+            <translation><!-- Dummy Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EITA</masterLabel>
+            <translation><!-- EITA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA Person</masterLabel>
+            <translation><!-- EPA Person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA-100</masterLabel>
+            <translation><!-- EPA-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA-3160-6v5</masterLabel>
+            <translation><!-- EPA-3160-6v5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPA-3160-6v5_old_delete</masterLabel>
+            <translation><!-- EPA-3160-6v5_old_delete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ethics Intake Tracking</masterLabel>
+            <translation><!-- Ethics Intake Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FRS</masterLabel>
+            <translation><!-- FRS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTTA Agreement/Amendment</masterLabel>
+            <translation><!-- FTTA Agreement/Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTTA License</masterLabel>
+            <translation><!-- FTTA License --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTTA License Inventor</masterLabel>
+            <translation><!-- FTTA License Inventor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTTA Licensee</masterLabel>
+            <translation><!-- FTTA Licensee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTTA Partner</masterLabel>
+            <translation><!-- FTTA Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTTA Partner POC</masterLabel>
+            <translation><!-- FTTA Partner POC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTTA Products</masterLabel>
+            <translation><!-- FTTA Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTTA Royalties</masterLabel>
+            <translation><!-- FTTA Royalties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Form</masterLabel>
+            <translation><!-- Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Form - EPA-100 Line Item</masterLabel>
+            <translation><!-- Form - EPA-100 Line Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Form - Sample Record Type Line Item</masterLabel>
+            <translation><!-- Form - Sample Record Type Line Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Form - TCTO Request Line Item</masterLabel>
+            <translation><!-- Form - TCTO Request Line Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS Order Request</masterLabel>
+            <translation><!-- GAS Order Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS Orders</masterLabel>
+            <translation><!-- GAS Orders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Accounts</masterLabel>
+            <translation><!-- General Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Contacts</masterLabel>
+            <translation><!-- General Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR Org</masterLabel>
+            <translation><!-- HR Org --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Kind Contribution</masterLabel>
+            <translation><!-- In Kind Contribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORD-111</masterLabel>
+            <translation><!-- ORD-111 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTAQ Division Sub-Allocation</masterLabel>
+            <translation><!-- OTAQ Division Sub-Allocation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTAQ Op Plan</masterLabel>
+            <translation><!-- OTAQ Op Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office</masterLabel>
+            <translation><!-- Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original</masterLabel>
+            <translation><!-- Original --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card Order Request</masterLabel>
+            <translation><!-- Purchase Card Order Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: Cancellation Check or Card</masterLabel>
+            <translation><!-- Purchase Card: Cancellation Check or Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: Change Cardholder AO</masterLabel>
+            <translation><!-- Purchase Card: Change Cardholder AO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: Change Contact Information</masterLabel>
+            <translation><!-- Purchase Card: Change Contact Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: Change Monthly Limit</masterLabel>
+            <translation><!-- Purchase Card: Change Monthly Limit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: Change Name on Card/Check</masterLabel>
+            <translation><!-- Purchase Card: Change Name on Card/Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: Change Suspension of Card/Check</masterLabel>
+            <translation><!-- Purchase Card: Change Suspension of Card/Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: New Approving Official (AO)</masterLabel>
+            <translation><!-- Purchase Card: New Approving Official (AO) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: New Convenience Check</masterLabel>
+            <translation><!-- Purchase Card: New Convenience Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Card: New Purchase Card</masterLabel>
+            <translation><!-- Purchase Card: New Purchase Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RPIO</masterLabel>
+            <translation><!-- RPIO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region</masterLabel>
+            <translation><!-- Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF-182</masterLabel>
+            <translation><!-- SF-182 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STAA Application</masterLabel>
+            <translation><!-- STAA Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sample Line Item Record Type</masterLabel>
+            <translation><!-- Sample Line Item Record Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Application</masterLabel>
+            <translation><!-- Software Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State/Territory</masterLabel>
+            <translation><!-- State/Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCTO Earned Hours</masterLabel>
+            <translation><!-- TCTO Earned Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCTO New Time Item</masterLabel>
+            <translation><!-- TCTO New Time Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCTO Proposed Hours</masterLabel>
+            <translation><!-- TCTO Proposed Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCTO Travel Comp Time Not Applicable</masterLabel>
+            <translation><!-- TCTO Travel Comp Time Not Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TQB Contacts</masterLabel>
+            <translation><!-- TQB Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TQB Questions</masterLabel>
+            <translation><!-- TQB Questions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WOTUS Recommendations</masterLabel>
+            <translation><!-- WOTUS Recommendations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waters of the US</masterLabel>
+            <translation><!-- Waters of the US --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waters of the US – Step 0</masterLabel>
+            <translation><!-- Waters of the US – Step 0 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sandbox Name --></label>
+        <name>Sandbox_Name_Formula__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter in the name of the Sandbox that was granted for the prospect application --></help>
+        <label><!-- Sandbox Name_deprecated --></label>
+        <name>Sandbox_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sandbox Location --></help>
+        <label><!-- Sandbox --></label>
+        <name>Sandbox__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Schedule --></label>
+        <name>Schedule__c</name>
+        <picklistValues>
+            <masterLabel>Ahead</masterLabel>
+            <translation><!-- Ahead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Schedule</masterLabel>
+            <translation><!-- On Schedule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Significantly Behind</masterLabel>
+            <translation><!-- Significantly Behind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slightly Behind</masterLabel>
+            <translation><!-- Slightly Behind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Standard Form Number --></label>
+        <name>Standard_Form_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starter Users --></label>
+        <name>Starter_Users__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status By --></label>
+        <name>Status_By_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status By --></label>
+        <name>Status_By__c</name>
+        <relationshipLabel><!-- Applications (Status By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status Date --></label>
+        <name>Status_Date_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Date --></label>
+        <name>Status_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Narrative --></label>
+        <name>Status_Narrative__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Candidate</masterLabel>
+            <translation><!-- Candidate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred/Cancelled</masterLabel>
+            <translation><!-- Deferred/Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Improbable</masterLabel>
+            <translation><!-- Improbable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Development</masterLabel>
+            <translation><!-- In Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Planning</masterLabel>
+            <translation><!-- In Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Production (Stable)</masterLabel>
+            <translation><!-- In Production (Stable) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Production and Development</masterLabel>
+            <translation><!-- In Production and Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold per Customer</masterLabel>
+            <translation><!-- On Hold per Customer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Support Link --></label>
+        <name>Support_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Organization supporting the development of this application --></help>
+        <label><!-- Supporting Organization --></label>
+        <name>Supporting_Organization__c</name>
+        <picklistValues>
+            <masterLabel>BIAC Federal Staff</masterLabel>
+            <translation><!-- BIAC Federal Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ERG</masterLabel>
+            <translation><!-- ERG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FedSight</masterLabel>
+            <translation><!-- FedSight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GDIT</masterLabel>
+            <translation><!-- GDIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Innovate</masterLabel>
+            <translation><!-- Innovate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office’s Federal Staff</masterLabel>
+            <translation><!-- Office’s Federal Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Owning Office Federal Staff</masterLabel>
+            <translation><!-- Owning Office Federal Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To Be Determined</masterLabel>
+            <translation><!-- To Be Determined --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- System Owner --></label>
+        <name>System_Owner_1__c</name>
+        <relationshipLabel><!-- Applications (System Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- FITARA User Group --></help>
+        <label><!-- System Title --></label>
+        <name>System_Title__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sum Total of EPA Full &amp; EPA Starter Users --></help>
+        <label><!-- Total Users --></label>
+        <name>Total_Users__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Fill and Print</masterLabel>
+            <translation><!-- Fill and Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow</masterLabel>
+            <translation><!-- Workflow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- User interface type: 1 for EPA personnel without Salesforce license, 3 for EPA personnel with Salesforce license.  (2 for Salesforce license only no longer used.) --></help>
+        <label><!-- UI Type --></label>
+        <name>UI_Type__c</name>
+        <picklistValues>
+            <masterLabel>Fill and Print</masterLabel>
+            <translation><!-- Fill and Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow</masterLabel>
+            <translation><!-- Workflow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Version in Development --></help>
+        <label><!-- Version in Development --></label>
+        <name>Version_in_Development__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weblink --></label>
+        <name>Weblink__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Applications</value>
+    </caseValues>
+    <startsWith>Vowel</startsWith>
+    <layouts>
+        <layout>Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Candidate Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Candidate Application PM Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Forms</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Software Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Salesforce Application Details --></label>
+            <section>Salesforce Application Details</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+        <sections>
+            <label><!-- Support Information --></label>
+            <section>Support Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Software Application Management Layout</layout>
+        <sections>
+            <label><!-- BIAC Project Management Indicators --></label>
+            <section>BIAC Project Management Indicators</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Form --></label>
+        <name>Forms</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- BIAC Software Application Projects --></description>
+        <label><!-- Software Application --></label>
+        <name>Software_Application</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Specialized support information --></description>
+        <label><!-- Software Application Management --></label>
+        <name>Software_Application_Management</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please provide additional requirements for data availability when selected as desired or required. --></errorMessage>
+        <name>Data_Availability_Comments_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

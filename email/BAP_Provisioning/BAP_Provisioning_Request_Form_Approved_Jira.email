@@ -1,0 +1,25 @@
+{!Forms__c.Form_Type__c} Request Created By {!Forms__c.CreatedBy}<br>
+Submitted on behalf of: {!Forms__c.Submitted_on_Behalf_Of__c}<br>
+
+Type: {!Forms__c.Form_Type__c}<br>
+Quantity: {!Forms__c.Quantity__c}<br>
+BAPM Approval Link: {!Forms__c.Link}<br>
+Form Status: {!Forms__c.Form_Status__c}<br>
+Date: {!Forms__c.Expire_Date__c}<br>
+Description:<br>
+
+
+<br><br>
+Approver Info:
+Approved By: {!ApprovalRequest.Process_Approver}<br>
+Approver Comments: {!ApprovalRequest.Comments}<br>
+<br>
+Deployment Info (if any):<br>
+Source: {!Forms__c.Deployment_Source_Sandbox_Name__c} - {!Forms__c.Deployment_Source_Sandbox__c}<br>
+Destination: {!Forms__c.Deployment_Destination__c}<br>
+Changeset name: {!Forms__c.Deployment_Changset_Name__c}<br>
+<br>
+User activation Info (if any):<br>
+Authorization Reason: {!Forms__c.Authorization_Reason__c}<br>
+Role: {!Forms__c.Role__c}
+<br>

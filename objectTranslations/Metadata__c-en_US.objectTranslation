@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- API Name --></label>
+        <name>API_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Date --></label>
+        <name>Action_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+        <picklistValues>
+            <masterLabel>Activate</masterLabel>
+            <translation><!-- Activate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deactivate</masterLabel>
+            <translation><!-- Deactivate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freeze</masterLabel>
+            <translation><!-- Freeze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unfreeze</masterLabel>
+            <translation><!-- Unfreeze --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Changed By User --></label>
+        <name>Changed_By_User__c</name>
+        <relationshipLabel><!-- Metadata (Changed By User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Type --></label>
+        <name>Field_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filename --></label>
+        <name>Filename__c</name>
+    </fields>
+    <fields>
+        <label><!-- Label --></label>
+        <name>Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member Count --></label>
+        <name>Member_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original SF ID --></label>
+        <name>Original_SF_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Type --></label>
+        <name>Parent_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent --></label>
+        <name>Parent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picklist Values --></label>
+        <name>Picklist_Values__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referenced To --></label>
+        <name>Referenced_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Required --></label>
+        <name>Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sandbox Name --></label>
+        <name>Sandbox_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Metadata (User) --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Metadata</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Metadata</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Default LOV Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>File Selector</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Metadata Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- BAP Metadata from each sandbox --></description>
+        <label><!-- BAP Metadata --></label>
+        <name>BAP_Metadata</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- File Selector --></label>
+        <name>File_Selector</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- List of available Groups --></description>
+        <label><!-- Group --></label>
+        <name>Group</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Types and their associated Record Types --></description>
+        <label><!-- Object Record Types --></label>
+        <name>Object_Record_Types</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Contains a list of Permission Sets used in the BAP --></description>
+        <label><!-- Permission Set --></label>
+        <name>Permission_Set</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Output from Sandbox scripts --></description>
+        <label><!-- Sandbox Log --></label>
+        <name>Sandbox_Log</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- User access to an object and how the access was granted --></description>
+        <label><!-- User Access --></label>
+        <name>User_Access</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- User History --></label>
+        <name>User_History</name>
+    </recordTypes>
+</CustomObjectTranslation>

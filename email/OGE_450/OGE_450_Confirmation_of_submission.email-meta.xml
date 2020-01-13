@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OGE-450 Confirmation of submission</name>
+    <style>none</style>
+    <subject>Thank you for submitting your OGE 450 report!</subject>
+    <textOnly>Dear {!Forms__c.Type_1_Owner_Contact__c},
+
+Thank you for submitting your OGE 450 confidential financial disclosure report! Your report was received on {!TODAY()}.
+
+What to expect
+You will receive email notifications each time a reviewer “approves” or “rejects” your report. If a reviewer needs clarification or changes to your report, he/she/they will “Reject” your report. You’ll receive a notification email with instructions and will need to make the necessary changes and then resubmit the form. When your report is certified, you’ll receive an email confirmation.
+
+At any time, you may check on the status of your report by going to the EPA Business Application Platform and selecting “My Forms”. Your OGE 450 form and its current status will be listed there.
+
+Regards,
+Your EPA Ethics Officials</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

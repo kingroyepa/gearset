@@ -1,0 +1,22 @@
+To: <b> {!ApprovalRequest.Process_Assignee}</b> <br>
+
+<em>  {!ApprovalRequest.Process_Step_Name} </em>
+<br>
+<br>
+A Public Notice Posting Request has been submitted for your approval by 
+{!Forms__c.Form_Owner__c}. <BR> 
+For <b> {!Forms__c.Public_Notice_Title__c} ,</b>   <br>
+With Target Publication Date of  {!Forms__c.Publication_Date__c}
+
+<p>
+<h3> Instructions</h3>
+<p>
+1. Click here to access the form : {!Forms__c.Link} <BR>
+2. Scroll down to Form Window , click Attachment Tab to review files <BR>
+3. Scroll Up to Approval History Windows and click Approve or Reject button <BR>
+4. Optional - Type your Comments in Pop-up WIndow 
+</p>
+
+<p>
+Record ID: {!Forms__c.Form_Record_Name__c}
+</p>

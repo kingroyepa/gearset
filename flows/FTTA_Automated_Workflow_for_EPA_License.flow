@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Email_notification_to_Lab_Contact_Out_for_Signature</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_11_A1</name>
+        <label>Notify Lab Contact</label>
+        <locationX>1100</locationX>
+        <locationY>200</locationY>
+        <actionName>EPA_Agreement__c.Email_notification_to_Lab_Contact_Out_for_Signature</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>FTTA_Email_notification_to_Owner_License_Signed</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_13_A1</name>
+        <label>Notify Owner</label>
+        <locationX>1300</locationX>
+        <locationY>200</locationY>
+        <actionName>EPA_Agreement__c.FTTA_Email_notification_to_Owner_License_Signed</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Email_notification_to_FTTA_License_Active</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_15_A1</name>
+        <label>Notify FTTA</label>
+        <locationX>1500</locationX>
+        <locationY>200</locationY>
+        <actionName>EPA_Agreement__c.Email_notification_to_FTTA_License_Active</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Email_notification_to_FTTA_license_created</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Notify FTTA</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>EPA_Agreement__c.Email_notification_to_FTTA_license_created</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>FTTA_Email_notification_to_Owner_License_Assigned</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A1</name>
+        <label>Nofity Owner</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <actionName>EPA_Agreement__c.FTTA_Email_notification_to_Owner_License_Assigned</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Email_notification_to_FTTA_License_Pending</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_5_A1</name>
+        <label>Notify FTTA</label>
+        <locationX>500</locationX>
+        <locationY>200</locationY>
+        <actionName>EPA_Agreement__c.Email_notification_to_FTTA_License_Pending</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>FTTA_License_Email_notification_to_OGC_Attorney_OGC_Review</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_7_A1</name>
+        <label>Notify OGC Attorney</label>
+        <locationX>700</locationX>
+        <locationY>200</locationY>
+        <actionName>EPA_Agreement__c.FTTA_License_Email_notification_to_OGC_Attorney_OGC_Review</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>FTTA_License_Email_notification_to_Owner_OGC_Concurrence</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_9_A1</name>
+        <label>Notify Owner</label>
+        <locationX>900</locationX>
+        <locationY>200</locationY>
+        <actionName>EPA_Agreement__c.FTTA_License_Email_notification_to_Owner_OGC_Concurrence</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <assignments>
+        <name>myVariable_waitStartTimeAssignment</name>
+        <label>myVariable_waitStartTimeAssignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myDecision</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>When Status Created</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>5.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision10</name>
+        <label>myDecision10</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision12</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_11</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_11</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_11_A1</targetReference>
+            </connector>
+            <label>When Status At Signature</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>6.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision12</name>
+        <label>myDecision12</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision14</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_13</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_13</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_13_A1</targetReference>
+            </connector>
+            <label>When Status Signed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>7.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision14</name>
+        <label>myDecision14</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision16</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_15</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_15</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_15_A1</targetReference>
+            </connector>
+            <label>When Status Active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>8.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision16</name>
+        <label>myDecision16</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_17</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_17</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_17_A1</targetReference>
+            </connector>
+            <label>When Date &gt; Expiration Date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision2</name>
+        <label>myDecision2</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision4</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <label>When Status Assigned</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision4</name>
+        <label>myDecision4</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision6</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_5</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_5</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_5_A1</targetReference>
+            </connector>
+            <label>When Status Pending</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>3.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision6</name>
+        <label>myDecision6</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision8</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_7</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_7</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_7_A1</targetReference>
+            </connector>
+            <label>When Status OGC REVIEW</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>4.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision8</name>
+        <label>myDecision8</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision10</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_9</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_9</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_9_A1</targetReference>
+            </connector>
+            <label>When Status OGC Concurrence</label>
+        </rules>
+    </decisions>
+    <description>FTTA License. Automate the workflow for the EPA License.</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+ISNEW(),
+ISPICKVAL([EPA_Agreement__c].Status__c , &apos;Created&apos;)
+)
+
+,true,false)
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+ISNEW(),
+ISPICKVAL({!myVariable_current.Status__c} , &apos;Created&apos;)
+)
+
+,true,false)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+	[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL([EPA_Agreement__c].Status__c, &apos;At Signature&apos;),
+		ISCHANGED([EPA_Agreement__c].Status__c)
+		
+		)
+
+	)
+
+,true,false)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_11</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+	{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL({!myVariable_current.Status__c}, &apos;At Signature&apos;),
+		ISCHANGED({!myVariable_current.Status__c})
+		
+		)
+
+	)
+
+,true,false)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+	[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL([EPA_Agreement__c].Status__c, &apos;Signed&apos;),
+		ISCHANGED([EPA_Agreement__c].Status__c)
+		
+		)
+
+	)
+
+,true,false)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_13</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+	{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL({!myVariable_current.Status__c}, &apos;Signed&apos;),
+		ISCHANGED({!myVariable_current.Status__c})
+		
+		)
+
+	)
+
+,true,false)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+	[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL([EPA_Agreement__c].Status__c, &apos;Active&apos;),
+		ISCHANGED([EPA_Agreement__c].Status__c)
+		
+		)
+
+	)
+
+,true,false)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_15</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+	{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL({!myVariable_current.Status__c}, &apos;Active&apos;),
+		ISCHANGED({!myVariable_current.Status__c})
+		
+		)
+
+	)
+
+,true,false)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+	[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+
+	TODAY() &gt; [EPA_Agreement__c].Expiration_Date__c 
+
+	)
+
+,true,false)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_17</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+	{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+
+	TODAY() &gt; {!myVariable_current.Expiration_Date__c} 
+
+	)
+
+,true,false)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+	[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL([EPA_Agreement__c].Status__c, &apos;Assigned&apos;),
+		ISCHANGED([EPA_Agreement__c].Status__c)
+		
+		)
+
+	)
+
+,true,false)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+	{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL({!myVariable_current.Status__c}, &apos;Assigned&apos;),
+		ISCHANGED({!myVariable_current.Status__c})
+		
+		)
+
+	)
+
+,true,false)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+	[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL([EPA_Agreement__c].Status__c, &apos;Pending&apos;),
+		ISCHANGED([EPA_Agreement__c].Status__c)
+		
+		)
+
+	)
+
+,true,false)
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_5</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+	{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL({!myVariable_current.Status__c}, &apos;Pending&apos;),
+		ISCHANGED({!myVariable_current.Status__c})
+		
+		)
+
+	)
+
+,true,false)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+	[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+
+	AND(
+		OR(
+			AND(
+				ISPICKVAL([EPA_Agreement__c].Status__c, &apos;OGC review&apos;),
+				ISCHANGED([EPA_Agreement__c].Status__c),
+				NOT(ISBLANK([EPA_Agreement__c].OGC_Attorney__c ))
+			),
+			AND(
+				ISPICKVAL([EPA_Agreement__c].Status__c, &apos;OGC review&apos;),
+				ISCHANGED([EPA_Agreement__c].OGC_Attorney__c ),
+				NOT(ISBLANK([EPA_Agreement__c].OGC_Attorney__c ))
+			)
+		
+			)
+		
+		
+		)
+
+	)
+
+,true,false)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_7</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+	{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+
+	AND(
+		OR(
+			AND(
+				ISPICKVAL({!myVariable_current.Status__c}, &apos;OGC review&apos;),
+				ISCHANGED({!myVariable_current.Status__c}),
+				NOT(ISBLANK({!myVariable_current.OGC_Attorney__c} ))
+			),
+			AND(
+				ISPICKVAL({!myVariable_current.Status__c}, &apos;OGC review&apos;),
+				ISCHANGED({!myVariable_current.OGC_Attorney__c} ),
+				NOT(ISBLANK({!myVariable_current.OGC_Attorney__c} ))
+			)
+		
+			)
+		
+		
+		)
+
+	)
+
+,true,false)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+
+AND(
+	[EPA_Agreement__c].RecordType.DeveloperName  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL([EPA_Agreement__c].Status__c, &apos;OGC Concurrence&apos;),
+		ISCHANGED([EPA_Agreement__c].Status__c)
+		
+		)
+
+	)
+
+,true,false)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_9</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+
+AND(
+	{!myVariable_current.RecordType.DeveloperName}  ==&apos;FTTA_License&apos;,
+
+	AND(
+		ISPICKVAL({!myVariable_current.Status__c}, &apos;OGC Concurrence&apos;),
+		ISCHANGED({!myVariable_current.Status__c})
+		
+		)
+
+	)
+
+,true,false)</expression>
+    </formulas>
+    <interviewLabel>FTTA_Automated_Workflow_for_EPA_License-3_InterviewLabel</interviewLabel>
+    <label>FTTA Automated Workflow for EPA License</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>EPA_Agreement__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[EPA_Agreement__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_17_A1</name>
+        <label>Update Status to Expired</label>
+        <locationX>1700</locationX>
+        <locationY>200</locationY>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Expired</stringValue>
+            </value>
+        </inputAssignments>
+        <object>EPA_Agreement__c</object>
+    </recordUpdates>
+    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>EPA_Agreement__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>EPA_Agreement__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_waitStartTimeVariable</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Flow.CurrentDateTime</elementReference>
+        </value>
+    </variables>
+</Flow>

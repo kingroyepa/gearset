@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>4 - Sent to Owner after Rejection</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EPA_Email_Notification</letterhead>
+    <name>GAS Order Rejection Notification</name>
+    <style>freeForm</style>
+    <subject>A New Gas Products Order &quot;{!Order_Request__c.Name}&quot; has been rejected by a Branch Chief</subject>
+    <textOnly>Hello,
+
+A New Gas Products Order been submitted by {!Order_Request__c.OwnerFirstName} {!Order_Request__c.OwnerLastName} and has been rejected in Branch Chief review.
+
+To access this order, double-click this DocLink:
+&quot;{!Order_Request__c.Link}
+
+Thank You.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

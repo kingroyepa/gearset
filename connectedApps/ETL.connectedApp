@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>king.roy@epa.gov</contactEmail>
+    <label>ETL</label>
+    <oauthConfig>
+        <callbackUrl>https://epaoei.lightning.force.com</callbackUrl>
+        <consumerKey>3MVG9NEgrsZAHtHTPjuiLqU7TxSRusGcxevbPSBgj0ID9R4Rh8di7f3zf3TspYEHCCf_UU4MIRCVB_ARqfdUc</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Api</scopes>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

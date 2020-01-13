@@ -1,0 +1,2 @@
+A purchase card provisioning action has been requested and has been assigned to {!Forms__c.Assigned_to__c} for completion. To review information regarding this action please click on the link below. <br/><br/>
+{!Forms__c.RecordType} Link: {!Forms__c.Link}

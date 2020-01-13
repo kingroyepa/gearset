@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>noreply@epa.gov.invalid</email>
+    <name>PCORS Application Admins</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>PCORS_App_Admins</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Order_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

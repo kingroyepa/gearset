@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create the printable format e450 Form.</description>
+    <height>500</height>
+    <label>Create Printable e450 Form</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>e450SinglePageForm_Type3</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

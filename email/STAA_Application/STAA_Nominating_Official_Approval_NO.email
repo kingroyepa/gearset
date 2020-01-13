@@ -1,0 +1,14 @@
+<p>Dear {!Cover_Form__c.OwnerFullName},</p>
+
+<p>Please open to see Nominating Official's comments<br/>
+Click here to open nomination application: <a href="{!Cover_Form__c.Link}">{!Cover_Form__c.Link}</a></p>
+
+<p>NOMINATION ID: <a href="{!Cover_Form__c.Link}">{!Cover_Form__c.Nomination_ID__c}</a></p>
+
+<p>Title: {!Cover_Form__c.Citation__c}</p>
+
+<p>Please do not  reply to this message. Replies to this message are routed to an unmonitored mailbox.</p>
+
+<p>If you have questions, please contact {!Cover_Form__c.STAA_Coordinator_Name__c} at {!Cover_Form__c.STAA_Coordinator_Telephone_Number__c} or <a href="mailto:{!Cover_Form__c.STAA_Coordinator_eMail__c}">{!Cover_Form__c.STAA_Coordinator_eMail__c}</a>.</p>
+
+<p>EPA STAA Coordinator</p>

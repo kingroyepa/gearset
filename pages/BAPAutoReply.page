@@ -1,0 +1,31 @@
+<apex:page controller="BAPAutoReply" > 
+<!--<apex:page controller="BAPAutoReply" showHeader="false"> -->
+    <h1>
+        Business Automation Platform (BAP) Support contact information
+    </h1>
+    <p>To access the Agency Forms Site component of the BAP where you can submit workflow forms, please visit: <a href="https://forms.epa.gov/">https://forms.epa.gov/</a> (You will need an EPA LAN ID and password.)<br/><br/>
+        To access the main Force.com component of the BAP where you can approve workflow forms, please visit: <a href="https://epaoei.my.salesforce.com/">https://epaoei.my.salesforce.com/</a> (You will need an EPA LAN ID and password, and you will need to have been activated as a Salesforce user.)<br/><br/>
+To request that a user (yourself or someone else) be activated in Salesforce, go to <a href="https://forms.epa.gov/">https://forms.epa.gov/</a> and click "New Form" for BAP User Provisioning. Please select "Starter User", select the Authorization Reason and the user’s Role, then submit the form for approval.<br/><br/>
+If your e-mail pertains to a specific application or technical issue, please contact the EPA Call Center (866-411-4EPA, epacallcenter@epa.gov) or the cognizant individual or group below:<br/><br/>
+    </p>
+    <table class='list'>
+    <thead>
+    <tr class='headerRow'>
+        <th>BAP Application</th>
+        <th colspan='3'>Support Contact Info</th>
+    </tr>
+    </thead>
+    <tbody>
+        <apex:repeat value="{!account}" var="a">
+            <tr>
+                <td>{!a.Application_Name__c}</td>
+                 <td>{!a.AutoReply_Text__c} (<a href="{!a.Support_Email__c}">{!a.Support_Email__c})</a></td>
+            </tr>
+        </apex:repeat>
+    </tbody>
+</table>
+    <p>If you have a general problem in using or accessing the BAP that is not related to any particular application (for example, you cannot log in to the BAP though you were able to previously), please contact BAP-Support@epa.gov.  The BAP administration team will respond to your request if it is not covered by any of the other options suggested in this document.<br/><br/>
+If your inquiry is of a general technical nature unrelated specifically to the BAP or any of its applications (for example, you cannot log on to the Agency network), please contact the EPA Call Center (866-411-4EPA, epacallcenter@epa.gov).
+    </p>
+
+</apex:page>

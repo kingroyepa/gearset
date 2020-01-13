@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Clone award where the result is a time off award.</description>
+    <height>250</height>
+    <label>Clone Award as Time Off</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>AwardCloneTimeoff</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

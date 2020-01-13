@@ -1,0 +1,8 @@
+<p>
+Dear {!Forms__c.Unauthenticated_Owner__c}: your EPA Form 3160-6 has been approved by your local leave bank coordinator and has been sent to the Leave Bank Team for approval and processing. 
+</p>
+<p>
+For questions about this action, please contact your local leave bank coordinator. 
+</p>
+<p>
+Form Record Number: {!Forms__c.Name}</p>

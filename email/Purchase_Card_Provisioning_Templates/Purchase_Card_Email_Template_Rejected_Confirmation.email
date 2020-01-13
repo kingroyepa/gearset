@@ -1,0 +1,9 @@
+Hello, <br/>
+
+Your purchase card request has been reviewed and was not approved. <br/><br/>
+
+Here are the comments: <br/>
+
+{!ApprovalRequest.Comments} <br/><br/>
+
+Please click on the following link for more details: {!Forms__c.Link}

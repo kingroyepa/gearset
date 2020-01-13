@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates and saves as an attachment the Cincinnati office justification form.</description>
+    <height>250</height>
+    <label>Create Cincinnati Justification PDF</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>CincinnatiPDFCreator</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

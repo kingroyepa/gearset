@@ -1,0 +1,9 @@
+<p>
+We have received your submission of the {!Forms__c.Form_Type_Name__c} Form!
+</p>
+
+<p>
+The form is currently under review by {!Forms__c.User_Supervisor__c}</p>
+
+<p>
+Form Record ID: {!Forms__c.Name}</p>

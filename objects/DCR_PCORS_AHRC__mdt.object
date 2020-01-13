@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>DCR_AHRC__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>DCR AHRC</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>58A - IO</fullName>
+                    <default>true</default>
+                    <label>58A - IO</label>
+                </value>
+                <value>
+                    <fullName>58C - SPD</fullName>
+                    <default>false</default>
+                    <label>58C - SPD</label>
+                </value>
+                <value>
+                    <fullName>58D - CAMD</fullName>
+                    <default>false</default>
+                    <label>58D - CAMD</label>
+                </value>
+                <value>
+                    <fullName>58E - CPPD</fullName>
+                    <default>false</default>
+                    <label>58E - CPPD</label>
+                </value>
+                <value>
+                    <fullName>58F - CCD</fullName>
+                    <default>false</default>
+                    <label>58F - CCD</label>
+                </value>
+                <value>
+                    <fullName>58 - OAP</fullName>
+                    <default>false</default>
+                    <label>58 - OAP</label>
+                </value>
+                <value>
+                    <fullName>561</fullName>
+                    <default>false</default>
+                    <label>561</label>
+                </value>
+                <value>
+                    <fullName>56A - IO-DC</fullName>
+                    <default>false</default>
+                    <label>56A - IO-DC</label>
+                </value>
+                <value>
+                    <fullName>56C - CD</fullName>
+                    <default>false</default>
+                    <label>56C - CD</label>
+                </value>
+                <value>
+                    <fullName>56D - TATD</fullName>
+                    <default>false</default>
+                    <label>56D - TATD</label>
+                </value>
+                <value>
+                    <fullName>56E - IO-AA</fullName>
+                    <default>false</default>
+                    <label>56E - IO-AA</label>
+                </value>
+                <value>
+                    <fullName>56F - TCD</fullName>
+                    <default>false</default>
+                    <label>56F - TCD</label>
+                </value>
+                <value>
+                    <fullName>56H - ASD</fullName>
+                    <default>false</default>
+                    <label>56H - ASD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PCORS_AHRC__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>PCORS AHRC</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Maps potential free form AHRC entries into PCORS to picklist values in the DCR</description>
+    <label>DCR - PCORS AHRC</label>
+    <pluralLabel>DCR - PCORS AHRC</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

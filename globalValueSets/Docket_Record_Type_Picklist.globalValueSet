@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bristol Bay</fullName>
+        <default>false</default>
+        <label>Bristol Bay</label>
+    </customValue>
+    <customValue>
+        <fullName>Waters of the US</fullName>
+        <default>false</default>
+        <label>Waters of the US</label>
+    </customValue>
+    <customValue>
+        <fullName>California Selenium</fullName>
+        <default>false</default>
+        <label>California Selenium</label>
+    </customValue>
+    <customValue>
+        <fullName>Missouri NNC Docket</fullName>
+        <default>false</default>
+        <label>Missouri NNC Docket</label>
+    </customValue>
+    <customValue>
+        <fullName>Waters of the US – Step 0</fullName>
+        <default>false</default>
+        <label>Waters of the US – Step 0</label>
+    </customValue>
+    <customValue>
+        <fullName>Waters of the US – Step 1 SUPP</fullName>
+        <default>false</default>
+        <label>Waters of the US – Step 1 SUPP</label>
+    </customValue>
+    <customValue>
+        <fullName>Waters of the US – Step 2</fullName>
+        <default>false</default>
+        <label>Waters of the US – Step 2</label>
+    </customValue>
+    <customValue>
+        <fullName>WOTUS Recommendations</fullName>
+        <default>false</default>
+        <label>WOTUS Recommendations</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Quality Certification</fullName>
+        <default>false</default>
+        <label>Water Quality Certification</label>
+    </customValue>
+    <description>Docket Comment Application.</description>
+    <masterLabel>Docket Record Type Picklist</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

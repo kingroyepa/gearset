@@ -1,0 +1,23 @@
+<apex:page standardController="Cover_Form__c" action="{!checkRecord}" extensions="STAAAplicationFinalValidation" lightningStyleSheets="true">
+    <style>
+        .messageCell h4{font-size: .8125rem;}
+        .errorTitle{padding-bottom:5px; font-size: 1.125rem;font-weight: 700;line-height: 1.25;font-family: 'Salesforce Sans',Arial,sans-serif;}
+        .errorItem{padding:5px 0px 5px 25px;font-weight: 300;font-size: 1rem;line-height: 1.25;}
+        .errorItemTitle{font-weight: bold;}
+    </style>
+<apex:slds />
+    <div class="slds-scope">
+        <apex:pageblock >
+            <apex:pageMessages escape="false"></apex:pageMessages>
+        </apex:pageblock>
+     
+    <div style="text-align:center;">
+        <div class="slds-button-group" role="group">
+            <a href="javascript: window.history.go(-1)">
+                <button class="slds-button slds-button_brand">Back</button>
+            </a>
+        </div>
+        <p>&nbsp;</p>
+    </div>
+    </div>
+</apex:page>

@@ -1,0 +1,486 @@
+<apex:page Controller="LineItemsGrid_e450_Controller" title="Reportable Information" showheader="false" sidebar="false" cache="false" action="{!ValidateOrRedirect}" >
+    
+    <style>
+        body { background-color: #E0F1FF; }
+        
+        .msg {
+        font-size: .75rem;
+        line-height: 1.25;
+        color: rgb(84, 105, 141);
+        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        margin-left: 200px;
+        margin-bottom: 20px;
+        margin-top: -20px;
+        width: 75%;
+        text-align: center;
+        font-family: 'Salesforce Sans',Arial,sans-serif;
+        background: rgb(253, 253, 253);
+        -webkit-tap-highlight-color: transparent;
+        }
+        
+        .gridTable{
+        border-collapse: collapse;
+        background-color: white;
+        border: 1px solid black;
+        }
+        
+        .gridDiv
+        {
+        height: 60%;    
+        width: 90%;      
+        }
+        
+        .gridDiv_example
+        {
+        height: 60%;    
+        width: 90%;      
+        overflow-y: scroll;    
+        overflow-x: scroll;
+        }
+        
+        .gridTable_th {
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-bottom: 5px;
+        text-align: center;
+        white-space:pre-line;
+        }
+        
+        .gridTable_td{
+        padding: 10px;
+        align: center;
+        white-space: nowrap;
+        }
+        
+        .dateFormat
+        {
+        display: none;
+        }
+        
+        .gridTable_tr:hover {background-color:#f5f5f5;}
+        
+        .instructionsTable{
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 90%;
+        border: 1px solid black;
+        }
+        
+        .instructionsTable_td{
+        width: 50%;
+        padding-left: 8px;
+        padding-right: 1px;
+        padding-bottom: 2px;
+        padding-top: 3px;
+        vertical-align: top;
+        }
+        
+    </style>
+    
+    <!--Header-->
+    <apex:form rendered="{!t1user}">
+        <apex:outputpanel >
+            <div class="topBar1" style="width: 100%; height: 110px; background-color: #0E6993; min-width: 1175px;">
+                <a href="http://workplace.epa.gov/" style="margin-left: 25%;"><img src="{!$Resource.EPAOneLogo}" alt="EPA One Logo" style="margin-top: 20px;"/></a>
+            </div>
+            <div class="topBar2" style="width: 100%; height: 38px; background-color: #0A5071; min-width: 1175px;">
+                &nbsp;
+            </div>
+        </apex:outputpanel>
+        <div class="WebFormsNav" style="width: 100%; height: 200px; min-width: 1150px;">
+            <table style="width: 80%; padding: 20px;">
+                <tr>
+                    <td style="width: 180px; vertical-align: top;">
+                        <img src="{!$Resource.EPALogo}" alt="EPA Logo"/>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <h1 style="font-size: 250%; padding-bottom: 20px;">Part 1: Assets and Income for Form ID: {!form.Name}</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </apex:form>
+    <!-- End Header -->
+    
+    <!--Body-->
+    
+    <div style="padding-left: 10px;"> 
+        
+        <apex:form id="LineSelectionTableForm">
+            
+            <apex:pageBlock title="Choose Type of Information to Report" id="out">
+                <apex:pageBlockButtons location="bottom">
+                    <div style="margin-right: 1800px; margin-left: 250px;">
+                    <apex:commandButton value="Go!" action="{!go}" rerender="out" />
+                    </div>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection >
+                    <apex:selectList value="{!lineItemRT}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!LineItemRTs}"/>
+                    </apex:selectList>
+                </apex:pageBlockSection>
+            </apex:pageBlock>         
+        </apex:form>
+    </div>
+    <br/>
+    
+    <div style="padding-left: 10px;"> 
+        
+        <apex:form id="LineTableForm">
+            <apex:pageMessages />
+            <div align="center">
+                <apex:commandButton value="Add New Line" rendered="{!t1user}" action="{!addRow}" disabled="{!readOnlyFlag}" style="font-size:large;margin:7px;padding-left:5px;padding-right:5px"/>
+                <apex:commandButton value="Save" action="{!saveTable}" disabled="{!readOnlyFlag}" style="font-size:large;margin:7px;padding-left:5px;padding-right:5px;" />
+                
+                <!--apex:commandButton value="Submit For Approval" action="{!submitFormFromLineItem}" disabled="{!readOnlyFlag}" style="font-size: large;margin:5px"/-->
+                <apex:commandButton value="Return To Form" rendered="{!t1user}" action="{!saveAndReturn}" style="font-size: large;margin:7px;padding-left:5px;padding-right:5px"/>
+                <apex:commandButton value="Return To Form" rendered="{!!t1user}" action="{!URLFOR($Action.forms__c.View, formID)}" style="font-size: large;margin:7px;padding-left:5px;padding-right:5px"/>
+                
+            </div>
+            <br/><br/><br/>
+            <div class="gridDiv" style="margin-left:20px">
+                <table border="1" class="gridTable" id="table" >
+                    <tr class="gridTable_tr">
+                    
+                        <!--Header-->
+                <!--        <apex:repeat value="{!fieldHeader}" var="headerVar">
+                            <th class="gridTable_th" >
+                                {!headerVar}
+                            </th>
+                        </apex:repeat>  -->
+                        <th class="gridTable_th" style="width: 5%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 15%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 30%; font-weight: normal; text-align:left; padding-left: 7px;">
+                            <b>Specific stock, bond, sector mutual fund, type/location of real estate, etc.</b>
+                            <i>(Indicate the full name of each specific asset or investment. You may add the ticker symbol to the full name.)</i> 
+                            <b>Name of Employer or Business; Source of Fees, Commissions, or Honoraria </b><i>(Include brief description.)</i> 
+                            You may distinguish any entry for a family member by preceding it with S for spouse, DC for dependent child, or J for jointly held.
+                        </th>
+                        <th class="gridTable_th" style="width: 10%; padding-left: 4px; padding-right: 4px;">
+                            No Longer Held
+                        </th>
+                        <th class="gridTable_th" style="width: 20%; padding-left: 4px; padding-right: 4px;">
+                            Approver Comment
+                        </th>
+                        <th class="gridTable_th" style="width: 20%; padding-left: 4px; padding-right: 4px;">
+                            Filer's Response
+                        </th>
+                    </tr>
+                    <!-- Edit Generation-->
+                    <apex:repeat value="{!lineItemCollection}" var="lineItem" rendered="{!!readOnlyFlag}"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                             <!--Mounika Suram 9/17/2018 Added the delete action -->
+                            <td class="gridTable_td" rendered="{!!readOnlyFlag}">
+                                <apex:commandLink value="Delete" action="{!deleteRow}" styleClass="btn">                              
+                                        <apex:param name="itemToDelete" value="{!lineItem.id}" assignTo="{!lineToDelete}"/>
+                                </apex:commandLink>
+                            </td>
+                            <td>
+                                &nbsp; Part 1: Assets and Income &nbsp;
+                            </td>
+                            <apex:repeat value="{!apiList}" var="fieldName">
+                                <td class="gridTable_td">
+                                   <apex:inputField value="{!lineItem[fieldName]}" style="width: 99%"/>
+                                </td>
+                            </apex:repeat>   
+                        </tr>
+                    </apex:repeat>
+                    
+                    <!--Read Only Generation -->
+                    <apex:repeat value="{!lineItemCollection}" var="lineItem" rendered="{!readOnlyFlag}"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                              <!--Mounika Suram 9/17/2018 Added the delete action -->
+                            <td class="gridTable_td" rendered="{!readOnlyFlag}">
+                                <apex:commandLink value="Delete" action="{!deleteRow}" styleClass="btn" rendered="{!!readOnlyFlag}">
+                                        <apex:param name="itemToDelete" value="{!lineItem.id}" assignTo="{!lineToDelete}"/>
+                                </apex:commandLink>&nbsp;
+                            </td>
+                            <td>
+                                &nbsp; Part 1: Assets and Income &nbsp;
+                            </td>
+                            <apex:repeat value="{!apiList}" var="fieldName">
+                                <td class="gridTable_td">
+                                    <apex:outputField value="{!lineItem[fieldName]}" style="width: 99%"/>
+                                </td>
+                            </apex:repeat>
+                        </tr>
+                    </apex:repeat>
+                </table>              
+            </div>
+            <br/><br/><br/>
+            
+            <!-- Specific Line Item Instructions -->
+            <div style="font-size:medium;"><b> Instructions and Examples</b></div>
+            <div>
+                <table border="1" class="instructionsTable" id="table" style="margin-left:20px">
+                    <tr class="gridTable_tr" >
+                        <!--Header-->
+                        <th colspan="2" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b> INSTRUCTIONS - Part 1: Assets and Income </b>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td">
+                            <b>Report for Yourself, Spouse, and Dependent Child:</b>
+                        </td>
+                        <td class="instructionsTable_td">
+                            <b>Do Not Report:</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td" style="text-indent: -2.1em; padding-left: 20px;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; Assets held for investment or the production of income that ended the reporting period with a value greater 
+                            than $1,000. In addition, annual filers must report assets from which more than $1,000 in income was received during the reporting period. Reportable assets 
+                            include, but are not limited to:<br/>
+                            <div style="text-indent: -1.2em; padding-left: 18px;">
+                                <b>-</b>&nbsp;&nbsp; Assets such as stocks, bonds, annuities, trust holdings, partnership interests, life insurance, investment real estate, or a 
+                                privately-held trade or business<br/>
+                            </div>
+                            <div style="text-indent: -1.2em; padding-left: 18px;">
+                                <b>-</b>&nbsp;&nbsp; Sector mutual funds: those funds invested in a particular industry, business, or location, such as ABC Electronics Fund or XYZ Canada 
+                                Fund (report the full name of the fund, not just the family fund name)<br/>
+                            </div>
+                            <div style="text-indent: -1.2em; padding-left: 18px;">
+                                <b>-</b>&nbsp;&nbsp; Holdings of retirement plans, such as 401(k)s or IRAs, investment life insurance, or variable annuities (report each holding unless 
+                                listed in the Do Not Report section)<br/>
+                            </div>
+                            <div style="text-indent: -1.2em; padding-left: 18px;">
+                                <b>-</b>&nbsp;&nbsp; Defined benefit pension plans provided by a former employer (include the name of the employer)
+                            </div>
+                        </td>
+                        <td class="instructionsTable_td">
+                             <b>•</b>&nbsp;&nbsp; Federal Government retirement benefits<br/>
+                             <b>•</b>&nbsp;&nbsp; Thrift Savings Plan<br/>
+                             <b>•</b>&nbsp;&nbsp; Certificates of deposit, savings or checking accounts<br/>
+                             <b>•</b>&nbsp;&nbsp; Term life insurance<br/>
+                             <b>•</b>&nbsp;&nbsp; Money market mutual funds and money market accounts<br/>
+                             <b>•</b>&nbsp;&nbsp; Your personal residence, unless you rent it out<br/>
+                             <b>•</b>&nbsp;&nbsp; U.S. Government Treasury bonds, bills, notes, and savings bonds<br/>
+                             <b>•</b>&nbsp;&nbsp; Diversified mutual funds, such as ABC Equity Value Fund or XYZ Large Capital Fund<br/>
+                             <b>•</b>&nbsp;&nbsp; Diversified funds within an employee benefit plan<br/>
+                             <b>•</b>&nbsp;&nbsp; Money owed to you, your spouse, or dependent child by a spouse, parent, sibling, or child
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td">
+                            <b>Also Report:</b>
+                        </td>
+                        <td class="instructionsTable_td">
+                            <b>Do Not Report:</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td" style="text-indent: -2.1em; padding-left: 20px;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; <u>For yourself:</u> (1) all sources of salary, fees, commissions, and other earned income greater than 
+                            $1,000, (2) honoraria greater than $1,000, and (3) other non-investment income such as scholarships, prizes, and gambling income greater than $1,000<br/>
+                            <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; <u>For your spouse:</u> (1) all sources of salary, fees, commissions, and other earned income greater than 
+                                $1,000, and (2)honoraria greater than $1,000
+                            </div>
+                        </td>
+                        <td class="instructionsTable_td">
+                             <b>•</b>&nbsp;&nbsp; Dependent child’s earned income<br/>
+                             <b>•</b>&nbsp;&nbsp; Veterans’ benefits<br/>
+                             <b>•</b>&nbsp;&nbsp; Federal Government salary<br/>
+                             <b>•</b>&nbsp;&nbsp; Social Security benefits<br/>
+                        </td>
+                    </tr>
+                </table>              
+            </div>
+            <br/><br/><br/>
+    
+            <div>
+                <table border="1" class="instructionsTable" id="table" style="margin-left:20px">
+                    <tr class="gridTable_tr" >
+                        <!--Header-->
+                        <th style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b> Important Definitions </b>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td">
+                            <b>Diversified Mutual Fund</b> – A mutual fund that does not have a stated policy of concentrating its investments in one industry, business, or 
+                            single country other than the United States.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td">
+                            <b>Sector Mutual Fund</b> – A mutual fund that concentrates its investments in an industry, business, single country other than the United States, 
+                            or bonds of a single state within the United States.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td">
+                            <b>Diversified Fund within an Employee Benefit Plan</b> – An employee benefit plan fund that has a written policy of varying investments without 
+                            concentration in one industry, business, or single country other than the United States
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td">
+                            <b>Dependent Child</b> – A son, daughter, stepson or stepdaughter who is either unmarried and under age 21 and living in the filer’s house, or 
+                            considered dependent under the U.S. tax code.
+                        </td>
+                    </tr>
+                </table>              
+            </div>
+            <br/><br/><br/>
+            
+            <!-- EXAMPLE -->
+            <div class="gridDiv_example" style="margin-left:20px">
+                <table border="1" class="gridTable" style="background-color:#f5f5f5;" id="table" >
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th colspan="4" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b>EXAMPLES - Part 1: Assets and Income </b>
+                        </th>
+                    </tr>
+                    <tr class="gridTable_tr" >
+                        <th class="gridTable_th" style="width: 5%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 15%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 65%; font-weight: normal; text-align:left; padding-left: 7px;">
+                            <b>Specific stock, bond, sector mutual fund, type/location of real estate, etc.</b>
+                            <i>(Indicate the full name of each specific asset or investment. You may add the ticker symbol to the full name.)</i> 
+                            <b>Name of Employer or Business; Source of Fees, Commissions, or Honoraria </b><i>(Include brief description.)</i> 
+                            You may distinguish any entry for a family member by preceding it with S for spouse, DC for dependent child, or J for jointly held.
+                        </th>
+                        <th class="gridTable_th" style="width: 15%; padding-left: 4px; padding-right: 4px;">
+                            No Longer Held
+                        </th>
+                    </tr>
+                    <!-- Example Generation-->
+                    <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 1: Assets and Income &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            OGC Communications (OGC) <i>(Example of a stock with a ticker symbol)</i>
+                        </td>      
+                        <td class="gridTable_td" style="font-size: 1rem;">
+                            &#x2610; <!-- unchecked box -->
+                        </td>                    
+                    </tr>
+                   <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 1: Assets and Income &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            OGE Energy <i>(Example of sold stock that produced more than $1,000 in income)</i>
+                        </td>      
+                        <td class="gridTable_td" style="font-size: 1rem;">
+                            &#x2611; <!-- checked box -->
+                        </td>                    
+                    </tr>
+                   <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 1: Assets and Income &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            (S) OGE Energy bond <i>(Example of a corporate bond held by a spouse)</i>
+                        </td>      
+                        <td class="gridTable_td" style="font-size: 1rem;">
+                            &#x2610; <!-- unchecked box -->
+                        </td>                    
+                    </tr>
+                   <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 1: Assets and Income &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            ABC Healthcare Fund <i>(Example of a sector fund held in a 401(k) plan)</i>
+                        </td>      
+                        <td class="gridTable_td" style="font-size: 1rem;">
+                            &#x2610; <!-- unchecked box -->
+                        </td>                    
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 1: Assets and Income &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            Residential real estate, Anchorage, AK <i>(Example of investment real estate)</i>
+                        </td>      
+                        <td class="gridTable_td" style="font-size: 1rem;">
+                            &#x2610; <!-- unchecked box -->
+                        </td>                    
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 1: Assets and Income &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            Bryggadune University – salary <i>(Example of earned income from a former employer)</i>
+                        </td>      
+                        <td class="gridTable_td" style="font-size: 1rem;">
+                            &#x2611; <!-- checked box -->
+                        </td>                    
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 1: Assets and Income &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            (S) Express Medical Clinic – salary <i>(Example of a spouse's earned income from a current employer)</i>
+                        </td>      
+                        <td class="gridTable_td" style="font-size: 1rem;">
+                            &#x2610; <!-- unchecked box -->
+                        </td>                    
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 1: Assets and Income &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            Association of Accountants – honorarium <i>(Example of a single honorarium from the listed source)</i>
+                        </td>      
+                        <td class="gridTable_td" style="font-size: 1rem;">
+                            &#x2610; <!-- unchecked box -->
+                        </td>                    
+                    </tr>
+                </table>              
+            </div>
+            <br/><br/><br/><br/>
+            
+        </apex:form>
+    </div>
+</apex:page>

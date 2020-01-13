@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>14 Day GSA Training Reminder</name>
+    <style>none</style>
+    <subject>NOTICE: GSA SmartPay Training to Expire in 14 Days</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>EPA-3160-6v5 Moving to Leave Bank Team</name>
+    <style>none</style>
+    <subject>BAP Forms Submission Confirmation:  {!Forms__c.Form_Type_Name__c}</subject>
+    <textOnly>Dear {!Forms__c.Unauthenticated_Owner__c}: your EPA Form 3160-6 has been approved by your local leave bank coordinator and has been sent to the Leave Bank Team for approval and processing.
+
+For questions about this action, please contact your local leave bank coordinator.
+
+Form Record Number: {!Forms__c.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

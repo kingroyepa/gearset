@@ -1,0 +1,3 @@
+An award for {!Award__c.Emp_Name__c} was submitted by {!Award__c.OwnerFullName} ({!Award__c.RO_HR_Org2__c}).
+
+The award can be found here: {!Award__c.Link}

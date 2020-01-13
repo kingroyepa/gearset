@@ -1,0 +1,2 @@
+{!Forms__c.Employee_Name_SF_182__c},
+  Your {!Forms__c.TCTO_Request_Type__c} for the following travel dates: {!Forms__c.Start_Date_TCTO__c} to {!Forms__c.End_Date_TCTO__c} has been approved.

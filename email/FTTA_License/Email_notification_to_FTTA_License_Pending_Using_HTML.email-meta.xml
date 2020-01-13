@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FTTA. Created for the email notification to FTTA that the License has been accepted by the owner.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EPA_Email_Notification</letterhead>
+    <name>Email notification to FTTA - License Pending Using HTML</name>
+    <style>freeForm</style>
+    <subject>EPA File # {!EPA_Agreement__c.EPA_File_2__c} - Pending</subject>
+    <textOnly>Hi,
+
+EPA File # {!EPA_Agreement__c.00Nr0000001VPB9} has been accepted by {!EPA_Agreement__c.Owner_Contact__c}.
+
+To access the agreement, please click the below link.
+
+{!EPA_Agreement__c.Name}
+
+Thank you.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

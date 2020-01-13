@@ -1,0 +1,211 @@
+<apex:page standardController="eOrders__c" showHeader="false" extensions="ORDGAS_savePDF" sidebar="false" standardStylesheets="false"  applyBodyTag="false" applyHtmlTag="false" docType="html-5.0">
+
+   
+  <apex:form >
+    <apex:actionFunction name="saveAttachement" action="{!saveAttachement}" rerender="allPanel"/>
+
+
+        <script>
+           window.onload=function()
+           {
+             saveAttachement();
+             window.document.getElementById("okbutton").style.display = 'block';
+           };
+        </script>
+
+  </apex:form>
+  
+  
+  
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+    <apex:stylesheet value="{!$Resource.GAScss}"/>
+<style>
+   .button-ok {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    background: transparent;
+    background-clip: border-box;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    line-height: 1.875rem;
+    text-decoration: none;
+    color: #0070d2;
+    -webkit-appearance: none;
+    white-space: normal;
+    user-select: none;
+    
+    
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #dddbda;
+    transition: border 0.15s linear;
+    border-color: #dddbda;
+    background-color: white;
+    font-size: .8125rem;
+}
+</style>
+    </head>
+    <body class="eorderpdf">
+    <!--Report Reproduction-->
+    <!--Header-->
+    <h1>Combined Gas Cylinder Order</h1>
+    
+    <!--Vendor Information-->
+    <div id="orderinfobox1" class="topinfoboxes">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" valign="top">
+                    <span class="topinfolabel">Vendor:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Vendor_Name__r.Name}"/></span><br/>
+                    <span class="topinfolabel">Email Address:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Vendor_Name__r.Email__c}"/></span>
+                </td>
+           </tr>
+        </table> 
+
+    </div>
+    
+     <table cellspacing="0" cellpadding="0" style="width:100%">
+      <tr>
+        <td style="width:50%">
+            <div id="vendorinfobox" class="topinfoboxes">
+                <span class="topinfolabel">EPA BPA/Contract Number:</span><span class="topinfodata">{!eOrders__c.Contract__r.Name}</span><br/>
+                <span class="topinfolabel">EPA Call Number: </span><span class="topinfodata">{!eOrders__c.Call_Number__c}</span><br/>
+                <span class="topinfolabel">EPA Customer Number:</span><span class="topinfodata">{!eOrders__c.Vendor_Name__r.Vendor_Customer_Number__c}</span><br/>
+            </div>
+        </td>
+        <td style="width:50%; vertical-align: top;">
+            <div id="contractinfobox" class="topinfoboxes">
+                <span class="topinfolabel">Date Order Placed:</span><span class="topinfodata"><apex:outputText value="{0,date,MM/dd/yyyy}"> 
+                <apex:param value="{!eOrders__c.Order_Effective_Date__c}" /> </apex:outputText>
+                </span><br/>
+                <span class="topinfolabel">Order Delivery Date:</span><span class="topinfodata">
+                <apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!eOrders__c.Order_Delivery_Date__c}" /></apex:outputText> </span><br/>
+                <span class="topinfolabel">Order Total Amount:</span><span class="topinfodata"><apex:outputText value="{0, Number, Currency}">
+                <apex:param value="{!eOrders__c.Order_Amount__c}" /></apex:outputText></span><br/>
+            
+            </div>
+        </td> 
+      </tr>
+    </table>
+    <!--Requestor Information-->
+    <div id="orderinfobox2" class="topinfoboxes">
+        <table style="width:100%">
+            <tr>
+                <td style="width:50%" valign="top">
+                    <span class="topinfolabel">Call Ordering Official:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Owner.Name}"/></span><br/>
+                    <span class="topinfolabel">Email Address:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Owner.Email}"/></span><br/>
+                    <span class="topinfolabel">Phone Number:</span><span class="topinfodata"><apex:outputText value="{!eOrders__c.Owner.Phone}"/></span>
+                </td>
+           </tr>
+        </table> 
+
+    </div>
+    
+    
+    
+    
+       
+    <!--Table 1-->
+    <div id="tablecontainer">
+    <table id="deliverytable" style="width=100%">
+        <thead>
+        <tr style="width=100%;background-color: darkgray !important;">
+            <th style="width=8%">
+                <div title="Delivery Location">Delivery Location</div>
+            </th>
+            <th style="width=8%">
+                <div title="Category Number">Catalog #</div>
+            </th>
+            <th style="width=8%">
+                <div title="Description">Description</div>
+            </th>
+            <th style="width=8%">
+                <div title="Quantity">Qty</div>
+            </th>
+            <th style="width=8%">
+                <div title="Price">Unit Price</div>
+            </th>
+                   
+            <th style="width=8%">
+                <div title="Total">Total Cost</div>
+            </th>
+            <th style="width=8%">
+                <div title="Order Number">EPA Internal Order Request Number </div>
+            </th>
+            <th style="width=8%">
+                <div title="Requestor">Requestor Name</div>
+            </th>
+            
+            <th style="width=8%">
+            <div title="Status">Organization</div>
+            </th>
+            <th style="width=8%">
+            <div title="Serial Number">EPA Internal Requested Delivery Date</div>
+            </th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        <apex:repeat value="{!eOrders__c.eOrder_Items__r}" var="line">
+          <tr style="width=100%">
+                <td data-label="Delivery Location" style="width=8%">
+                <div  title="{!line.Order_Request__r.Delivery_facilities__c}">{!line.Order_Request__r.Facility_Location__c}</div>
+                </td>
+                <td data-label="Category Number" style="width=8%">
+                <div  title="{!line.Product_Code__c}">{!line.Product_Code__c}</div>
+                </td> 
+                <td data-label="Description" style="width=8%">
+                <div  title="{!line.Product_Description__c}">{!line.Product_Description__c}</div>
+                </td>             
+                <td data-label="Quantity" style="width=8%">
+                <div  title="{!line.Quantity__c}">
+                <apex:outputText value="{0, number, 0}"><apex:param value="{!line.Quantity__c}" /></apex:outputText>
+                </div>
+                </td>           
+                <td data-label="Price" style="width=8%">
+                <div  title="{!line.Product_List_Price__c}">
+                <apex:outputText value="{0, Number, Currency}"><apex:param value="{!line.Product_List_Price__c}" /></apex:outputText>
+                </div>
+                </td>     
+                <td data-label="Total" style="width=8%">
+                <div  title="{!line.Total_Price__c}">
+                <apex:outputText value="{0, Number, Currency}"><apex:param value="{!line.Total_Price__c}" /></apex:outputText>
+                </div>
+                </td>
+                <td data-label="Order Number" style="width=8%">
+                <div  title="{!line.Order_Request__r.Name}">{!line.Order_Request__r.Name}</div>
+                </td> 
+                <td data-label="Requestor" style="width=8%">
+                <div  title="{!line.Order_Request__r.Requester__c}">{!line.Order_Request__r.Requester__c}</div>
+                </td>   
+                <td data-label="RequestorOrg" style="width=8%">
+                <div  title="{!line.Order_Request__r.Requester_Org__c}">{!line.Order_Request__r.Requester_Org__c}</div>
+                </td>  
+                  
+                <td data-label="Requested Date" style="width=8%">
+                 <div><apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!line.Order_Request__r.Delivery_Date__c}" /> </apex:outputText>
+                   </div>
+                </td>   
+                        
+
+            </tr>
+        </apex:repeat>
+        </tbody>
+    </table>
+    </div>
+	<p>
+    <div class="slds-scope"  id="okbutton" style="display:none;">
+        <apex:form >
+    <center> <apex:outputLink styleClass="button-ok" style="margin:0 auto;" value="{!URLFOR($Action.eOrders__c.View,eOrders__c.id)}" target="_parent">OK</apex:outputLink></center>
+    
+    </apex:form>
+    
+    </div>
+    </p>
+    </body>
+   </html>  
+
+</apex:page>

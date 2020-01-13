@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives OAR SITL Position access to OAR SITL Position picklist field on Forms__c and Senior IT Leader and Local SIO fields on Organizations. Used for Application Approval forms. John Jenkins. 2019.04.26.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>AAT - OAR SITL Position</label>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Local_SIO__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Senior_IT_Leader__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Forms__c.Additional_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Forms__c.OAR_SITL_Position__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

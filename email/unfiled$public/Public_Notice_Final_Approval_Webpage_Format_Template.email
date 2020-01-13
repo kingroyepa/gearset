@@ -1,0 +1,56 @@
+<h3> Public Notice Posting Request has been Approved by OCGR: </h3>
+<h3> Webpage Format of the Public Notice</h3>  
+<h2>  {!Forms__c.Public_Notice_Title__c} </h2>  
+ 
+<b>DATE OF THIS NOTICE: {!Forms__c.Publication_Date__c} </b><br>
+<p>
+ 
+<b>Summary of Proposed Action: </b>  <br> 
+{!Forms__c.Public_Notice_Purpose__c}
+</p>
+<p>
+<b>Program or Statutes: {!Forms__c.EPA_Program_Statue__c}  </b> </p> 
+<p>
+<p>
+<b> Proposed Action:  </b> {!Forms__c.Public_Notice_Proposed_Action__c} 
+</p> 
+<p>
+<p>
+<b> Location of Proposed Action: </b> {!Forms__c.Public_Notice_Location__c} 
+</p>
+<h3> Application or Respondent: </h3>
+{!Forms__c.Facility_Name_or_Applicant__c} <br> 
+{!Forms__c.Street_Address__c} <br>
+{!Forms__c.City__c}, {!Forms__c.State__c}  {!Forms__c.Zip__c}
+
+<br>
+
+RCRA ID:  {!Forms__c.RCRA_ID__c} <BR> 
+
+To access detailed site information including site map:  {!Forms__c.Facility_Factsheet_URL__c} 
+</p>
+
+<h3> Comments </h3> 
+<b>Comments Due Date: </b>  {!Forms__c.Public_Notice_Comments_Due__c} </p>
+<p>
+<b> How to Comment: </b>  Persons to comment on EPA’s proposed decision must submit comments to EPA within the {!Forms__c.PublicNotice_Comment_Period__c}-day comment period ending  <b> {!Forms__c.Public_Notice_Comments_Due__c} </b>. Interested persons may also request a public hearing on this proposed remedy.  All comments and/or requests for a hearing must be submitted in writing via mail, fax, or email to the EPA Project Manager,   {!User.FirstName}  {!User.LastName}  as listed below, and must be received prior to <b> {!Forms__c.Public_Notice_Comments_Due__c} </b> All comments will be considered in making a final decision. 
+</p>
+<p>
+<b> EPA Project Manager: {!Forms__c.OwnerFullName}   </b> <br>
+EPA Mid-Atlantic Region <br>
+Mail Code: {!Forms__c.Mail_Code__c}<br>  
+ {!Forms__c.Mailing_Address__c}   {!User.PostalCode}
+<br>
+Phone:{!Forms__c.Office_Telephone2__c}   <br> 
+FAX: {!User.Fax} <br>
+E-Mail:  {!Forms__c.Email_Address__c}<br>
+</p>
+<h3>Related Documents: </h3
+ 
+</p>
+<p>
+<b> METADATA </b> <br>
+<b> Descrption</b> {!Forms__c.Public_Notice_Purpose__c} </p>
+<p>
+<b> Keywords</b> {!Forms__c.EPA_Program_Statue__c}, Public Notice, {!Forms__c.Facility_Name_or_Applicant__c} {!Forms__c.Street_Address__c}
+ {!Forms__c.City__c},  {!Forms__c.State__c} , {!Forms__c.RCRA_ID__c} </p>

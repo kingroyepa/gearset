@@ -1,0 +1,6 @@
+<p>The Purchase Card Team has reviewed your training information and certificate associated to your Purchase Card Account.  This process is currently {!Forms__c.PC_Team_Status__c}. </p>
+
+<p>Click the following link to access the form <a href="{!Forms__c.Link}">{!Forms__c.Link}</a><br/>
+For Purchase Card Program assistance, please email: <a href="mailto:OARM-OAM-PURCHASE_CARD_TEAM@epa.gov"> OARM-OAM-PURCHASE_CARD_TEAM@epa.gov</a></p>
+
+<p>Thank You.</p>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>DCR_OAP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DCR OAP Sharing</description>
+        <label>DCR-OAP</label>
+        <sharedTo>
+            <group>DCR_OAR_OAP_PMO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Allowance_Holder__c</field>
+            <operation>equals</operation>
+            <value>58 - OAP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>DCR Order,DCR Order Period</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DCR_OTAQ</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>DCR OTAQ Sharing</description>
+        <label>DCR OTAQ</label>
+        <sharedTo>
+            <group>DCR_OAR_OTAQ</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Allowance_Holder__c</field>
+            <operation>equals</operation>
+            <value>56 - OTAQ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>DCR Order,DCR Order Period</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

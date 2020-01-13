@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CRM Lite Permissions</label>
+    <applicationVisibilities>
+        <application>CRM_Lite</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+</PermissionSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>42.0</apiVersion>
+    <available>true</available>
+    <description>Sent to Order Request Owner</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GAS Cylinder Ready for Pick-up</name>
+    <style>none</style>
+    <subject>GAS Cylinder for Order Request:  is Ready for Pick-Up</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

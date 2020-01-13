@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FTTA. Created to send email notification to PI and PM</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EPA_Email_Notification</letterhead>
+    <name>Email Notification to PI&amp;PM - At Signature using HTML</name>
+    <style>freeForm</style>
+    <subject>EPA File # {!EPA_Agreement__c.EPA_File_2__c} - At Signature</subject>
+    <textOnly>Hi,
+
+OGC concurred on EPA File # {!EPA_Agreement__c.00Nr0000001VPB9}. Please work with your FTTA lab contact to acquire Partner and EPA signatures. Please email FTTA@epa.gov with any questions.
+
+Thank you.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

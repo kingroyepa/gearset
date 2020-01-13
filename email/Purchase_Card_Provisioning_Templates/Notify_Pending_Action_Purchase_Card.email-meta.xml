@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notify Pending Action - Purchase Card</name>
+    <style>none</style>
+    <subject>Purchase Card Provisioning Action for {!Forms__c.RecordType} Assigned</subject>
+    <textOnly>A purchase card provisioning action has been requested and has been assigned to {!Forms__c.Assigned_to__c} for completion. To review information regarding this action please click on the link below.
+
+{!Forms__c.RecordType} Link: {!Forms__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,19 @@
+Owner: {!Forms__c.Submitted_on_Behalf_Of__c}<br>
+Sandbox Name: {!Forms__c.Name__c}<br>
+Submitted on behalf of: {!Forms__c.Submitted_on_Behalf_Of__c}<br>
+Quantity: {!Forms__c.Quantity__c}<br>
+Type: {!Forms__c.Form_Type__c}<br>
+BAPM Approval Link: {!Forms__c.Link}<br>
+Form Status: {!Forms__c.Form_Status__c}<br>
+Request Created By: {!Forms__c.CreatedBy}<br>
+<br>
+Description:<br>
+
+<br><br>
+Approver Info:
+Approved By: {!ApprovalRequest.Process_Approver}<br>
+Approver Comments: {!ApprovalRequest.Comments}<br>
+
+<br><br>
+Once completed, click here to finalize the request:
+ {!Forms__c.Link}

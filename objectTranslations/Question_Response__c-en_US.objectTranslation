@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Allowed Character limit : 35,000 --></help>
+        <label><!-- Answer --></label>
+        <name>Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate Application --></label>
+        <name>Candidate_Application__c</name>
+        <relationshipLabel><!-- Question Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Allowed Character limit : 35,000 --></help>
+        <label><!-- Question --></label>
+        <name>Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- Questions --></label>
+        <name>Questions__c</name>
+        <relationshipLabel><!-- Question Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Use this field to track the progress of your Response. --></help>
+        <label><!-- Response Status --></label>
+        <name>Response_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Started</masterLabel>
+            <translation><!-- Started --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Question Response</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Question Responses</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Question Repsonse Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- TQB Question Responses --></label>
+        <name>TQB_Question_Responses</name>
+    </recordTypes>
+</CustomObjectTranslation>

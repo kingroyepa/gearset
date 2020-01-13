@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to HRD shared inbox to deliver PDF justification documents.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PDF Delivery Email</name>
+    <style>none</style>
+    <subject>{!Award__c.RO_HR_Org2__c}, {!Award__c.RO_HR_Org2__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

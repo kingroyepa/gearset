@@ -1,0 +1,11 @@
+{!Forms__c.Employee_Name_SF_182__c},
+Your Earned TCTO Hours has been approved by {!Forms__c.User_Supervisor__c}.
+
+Destination: {!Forms__c.Destination__c}
+Travel Dates: {!Forms__c.Start_Date_TCTO__c} - {!Forms__c.End_Date_TCTO__c}
+Total TCTO Hours: {!Forms__c.Earned_Travel_Comp_Hours_Total__c}
+Supervisor Comments: {!ApprovalRequest.Comments}
+
+All TCTO credit earned must be entered into PeoplePlus.  Important:   Employees will have 26 pay periods after the pay period in which the TCTO credit is entered into PeoplePlus to use earned TCTO. At the end of those 26 pay periods, that particular TCTO credit will be automatically forfeited if not used by the employee.
+
+To return to this form, go to https://forms.epa.gov. Then click on “My Forms", locate the form with ID= {!Forms__c.Name} and click “Open Form”.

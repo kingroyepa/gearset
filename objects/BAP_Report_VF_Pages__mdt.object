@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Report_Description__c</fullName>
+        <description>Text Field to display on Reports list on reports.epa.gov. John Jenkins. 2019.04.10.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Report Description</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_URL__c</fullName>
+        <description>Text Field to display on Reports list on reports.epa.gov. John Jenkins. 2019.04.10.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Report URL</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>BAP Report VF Pages</label>
+    <pluralLabel>BAP Report VF Pages</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

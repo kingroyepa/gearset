@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification to Approver that a form has been submitted for them to approve/reject.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HR System Access Request Form Submission Notification Template</name>
+    <style>none</style>
+    <subject>An HR System Access Request Form Has Been Submitted for Your Approval From {!Forms__c.Form_Owner__c} - Record ID: {!Forms__c.Form_Record_Name__c}</subject>
+    <textOnly>The HR System Access Request Form has been submitted for your approval by {!Forms__c.Form_Owner__c}.
+
+To access, review, and approve the form use this link:  {!Forms__c.Link}
+
+Record ID: {!Forms__c.Form_Record_Name__c}
+Submitter Name: {!Forms__c.Applicant_Name_Last_First_MI2__c}
+{!if(Forms__c.Prepare_Form_for__c=&quot;&quot;,&quot;&quot;,&quot;Prepare Form As Person Other Than Self: &quot;&amp;Forms__c.Prepare_Form_for__c)}
+
+Organization Access Needed:  {!if(Forms__c.Nationwide__c, &quot;Nationwide
+&quot;&amp;&quot;Justification: &quot;&amp;Forms__c.Nationwide_Access_Justification__c,&quot;
+HR Organization: &quot;&amp;Forms__c.HR_Organization__c)}
+
+FPPS Access Requirements:
+{!if(Forms__c.Initiator__c,&quot;Initiator
+&quot;,&quot;&quot;)} {!if(Forms__c.Concurrer__c,&quot;Concurrer
+&quot;,&quot;&quot;)} {!if(Forms__c.Requestor__c,&quot;Requestor
+&quot;,&quot;&quot;)} {!if(Forms__c.Authorizer__c,&quot;Authorizer
+&quot;,&quot;&quot;)} {!if(Forms__c.SPO_Assistant__c,&quot;SPO Assistant
+&quot;,&quot;&quot;)} {!if(Forms__c.SPO_Legal_Approval_LGAP__c,&quot;SPO Legal Approval (LGAP)
+&quot;,&quot;&quot;)} {!if(Forms__c.SPO_Signature_Authority_PROC__c,&quot;SPO Signature Authority (PROC)
+&quot;,&quot;&quot;)} {!if(Forms__c.Labor_Employee_Relations_LER__c,&quot;Labor Employee Relations (LER)
+&quot;,&quot;&quot;)} {!if(Forms__c.Workman_s_Comp__c,&quot;Workman&apos;s Comp
+&quot;,&quot;&quot;)} {!if(Forms__c.Leave_Bank__c,&quot;Leave Bank
+&quot;,&quot;&quot;)} {!if(Forms__c.Personnel_Security_Branch_PSB__c,&quot;Personnel Security Branch (PSB)
+&quot;,&quot;&quot;)} {!if(Forms__c.HR_Support__c,&quot;HR Support
+&quot;,&quot;&quot;)} {!if(Forms__c.Payroll_Support__c,&quot;Payroll Support
+&quot;,&quot;&quot;)} {!if(Forms__c.Accounting_Support__c,&quot;Accounting Support
+&quot;,&quot;&quot;)} {!if(Forms__c.Security_Administrator__c,&quot;Security Administrator
+&quot;,&quot;&quot;)} {!if(Forms__c.ITD_Project_Support__c,&quot;ITD Project Support
+&quot;,&quot;&quot;)} {!if(Forms__c.FPPS_Investigator__c,&quot;FPPS Investigator
+&quot;,&quot;&quot;)}
+
+WTTS Access Requirements:
+{!if(Forms__c.Requesting_Office__c,&quot;Requesting Office
+&quot;,&quot;&quot;)} {!if(Forms__c.Servicing_Personnel_Office1__c,&quot;Servicing Personnel Office
+&quot;,&quot;&quot;)} {!if(Forms__c.Personnel_Security_Branch_PSB1__c,&quot;Personnel Security Branch (PSB)
+&quot;,&quot;&quot;)} {!if(Forms__c.View_Reports_Only1__c,&quot;View/Reports Only
+&quot;,&quot;&quot;)} {!if(Forms__c.HR_Security_Team1__c,&quot;HR Security Team
+&quot;,&quot;&quot;)}
+
+Datamart Access Requirements:
+{!if(Forms__c.Consumer_Role__c,&quot;Consumer Role
+&quot;,&quot;&quot;)} {!if(Forms__c.Author_Role__c,&quot;Author Role
+&quot;,&quot;&quot;)} {!if(Forms__c.EEO_Access_PII__c,&quot;EEO Access (PII)
+&quot;,&quot;&quot;)}
+
+EZ-HIRE Access Requirements:
+{!if(Forms__c.HR_Assistant__c,&quot;HR Assistant
+&quot;,&quot;&quot;)} {!if(Forms__c.HR_Specialist__c,&quot;HR Specialist
+&quot;,&quot;&quot;)} {!if(Forms__c.Ad_Hoc_Reports__c,&quot;Ad-Hoc Reports
+&quot;,&quot;&quot;)} {!if(Forms__c.OCR_Reports__c,&quot;OCR Reports
+&quot;,&quot;&quot;)} {!if(Forms__c.Standard_Reports__c,&quot;Standard Reports
+&quot;,&quot;&quot;)} {!if(Forms__c.Vacancy_Auditor__c,&quot;Vacancy Auditor
+&quot;,&quot;&quot;)} {!if(Forms__c.Supervisor_Manager__c,&quot;Supervisor/Manager
+&quot;,&quot;&quot;)} {!if(Forms__c.HR_Liaison_program_office__c,&quot;HR Liaison (program office)
+&quot;,&quot;&quot;)} {!if(Forms__c.Subject_Matter_Expert_SME__c,&quot;Subject Matter Expert (SME)
+&quot;,&quot;&quot;)}
+
+eOPF Access Requirements:
+{!if(Forms__c.HR_Specialist1__c,&quot;HR Specialist
+&quot;,&quot;&quot;)} {!if(Forms__c.Investigator__c,&quot;Investigator
+&quot;,&quot;&quot;)} {!if(Forms__c.Transfer__c,&quot;Transfer
+&quot;,&quot;&quot;)}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

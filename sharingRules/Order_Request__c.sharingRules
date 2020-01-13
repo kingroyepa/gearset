@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>GAS_Order_Requests</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>GAS Application. Shares the GAS order requests with GAS application admins.</description>
+        <label>GAS Order Requests</label>
+        <sharedTo>
+            <group>GAS_Application_Admin</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>GAS Order Request</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PCORS_Order_Request</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Read/Edit access.</description>
+        <label>PCORS Order Request</label>
+        <sharedTo>
+            <group>PCORS_App_Admins</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Purchase Card Order Request</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PCORS_Order_Request_for_Approvers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Access to Order Request Edits for Approvers.</description>
+        <label>PCORS Order Request for Approvers</label>
+        <sharedTo>
+            <group>PCORS_App_Approvers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Purchase Card Order Request</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

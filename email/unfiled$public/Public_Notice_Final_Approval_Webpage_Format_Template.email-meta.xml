@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification of Public Notice Final Approval - Webpage Format</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Public Notice Final Approval Webpage Format</name>
+    <style>none</style>
+    <subject>Public Notice Posting Request has been Approved by OCGR for {!Forms__c.Public_Notice_Title__c}</subject>
+    <textOnly>Public Notice Posting Request has been Approved by OCGR:   Webpage Format of the Public Notice  {!Forms__c.Public_Notice_Title__c}  
+DATE OF THIS NOTICE: {!Forms__c.Publication_Date__c}
+
+Summary of Proposed Action:
+{!Forms__c.Public_Notice_Purpose__c}
+
+Program or Statutes: {!Forms__c.EPA_Program_Statue__c}
+
+Proposed Action:  {!Forms__c.Public_Notice_Proposed_Action__c}
+
+Location of Proposed Action:  {!Forms__c.Public_Notice_Location__c}
+
+Application or Respondent:  :  {!Forms__c.Facility_Name_or_Applicant__c}
+{!Forms__c.Street_Address__c}
+{!Forms__c.City__c} , {!Forms__c.State__c}
+{!Forms__c.{!Forms__c.Zip__c}
+RCRA ID:  {!Forms__c.RCRA_ID__c}
+
+To access detailed site information including site map:  {!Forms__c.Facility_Factsheet_URL__c}
+
+Comments  Comments Due Date:  {!Forms__c.Public_Notice_Comments_Due__c}
+
+How to Comment:  Persons to comment on EPA’s proposed decision must submit comments to EPA within the {!Forms__c.PublicNotice_Comment_Period__c}-day comment period ending  {!Forms__c.Public_Notice_Comments_Due__c} . Interested persons may also request a public hearing on this proposed remedy.  All comments and/or requests for a hearing must be submitted in writing via mail, fax, or email to the EPA Project Manager,   {!User.FirstName}  {!User.LastName}  as listed below, and must be received prior to  {!Forms__c.Public_Notice_Comments_Due__c}  All comments will be considered in making a final decision.
+
+EPA Project Manager: {!Forms__c.OwnerFullName}
+EPA Mid-Atlantic Region
+Mail Code: {!Forms__c.Mail_Code__c}
+{!Forms__c.Mailing_Address__c}  {!Forms__c.Zip__c}
+Phone:{!Forms__c.Office_Telephone2__c}
+FAX: {!User.Fax}
+E-Mail:  {!Forms__c.Email_Address__c}
+
+Related Documents:
+
+METADATA
+Descrption {!Forms__c.Public_Notice_Purpose__c}
+
+Keywords {!Forms__c.EPA_Program_Statue__c}, Public Notice, {!Forms__c.Facility_Name_or_Applicant__c} {!Forms__c.Street_Address__c} {!Forms__c.City__c},  {!Forms__c.State__c} , {!Forms__c.RCRA_ID__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

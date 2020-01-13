@@ -1,0 +1,10 @@
+"You have received a time off award in the amount of {!Award__c.Time_Off_Amount__c} hours from {!Award__c.RO_HR_Org2__c}. The award is planned to be effective as of pay period: {!Award__c.Calendar_Pay_Period_Paid__c}({!Award__c.Date_Paid__c}). 
+
+
+The Requesting Official provided the following justification for your award: 
+""{!Award__c.Supervisor_Justification__c}"" 
+
+
+Please see your supervisor if you have any questions. 
+
+Congratulations!"

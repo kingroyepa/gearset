@@ -1,0 +1,9 @@
+"Congratulations, the award that you provided to {!Award__c.Emp_Name__c} for the amount of {!Award__c.Cash_Award_Amount__c} is planned to be paid out during pay period: {!Award__c.Calendar_Pay_Period_Paid__c}({!Award__c.Date_Paid__c}). Please be advised that the recipient has received confirmation in a separate email. 
+
+Your justification for that award was: 
+""{!Award__c.Supervisor_Justification__c}"" 
+
+
+Please reach out to your OARS-HRD representative with any questions or reference the award here: {!Award__c.Link} 
+
+Congratulations!"

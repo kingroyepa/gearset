@@ -1,0 +1,460 @@
+<apex:page Controller="LineItemsGrid_e450_Summary_Controller" title="Reportable Information" showheader="false" sidebar="false" cache="false" action="{!ValidateOrRedirect}" >
+    
+    <style>
+        body { background-color: #E0F1FF; }
+        
+        .msg {
+        font-size: .75rem;
+        line-height: 1.25;
+        color: rgb(84, 105, 141);
+        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        margin-left: 200px;
+        margin-bottom: 20px;
+        margin-top: -20px;
+        width: 75%;
+        text-align: center;
+        font-family: 'Salesforce Sans',Arial,sans-serif;
+        background: rgb(253, 253, 253);
+        -webkit-tap-highlight-color: transparent;
+        }
+        
+        .gridTable{
+        border-collapse: collapse;
+        background-color: white;
+        border: 1px solid black;
+        }
+        
+        .gridDiv
+        {
+        height: 100%;    
+        width: 90%;      
+        }
+        
+        .gridTable_th {
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-bottom: 5px;
+        text-align: center;
+        white-space:pre-line;
+        }
+        
+        .gridTable_td{
+        padding: 10px;
+        align: center;
+        white-space: nowrap;
+        }
+        
+        .dateFormat
+        {
+        display: none;
+        }
+        
+        .gridTable_tr:hover {background-color:#f5f5f5;}
+        
+        .instructionsTable{
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        border: 1px solid black;
+        }
+        
+        .instructionsTable_td{
+        width: 50%;
+        padding-left: 8px;
+        padding-right: 1px;
+        padding-bottom: 2px;
+        padding-top: 3px;
+        vertical-align: top;
+        }
+        
+    </style>
+    
+    <!--Header-->
+    <apex:form rendered="{!t1user}">
+        <apex:outputpanel >
+            <div class="topBar1" style="width: 100%; height: 110px; background-color: #0E6993; min-width: 1175px;">
+                <a href="http://workplace.epa.gov/" style="margin-left: 25%;"><img src="{!$Resource.EPAOneLogo}" alt="EPA One Logo" style="margin-top: 20px;"/></a>
+            </div>
+            <div class="topBar2" style="width: 100%; height: 38px; background-color: #0A5071; min-width: 1175px;">
+                &nbsp;
+            </div>
+        </apex:outputpanel>
+        <div class="WebFormsNav" rendered="{!t1user}" style="width: 100%; height: 200px; min-width: 1150px;">
+            <table style="width: 80%; padding: 20px;">
+                <tr>
+                    <td style="width: 180px; vertical-align: top;">
+                        <img src="{!$Resource.EPALogo}" alt="EPA Logo"/>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <h1 style="font-size: 250%; padding-bottom: 20px;">Summary of Reportable Information for Form ID: {!form.Name}</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </apex:form>
+    <!-- End Header -->
+    
+    <!--Body-->
+    
+    <div style="padding-left: 10px;"> 
+        
+        <apex:form id="LineSelectionTableForm" >
+            
+            <apex:pageBlock title="Choose Type of Information to Report" id="out">
+                <apex:pageBlockButtons location="bottom">
+                    <div style="margin-right: 1800px; margin-left: 250px;">
+                        <apex:commandButton value="Go!" action="{!go}" rerender="out" />
+                    </div>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection >
+                    <apex:selectList value="{!lineItemRT}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!LineItemRTs}"/>
+                    </apex:selectList>
+                </apex:pageBlockSection>
+            </apex:pageBlock>         
+        </apex:form>
+    </div>
+    <br/>
+    
+    <div style="padding-left: 10px;"> 
+        
+        <apex:form id="LineTableForm">
+            <apex:pageMessages />
+            <div align="center">
+      <!--          <apex:commandButton value="Add New Line" action="{!addRow}" disabled="{!readOnlyFlag}" style="font-size:large;margin:7px;padding-left:5px;padding-right:5px"/>  -->
+      <!--          <apex:commandButton value="Save" action="{!saveTable}" disabled="{!readOnlyFlag}" style="font-size:large;margin:7px;padding-left:5px;padding-right:5px;" />     -->
+                
+                <!--apex:commandButton value="Submit For Approval" action="{!submitFormFromLineItem}" disabled="{!readOnlyFlag}" style="font-size: large;margin:5px"/-->
+                <apex:commandButton value="Return To Form" rendered="{!t1user}" action="{!saveAndReturn}" style="font-size: large;margin:7px;padding-left:5px;padding-right:5px"/>
+                <apex:commandButton value="Return To Form" rendered="{!!t3First && !t1user}" action="{!URLFOR($Action.forms__c.View, formID)}" style="font-size: large;margin:7px;padding-left:5px;padding-right:5px"/>
+            
+            </div>
+            <br/>
+            <div style="font-size:medium;"><b> Reportable Information</b></div>
+            <br/>
+            
+            <!-- LINE ITEM SUMMARIES -->
+            
+            <!--Part 1 Summary-->
+            <div class="gridDiv" style="margin-left:20px">
+                <table border="1" class="gridTable" id="table" >
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th colspan="7" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b> Part 1: Assets and Income </b>
+                        </th>
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <th class="gridTable_th" style="width: 7%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 10%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 35%; font-weight: normal; text-align:left; padding-left: 7px;">
+                            <b>Specific stock, bond, sector mutual fund, type/location of real estate, etc.</b>
+                            <i>(Indicate the full name of each specific asset or investment. You may add the ticker symbol to the full name.)</i> 
+                            <b>Name of Employer or Business; Source of Fees, Commissions, or Honoraria </b><i>(Include brief description.)</i> 
+                            You may distinguish any entry for a family member by preceding it with S for spouse, DC for dependent child, or J for jointly held.
+                        </th>
+                        <th class="gridTable_th" style="width: 10%; padding-left: 4px; padding-right: 4px;">
+                            No Longer Held
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Approver Comment
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Submitter Response
+                        </th>
+                    </tr>
+                    
+                    <!--Read Only Generation -->
+                    <apex:repeat value="{!lineItemSummary1}" var="lineItem1"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                            <td>
+                                <apex:commandLink value="Edit/Comment" action="{!editComment}" styleClass="btn">                              
+                                        <apex:param name="itemEditComment" value="assets_income" assignTo="{!lineEditComment}"/>
+                                </apex:commandLink>
+                            </td>
+                            <td style="text-align: center;">
+                                &nbsp; Part 1 Assets and Income &nbsp;
+                            </td>                          
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem1.Item_Description__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem1.No_Longer_Held__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem1.Approver_Comment__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem1.Filer_s_Response__c}" style="width: 99%"/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>              
+            </div>
+            <br/>
+            
+            <!--Part 2 Summary-->
+            <div class="gridDiv" style="margin-left:20px">
+                <table border="1" class="gridTable" id="table" >
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th colspan="7" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b> Part 2: Liabilities </b>
+                        </th>
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <th class="gridTable_th" style="width: 7%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 10%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 20%; font-weight: normal; text-align:left; padding-left: 7px;">
+                            <b>Name of creditor</b> <i>(include city and state where creditor is located)</i> 
+                        </th>
+                        <th class="gridTable_th" style="width: 25%; font-weight: normal; text-align:left; padding-left: 7px;">
+                            <b>Type of liability</b> <i>(personal loan, margin account, etc.)</i>
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Approver Comment
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Submitter Response
+                        </th>
+                    </tr>
+                    
+                    <!--Read Only Generation -->
+                    <apex:repeat value="{!lineItemSummary2}" var="lineItem2"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                            <td>
+                                <apex:commandLink value="Edit/Comment" action="{!editComment}" styleClass="btn">                              
+                                        <apex:param name="itemEditComment" value="liabilities" assignTo="{!lineEditComment}"/>
+                                </apex:commandLink>
+                            </td>
+                            <td style="text-align: center;">
+                                &nbsp; Part 2 Agreements or Arrangements &nbsp;
+                            </td>                          
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem2.Name_of_Creditor__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem2.Type_of_Liability__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem2.Approver_Comment__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem2.Filer_s_Response__c}" style="width: 99%"/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>              
+            </div>
+            <br/>
+            
+            <!--Part 3 Summary-->
+            <div class="gridDiv" style="margin-left:20px">
+                <table border="1" class="gridTable" id="table" >
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th colspan="9" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b> Part 3: Outside Positions </b>
+                        </th>
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <th class="gridTable_th" style="width: 7%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 10%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 15%; font-weight: normal; text-align:left; padding-left: 7px;">
+                            <b>Organization</b>
+                            <i>(include city and state where organization is located)</i>  
+                        </th>
+                        <th class="gridTable_th" style="width: 10%; padding-left: 4px; padding-right: 4px;">
+                            Type of organization
+                        </th>
+                        <th class="gridTable_th" style="width: 10%; padding-left: 4px; padding-right: 4px;">
+                            Position
+                        </th>
+                        <th class="gridTable_th" style="width: 10%; padding-left: 4px; padding-right: 4px;">
+                            No Longer Held
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Approver Comment
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Submitter Response
+                        </th>
+                    </tr>
+                    
+                    <!--Read Only Generation -->
+                    <apex:repeat value="{!lineItemSummary3}" var="lineItem3"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                            <td>
+                                <apex:commandLink value="Edit/Comment" action="{!editComment}" styleClass="btn">                              
+                                        <apex:param name="itemEditComment" value="outside_positions" assignTo="{!lineEditComment}"/>
+                                </apex:commandLink>
+                            </td>
+                            <td style="text-align: center;">
+                                &nbsp; Part 3: Outside Positions &nbsp;
+                            </td>                          
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem3.Organization__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem3.Type_of_Organization__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem3.Position__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem3.No_Longer_Held__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem3.Approver_Comment__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem3.Filer_s_Response__c}" style="width: 99%"/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>              
+            </div>
+            <br/>
+            
+            <!--Part 4 Summary-->
+            <div class="gridDiv" style="margin-left:20px">
+                <table border="1" class="gridTable" id="table" >
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th colspan="7" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b> Part 4: Agreements or Arrangements </b>
+                        </th>
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <th class="gridTable_th" style="width: 7%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 10%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 20%; font-weight: normal; text-align:left; padding-left: 7px;">
+                            <b>Entity with which you have an agreement or arrangement</b> <i>(include city and state where entity is located)</i> 
+                        </th>
+                        <th class="gridTable_th" style="width: 25%; font-weight: normal; text-align:left; padding-left: 7px; ">
+                            <b>Terms of Agreement or Arrangement</b>
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Approver Comment
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Submitter Response
+                        </th>
+                    </tr>
+                    
+                    <!--Read Only Generation -->
+                    <apex:repeat value="{!lineItemSummary4}" var="lineItem4"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                            <td>
+                                <apex:commandLink value="Edit/Comment" action="{!editComment}" styleClass="btn">                              
+                                        <apex:param name="itemEditComment" value="agreement_arrangement" assignTo="{!lineEditComment}"/>
+                                </apex:commandLink>
+                            </td>
+                            <td style="text-align: center;">
+                                &nbsp; Part 4 Agreements or Arrangements &nbsp;
+                            </td>                          
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem4.Entity__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem4.Terms_of_Agreement_or_Arrangement__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem4.Approver_Comment__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem4.Filer_s_Response__c}" style="width: 99%"/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>              
+            </div>
+            <br/>
+            
+            <!--Part 5 Summary-->
+            <div class="gridDiv" style="margin-left:20px">
+                <table border="1" class="gridTable" id="table" >
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th colspan="7" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b>Part 5: Gifts and Travel Reimbursements </b>
+                        </th>
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <th class="gridTable_th" style="width: 7%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 10%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 20%; font-weight: normal; text-align:left; padding-left: 7px;" >
+                            <b>Source</b> 
+                        </th>
+                        <th class="gridTable_th" style="width: 25%; font-weight: normal; text-align:left; padding-left: 7px;" >
+                            <b>Description</b>
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Approver Comment
+                        </th>
+                        <th class="gridTable_th" style="width: 19%; padding-left: 4px; padding-right: 4px;">
+                            Submitter Response
+                        </th>
+                    </tr>
+                    
+                    <!--Read Only Generation -->
+                    <apex:repeat value="{!lineItemSummary5}" var="lineItem5"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                            <td>
+                                <apex:commandLink value="Edit/Comment" action="{!editComment}" styleClass="btn">                              
+                                        <apex:param name="itemEditComment" value="gifts_travel" assignTo="{!lineEditComment}"/>
+                                </apex:commandLink>
+                            </td>
+                            <td style="text-align: center;">
+                                &nbsp; Part 5: Gifts and Travel Reimbursements &nbsp;
+                            </td>                          
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem5.Source__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem5.Description__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem5.Approver_Comment__c}" style="width: 99%"/>
+                            </td>
+                            <td class="gridTable_td">
+                                <apex:outputField value="{!lineItem5.Filer_s_Response__c}" style="width: 99%"/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>              
+            </div>
+            <br/><br/><br/>
+            <br/><br/><br/>
+        </apex:form>
+    </div>
+</apex:page>

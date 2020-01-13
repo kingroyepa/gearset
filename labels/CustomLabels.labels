@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>LineItem_Training</fullName>
+        <categories>Process Builder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LineItem Training</shortDescription>
+        <value>012t0000000TU3jAAG</value>
+    </labels>
+    <labels>
+        <fullName>LineItem_pcors</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LineItem pcors</shortDescription>
+        <value>012t000000009rjAAA</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>DCR_FOC__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>DCR FOC</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1217 - PCS (10)</fullName>
+                    <default>true</default>
+                    <label>1217 - PCS (10)</label>
+                </value>
+                <value>
+                    <fullName>1220 - Relocat. Payrol Tax (10)</fullName>
+                    <default>false</default>
+                    <label>1220 - Relocat. Payrol Tax (10)</label>
+                </value>
+                <value>
+                    <fullName>1263 - Professional Liability Insurance (10)</fullName>
+                    <default>false</default>
+                    <label>1263 - Professional Liability Insurance (10)</label>
+                </value>
+                <value>
+                    <fullName>2100 - Travel (21)</fullName>
+                    <default>false</default>
+                    <label>2100 - Travel (21)</label>
+                </value>
+                <value>
+                    <fullName>2111 - Per Diem &amp; Subsistence (21)</fullName>
+                    <default>false</default>
+                    <label>2111 - Per Diem &amp; Subsistence (21)</label>
+                </value>
+                <value>
+                    <fullName>2113 - Common Carrier (21)</fullName>
+                    <default>false</default>
+                    <label>2113 - Common Carrier (21)</label>
+                </value>
+                <value>
+                    <fullName>2114 - Privately Owned Vehicle (21)</fullName>
+                    <default>false</default>
+                    <label>2114 - Privately Owned Vehicle (21)</label>
+                </value>
+                <value>
+                    <fullName>2115 - Commercial Rental (21)</fullName>
+                    <default>false</default>
+                    <label>2115 - Commercial Rental (21)</label>
+                </value>
+                <value>
+                    <fullName>2116 - Gsa Car Rental (21)</fullName>
+                    <default>false</default>
+                    <label>2116 - Gsa Car Rental (21)</label>
+                </value>
+                <value>
+                    <fullName>2117 - Incidental Costs (21)</fullName>
+                    <default>false</default>
+                    <label>2117 - Incidental Costs (21)</label>
+                </value>
+                <value>
+                    <fullName>2118 - E Travel Transaction Fee (21)</fullName>
+                    <default>false</default>
+                    <label>2118 - E Travel Transaction Fee (21)</label>
+                </value>
+                <value>
+                    <fullName>2121 - Site Per Diem &amp; Subs (28)</fullName>
+                    <default>false</default>
+                    <label>2121 - Site Per Diem &amp; Subs (28)</label>
+                </value>
+                <value>
+                    <fullName>2123 - Site Common Carrier (28)</fullName>
+                    <default>false</default>
+                    <label>2123 - Site Common Carrier (28)</label>
+                </value>
+                <value>
+                    <fullName>2124 - Site Pov (28)</fullName>
+                    <default>false</default>
+                    <label>2124 - Site Pov (28)</label>
+                </value>
+                <value>
+                    <fullName>2125 - Site Commercial Rental (28)</fullName>
+                    <default>false</default>
+                    <label>2125 - Site Commercial Rental (28)</label>
+                </value>
+                <value>
+                    <fullName>2126 - Site Gsa Car Rental (28)</fullName>
+                    <default>false</default>
+                    <label>2126 - Site Gsa Car Rental (28)</label>
+                </value>
+                <value>
+                    <fullName>2127 - Site Incidentials (28)</fullName>
+                    <default>false</default>
+                    <label>2127 - Site Incidentials (28)</label>
+                </value>
+                <value>
+                    <fullName>2128 - Etravel Transact Fee-Sitetrav (28)</fullName>
+                    <default>false</default>
+                    <label>2128 - Etravel Transact Fee-Sitetrav (28)</label>
+                </value>
+                <value>
+                    <fullName>2135 - Meetings / Conf Subsistence (21)</fullName>
+                    <default>false</default>
+                    <label>2135 - Meetings / Conf Subsistence (21)</label>
+                </value>
+                <value>
+                    <fullName>2191 - Local Travel (21)</fullName>
+                    <default>false</default>
+                    <label>2191 - Local Travel (21)</label>
+                </value>
+                <value>
+                    <fullName>2192 - Site-Specific Local Travel (28)</fullName>
+                    <default>false</default>
+                    <label>2192 - Site-Specific Local Travel (28)</label>
+                </value>
+                <value>
+                    <fullName>2198 - Vehicle Chargeback (21)</fullName>
+                    <default>false</default>
+                    <label>2198 - Vehicle Chargeback (21)</label>
+                </value>
+                <value>
+                    <fullName>2199 - Interest Penalty (21)</fullName>
+                    <default>false</default>
+                    <label>2199 - Interest Penalty (21)</label>
+                </value>
+                <value>
+                    <fullName>21 - Travel Subject To Ceiling (21)</fullName>
+                    <default>false</default>
+                    <label>21 - Travel Subject To Ceiling (21)</label>
+                </value>
+                <value>
+                    <fullName>2200 - Transportation Of Things (36)</fullName>
+                    <default>false</default>
+                    <label>2200 - Transportation Of Things (36)</label>
+                </value>
+                <value>
+                    <fullName>2220 - Admin Transport Of Things (36)</fullName>
+                    <default>false</default>
+                    <label>2220 - Admin Transport Of Things (36)</label>
+                </value>
+                <value>
+                    <fullName>2221 - Transprt Of Things-Consult Fee (36)</fullName>
+                    <default>false</default>
+                    <label>2221 - Transprt Of Things-Consult Fee (36)</label>
+                </value>
+                <value>
+                    <fullName>2222 - Transport Things-Variable Fee (36)</fullName>
+                    <default>false</default>
+                    <label>2222 - Transport Things-Variable Fee (36)</label>
+                </value>
+                <value>
+                    <fullName>2223 - Pcs Transfer Effects (36)</fullName>
+                    <default>false</default>
+                    <label>2223 - Pcs Transfer Effects (36)</label>
+                </value>
+                <value>
+                    <fullName>2224 - Prog. Transport Of Things (36)</fullName>
+                    <default>false</default>
+                    <label>2224 - Prog. Transport Of Things (36)</label>
+                </value>
+                <value>
+                    <fullName>2297 - Prog.Interest Penalty-Trans (36)</fullName>
+                    <default>false</default>
+                    <label>2297 - Prog.Interest Penalty-Trans (36)</label>
+                </value>
+                <value>
+                    <fullName>2299 - Admin.Interest Penalty-Trans (36)</fullName>
+                    <default>false</default>
+                    <label>2299 - Admin.Interest Penalty-Trans (36)</label>
+                </value>
+                <value>
+                    <fullName>2300 - Rentals, Communication, Util (36)</fullName>
+                    <default>false</default>
+                    <label>2300 - Rentals, Communication, Util (36)</label>
+                </value>
+                <value>
+                    <fullName>2330 - Admin. - Equipment Rental (36)</fullName>
+                    <default>false</default>
+                    <label>2330 - Admin. - Equipment Rental (36)</label>
+                </value>
+                <value>
+                    <fullName>2331 - Rental Of Land &amp; Struct (36)</fullName>
+                    <default>false</default>
+                    <label>2331 - Rental Of Land &amp; Struct (36)</label>
+                </value>
+                <value>
+                    <fullName>2332 - Rent Paid To Gsa (36)</fullName>
+                    <default>false</default>
+                    <label>2332 - Rent Paid To Gsa (36)</label>
+                </value>
+                <value>
+                    <fullName>2333 - Admin-Utility Serv (36)</fullName>
+                    <default>false</default>
+                    <label>2333 - Admin-Utility Serv (36)</label>
+                </value>
+                <value>
+                    <fullName>2334 - Postage/Mail (36)</fullName>
+                    <default>false</default>
+                    <label>2334 - Postage/Mail (36)</label>
+                </value>
+                <value>
+                    <fullName>2335 - Telephone Service Voice Analog (36)</fullName>
+                    <default>false</default>
+                    <label>2335 - Telephone Service Voice Analog (36)</label>
+                </value>
+                <value>
+                    <fullName>2337 - Telephone Servic-Data&amp; Voip (36)</fullName>
+                    <default>false</default>
+                    <label>2337 - Telephone Servic-Data&amp; Voip (36)</label>
+                </value>
+                <value>
+                    <fullName>2343 - It Hardware Service (36)</fullName>
+                    <default>false</default>
+                    <label>2343 - It Hardware Service (36)</label>
+                </value>
+                <value>
+                    <fullName>2345 - Telecom Equip, Voice Admin. (36)</fullName>
+                    <default>false</default>
+                    <label>2345 - Telecom Equip, Voice Admin. (36)</label>
+                </value>
+                <value>
+                    <fullName>2346 - Telecom Equip, Voice Progr. (36)</fullName>
+                    <default>false</default>
+                    <label>2346 - Telecom Equip, Voice Progr. (36)</label>
+                </value>
+                <value>
+                    <fullName>2347 - Telecom Equip Data/Voip Admin (36)</fullName>
+                    <default>false</default>
+                    <label>2347 - Telecom Equip Data/Voip Admin (36)</label>
+                </value>
+                <value>
+                    <fullName>2348 - Telecom Equip Data/Voip Prog (36)</fullName>
+                    <default>false</default>
+                    <label>2348 - Telecom Equip Data/Voip Prog (36)</label>
+                </value>
+                <value>
+                    <fullName>2350 - Prog.-Equipment Rental (36)</fullName>
+                    <default>false</default>
+                    <label>2350 - Prog.-Equipment Rental (36)</label>
+                </value>
+                <value>
+                    <fullName>2352 - Messenger/Courier Serv. (36)</fullName>
+                    <default>false</default>
+                    <label>2352 - Messenger/Courier Serv. (36)</label>
+                </value>
+                <value>
+                    <fullName>2353 - Prog.-Utility Serv (36)</fullName>
+                    <default>false</default>
+                    <label>2353 - Prog.-Utility Serv (36)</label>
+                </value>
+                <value>
+                    <fullName>2397 - Prog.Interest Penalty-Rent (36)</fullName>
+                    <default>false</default>
+                    <label>2397 - Prog.Interest Penalty-Rent (36)</label>
+                </value>
+                <value>
+                    <fullName>2399 - Admin.Interest Penalty-Rent (36)</fullName>
+                    <default>false</default>
+                    <label>2399 - Admin.Interest Penalty-Rent (36)</label>
+                </value>
+                <value>
+                    <fullName>2400 - Printing (36)</fullName>
+                    <default>false</default>
+                    <label>2400 - Printing (36)</label>
+                </value>
+                <value>
+                    <fullName>2410 - Administrative Printing (36)</fullName>
+                    <default>false</default>
+                    <label>2410 - Administrative Printing (36)</label>
+                </value>
+                <value>
+                    <fullName>2411 - Programmatic Printing (36)</fullName>
+                    <default>false</default>
+                    <label>2411 - Programmatic Printing (36)</label>
+                </value>
+                <value>
+                    <fullName>2412 - Federal Register Printing (36)</fullName>
+                    <default>false</default>
+                    <label>2412 - Federal Register Printing (36)</label>
+                </value>
+                <value>
+                    <fullName>2414 - Administrative Advertising (36)</fullName>
+                    <default>false</default>
+                    <label>2414 - Administrative Advertising (36)</label>
+                </value>
+                <value>
+                    <fullName>2415 - Programmatic Advertising (36)</fullName>
+                    <default>false</default>
+                    <label>2415 - Programmatic Advertising (36)</label>
+                </value>
+                <value>
+                    <fullName>2499 - Admin.Interest Penalty-Print (36)</fullName>
+                    <default>false</default>
+                    <label>2499 - Admin.Interest Penalty-Print (36)</label>
+                </value>
+                <value>
+                    <fullName>2500 - Contractual Efforts (37)</fullName>
+                    <default>false</default>
+                    <label>2500 - Contractual Efforts (37)</label>
+                </value>
+                <value>
+                    <fullName>2501 - Training (Cross Function) Adm. (37)</fullName>
+                    <default>false</default>
+                    <label>2501 - Training (Cross Function) Adm. (37)</label>
+                </value>
+                <value>
+                    <fullName>2502 - Training (Technical) Prog. (37)</fullName>
+                    <default>false</default>
+                    <label>2502 - Training (Technical) Prog. (37)</label>
+                </value>
+                <value>
+                    <fullName>2503 - Rotate.&amp; Dev.Trng (37)</fullName>
+                    <default>false</default>
+                    <label>2503 - Rotate.&amp; Dev.Trng (37)</label>
+                </value>
+                <value>
+                    <fullName>2504 - Administrative Contracts (37)</fullName>
+                    <default>false</default>
+                    <label>2504 - Administrative Contracts (37)</label>
+                </value>
+                <value>
+                    <fullName>2505 - Program Contracts (37)</fullName>
+                    <default>false</default>
+                    <label>2505 - Program Contracts (37)</label>
+                </value>
+                <value>
+                    <fullName>2506 - Interagency Agreements (37)</fullName>
+                    <default>false</default>
+                    <label>2506 - Interagency Agreements (37)</label>
+                </value>
+                <value>
+                    <fullName>2508 - Admin. It Systems Enhance (37)</fullName>
+                    <default>false</default>
+                    <label>2508 - Admin. It Systems Enhance (37)</label>
+                </value>
+                <value>
+                    <fullName>2509 - Prog. It Systems Enhance (37)</fullName>
+                    <default>false</default>
+                    <label>2509 - Prog. It Systems Enhance (37)</label>
+                </value>
+                <value>
+                    <fullName>2510 - Admin. It Studies (37)</fullName>
+                    <default>false</default>
+                    <label>2510 - Admin. It Studies (37)</label>
+                </value>
+                <value>
+                    <fullName>2511 - Prog. It Studies (37)</fullName>
+                    <default>false</default>
+                    <label>2511 - Prog. It Studies (37)</label>
+                </value>
+                <value>
+                    <fullName>2512 - Admin.It User/Oper.Suppt (37)</fullName>
+                    <default>false</default>
+                    <label>2512 - Admin.It User/Oper.Suppt (37)</label>
+                </value>
+                <value>
+                    <fullName>2515 - Prog. It User/Oper Suppt (37)</fullName>
+                    <default>false</default>
+                    <label>2515 - Prog. It User/Oper Suppt (37)</label>
+                </value>
+                <value>
+                    <fullName>2522 - Telecom Cont Sppt Voice Analog (37)</fullName>
+                    <default>false</default>
+                    <label>2522 - Telecom Cont Sppt Voice Analog (37)</label>
+                </value>
+                <value>
+                    <fullName>2525 - Prog. Repairs &amp; Improvements (37)</fullName>
+                    <default>false</default>
+                    <label>2525 - Prog. Repairs &amp; Improvements (37)</label>
+                </value>
+                <value>
+                    <fullName>2526 - Brownfields Trng Tech Asst Con (37)</fullName>
+                    <default>false</default>
+                    <label>2526 - Brownfields Trng Tech Asst Con (37)</label>
+                </value>
+                <value>
+                    <fullName>2530 - Telecom Cont Data/Voip Admin. (37)</fullName>
+                    <default>false</default>
+                    <label>2530 - Telecom Cont Data/Voip Admin. (37)</label>
+                </value>
+                <value>
+                    <fullName>2531 - Telecom Cont Data/Voip Prog. (37)</fullName>
+                    <default>false</default>
+                    <label>2531 - Telecom Cont Data/Voip Prog. (37)</label>
+                </value>
+                <value>
+                    <fullName>2532 - Prog. R&amp;D Contracts (37)</fullName>
+                    <default>false</default>
+                    <label>2532 - Prog. R&amp;D Contracts (37)</label>
+                </value>
+                <value>
+                    <fullName>2533 - Prog-R&amp;D Contracts Stud. Serv. (37)</fullName>
+                    <default>false</default>
+                    <label>2533 - Prog-R&amp;D Contracts Stud. Serv. (37)</label>
+                </value>
+                <value>
+                    <fullName>2534 - It Timeshare Services (37)</fullName>
+                    <default>false</default>
+                    <label>2534 - It Timeshare Services (37)</label>
+                </value>
+                <value>
+                    <fullName>2535 - Adm -R&amp;D Contracts Stud. Serv. (37)</fullName>
+                    <default>false</default>
+                    <label>2535 - Adm -R&amp;D Contracts Stud. Serv. (37)</label>
+                </value>
+                <value>
+                    <fullName>2536 - Brownfields Trng Tech Asst Ia (37)</fullName>
+                    <default>false</default>
+                    <label>2536 - Brownfields Trng Tech Asst Ia (37)</label>
+                </value>
+                <value>
+                    <fullName>2541 - It Equipment Repair &amp; Maint (37)</fullName>
+                    <default>false</default>
+                    <label>2541 - It Equipment Repair &amp; Maint (37)</label>
+                </value>
+                <value>
+                    <fullName>2554 - It And Info Support Ias (37)</fullName>
+                    <default>false</default>
+                    <label>2554 - It And Info Support Ias (37)</label>
+                </value>
+                <value>
+                    <fullName>2556 - Security Investigations (37)</fullName>
+                    <default>false</default>
+                    <label>2556 - Security Investigations (37)</label>
+                </value>
+                <value>
+                    <fullName>2558 - ADM.FEE LOCAL (37)</fullName>
+                    <default>false</default>
+                    <label>2558 - ADM.FEE LOCAL (37)</label>
+                </value>
+                <value>
+                    <fullName>2560 - Admn.Regist. Fees-Other (37)</fullName>
+                    <default>false</default>
+                    <label>2560 - Admn.Regist. Fees-Other (37)</label>
+                </value>
+                <value>
+                    <fullName>2561 - Prog.Regist. Fees-Other (37)</fullName>
+                    <default>false</default>
+                    <label>2561 - Prog.Regist. Fees-Other (37)</label>
+                </value>
+                <value>
+                    <fullName>2562 - Admn.Stor.Household Goods (37)</fullName>
+                    <default>false</default>
+                    <label>2562 - Admn.Stor.Household Goods (37)</label>
+                </value>
+                <value>
+                    <fullName>2563 - Occupat.Health Monitoring (37)</fullName>
+                    <default>false</default>
+                    <label>2563 - Occupat.Health Monitoring (37)</label>
+                </value>
+                <value>
+                    <fullName>2565 - Admn.Facility Maint/Oper (37)</fullName>
+                    <default>false</default>
+                    <label>2565 - Admn.Facility Maint/Oper (37)</label>
+                </value>
+                <value>
+                    <fullName>2567 - Admin. Repairs &amp; Improvements (37)</fullName>
+                    <default>false</default>
+                    <label>2567 - Admin. Repairs &amp; Improvements (37)</label>
+                </value>
+                <value>
+                    <fullName>2569 - Admin. Repair &amp; Improve. Iags (37)</fullName>
+                    <default>false</default>
+                    <label>2569 - Admin. Repair &amp; Improve. Iags (37)</label>
+                </value>
+                <value>
+                    <fullName>2570 - Prog. Repair &amp; Improv. Iags (37)</fullName>
+                    <default>false</default>
+                    <label>2570 - Prog. Repair &amp; Improv. Iags (37)</label>
+                </value>
+                <value>
+                    <fullName>2571 - Prog. Research Iags (37)</fullName>
+                    <default>false</default>
+                    <label>2571 - Prog. Research Iags (37)</label>
+                </value>
+                <value>
+                    <fullName>2573 - Admin.Gen.Equip.Repair &amp; Maint (37)</fullName>
+                    <default>false</default>
+                    <label>2573 - Admin.Gen.Equip.Repair &amp; Maint (37)</label>
+                </value>
+                <value>
+                    <fullName>2574 - Prog.Equip.Repair &amp; Maint. (37)</fullName>
+                    <default>false</default>
+                    <label>2574 - Prog.Equip.Repair &amp; Maint. (37)</label>
+                </value>
+                <value>
+                    <fullName>2576 - Working Capital Fund (38)</fullName>
+                    <default>false</default>
+                    <label>2576 - Working Capital Fund (38)</label>
+                </value>
+                <value>
+                    <fullName>2577 - Wcf-Type Service Priv Or Gov (37)</fullName>
+                    <default>false</default>
+                    <label>2577 - Wcf-Type Service Priv Or Gov (37)</label>
+                </value>
+                <value>
+                    <fullName>2578 - Wcf Cost Of Goods Sold (38)</fullName>
+                    <default>false</default>
+                    <label>2578 - Wcf Cost Of Goods Sold (38)</label>
+                </value>
+                <value>
+                    <fullName>2579 - Wcf Accrued Liability (38)</fullName>
+                    <default>false</default>
+                    <label>2579 - Wcf Accrued Liability (38)</label>
+                </value>
+                <value>
+                    <fullName>2582 - Prog.Facil.Maint.&amp; Oper Exp. (37)</fullName>
+                    <default>false</default>
+                    <label>2582 - Prog.Facil.Maint.&amp; Oper Exp. (37)</label>
+                </value>
+                <value>
+                    <fullName>2583 - Other Programmatic Contracts (37)</fullName>
+                    <default>false</default>
+                    <label>2583 - Other Programmatic Contracts (37)</label>
+                </value>
+                <value>
+                    <fullName>2584 - Admin. Mgt &amp; Prof.Supt.Consult (37)</fullName>
+                    <default>false</default>
+                    <label>2584 - Admin. Mgt &amp; Prof.Supt.Consult (37)</label>
+                </value>
+                <value>
+                    <fullName>2585 - Studies,Analy,Eval,Consult (37)</fullName>
+                    <default>false</default>
+                    <label>2585 - Studies,Analy,Eval,Consult (37)</label>
+                </value>
+                <value>
+                    <fullName>2587 - Adm.-Engineering &amp;Tech.Consult (37)</fullName>
+                    <default>false</default>
+                    <label>2587 - Adm.-Engineering &amp;Tech.Consult (37)</label>
+                </value>
+                <value>
+                    <fullName>2588 - Prog.-Scien.&amp; Tech.Equip.Maint (37)</fullName>
+                    <default>false</default>
+                    <label>2588 - Prog.-Scien.&amp; Tech.Equip.Maint (37)</label>
+                </value>
+                <value>
+                    <fullName>2589 - Prog. Compensated Prof.Servics (37)</fullName>
+                    <default>false</default>
+                    <label>2589 - Prog. Compensated Prof.Servics (37)</label>
+                </value>
+                <value>
+                    <fullName>2591 - Adm. Commercial It Training (37)</fullName>
+                    <default>false</default>
+                    <label>2591 - Adm. Commercial It Training (37)</label>
+                </value>
+                <value>
+                    <fullName>2592 - Prog. Commercial It Training (37)</fullName>
+                    <default>false</default>
+                    <label>2592 - Prog. Commercial It Training (37)</label>
+                </value>
+                <value>
+                    <fullName>2593 - Administrative Iags Training (37)</fullName>
+                    <default>false</default>
+                    <label>2593 - Administrative Iags Training (37)</label>
+                </value>
+                <value>
+                    <fullName>2594 - Programmatic Iags Training (37)</fullName>
+                    <default>false</default>
+                    <label>2594 - Programmatic Iags Training (37)</label>
+                </value>
+                <value>
+                    <fullName>2597 - Prog. Interest Penalty-Conts. (37)</fullName>
+                    <default>false</default>
+                    <label>2597 - Prog. Interest Penalty-Conts. (37)</label>
+                </value>
+                <value>
+                    <fullName>2599 - Admin. Interest Penalty-Conts. (37)</fullName>
+                    <default>false</default>
+                    <label>2599 - Admin. Interest Penalty-Conts. (37)</label>
+                </value>
+                <value>
+                    <fullName>25C1 - Conf Con (37)</fullName>
+                    <default>false</default>
+                    <label>25C1 - Conf Con (37)</label>
+                </value>
+                <value>
+                    <fullName>2600 - Supplies &amp; Materials (36)</fullName>
+                    <default>false</default>
+                    <label>2600 - Supplies &amp; Materials (36)</label>
+                </value>
+                <value>
+                    <fullName>2615 - Admn.Supplies &amp; Materials (36)</fullName>
+                    <default>false</default>
+                    <label>2615 - Admn.Supplies &amp; Materials (36)</label>
+                </value>
+                <value>
+                    <fullName>2616 - Prog.Supplies &amp; Materials (36)</fullName>
+                    <default>false</default>
+                    <label>2616 - Prog.Supplies &amp; Materials (36)</label>
+                </value>
+                <value>
+                    <fullName>2617 - Admn. It &amp; Telecom Supplies (36)</fullName>
+                    <default>false</default>
+                    <label>2617 - Admn. It &amp; Telecom Supplies (36)</label>
+                </value>
+                <value>
+                    <fullName>2619 - Admin. Subscriptions (36)</fullName>
+                    <default>false</default>
+                    <label>2619 - Admin. Subscriptions (36)</label>
+                </value>
+                <value>
+                    <fullName>2620 - Bankcard Purchases (36)</fullName>
+                    <default>false</default>
+                    <label>2620 - Bankcard Purchases (36)</label>
+                </value>
+                <value>
+                    <fullName>2621 - Admin. Chargeback (36)</fullName>
+                    <default>false</default>
+                    <label>2621 - Admin. Chargeback (36)</label>
+                </value>
+                <value>
+                    <fullName>2622 - Prog.Prot.Clothing &amp; Supl (36)</fullName>
+                    <default>false</default>
+                    <label>2622 - Prog.Prot.Clothing &amp; Supl (36)</label>
+                </value>
+                <value>
+                    <fullName>2623 - Criminal Investigator Supplies (36)</fullName>
+                    <default>false</default>
+                    <label>2623 - Criminal Investigator Supplies (36)</label>
+                </value>
+                <value>
+                    <fullName>2624 - Prog. Subscriptions (36)</fullName>
+                    <default>false</default>
+                    <label>2624 - Prog. Subscriptions (36)</label>
+                </value>
+                <value>
+                    <fullName>2625 - Prog. It &amp; Telecom Supplies (36)</fullName>
+                    <default>false</default>
+                    <label>2625 - Prog. It &amp; Telecom Supplies (36)</label>
+                </value>
+                <value>
+                    <fullName>2627 - Prog.Stores-Charge Back (36)</fullName>
+                    <default>false</default>
+                    <label>2627 - Prog.Stores-Charge Back (36)</label>
+                </value>
+                <value>
+                    <fullName>2628 - Adm.Prot.Clothing &amp; Supl (36)</fullName>
+                    <default>false</default>
+                    <label>2628 - Adm.Prot.Clothing &amp; Supl (36)</label>
+                </value>
+                <value>
+                    <fullName>2629 - Science &amp; Tech.Lab.Supplies (36)</fullName>
+                    <default>false</default>
+                    <label>2629 - Science &amp; Tech.Lab.Supplies (36)</label>
+                </value>
+                <value>
+                    <fullName>2630 - Bldg.Maint.Supplies &amp; Material (36)</fullName>
+                    <default>false</default>
+                    <label>2630 - Bldg.Maint.Supplies &amp; Material (36)</label>
+                </value>
+                <value>
+                    <fullName>2697 - Prog. Interest Penalty-Supplys (36)</fullName>
+                    <default>false</default>
+                    <label>2697 - Prog. Interest Penalty-Supplys (36)</label>
+                </value>
+                <value>
+                    <fullName>2699 - Admn. Interest Penalty-Supplys (36)</fullName>
+                    <default>false</default>
+                    <label>2699 - Admn. Interest Penalty-Supplys (36)</label>
+                </value>
+                <value>
+                    <fullName>26C1 - Conference Expenses (36)</fullName>
+                    <default>false</default>
+                    <label>26C1 - Conference Expenses (36)</label>
+                </value>
+                <value>
+                    <fullName>28 - Site Specific Travel (28)</fullName>
+                    <default>false</default>
+                    <label>28 - Site Specific Travel (28)</label>
+                </value>
+                <value>
+                    <fullName>3100 - Equipment Not Capitalized (36)</fullName>
+                    <default>false</default>
+                    <label>3100 - Equipment Not Capitalized (36)</label>
+                </value>
+                <value>
+                    <fullName>3120 - Admn. Equipment Chairs Only (36)</fullName>
+                    <default>false</default>
+                    <label>3120 - Admn. Equipment Chairs Only (36)</label>
+                </value>
+                <value>
+                    <fullName>3125 - Admin Equip. Copiers Only (36)</fullName>
+                    <default>false</default>
+                    <label>3125 - Admin Equip. Copiers Only (36)</label>
+                </value>
+                <value>
+                    <fullName>3130 - Admin.Cap.Equip. &gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3130 - Admin.Cap.Equip. &gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3131 - Prog.Cap.Sci/Tech.Eq.&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3131 - Prog.Cap.Sci/Tech.Eq.&gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3132 - Prog.Sci &amp; Tech Equip.&lt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3132 - Prog.Sci &amp; Tech Equip.&lt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3133 - Capital It Equipment &gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3133 - Capital It Equipment &gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3135 - Adm.Cap.Tele.Eq.-Voice&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3135 - Adm.Cap.Tele.Eq.-Voice&gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3136 - Prg.Cap.Tele.Eq.-Voice&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3136 - Prg.Cap.Tele.Eq.-Voice&gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3137 - Cap.Tele.Equip.-Data&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3137 - Cap.Tele.Equip.-Data&gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3139 - Cap.Lease-Pers Prop&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3139 - Cap.Lease-Pers Prop&gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3141 - Admn.Cap.Lease-It Equip&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3141 - Admn.Cap.Lease-It Equip&gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3142 - Prog.Cap.Lease-It Equip&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3142 - Prog.Cap.Lease-It Equip&gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3143 - Admn. Equipment &lt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3143 - Admn. Equipment &lt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3144 - Prog. Equipment &lt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3144 - Prog. Equipment &lt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3145 - Prog.Cap.Equip. &gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3145 - Prog.Cap.Equip. &gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3146 - Admn. It Equipment &lt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3146 - Admn. It Equipment &lt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3147 - Prog. It Equipment &lt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3147 - Prog. It Equipment &lt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3148 - Tel Contr Voi Analog&lt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3148 - Tel Contr Voi Analog&lt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3150 - Adm. Tel Contr Data/Voip&lt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3150 - Adm. Tel Contr Data/Voip&lt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3151 - Prog Tel Contr Data/Voip&lt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3151 - Prog Tel Contr Data/Voip&lt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3152 - Admn.Cap.Lease Improv. &gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3152 - Admn.Cap.Lease Improv. &gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3154 - Construc.-Pers Prop&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3154 - Construc.-Pers Prop&gt;$25K (36)</label>
+                </value>
+                <value>
+                    <fullName>3156 - Admn. It Software &amp; Packages (36)</fullName>
+                    <default>false</default>
+                    <label>3156 - Admn. It Software &amp; Packages (36)</label>
+                </value>
+                <value>
+                    <fullName>3157 - Prog. It Software &amp; Packages (36)</fullName>
+                    <default>false</default>
+                    <label>3157 - Prog. It Software &amp; Packages (36)</label>
+                </value>
+                <value>
+                    <fullName>3160 - Cap. Software Wcf/Ocfo Only (36)</fullName>
+                    <default>false</default>
+                    <label>3160 - Cap. Software Wcf/Ocfo Only (36)</label>
+                </value>
+                <value>
+                    <fullName>3161 - Cap. Soft.Dev. Wcf/Ocfo Only (36)</fullName>
+                    <default>false</default>
+                    <label>3161 - Cap. Soft.Dev. Wcf/Ocfo Only (36)</label>
+                </value>
+                <value>
+                    <fullName>3164 - Prog Wireless Telecom (36)</fullName>
+                    <default>false</default>
+                    <label>3164 - Prog Wireless Telecom (36)</label>
+                </value>
+                <value>
+                    <fullName>3197 - Prog. Interest Penalty Equip. (36)</fullName>
+                    <default>false</default>
+                    <label>3197 - Prog. Interest Penalty Equip. (36)</label>
+                </value>
+                <value>
+                    <fullName>3199 - Admin. Interest Penalty Equip. (36)</fullName>
+                    <default>false</default>
+                    <label>3199 - Admin. Interest Penalty Equip. (36)</label>
+                </value>
+                <value>
+                    <fullName>3200 - Land &amp; Structures-Accrual Only (36)</fullName>
+                    <default>false</default>
+                    <label>3200 - Land &amp; Structures-Accrual Only (36)</label>
+                </value>
+                <value>
+                    <fullName>3210 - Cap.Land &amp; Land Rights&gt;$85K (36)</fullName>
+                    <default>false</default>
+                    <label>3210 - Cap.Land &amp; Land Rights&gt;$85K (36)</label>
+                </value>
+                <value>
+                    <fullName>3211 - Real Prop.Cap.Leases&gt;$85K (36)</fullName>
+                    <default>false</default>
+                    <label>3211 - Real Prop.Cap.Leases&gt;$85K (36)</label>
+                </value>
+                <value>
+                    <fullName>3212 - Cap.Build.&amp; Other Stuc.&gt;$85K (36)</fullName>
+                    <default>false</default>
+                    <label>3212 - Cap.Build.&amp; Other Stuc.&gt;$85K (36)</label>
+                </value>
+                <value>
+                    <fullName>3213 - Capital Land Improvements &gt;85K (36)</fullName>
+                    <default>false</default>
+                    <label>3213 - Capital Land Improvements &gt;85K (36)</label>
+                </value>
+                <value>
+                    <fullName>3214 - Cap.Real Prop.Lease Imp&gt;$85K (36)</fullName>
+                    <default>false</default>
+                    <label>3214 - Cap.Real Prop.Lease Imp&gt;$85K (36)</label>
+                </value>
+                <value>
+                    <fullName>3215 - Constr.Cap.Real Prop.&gt;$85K (36)</fullName>
+                    <default>false</default>
+                    <label>3215 - Constr.Cap.Real Prop.&gt;$85K (36)</label>
+                </value>
+                <value>
+                    <fullName>3216 - Land &amp; Land Rights &lt;$85K (36)</fullName>
+                    <default>false</default>
+                    <label>3216 - Land &amp; Land Rights &lt;$85K (36)</label>
+                </value>
+                <value>
+                    <fullName>3296 - Cap.Lease Imputed Int.Land &amp; S (36)</fullName>
+                    <default>false</default>
+                    <label>3296 - Cap.Lease Imputed Int.Land &amp; S (36)</label>
+                </value>
+                <value>
+                    <fullName>3299 - Interest Penalty-Land &amp; Struct (36)</fullName>
+                    <default>false</default>
+                    <label>3299 - Interest Penalty-Land &amp; Struct (36)</label>
+                </value>
+                <value>
+                    <fullName>3300 - Administrative Contracts (3300)</fullName>
+                    <default>false</default>
+                    <label>3300 - Administrative Contracts (3300)</label>
+                </value>
+                <value>
+                    <fullName>3397 - Prompt Pay Int Penalty (41)</fullName>
+                    <default>false</default>
+                    <label>3397 - Prompt Pay Int Penalty (41)</label>
+                </value>
+                <value>
+                    <fullName>36 - Expenses (36)</fullName>
+                    <default>false</default>
+                    <label>36 - Expenses (36)</label>
+                </value>
+                <value>
+                    <fullName>3700 - CONTRACTS (37)</fullName>
+                    <default>false</default>
+                    <label>3700 - CONTRACTS (37)</label>
+                </value>
+                <value>
+                    <fullName>37 - Contracts (37)</fullName>
+                    <default>false</default>
+                    <label>37 - Contracts (37)</label>
+                </value>
+                <value>
+                    <fullName>38 - Working Capital Fund (38)</fullName>
+                    <default>false</default>
+                    <label>38 - Working Capital Fund (38)</label>
+                </value>
+                <value>
+                    <fullName>4106 - Oper.Cert.Exp.Reim.Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4106 - Oper.Cert.Exp.Reim.Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4107 - See Program Coop. Agreements (41)</fullName>
+                    <default>false</default>
+                    <label>4107 - See Program Coop. Agreements (41)</label>
+                </value>
+                <value>
+                    <fullName>4108 - Program Partnership Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4108 - Program Partnership Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4109 - Dr.Wtr Srf Prog. Cap. Grts (41)</fullName>
+                    <default>false</default>
+                    <label>4109 - Dr.Wtr Srf Prog. Cap. Grts (41)</label>
+                </value>
+                <value>
+                    <fullName>4110 - Environ Prot Consol Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4110 - Environ Prot Consol Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4111 - Wastewtr Treat Works Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4111 - Wastewtr Treat Works Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4112 - Air Poll Control Prog Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4112 - Air Poll Control Prog Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4113 - States/Tribes Response (41)</fullName>
+                    <default>false</default>
+                    <label>4113 - States/Tribes Response (41)</label>
+                </value>
+                <value>
+                    <fullName>4114 - Brownfields Char,Assess (41)</fullName>
+                    <default>false</default>
+                    <label>4114 - Brownfields Char,Assess (41)</label>
+                </value>
+                <value>
+                    <fullName>4115 - Brownfields Trng,Res,Tech (41)</fullName>
+                    <default>false</default>
+                    <label>4115 - Brownfields Trng,Res,Tech (41)</label>
+                </value>
+                <value>
+                    <fullName>4116 - Gt Lakes Poll Cntl Gts R&amp;D (41)</fullName>
+                    <default>false</default>
+                    <label>4116 - Gt Lakes Poll Cntl Gts R&amp;D (41)</label>
+                </value>
+                <value>
+                    <fullName>4117 - Wtr Poll Control Prog Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4117 - Wtr Poll Control Prog Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4118 - Pub Wtr System Super/St Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4118 - Pub Wtr System Super/St Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4119 - Underground Wtr Source Prot Gt (41)</fullName>
+                    <default>false</default>
+                    <label>4119 - Underground Wtr Source Prot Gt (41)</label>
+                </value>
+                <value>
+                    <fullName>4120 - Safe Dkg Wtr St &amp; Loc Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4120 - Safe Dkg Wtr St &amp; Loc Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4121 - Training Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4121 - Training Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4122 - Nat'l Clean Diesl Fund Prog (41)</fullName>
+                    <default>false</default>
+                    <label>4122 - Nat'l Clean Diesl Fund Prog (41)</label>
+                </value>
+                <value>
+                    <fullName>4123 - State Clean Diesel (41)</fullName>
+                    <default>false</default>
+                    <label>4123 - State Clean Diesel (41)</label>
+                </value>
+                <value>
+                    <fullName>4125 - Fellowships (41)</fullName>
+                    <default>false</default>
+                    <label>4125 - Fellowships (41)</label>
+                </value>
+                <value>
+                    <fullName>4126 - Contributions (41)</fullName>
+                    <default>false</default>
+                    <label>4126 - Contributions (41)</label>
+                </value>
+                <value>
+                    <fullName>4127 - Water Prot Coord State Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4127 - Water Prot Coord State Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4135 - Dera Rebate Program (41)</fullName>
+                    <default>false</default>
+                    <label>4135 - Dera Rebate Program (41)</label>
+                </value>
+                <value>
+                    <fullName>4141 - Research Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4141 - Research Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4142 - Research&amp;Dev Coop Agreements (41)</fullName>
+                    <default>false</default>
+                    <label>4142 - Research&amp;Dev Coop Agreements (41)</label>
+                </value>
+                <value>
+                    <fullName>4145 - Demonstration Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4145 - Demonstration Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4151 - Area-Wide Planning Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4151 - Area-Wide Planning Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4152 - Long Island Sound Prg Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4152 - Long Island Sound Prg Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4153 - Region Wetland Prg Devel Grant (41)</fullName>
+                    <default>false</default>
+                    <label>4153 - Region Wetland Prg Devel Grant (41)</label>
+                </value>
+                <value>
+                    <fullName>4154 - National Estuary Program (41)</fullName>
+                    <default>false</default>
+                    <label>4154 - National Estuary Program (41)</label>
+                </value>
+                <value>
+                    <fullName>4156 - Monit&amp;Notif Prg Develop Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4156 - Monit&amp;Notif Prg Develop Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4157 - Haz Waste Mgt St Supt Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4157 - Haz Waste Mgt St Supt Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4158 - Targeted Watershed Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4158 - Targeted Watershed Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4161 - Pest Enforce Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4161 - Pest Enforce Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4163 - Toxic Subs Prog Gts (41)</fullName>
+                    <default>false</default>
+                    <label>4163 - Toxic Subs Prog Gts (41)</label>
+                </value>
+                <value>
+                    <fullName>4164 - Radiation Grants (41)</fullName>
+                    <default>false</default>
+                    <label>4164 - Radiation Grants (41)</label>
+                </value>
+                <value>
+                    <fullName>4183 - Investig,Surveys,Studies (41)</fullName>
+                    <default>false</default>
+                    <label>4183 - Investig,Surveys,Studies (41)</label>
+                </value>
+                <value>
+                    <fullName>4185 - Superfund,Remed,Plng &amp; Imp (41)</fullName>
+                    <default>false</default>
+                    <label>4185 - Superfund,Remed,Plng &amp; Imp (41)</label>
+                </value>
+                <value>
+                    <fullName>4187 - St Undrgnd Stor Tank Prog (41)</fullName>
+                    <default>false</default>
+                    <label>4187 - St Undrgnd Stor Tank Prog (41)</label>
+                </value>
+                <value>
+                    <fullName>4188 - Lust Cooperative Agreements (41)</fullName>
+                    <default>false</default>
+                    <label>4188 - Lust Cooperative Agreements (41)</label>
+                </value>
+                <value>
+                    <fullName>4189 - Sf Core Program Co-Op (41)</fullName>
+                    <default>false</default>
+                    <label>4189 - Sf Core Program Co-Op (41)</label>
+                </value>
+                <value>
+                    <fullName>4192 - Congress Mandated Projects (41)</fullName>
+                    <default>false</default>
+                    <label>4192 - Congress Mandated Projects (41)</label>
+                </value>
+                <value>
+                    <fullName>4197 - Prompt Pay Int Penalty (41)</fullName>
+                    <default>false</default>
+                    <label>4197 - Prompt Pay Int Penalty (41)</label>
+                </value>
+                <value>
+                    <fullName>41 - Grants/Loans (41)</fullName>
+                    <default>false</default>
+                    <label>41 - Grants/Loans (41)</label>
+                </value>
+                <value>
+                    <fullName>4200 - Ins Claims &amp; Indemnity-Accrual (36)</fullName>
+                    <default>false</default>
+                    <label>4200 - Ins Claims &amp; Indemnity-Accrual (36)</label>
+                </value>
+                <value>
+                    <fullName>4210 - Admin.Claims &amp; Indemnity (36)</fullName>
+                    <default>false</default>
+                    <label>4210 - Admin.Claims &amp; Indemnity (36)</label>
+                </value>
+                <value>
+                    <fullName>4211 - Prog.-Insurance Claims &amp; Indem (36)</fullName>
+                    <default>false</default>
+                    <label>4211 - Prog.-Insurance Claims &amp; Indem (36)</label>
+                </value>
+                <value>
+                    <fullName>4212 - Admin. Fines &amp; Court Claims (36)</fullName>
+                    <default>false</default>
+                    <label>4212 - Admin. Fines &amp; Court Claims (36)</label>
+                </value>
+                <value>
+                    <fullName>4213 - Prog. Fines &amp; Court Claims (36)</fullName>
+                    <default>false</default>
+                    <label>4213 - Prog. Fines &amp; Court Claims (36)</label>
+                </value>
+                <value>
+                    <fullName>4215 - Prog.Superfund Response Claims (36)</fullName>
+                    <default>false</default>
+                    <label>4215 - Prog.Superfund Response Claims (36)</label>
+                </value>
+                <value>
+                    <fullName>4216 - Prog.Prp Sf Response Claims (36)</fullName>
+                    <default>false</default>
+                    <label>4216 - Prog.Prp Sf Response Claims (36)</label>
+                </value>
+                <value>
+                    <fullName>4217 - Prog. Sf Reimb. Petitions (36)</fullName>
+                    <default>false</default>
+                    <label>4217 - Prog. Sf Reimb. Petitions (36)</label>
+                </value>
+                <value>
+                    <fullName>4299 - Admin. Interest Penalty-Claims (36)</fullName>
+                    <default>false</default>
+                    <label>4299 - Admin. Interest Penalty-Claims (36)</label>
+                </value>
+                <value>
+                    <fullName>9401 - Financial Transfers (94)</fullName>
+                    <default>false</default>
+                    <label>9401 - Financial Transfers (94)</label>
+                </value>
+                <value>
+                    <fullName>94 - Financial Transfers (94)</fullName>
+                    <default>false</default>
+                    <label>94 - Financial Transfers (94)</label>
+                </value>
+                <value>
+                    <fullName>3131 – Prog.Cap.Sci/Tech.Eq.&gt;$25K (36)</fullName>
+                    <default>false</default>
+                    <label>3131 – Prog.Cap.Sci/Tech.Eq.&gt;$25K (36)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PCORS_FOC__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>PCORS FOC</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <description>Maps potential free form Allowance Holder entries into PCORS to picklist values in the DCR</description>
+    <label>DCR - PCORS FOC</label>
+    <pluralLabel>DCR - PCORS FOC</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AAT - Approval Needed Notification</name>
+    <style>none</style>
+    <subject>Action: Review of Application Review Form for {!Forms__c.Application_Name__c} {!Forms__c.Name}</subject>
+    <textOnly>{!if(Forms__c.Approval_Step__c=&quot;Awaiting Pre-Reviewer Approval&quot;,&quot;An Application Review form has been submitted. Please complete the pre-review process within three (3) business days of receipt of this message.
+
+Note: A copy of this email was sent to the Application Owner so they are aware of the application status.
+
+To access the form use this link: &quot;&amp;Forms__c.Link&amp;&quot;
+
+Application Review Form Summary:
+
+-   Application Name: &quot;&amp;Forms__c.Application_Name__c&amp;&quot;
+-   Application Owner: &quot;&amp;Forms__c.Application_Owner__c&amp;&quot;
+-   Form number: &quot;&amp;Forms__c.Name&amp;&quot;
+-   Application Description: &quot;&amp;Forms__c.Application_Description__c&amp;&quot;
+-   Approval Status: &quot;&amp;Forms__c.Approval_Step__c&amp;&quot;
+
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&amp;e=x91vhQ.
+
+End of Message
+
+Email template #1&quot;,if(Forms__c.Approval_Step__c=&quot;Awaiting Local SITL Approval&quot;, &quot;An Application Review form has been approved by the Pre-Reviewer. Please complete the Local SITL review within four (4) business days of receipt of this message.
+
+If you approve this application, all SITLs will be notified to review the application and identify potential duplication and interest in participating in a Review Group within five (5) business days.
+
+Note: A copy of this email was sent to the Application Owner and Pre-Reviewer so they are aware of the application status.
+
+To access the form use this link: &quot;&amp;Forms__c.Link&amp;&quot;
+
+Application Review Form Summary:
+
+-   Application Name: &quot;&amp;Forms__c.Application_Name__c&amp;&quot;
+-   Application Owner: &quot;&amp;Forms__c.Application_Owner__c&amp;&quot;
+-   Form number: &quot;&amp;Forms__c.Name&amp;&quot;
+-   Application Description: &quot;&amp;Forms__c.Application_Description__c&amp;&quot;
+-   Approval Status: &quot;&amp;Forms__c.Approval_Step__c&amp;&quot;
+
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&amp;e=x91vhQ.
+
+End of Message
+
+Email template #3&quot;,if(Forms__c.Approval_Step__c=&quot;Awaiting Owning SIO Approval&quot;,&quot;An Application Review form has been approved by the Review Group. Please complete the SIO review within five (5) business days of receipt of this message by approving or rejecting it in the tool. You can confer with your SITL for details.
+
+Note: A copy of this email was sent to the Application Owner and Owning SITL as a courtesy.
+
+To access the form use this link: &quot;&amp;Forms__c.Link&amp;&quot;
+
+Application Review Form Summary:
+
+-   Application Name: &quot;&amp;Forms__c.Application_Name__c&amp;&quot;
+-   Application Owner: &quot;&amp;Forms__c.Application_Owner__c&amp;&quot;
+-   Form number: &quot;&amp;Forms__c.Name&amp;&quot;
+-   Application Description: &quot;&amp;Forms__c.Application_Description__c&amp;&quot;
+-   Approval Status: &quot;&amp;Forms__c.Approval_Step__c&amp;&quot;
+
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&amp;e=x91vhQ.
+
+End of Message
+
+Email template #9&quot;,if(Forms__c.Approval_Step__c=&quot;Awaiting Owning SITL Approval&quot;,&quot;An Application Review form has been approved by the Local SITL and submitted to all SITLs. As the Owning SITL, you are responsible for reviewing all SITL responses in the Application Review Tool and coordinating the Review Group discussions. Within five (5) business days of receipt of this message, all SITLs should have selected one of these options on the form:
+1.  I don’t have a duplicate application, please proceed.
+2.  I don&apos;t have a duplicate application and want to be on the Review Group.
+3.  I have a potential duplicate application and want to be on the Review Group.
+Any SITL who does not respond in that timeframe is assumed to not have a duplicate application.
+
+As the Owning SITL, you will coordinate communications with all SITLs who selected response option two (2) or three (3). The Review Group has ten (10) business days to come to consensus about how to proceed with developing this application or to reject it. As the Owning SITL, you will approve or reject the application tool on behalf of the Review Group. If the Review Group does not come to consensus in that timeframe then the CIO will work with the Review Group and others to determine how to proceed.
+
+Note: The role of Owning SITL is automatically assigned to the Local SITL. If it is determined that another SITL should lead the Review Group, the Owning SITL can reassign this role within the Application Review Tool.
+
+To access the form use this link: &quot;&amp;Forms__c.Link&amp;&quot;
+
+Application Review Form Summary:
+
+-   Application Name: &quot;&amp;Forms__c.Application_Name__c&amp;&quot;
+-   Application Owner: &quot;&amp;Forms__c.Application_Owner__c&amp;&quot;
+-   Form number: &quot;&amp;Forms__c.Name&amp;&quot;
+-   Application Description: &quot;&amp;Forms__c.Application_Description__c&amp;&quot;
+-   Approval Status: &quot;&amp;Forms__c.Approval_Step__c&amp;&quot;
+
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&amp;e=x91vhQ.
+
+End of Message
+
+Email template #16&quot;,&quot;An Application Review Form has been submitted for your approval.
+
+To access the form use this link: &quot;&amp;Forms__c.Link&amp;&quot;
+
+Application Review Form Summary:
+
+-   Application Name: &quot;&amp;Forms__c.Application_Name__c&amp;&quot;
+-   Application Owner: &quot;&amp;Forms__c.Application_Owner__c&amp;&quot;
+-   Form number: &quot;&amp;Forms__c.Name&amp;&quot;
+-   Application Description: &quot;&amp;Forms__c.Application_Description__c&amp;&quot;
+-   Approval Status: &quot;&amp;Forms__c.Approval_Step__c&amp;&quot;
+
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&amp;e=x91vhQ.
+
+End of Message
+
+Email template #00&quot;))))}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

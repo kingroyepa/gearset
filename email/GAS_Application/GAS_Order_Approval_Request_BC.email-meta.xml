@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2 - Sent to Branch Chief after submission</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EPA_Email_Notification</letterhead>
+    <name>GAS Order Approval Request</name>
+    <style>freeForm</style>
+    <subject>A New Gas Products Order for {!Order_Request__c.OwnerLastName}, {!Order_Request__c.OwnerFirstName} has been submitted for your review</subject>
+    <textOnly>Hello,
+
+A New Gas Products Order has been submitted by {!Order_Request__c.OwnerLastName}, {!Order_Request__c.OwnerFirstName} and is ready for Branch Chief review. Please review this Order for content and upon completing your review, press the Branch Chief Approval button next to your name.
+
+Please note that if this order has not been approved at least four business days prior to the
+requested delivery date, delivery may be delayed.
+
+To access this new order, double-click this DocLink:
+{!ApprovalRequest.External_URL}
+
+Thank You.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

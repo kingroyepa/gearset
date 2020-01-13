@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Check the box if the Order Request needs to be archived. --></help>
+        <label><!-- Archive --></label>
+        <name>Archive__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identifier used internally with GAS Team --></help>
+        <label><!-- Call Number --></label>
+        <name>Call_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract End Date --></label>
+        <name>Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Active contract associated with Vendor --></help>
+        <label><!-- Vendor Contract --></label>
+        <name>Contract__c</name>
+        <relationshipLabel><!-- eOrders --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Comments to help describe the needs, uses, and etc. of the eOrder --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Cost of the sum of associated eOrder Items --></help>
+        <label><!-- Order Amount --></label>
+        <name>Order_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Delivery Date --></label>
+        <name>Order_Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Effective Date --></label>
+        <name>Order_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Request --></label>
+        <name>Order_Request__c</name>
+        <relationshipLabel><!-- eOrders --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Choose the Organization for which you want to create an eOrder. --></help>
+        <label><!-- Organization Name --></label>
+        <name>Organization_Name__c</name>
+        <relationshipLabel><!-- eOrders (Organization Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Purchase Order Date --></help>
+        <label><!-- PO Date --></label>
+        <name>PO_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Purchase Order Number --></help>
+        <label><!-- PO Number --></label>
+        <name>PO_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested Pickup Date --></label>
+        <name>Requested_Pickup_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requester --></label>
+        <name>Requester__c</name>
+    </fields>
+    <fields>
+        <help><!-- The current state of the eOrder --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Activated</masterLabel>
+            <translation><!-- Activated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Archived</masterLabel>
+            <translation><!-- Archived --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Order Received</masterLabel>
+            <translation><!-- Full Order Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Closed</masterLabel>
+            <translation><!-- Order Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Placed</masterLabel>
+            <translation><!-- Order Placed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Order Received</masterLabel>
+            <translation><!-- Partial Order Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Return Order Closed</masterLabel>
+            <translation><!-- Return Order Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Return Order Placed</masterLabel>
+            <translation><!-- Return Order Placed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Quantity --></label>
+        <name>Total_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Contract Name --></label>
+        <name>Vendor_Contract_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Id --></label>
+        <name>Vendor_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose the Vendor for which you want to create an eOrder --></help>
+        <label><!-- Vendor Name --></label>
+        <name>Vendor_Name__c</name>
+        <relationshipLabel><!-- eOrders --></relationshipLabel>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>eOrder</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>eOrders</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>GAS eOrder Admin Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Order Description --></label>
+            <section>Order Description</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>GAS eOrder Return Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Order Description --></label>
+            <section>Order Description</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Create eOrders to request cylinders from Vendors --></description>
+        <label><!-- GAS eOrder Admin --></label>
+        <name>GAS_eOrder_Admin</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Create eOrders to return empty cylinders --></description>
+        <label><!-- GAS eOrder Return --></label>
+        <name>GAS_eOrder_Return</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The eOrder request can be archived only after the order request is fulfilled. --></errorMessage>
+        <name>ORDGAS_Check_Archive</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Generate_PDF --></label>
+        <name>Generate_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Generate_eOrder_Return --></label>
+        <name>Generate_eOrder_Return</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,10 @@
+"Congratulations, you have received an award in the amount of {!Award__c.Cash_Award_Amount__c} from {!Award__c.RO_HR_Org2__c}. The award is planned to be effective as of pay period: {!Award__c.Calendar_Pay_Period_Paid__c}({!Award__c.Date_Paid__c}). 
+
+
+Please see the justification below that was included with your award nomination: 
+""{!Award__c.Supervisor_Justification__c}"" 
+
+
+Please see your supervisor if you have any questions. 
+
+Congratulations!"

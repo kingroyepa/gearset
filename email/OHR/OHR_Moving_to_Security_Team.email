@@ -1,0 +1,5 @@
+<p>
+{!Forms__c.Unauthenticated_Owner__c}: <br><br>Your {!Forms__c.Form_Type_Name__c} Form has been approved by {!Forms__c.Approver_1__c} and has been sent to the OHR Security Team as the final step in the approval process. 
+</p>
+<p>
+Form Record Number: {!Forms__c.Name}</p>

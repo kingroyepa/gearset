@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AAT SITL Group Notification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AAT SITL Group Notification</name>
+    <style>none</style>
+    <subject>Action: Application Approval Form submitted for {!Forms__c.Application_Name__c}, {!Forms__c.Name} –SITL Group Review Stage</subject>
+    <textOnly>An Application Approval form has been approved by the Local SITL and submitted to the SITL Group. Please complete the SITL Group review process within ten (10) business days of receipt of this message.
+
+Application Approval Form Summary:
+
+-	Application Name: {!Forms__c.Application_Name__c}
+-	Application Owner: {!Forms__c.Application_Owner__c}
+-	Form number: {!Forms__c.Name}
+-	Application Description: {!Forms__c.Application_Description__c}
+-	Comments: {!Forms__c.Comments_1__c}
+-	Approval Status: SITL Group review
+-	Modification Date: {!Forms__c.LastModifiedDate}
+-	Modified By: {!Forms__c.LastModifiedBy}
+
+To access, review, and approve the form use this link: {!Forms__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

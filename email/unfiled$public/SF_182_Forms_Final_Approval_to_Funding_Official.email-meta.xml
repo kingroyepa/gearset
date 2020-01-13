@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF-182 Forms Final Approval to Funding Official</name>
+    <style>none</style>
+    <subject>SF-182 Form Approved - Record ID: {!Forms__c.Form_Record_Name__c}</subject>
+    <textOnly>An SF-182 Form has been approved. A link has been provided below to access any related information or documents on the form.  
+
+Record ID: {!Forms__c.Form_Record_Name__c}  
+
+{!Forms__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

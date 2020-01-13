@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email notification when an award requires IOAA approval.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Award IOAA Approval Needed</name>
+    <style>none</style>
+    <subject>Employee award needs your approval.</subject>
+    <textOnly>{!ApprovalRequest.Process_Approver},  
+
+An employee award needs your approval. Please visit this link to log into the Awards Reporting and Tracking Tool (ARTT) to approve or deny the request: {!ApprovalRequest.Internal_URL}.  
+
+Please contact your HRD Representative if you have any questions.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

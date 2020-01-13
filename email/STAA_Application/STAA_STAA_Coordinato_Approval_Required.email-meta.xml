@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to Nominating Coordinator Approval Required</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>STAA - STAA Coordinator Approval Required</name>
+    <style>none</style>
+    <subject>EPA STAA Notice of Pending Nomination for Your Approval</subject>
+    <textOnly>Dear {!Cover_Form__c.STAA_Coordinator_Name__c},
+
+The following EPA STAA nomination is ready for your approval.
+
+NOMINATION ID: {!Cover_Form__c.Nomination_ID__c}
+
+Title: {!Cover_Form__c.Citation__c}
+
+Please click here to open the nomination application: {!Cover_Form__c.Link}
+
+Please do not  reply to this message. Replies to this message are routed to an unmonitored mailbox.
+
+EPA STAA Coordinator</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

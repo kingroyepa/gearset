@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines whether this row is ignored</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DelegatedAdmin__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Make this user and admin in the Sandbox</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>DelegatedAdmin</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SandboxName__c</fullName>
+        <description>Name of the sandbox the user should be an admin in</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>SandboxName</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SandboxUser__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines whether it should be loaded post-refresh</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>SandboxUser</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Task_Order__c</fullName>
+        <description>Order in which this task is executed</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Task Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserAlias__c</fullName>
+        <description>Alias of Person, used to auto update emails post refresh</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>UserAlias</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>removeFromEmail__c</fullName>
+        <defaultValue>".invalid"</defaultValue>
+        <description>String to remove from the user email post refresh</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>removeFromEmail</label>
+        <length>244</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>resetPw__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Should password be reset post-refresh</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>resetPw</label>
+        <type>Checkbox</type>
+    </fields>
+    <description>Settings used by the sandbox refresh scripts</description>
+    <label>BAPSandboxSetting</label>
+    <pluralLabel>BAPSandboxSettings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

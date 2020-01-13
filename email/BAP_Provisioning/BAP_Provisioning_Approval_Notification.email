@@ -1,0 +1,9 @@
+<br>
+   The BAP {!Forms__c.Form_Type__c} Request has been successfully completed. If you have any questions regarding this request, please contact the BAP Admin team BAP_Admins@epa.gov. <br><br>
+Type: {!Forms__c.Form_Type__c}<br>
+Quantity: {!Forms__c.Quantity__c}<br>
+Description:
+{!Forms__c.comments__c}<br><br>
+
+Thanks,<br>
+BAP Admin

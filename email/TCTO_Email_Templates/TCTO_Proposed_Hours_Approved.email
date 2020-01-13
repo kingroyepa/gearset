@@ -1,0 +1,12 @@
+{!Forms__c.Employee_Name_SF_182__c},
+Your Proposed TCTO Hours has been approved by {!Forms__c.User_Supervisor__c}.
+
+Destination: {!Forms__c.Destination__c}
+Travel Dates: {!Forms__c.Start_Date_TCTO__c} - {!Forms__c.End_Date_TCTO__c}
+Total Proposed TCTO Hours: {!Forms__c.Proposed_Travel_Comp_Hours_Total__c}
+Supervisor Comments: {!ApprovalRequest.Comments}
+
+Once travel has been completed, return to this request to enter actual earned hours and resubmit for approval.
+
+
+To return to this form, go to https://forms.epa.gov. Then click on “My Forms", locate the form with ID= {!Forms__c.Name} and click “Open Form”.

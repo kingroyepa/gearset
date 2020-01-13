@@ -1,0 +1,335 @@
+<apex:page Controller="LineItemsGrid_e450_Controller" title="Reportable Information" showheader="false" sidebar="false" cache="false" action="{!ValidateOrRedirect}" >
+    
+    <style>
+        body { background-color: #E0F1FF; }
+        
+        .msg {
+        font-size: .75rem;
+        line-height: 1.25;
+        color: rgb(84, 105, 141);
+        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        margin-left: 200px;
+        margin-bottom: 20px;
+        margin-top: -20px;
+        width: 75%;
+        text-align: center;
+        font-family: 'Salesforce Sans',Arial,sans-serif;
+        background: rgb(253, 253, 253);
+        -webkit-tap-highlight-color: transparent;
+        }
+        
+        .gridTable{
+        border-collapse: collapse;
+        background-color: white;
+        border: 1px solid black;
+        }
+        
+        .gridDiv
+        {
+        height: 60%;    
+        width: 90%;      
+        }
+        
+        .gridDiv_example
+        {
+        height: 60%;    
+        width: 90%;      
+        overflow-y: scroll;    
+        overflow-x: scroll;
+        }
+        
+        .gridTable_th {
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-bottom: 5px;
+        text-align: center;
+        white-space:pre-line;
+        }
+        
+        .gridTable_td{
+        padding: 10px;
+        align: center;
+        white-space: nowrap;
+        }
+        
+        .dateFormat
+        {
+        display: none;
+        }
+        
+        .gridTable_tr:hover {background-color:#f5f5f5;}
+        
+        .instructionsTable{
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 90%;
+        border: 1px solid black;
+        }
+        
+        .instructionsTable_td{
+        width: 50%;
+        padding-left: 8px;
+        padding-right: 1px;
+        padding-bottom: 2px;
+        padding-top: 3px;
+        vertical-align: top;
+        }
+        
+    </style>
+    
+    <!--Header-->
+    <apex:form rendered="{!t1user}">
+        <apex:outputpanel >
+            <div class="topBar1" style="width: 100%; height: 110px; background-color: #0E6993; min-width: 1175px;">
+                <a href="http://workplace.epa.gov/" style="margin-left: 25%;"><img src="{!$Resource.EPAOneLogo}" alt="EPA One Logo" style="margin-top: 20px;"/></a>
+            </div>
+            <div class="topBar2" style="width: 100%; height: 38px; background-color: #0A5071; min-width: 1175px;">
+                &nbsp;
+            </div>
+        </apex:outputpanel>
+        <div class="WebFormsNav" style="width: 100%; height: 200px; min-width: 1150px;">
+            <table style="width: 80%; padding: 20px;">
+                <tr>
+                    <td style="width: 180px; vertical-align: top;">
+                        <img src="{!$Resource.EPALogo}" alt="EPA Logo"/>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <h1 style="font-size: 250%; padding-bottom: 20px;">Part 5: Gifts and Travel Reimbursements for Form ID: {!form.Name}</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </apex:form>
+    <!-- End Header -->
+    
+    <!--Body-->
+    
+    <div style="padding-left: 10px;"> 
+        
+        <apex:form id="LineSelectionTableForm">
+            
+            <apex:pageBlock title="Choose Type of Information to Report" id="out">
+                <apex:pageBlockButtons location="bottom">
+                    <div style="margin-right: 1800px; margin-left: 250px;">
+                    <apex:commandButton value="Go!" action="{!go}" rerender="out" />
+                    </div>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection >
+                    <apex:selectList value="{!lineItemRT}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!LineItemRTs}"/>
+                    </apex:selectList>
+                </apex:pageBlockSection>
+            </apex:pageBlock>         
+        </apex:form>
+    </div>
+    <br/>
+    
+    <div style="padding-left: 10px;"> 
+        
+        <apex:form id="LineTableForm">
+            <apex:pageMessages />
+            <div align="center">
+                <apex:commandButton value="Add New Line" rendered="{!t1user}" action="{!addRow}" disabled="{!readOnlyFlag}" style="font-size:large;margin:7px;padding-left:5px;padding-right:5px"/>
+                <apex:commandButton value="Save" action="{!saveTable}" disabled="{!readOnlyFlag}" style="font-size:large;margin:7px;padding-left:5px;padding-right:5px;" />
+                
+                <!--apex:commandButton value="Submit For Approval" action="{!submitFormFromLineItem}" disabled="{!readOnlyFlag}" style="font-size: large;margin:5px"/-->
+                <apex:commandButton value="Return To Form" rendered="{!t1user}" action="{!saveAndReturn}" style="font-size: large;margin:7px;padding-left:5px;padding-right:5px"/>
+                <apex:commandButton value="Return To Form" rendered="{!!t1user}" action="{!URLFOR($Action.forms__c.View, formID)}" style="font-size: large;margin:7px;padding-left:5px;padding-right:5px"/>
+                 
+            </div>
+            <br/><br/><br/>
+            
+            <div class="gridDiv" style="margin-left:20px">
+                <table border="1" class="gridTable" id="table" >
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th class="gridTable_th" style="width: 5%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 15%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 15%; font-weight: normal; text-align:left; padding-left: 7px;" >
+                            <b>Source</b> 
+                        </th>
+                        <th class="gridTable_th" style="width: 25%; font-weight: normal; text-align:left; padding-left: 7px;" >
+                            <b>Description</b>
+                        </th>
+                        <th class="gridTable_th" style="width: 20%; padding-left: 4px; padding-right: 4px;">
+                            Approver Comment
+                        </th>
+                        <th class="gridTable_th" style="width: 20%; padding-left: 4px; padding-right: 4px;">
+                            Submitter Response
+                        </th>
+                    </tr>
+                    <!-- Edit Generation-->
+                    <apex:repeat value="{!lineItemCollection}" var="lineItem" rendered="{!!readOnlyFlag}"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                             <!--Mounika Suram 9/17/2018 Added the delete action -->
+                            <td class="gridTable_td" rendered="{!!readOnlyFlag}">
+                                <apex:commandLink value="Delete" action="{!deleteRow}" styleClass="btn">                              
+                                        <apex:param name="itemToDelete" value="{!lineItem.id}" assignTo="{!lineToDelete}"/>
+                                </apex:commandLink>
+                            </td>
+                            <td style="text-align: center;">
+                                &nbsp; Part 5: Gifts and Travel Reimbursements &nbsp;
+                            </td>
+                            <apex:repeat value="{!apiList}" var="fieldName">
+                                <td class="gridTable_td">
+                                   <apex:inputField value="{!lineItem[fieldName]}" style="width: 99%"/>
+                                </td>
+                            </apex:repeat>   
+                        </tr>
+                    </apex:repeat>
+                    
+                    <!--Read Only Generation -->
+                    <apex:repeat value="{!lineItemCollection}" var="lineItem" rendered="{!readOnlyFlag}"> <!-- add field list here-->
+                        <tr class="gridTable_tr">
+                              <!--Mounika Suram 9/17/2018 Added the delete action -->
+                            <td class="gridTable_td" rendered="{!readOnlyFlag}">
+                                <apex:commandLink value="Delete" action="{!deleteRow}" styleClass="btn" rendered="{!!readOnlyFlag}">
+                                        <apex:param name="itemToDelete" value="{!lineItem.id}" assignTo="{!lineToDelete}"/>
+                                </apex:commandLink>&nbsp;
+                            </td>
+                            <td>
+                                &nbsp; Part 5: Gifts and Travel Reimbursements &nbsp;
+                            </td>
+                            <apex:repeat value="{!apiList}" var="fieldName">
+                                <td class="gridTable_td">
+                                    <apex:outputField value="{!lineItem[fieldName]}" style="width: 99%"/>
+                                </td>
+                            </apex:repeat>
+                        </tr>
+                    </apex:repeat>
+                </table>              
+            </div>
+            <br/><br/><br/>
+            
+            <!-- Specific Line Item Instructions -->
+            <div style="font-size:medium;"><b> Instructions and Examples</b></div>
+            <div>
+                <table border="1" class="instructionsTable" id="table" style="margin-left:20px">
+                    <tr class="gridTable_tr" >
+                        <!--Header-->
+                        <th colspan="2" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b> INSTRUCTIONS - Part 5: Gifts and Travel Reimbursements</b>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td">
+                            <b>Report for Yourself, Spouse, and Dependent Child:</b>
+                        </td>
+                        <td class="instructionsTable_td">
+                            <b>Do Not Report:</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="instructionsTable_td" style="text-indent: -2.1em; padding-left: 20px;">
+                             &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; Any gifts or travel reimbursements (items such as lodging, transportation, and food) totaling more than $390* from any one 
+                             source during the reporting period; include where you traveled, the purpose, and date(s) of the trip for travel gifts and reimbursements<br/>
+                             <br/>
+                             <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;*If you received more than one gift from one source:<br/> 
+                             </div>
+                             <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;1. &nbsp;&nbsp; Future employment, including date you accepted employment offer<br/> 
+                             </div>
+                             <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;2. &nbsp;&nbsp; Ignore each item valued at $156 or less<br/> 
+                             </div>
+                             <div style="text-indent: -3.2em; padding-left: 13px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;3. &nbsp;&nbsp; Add the value of those items valued at more than $156; if the total is more than $390, then you must list those items on this form<br/> 
+                             </div>                                            
+                        </td>
+                        <td class="instructionsTable_td" style="text-indent: -2.1em; padding-left: 20px;">
+                             &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; Any agreement or arrangement related to your employment by the Federal Government<br/>
+                             <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; Anything received from relatives, the U.S. Government, D.C., state, or local governments<br/>
+                             </div>
+                             <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; Bequests and other forms of inheritance<br/>                                              
+                             </div>
+                             <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; Gifts and travel reimbursements given to your agency in connection with your official travel<br/>                                              
+                             </div>
+                             <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; Gifts of hospitality (food, lodging, entertainment) at the donor’s residence or personal premises<br/>                                              
+                             </div>
+                             <div style="text-indent: -2.1em; padding-left: -5px;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<b>•</b>&nbsp;&nbsp; Anything received by your spouse or dependent child totally independent of their relationship to you<br/>                                              
+                             </div>
+                        </td>
+                    </tr>
+                </table>              
+            </div>
+            <br/><br/><br/>
+    
+            <!-- EXAMPLE -->
+            <div class="gridDiv_example" style="margin-left:20px">
+                <table border="1" class="gridTable" style="background-color:#f5f5f5;" id="table" >
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th colspan="4" style="text-align: center; font-size: 1rem; padding-bottom: 7px; padding-top: 7px; ">
+                            <b>EXAMPLES - Part 5: Gifts and Travel Reimbursements </b>
+                        </th>
+                    </tr>
+                    <tr class="gridTable_tr">
+                        <!--Header-->
+                        <th class="gridTable_th" style="width: 5%;">
+                            
+                        </th>
+                        <th class="gridTable_th" style="width: 15%;">
+                            Type
+                        </th>
+                        <th class="gridTable_th" style="width: 35%; font-weight: normal; text-align:left; padding-left: 7px;" >
+                            <b>Source</b> 
+                        </th>
+                        <th class="gridTable_th" style="width: 45%; font-weight: normal; text-align:left; padding-left: 7px;" >
+                            <b>Description</b>
+                        </th>
+                    </tr>
+                    <!-- Example Generation-->           
+                    <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 5: Gifts and Travel Reimbursements &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            Dee, Jones &amp; Smith <br/>(San Diego, CA)
+                        </td>      
+                        <td class="gridTable_td">
+                           Leather briefcase <i>(Example of a gift totaling more than $390 from one source)</i> 
+                        </td>                    
+                    </tr>
+                   <tr class="gridTable_tr">
+                        <td class="gridTable_td">
+                            <i>Example</i>    
+                        </td>
+                        <td class="gridTable_td">
+                            &nbsp; Part 5: Gifts and Travel Reimbursements &nbsp;
+                        </td>
+                        <td class="gridTable_td">
+                            CGH Culinary Institute 
+                        </td>      
+                        <td class="gridTable_td" style="width: 30%; font-weight: normal; text-align:left; padding-left: 7px; white-space:normal;">
+                           Airline ticket, hotel room, and meals incident to culinary seminar in Tokyo, Japan from May 1-5, 2018 <i>(Example of a travel reimbursement)</i>
+                        </td>               
+                    </tr>
+                </table>              
+            </div>
+            <br/><br/><br/><br/>
+            
+        </apex:form>
+    </div>
+</apex:page>

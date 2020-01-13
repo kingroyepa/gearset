@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification of Public Notice Final Approval - Newspaper Format</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Public Notice Final Approval Newspaper Format</name>
+    <style>none</style>
+    <subject>Public Notice Posting Request  has been Approved by OCGR for {!Forms__c.Public_Notice_Title__c}</subject>
+    <textOnly>Public Notice Posting Request has been Approved by OCGR  
+ Newspaper Format of Public Notice - Recommended Local Newspaper for Public Notice {!Forms__c.PN_Newspaper__c}
+
+ Public Notice : {!Forms__c.Facility_Name_or_Applicant__c} -  {!Forms__c.City__c}, {!Forms__c.State__c} 
+
+DATE OF THIS NOTICE: {!Forms__c.Publication_Date__c}
+
+PURPOSE OF THIS NOTICE:  {!Forms__c.Public_Notice_Purpose__c}
+
+Summary of Proposed Action:
+{!Forms__c.Public_Notice_Proposed_Action__c}
+
+FACILITY DESCRIPTION:  {!Forms__c.Facility_Description__c}
+
+INFORMATION AVAILABILITY:  Information regarding EPA’s proposed remedy is available on EPA’s website at {!Forms__c.Facility_Factsheet_URL__c} .   The Administrative Record, which contains all the information considered in EPA’s proposed remedy, is available at U.S. EPA Mid-Atlantic Region,  Mail Code:{!User.Mail_Stop__c},  1650 Arch Street, Philadelphia, PA. 19103. Office hours are: Mon-Fri, 8:00 AM – 5:00 PM. For additional information, contact   , Project Manager,{!Forms__c.OwnerFullName}   at EPA Mid-Atlantic’s address listed above; Phone: {!Forms__c.OwnerPhone} or Email:{!Forms__c.Email_Address__c} .
+
+COMMENT PROCESS:  Persons to comment on EPA’s proposed decision must submit comments to EPA within the {!Forms__c.PublicNotice_Comment_Period__c} -day comment period ending  {!Forms__c.Public_Notice_Comments_Due__c} . Interested persons may also request a public hearing on this proposed remedy.  All comments and/or requests for a hearing must be submitted in writing via mail, fax, or email to the EPA Project Manager,   {!Forms__c.OwnerFullName}  as listed above  , and must be received prior to {!Forms__c.Public_Notice_Comments_Due__c}  All comments will be considered in making a final decision.
+
+FINAL DECISION:  EPA will make a final decision after considering all comments, consistent with applicable RCRA requirements and regulations. If the remedy is substantially unchanged from the one in this notice, EPA will issue a final decision and inform all persons who submitted written comments or requested notice of EPA’s final determination. If the remedy is significantly different from the one proposed, EPA will issue a public notice explaining the new remedy and will reopen the comment period.
+
+ Recommended Local Newspaper: {!Forms__c.PN_Newspaper__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

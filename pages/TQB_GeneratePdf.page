@@ -1,0 +1,496 @@
+<!--
+Name: TQB_GeneratePdf
+
+======================================================
+======================================================
+Purpose:
+-------
+Created this page to generate pdf document with the candidate package details
+======================================================
+======================================================
+History
+-------
+VERSION AUTHOR        DATE      DETAIL              FEATURES/CSR/TTP
+1.0 -   Mounika Suram 5/17/2019 INITIAL DEVELOPMENT 
+***********************************************************************
+-->
+<apex:page standardController="Candidate_Application__c" extensions="TQB_GeneratePdfController" showHeader="false" sidebar="false" 
+           standardStylesheets="false"  applyBodyTag="false" applyHtmlTag="false" docType="html-5.0"       
+           >
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!$Resource.ORDGAS_190063}"/>
+            <style>
+                .info{
+                border:0 ! important;
+                padding: 10px 10px 10px 10px ! important;
+                width: 100%;
+                }
+                .info td{
+                padding: 10px 0px 0px 10px ! important;
+                border:0 ! important;
+                }
+               
+                .title {
+                 font-weight:bold;
+                 padding-top: 5px;
+                 padding-bottom: 5px;
+                 padding-right:5px;                
+                }
+                #form-title{
+                text-align:right;}
+
+                .button-ok {
+                position: relative;
+                display: inline-block;
+                padding: 0;
+                background: transparent;
+                background-clip: border-box;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                line-height: 1.875rem;
+                text-decoration: none;
+                color: #0070d2;
+                -webkit-appearance: none;
+                white-space: normal;
+                user-select: none;
+                font-family: Arial, Helvetica, sans-serif;
+
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-align: center;
+                vertical-align: middle;
+                border: 1px solid #dddbda;
+                transition: border 0.15s linear;
+                border-color: #dddbda;
+                background-color: white;
+                font-size: .8125rem;
+                }
+                
+                .buttonlist-right {
+                text-align: right;
+                }
+                
+            </style>
+            <apex:form >
+                <apex:actionFunction name="saveAttachment" action="{!saveAttachment}" rerender="allPanel"/>
+                <script>
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById("okbutton").style.display = "block";
+                }, false);
+                
+                function GeneratePdf()
+                {
+                    //alert("*********Calling saveAttachment from GeneratePdf");
+                //document.getElementById("okbutton").style.display = "none";
+                //document.getElementById("okbutton").style.visibility = "hidden";
+               
+                saveAttachment();
+                //document.getElementById("okbutton").style.display = "none";
+                    //alert("*********Called saveAttachment from GeneratePdf");
+                
+                    
+                };
+                </script>
+
+            </apex:form>
+            
+        </head>
+
+        <!-- To display the error messages -->
+        <apex:pageMessages />
+        
+        <body>
+             <apex:outputPanel >
+                <!-- EPA Logo Header Start -->
+                <table id="toptable" width="100%" border="1">
+                    <!--EPA Logo Header Start-->
+                    <tr >
+                        <td>
+                            <table id="toptableheader" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="20%">
+                                        <div style="padding:10px"><apex:image url="{!$Resource.EPAlogo_black}" height="55px"/></div>
+                                    </td>
+                                    <td width="60%" style="text-align:right ! important;" valign="bottom">
+                                        <div id="form-title">United States Environmental Protection Agency<br/> Washington, DC 20460
+                                        </div>
+                                    </td>
+                                  </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--EPA Logo Header End-->
+                    <!--Subtitle Start-->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td >
+                                        
+                                        <div class="slds-scope buttonlist-right" id="okbutton" style="display:none;">
+                                            <apex:form >
+
+                                                <apex:outputLink styleClass="button-ok" style="margin:0 auto;" onclick="GeneratePdf();" value="{!URLFOR($Action.Candidate_Application__c.View,Candidate_Application__c.id)}" target="_parent"> OK </apex:outputLink>
+                                                &nbsp;
+                                                <apex:outputLink styleClass="button-ok" style="margin:0 auto;" value="{!URLFOR($Action.Candidate_Application__c.View,Candidate_Application__c.id)}" target="_parent">Cancel</apex:outputLink>
+
+                                            </apex:form>
+
+                                        </div>
+                                        <div id="subtitle-text">TQB Candidate Package Details</div>
+                                    </td>
+                                </tr>
+                               
+                            </table>
+                        </td>
+                    </tr>
+                    <!--Subtitle End--> 
+                    <!--CoverForm General Info Start-->
+                    <tr>
+                        <td>                             
+                            <table class="info" >
+                                 <tr class="title"> 
+                                     <td>                                     
+                                    Candidate Details: 
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td width="30%" >
+                                         Candidate:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Candidate__c}
+                                     </td>
+                                 </tr>
+                                  <tr >
+                                     <td >
+                                         Record Type:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.RecordType.Name}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Current GS Level:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Current_GS_Level__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Permanent Organization:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Permanent_Organization__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Intended Track:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Intended_Track__c}
+                                     </td>
+                                 </tr>
+                                
+                            </table>
+                            <table class="info" >
+                                 <tr class="title"> 
+                                     <td>                                     
+                                    Candidate Package Details: 
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td width="30%" >
+                                         Candidate Application ID:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Name}
+                                     </td>
+                                 </tr>
+                                  <tr >
+                                     <td >
+                                         Status:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Status__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Promotion Effective Date:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Promotion_Effective_Date__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Comments:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Comments__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Final Promotion Date:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Final_Promoton_Date__c}
+                                     </td>
+                                 </tr>
+                                <tr >
+                                     <td >
+                                         Promotion Scheduled Date:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.TQB_Scheduled_Date__c}
+                                     </td>
+                                 </tr>
+                                
+                            </table>
+                            <table class="info" >
+                                 <tr class="title"> 
+                                     <td>                                     
+                                    Supervisors: 
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td width="30%" >
+                                         First Line Supervisor:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.First_Line_Supervisor__r.Name}
+                                     </td>
+                                 </tr>
+                                  <tr >
+                                     <td >
+                                         Second Line Supervisor:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Second_Line_Supervisor__r.Name}
+                                     </td>
+                                 </tr>
+                            </table>
+                            <table class="info" >
+                                 <tr class="title"> 
+                                     <td>                                     
+                                    TQB Details: 
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td width="30%" >
+                                         TQB Coordinator:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.TQB_Coordinator__r.Name}
+                                     </td>
+                                 </tr>
+                                  <tr >
+                                     <td >
+                                         Program/Region Representative:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.ProgramRegion_Representative__r.Name}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         TQB Coordinator 2:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.TQB_Coordinator_2__r.Name}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         TQB Peer:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.TQB_Peer__r.Name}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         TQB Chair:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.TQB_Chair__r.Name}
+                                     </td>
+                                 </tr>
+                                <tr >
+                                     <td >
+                                         ORD Rep:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.ORD_Rep__c}
+                                     </td>
+                                 </tr>
+                               <tr>
+                                     <td  >
+                                         Panel Member 1 (Ad-Hoc):
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Panel_Member_1_Ad_Hoc__c}
+                                     </td>
+                                 </tr>
+                                  <tr >
+                                     <td >
+                                         Panel Member 2 (Ad-Hoc):
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Panel_Member_2_Ad_Hoc__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         TQB Chair Comments:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.TQB_Chair_Comments__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Panel Recomendation:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Panel_Recomendation__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                        Promotion Decision:
+                                     </td>
+                                     <td >
+                                         {!Candidate_Application__c.Promotion_Decision__c}
+                                     </td>
+                                 </tr>
+                                
+                                 
+                            </table>
+                                
+                            <table class="info" >
+                                  <apex:form >    
+                                 <tr class="title"> 
+                                     <td>                                     
+                                    TQB Checklist
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td width="30%" >
+                                         List of 5 References and 5 Ad hocs:
+                                     </td>
+                                     <td >
+                                       <apex:inputCheckbox value="{!Candidate_Application__c.List_of_5_References_and_5_Ad_hocs__c}"/>
+                                     </td>
+                                 </tr>
+                                  <tr >
+                                     <td >
+                                         Candidates CV and Bi:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Candidate_s_CV_and_Bi__c }"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Selection request of 3 outside experts:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Selection_request_of_3_outside_experts__c}"/>
+                                     </td>
+                                 </tr>
+                                                                  <tr >
+                                     <td >
+                                         Nomination of 4 Ad hoc Members:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Nomination_of_4_Ad_hoc_Members__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Availability statements from four Ad hoc:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Availability_statements_from_four_Ad_hoc__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Transmittal and certification memo:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Transmittal_and_certification_memo__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Candidates Essay with Responses:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Candidate_s_Essay_with_Responses__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         X3 5 Recent Publications Work Products:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.X3_5_Recent_Publications_Work_Products__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         New Position Description PD:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.New_Position_Description_PD__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Include the 3 letters:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Include_the_3_letters__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Signed COI Statements from 4 Ad hocs:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Signed_COI_Statements_from_4_Ad_hocs__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Biosketches CVs for four Ad:
+                                     </td>
+                                     <td >
+                                        <apex:inputCheckbox value="{!Candidate_Application__c.Biosketches_CVs_for_four_Ad__c}"/>
+                                     </td>
+                                 </tr>
+                                </apex:form>   
+
+                            </table>
+                            
+                        </td>
+                    </tr> 
+                    <!--CoverForm General Info End-->
+                                       
+                </table>
+            </apex:outputPanel>            
+        </body>
+    </html>  
+    
+
+</apex:page>

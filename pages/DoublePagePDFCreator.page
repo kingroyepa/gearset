@@ -1,0 +1,6 @@
+<apex:page showHeader="true"
+           id="DoublePagePDFCreator"
+           standardController="Award__c"
+           extensions="PDFFormCreatorController"
+           action="{!createDoublePageForm}">
+</apex:page>

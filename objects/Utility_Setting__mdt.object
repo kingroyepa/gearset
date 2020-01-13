@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Is_DST_Active_in_US__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is DST Active in US</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Utility Setting</label>
+    <pluralLabel>Utility Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

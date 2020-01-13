@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Purchase Card Status Update</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Purchase Card Email Template - Rejected Confirmation</name>
+    <style>none</style>
+    <subject>Purchase Card Status Update</subject>
+    <textOnly>Hi {!Forms__c.Cardholder_AO_Name__c},
+
+Your purchase card request has been reviewed and was not approved.
+
+Here are the comments:
+{!ApprovalRequest.Comments}
+
+Please click on the following link for more details: {!Forms__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

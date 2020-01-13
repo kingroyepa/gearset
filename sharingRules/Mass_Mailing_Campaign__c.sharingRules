@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Bristol_Bay</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Bristol Bay</label>
+        <sharedTo>
+            <group>Bristol_Bay</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Bristol Bay</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>California_Selenium</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>California Selenium Docket</description>
+        <label>California Selenium</label>
+        <sharedTo>
+            <group>California_Selenium_Docket</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>California Selenium</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Missouri_NNC_Docket</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Missouri NNC Docket</description>
+        <label>Missouri NNC Docket</label>
+        <sharedTo>
+            <group>Missouri_NNC_Docket</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Missouri NNC Docket</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Water_Quality_Certification</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Water Quality Certification</description>
+        <label>Water Quality Certification</label>
+        <sharedTo>
+            <group>Water_Quality_Certification</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Water Quality Certification</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Waters_of_the_US</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Waters of the US</label>
+        <sharedTo>
+            <group>Waters_of_the_US</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Waters of the US,WOTUS Recommendations,Waters of the US – Step 0</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Waters_of_the_US_Step_1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Waters of the US – Step 1</description>
+        <label>Waters of the US – Step 1</label>
+        <sharedTo>
+            <group>Waters_of_the_US_Step_1_SUPP_Docket</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Waters of the US – Step 1 SUPP</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Waters_of_the_US_Step_2_Docket</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Waters of the US – Step 2 Docket</description>
+        <label>Waters of the US – Step 2 Docket</label>
+        <sharedTo>
+            <group>Waters_of_the_US_Step_2_Docket</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Waters of the US – Step 2</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

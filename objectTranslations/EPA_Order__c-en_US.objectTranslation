@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Allowance Holder --></label>
+        <name>Allowance_Holder__c</name>
+        <picklistValues>
+            <masterLabel>56 - OTAQ</masterLabel>
+            <translation><!-- 56 - OTAQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>58 - OAP</masterLabel>
+            <translation><!-- 58 - OAP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Alt Order COR Name --></label>
+        <name>Alt_Order_COR_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the alternate order or work assignment COR. --></help>
+        <label><!-- Alt. Order COR --></label>
+        <name>Alt_Order_COR__c</name>
+        <relationshipLabel><!-- EPA Orders (Alt. Order COR) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the text contract number (no dashes) field. --></help>
+        <label><!-- Contract Number (No Dashes) --></label>
+        <name>Contract_Number_No_Dashes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Vehicle --></label>
+        <name>Contract_Vehicle2__c</name>
+        <relationshipLabel><!-- DCR EPA Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Vendor --></label>
+        <name>Contract_Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Item Total --></label>
+        <name>Line_Item_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Order Alt. COR --></label>
+        <name>Master_Order_Alt_COR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Order COR --></label>
+        <name>Master_Order_COR__c</name>
+    </fields>
+    <fields>
+        <help><!-- Maximum potential order amount --></help>
+        <label><!-- Master Order Ceiling --></label>
+        <name>Master_Order_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the master order record for cases when a TO has multiple periods of performance --></help>
+        <label><!-- Master Order --></label>
+        <name>Master_Order__c</name>
+        <relationshipLabel><!-- Order Periods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order COR Name --></label>
+        <name>Order_COR_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the order or work assignment COR. --></help>
+        <label><!-- Order COR --></label>
+        <name>Order_COR__c</name>
+        <relationshipLabel><!-- EPA Orders (Order COR) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please enter the order or work assignment ceiling. --></help>
+        <label><!-- Order Ceiling --></label>
+        <name>Order_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- Description for the order. --></help>
+        <label><!-- Order Description --></label>
+        <name>Order_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculated Order Number. If the Order record is for an Order Period, the number will have the Period appended to the Order Number. --></help>
+        <label><!-- Order Number (Calc) --></label>
+        <name>Order_Number_Calc__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the order or work assignment number under a contract. --></help>
+        <label><!-- Order Number (No Dashes) --></label>
+        <name>Order_Number_No_Dashes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Ceiling amount for the order period, not the max potential order ceiling. --></help>
+        <label><!-- Order Period Ceiling --></label>
+        <name>Order_Period_Ceiling__c</name>
+    </fields>
+    <fields>
+        <help><!-- End date of the order period (not the max period performance end date) --></help>
+        <label><!-- Order Period End Date --></label>
+        <name>Order_Period_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start date of the order period --></help>
+        <label><!-- Order Period Start Date --></label>
+        <name>Order_Period_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the order or work assignment title. --></help>
+        <label><!-- Order Title --></label>
+        <name>Order_Title__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to capture outside funding on an order. --></help>
+        <label><!-- Outside Funding --></label>
+        <name>Outside_Funding__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the PR Number from the source system. --></help>
+        <label><!-- PR Number --></label>
+        <name>PR_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Performance period end date for the order. --></help>
+        <label><!-- Performance Period End Date --></label>
+        <name>Perf_Per_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Performance period start date for the order. --></help>
+        <label><!-- Performance Period Start Date --></label>
+        <name>Perf_Per_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the funding/option period of the contract that the order falls under. --></help>
+        <label><!-- Period --></label>
+        <name>Period__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Remaining Days in Order Period --></label>
+        <name>Remaining_Days_in_Order_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Order Ceiling --></label>
+        <name>Remaining_Order_Ceiling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Order Period Ceiling --></label>
+        <name>Remaining_Order_Period_Ceiling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Activated</masterLabel>
+            <translation><!-- Activated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>EPA Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>EPA Orders</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>DCR Contract Order Layout</layout>
+        <sections>
+            <label><!-- Contact --></label>
+            <section>Contact</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Last --></label>
+            <section>Last</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DCR Order Period</layout>
+        <sections>
+            <label><!-- Contact --></label>
+            <section>Contact</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Last --></label>
+            <section>Last</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create New EPA Order --></label>
+        <name>Order_Period</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- DCR Order --></label>
+        <name>DCR_Order</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type used to distinguish periods within Task Orders --></description>
+        <label><!-- DCR Order Period --></label>
+        <name>DCR_Order_Period</name>
+    </recordTypes>
+</CustomObjectTranslation>

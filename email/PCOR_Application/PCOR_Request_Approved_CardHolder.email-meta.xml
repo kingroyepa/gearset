@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>PCOR Application. Notification sent to the cardholder once the order request is approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EPA_Email_Notification</letterhead>
+    <name>Purchase Order Request Approved Notification  To CardHolder</name>
+    <style>freeForm</style>
+    <subject>Purchase Order Request {!Order_Request__c.Name} - Approved</subject>
+    <textOnly>Hello {!Order_Request__c.Requester__c},
+
+The purchase order request submitted for the below details has been approved.
+
+Title: {!Order_Request__c.Title__c}
+Request Type: {!Order_Request__c.Request_Type__c}
+Vendor: {!Order_Request__c.Vendor_Name__c}
+
+To access the purchase order request, please click this link {!Order_Request__c.Name}
+
+Thank You.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

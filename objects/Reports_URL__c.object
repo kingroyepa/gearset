@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>URL__c</fullName>
+        <description>Text field to provide site URL for reports.epa.gov.  John Jenkins. 2019.04.09.</description>
+        <externalId>false</externalId>
+        <label>URL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <label>Reports URL</label>
+    <visibility>Public</visibility>
+</CustomObject>

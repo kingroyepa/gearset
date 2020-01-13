@@ -1,0 +1,34 @@
+<!--
+ - Custom page and button to direct users to the awards Qlik application.
+ -->
+
+<apex:page id="QlikReport" lightningStylesheets="true" applyHtmlTag="false" showHeader="false">
+    <html>
+    <body>
+    <div style="padding-top: 50px; text-align: center">
+        <apex:form >
+            <apex:commandButton style="font-size: 18pt; height: 50px; width: 350px;" value="View OAP Qlik Reports" onClick="gotoOAPQlikReport(); return false;"/>
+        </apex:form>
+    </div>
+    <div style="padding-top: 50px; text-align: center">
+        <apex:form >
+            <apex:commandButton style="font-size: 18pt; height: 50px; width: 350px;" value="View OTAQ Qlik Reports" onClick="gotoOTAQQlikReport(); return false;"/>
+        </apex:form>
+    </div>
+    </body>
+
+
+    <script>
+        function gotoOAPQlikReport() {
+            var win = window.open('https://qlikviz.epa.gov/extensions/OAR_OAP_SoF/OAR_OAP_SoF.html', '_blank');
+            win.focus();
+        }
+    </script>
+    <script>
+        function gotoOTAQQlikReport() {
+            var win = window.open('https://qlikviz.epa.gov/extensions/OAR_OTAQ_SoF/OAR_OTAQ_SoF.html', '_blank');
+            win.focus();
+        }
+    </script>
+    </html>
+</apex:page>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Use “Initial Caps” format.  For example, “Effect of Benzene on Adult Population”.  Do not use the title of the publication, do not exceed 120 characters including spaces. --></help>
+        <label><!-- Citation --></label>
+        <name>Citation__c</name>
+    </fields>
+    <fields>
+        <label><!-- EPA Employee ID --></label>
+        <name>EPA_EIP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eligibility Criteria 1 --></label>
+        <name>Eligibility_Criteria_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eligibility Criteria 2 --></label>
+        <name>Eligibility_Criteria_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eligibility Criteria 3 --></label>
+        <name>Eligibility_Criteria_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eligibility Criteria 4 --></label>
+        <name>Eligibility_Criteria_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Explain how the nominated  paper&apos;s represent research that is innovative and important in advancing the scientific knowledge or technology relevant to EPA&apos;s mission. It is, important to provide a clear and compelling explanation of the relevance. --></help>
+        <label><!-- Justification 1 --></label>
+        <name>Justification_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Justification 2a: If multiple publications are submitted, provide a comprehensive explanation of the relationship and lengths between subject matter among the different nominated publications (Limit to 16,000 characters) Enter n/a if blank --></help>
+        <label><!-- Justification 2A --></label>
+        <name>Justification_2A__c</name>
+    </fields>
+    <fields>
+        <help><!-- Justification 2b  List the previous 5 year&apos;s of STAA nominations and associated publications for each EPA author. Categorize the list by author and include publication title, year, and award.(Limit to 16,000 characters including spaces) Enter n/a if blank --></help>
+        <label><!-- Justification 2B --></label>
+        <name>Justification_2B__c</name>
+    </fields>
+    <fields>
+        <help><!-- Justification 2c  Provide a description of how this nomination&apos;s publication(s) differ from previous (last 5 years) and current nominations by the author(s). (Limit to 16,000 characters including spaces.) Enter n/a if blank. --></help>
+        <label><!-- Justification 2C --></label>
+        <name>Justification_2C__c</name>
+    </fields>
+    <fields>
+        <help><!-- Justification 2d Indicate whether previously submitted supplemental information is listed as supplemental information for the current nomination. (Limit to 16,000 characters including spaces.) Enter n/a if blank. --></help>
+        <label><!-- Justification 2D --></label>
+        <name>Justification_2D__c</name>
+    </fields>
+    <fields>
+        <help><!-- Justification 2e If any of the authors have submitted a concurrent nomination to another research category, provide sufficient justification to distinguish the differnce between nominations. (Limit to 16,000 characters including spaces) Enter n/a if blank --></help>
+        <label><!-- Justification 2E --></label>
+        <name>Justification_2E__c</name>
+    </fields>
+    <fields>
+        <help><!-- Justification 3a Provide evidence of recognition of the contribution from outside. (Limit to 16,000 characters including spaces.) --></help>
+        <label><!-- Justification 3A --></label>
+        <name>Justification_3A__c</name>
+    </fields>
+    <fields>
+        <help><!-- Justification 3b Provide an explanation of the external peer review process used to evaluate the scientific merit of the nominated publication(s). (Limit to 16,000 characters including spaces.) --></help>
+        <label><!-- Justification 3B --></label>
+        <name>Justification_3B__c</name>
+    </fields>
+    <fields>
+        <label><!-- Laboratory/Office Name --></label>
+        <name>Laboratory_Office_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nominating Author --></label>
+        <name>Nominating_Author_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nominating Author --></label>
+        <name>Nominating_Author__c</name>
+        <relationshipLabel><!-- Cover Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nominating Official --></label>
+        <name>Nominating_Official__c</name>
+        <relationshipLabel><!-- Cover Forms (Nominating Official) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nominating Official&apos;s Comments --></label>
+        <name>Nominating_Official_s_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nomination ID --></label>
+        <name>Nomination_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nominator Official Requirement 1 --></label>
+        <name>Nominator_Official_Requirement_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nominator Official Requirement 2 --></label>
+        <name>Nominator_Official_Requirement_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organization --></label>
+        <name>Organization_NA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Research Category --></label>
+        <name>Primary_Research_Category__c</name>
+        <picklistValues>
+            <masterLabel>Control Systems and Technology (CS)</masterLabel>
+            <translation><!-- Control Systems and Technology (CS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ecological Research (ER)</masterLabel>
+            <translation><!-- Ecological Research (ER) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy and the Environment (EE)</masterLabel>
+            <translation><!-- Energy and the Environment (EE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental Policy and Decision-Making Studies (EP)</masterLabel>
+            <translation><!-- Environmental Policy and Decision-Making Studies (EP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Effects Research and Human Health Risk Assessment (HE)</masterLabel>
+            <translation><!-- Health Effects Research and Human Health Risk Assessment (HE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Homeland Security (HS)</masterLabel>
+            <translation><!-- Homeland Security (HS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry and the Environment (IE)</masterLabel>
+            <translation><!-- Industry and the Environment (IE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrated Risk Assessment (IR)</masterLabel>
+            <translation><!-- Integrated Risk Assessment (IR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monitoring and Measurement Methods (MM)</masterLabel>
+            <translation><!-- Monitoring and Measurement Methods (MM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Environmental Research (OR)</masterLabel>
+            <translation><!-- Other Environmental Research (OR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review Articles (RA)</masterLabel>
+            <translation><!-- Review Articles (RA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Management and Ecosystem Restoration (RM)</masterLabel>
+            <translation><!-- Risk Management and Ecosystem Restoration (RM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sustainability and Innovation (SI)</masterLabel>
+            <translation><!-- Sustainability and Innovation (SI) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Fate (TF)</masterLabel>
+            <translation><!-- Transport and Fate (TF) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- STAA Coordinator Name --></label>
+        <name>STAA_Coordinator_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- STAA Coordinator Telephone Number --></label>
+        <name>STAA_Coordinator_Telephone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- STAA Coordinator --></label>
+        <name>STAA_Coordinator__c</name>
+        <relationshipLabel><!-- Cover Forms (STAA Coordinator) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- STAA Coordinator eMail --></label>
+        <name>STAA_Coordinator_eMail__c</name>
+    </fields>
+    <fields>
+        <label><!-- STAA Coordinator&apos;s Comments --></label>
+        <name>STAA_Coordinator_s_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select up to two categories --></help>
+        <label><!-- Secondary Research Category --></label>
+        <name>Secondary_Research_Category__c</name>
+        <picklistValues>
+            <masterLabel>Control Systems and Technology (CS)</masterLabel>
+            <translation><!-- Control Systems and Technology (CS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ecological Research (ER)</masterLabel>
+            <translation><!-- Ecological Research (ER) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy and the Environment (EE)</masterLabel>
+            <translation><!-- Energy and the Environment (EE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental Policy and Decision-Making Studies (EP)</masterLabel>
+            <translation><!-- Environmental Policy and Decision-Making Studies (EP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Effects Research and Human Health Risk Assessment (HE)</masterLabel>
+            <translation><!-- Health Effects Research and Human Health Risk Assessment (HE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Homeland Security (HS)</masterLabel>
+            <translation><!-- Homeland Security (HS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry and the Environment (IE)</masterLabel>
+            <translation><!-- Industry and the Environment (IE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrated Risk Assessment (IR)</masterLabel>
+            <translation><!-- Integrated Risk Assessment (IR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monitoring and Measurement Methods (MM)</masterLabel>
+            <translation><!-- Monitoring and Measurement Methods (MM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Environmental Research (OR)</masterLabel>
+            <translation><!-- Other Environmental Research (OR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review Articles (RA)</masterLabel>
+            <translation><!-- Review Articles (RA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Management and Ecosystem Restoration (RM)</masterLabel>
+            <translation><!-- Risk Management and Ecosystem Restoration (RM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sustainability and Innovation (SI)</masterLabel>
+            <translation><!-- Sustainability and Innovation (SI) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport and Fate (TF)</masterLabel>
+            <translation><!-- Transport and Fate (TF) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The package stays in DRAFT mode until STAA Coordinator Marks FINAL. --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>AWARDED</masterLabel>
+            <translation><!-- AWARDED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DRAFT</masterLabel>
+            <translation><!-- DRAFT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EXPIRED</masterLabel>
+            <translation><!-- EXPIRED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FINAL</masterLabel>
+            <translation><!-- FINAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOCKED - Pending Nominating Official Approval</masterLabel>
+            <translation><!-- LOCKED - Pending Nominating Official Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOCKED - Pending STAA Coordinator Approval</masterLabel>
+            <translation><!-- LOCKED - Pending STAA Coordinator Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NOT AWARDED</masterLabel>
+            <translation><!-- NOT AWARDED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Package Ready</masterLabel>
+            <translation><!-- Package Ready --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Cover Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cover Forms</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>STAA Nominations</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Info --></label>
+            <section>Info</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Citation --></label>
+        <name>Citation</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Criteria 1 --></label>
+        <name>Criteria_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- J1 --></label>
+        <name>J1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- J2A --></label>
+        <name>J2A</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- J2B --></label>
+        <name>J2B</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- J2C --></label>
+        <name>J2C</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- J2D --></label>
+        <name>J2D</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- J2E --></label>
+        <name>J2E</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- J3A --></label>
+        <name>J3A</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- J3B --></label>
+        <name>J3B</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- EPA Scientific and Technological Achievement Awards --></description>
+        <label><!-- STAA Application --></label>
+        <name>STAA_Application</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Citation Required. Length must not exceed 120 characters --></errorMessage>
+        <name>Citation_Length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Limit of two categories --></errorMessage>
+        <name>Limit_2_Category_Selection</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This record is currently LOCKED from editing --></errorMessage>
+        <name>STAA_Locked_Record_based_on_Status</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Generate_Pdf --></label>
+        <name>Generate_Pdf</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_Application --></label>
+        <name>Submit_Application</name>
+    </webLinks>
+</CustomObjectTranslation>

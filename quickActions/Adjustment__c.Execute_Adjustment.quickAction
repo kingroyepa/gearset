@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Changes the adjustment&apos;s status to final.</description>
+    <fieldOverrides>
+        <field>Status__c</field>
+        <literalValue>Final</literalValue>
+    </fieldOverrides>
+    <label>Execute Adjustment</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Adjustment executed!</successMessage>
+    <type>Update</type>
+</QuickAction>

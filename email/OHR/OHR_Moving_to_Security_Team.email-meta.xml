@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OHR - Moving to Security Team</name>
+    <style>none</style>
+    <subject>Submission Confirmation Update:  {!Forms__c.Form_Type_Name__c}</subject>
+    <textOnly>{!Forms__c.Unauthenticated_Owner__c}:
+
+Your {!Forms__c.Form_Type_Name__c} Form has been approved by {!Forms__c.Approver_1__c} and has been sent to the OHR Security Team as the final step in the approval process.
+
+Form Record Number: {!Forms__c.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

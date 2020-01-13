@@ -1,0 +1,9 @@
+"You have received a Quality Step-Increase due to outstanding work. It is planned to be effective as of pay period: {!Award__c.Calendar_Pay_Period_Paid__c}({!Award__c.Date_Paid__c}). 
+
+Your supervisor provided the following justification for your award: 
+""{!Award__c.Supervisor_Justification__c}"" 
+
+
+Please see your supervisor if you have any questions. 
+
+Congratulations!"

@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Archive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>GAS application</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check the box if the Order Request needs to be archived.</inlineHelpText>
+        <label>Archive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Call_Number__c</fullName>
+        <description>Identifier used internally with GAS Team</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifier used internally with GAS Team</inlineHelpText>
+        <label>Call Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract__r.Contract_End_Date__c</formula>
+        <label>Contract End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Active contract associated with Vendor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Active contract associated with Vendor</inlineHelpText>
+        <label>Vendor Contract</label>
+        <referenceTo>EPA_Contract__c</referenceTo>
+        <relationshipLabel>eOrders</relationshipLabel>
+        <relationshipName>eOrders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Comments to help describe the needs, uses, and etc. of the eOrder</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comments to help describe the needs, uses, and etc. of the eOrder</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Order_Amount__c</fullName>
+        <description>Total Cost of the sum of associated eOrder Items</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Cost of the sum of associated eOrder Items</inlineHelpText>
+        <label>Order Amount</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Order_Delivery_Date__c</fullName>
+        <description>GAS application.</description>
+        <externalId>false</externalId>
+        <label>Order Delivery Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Order_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Order_Number__c</fullName>
+        <displayFormat>EPA-PO-{000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Order Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Order_Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Order Request</label>
+        <referenceTo>Order_Request__c</referenceTo>
+        <relationshipLabel>eOrders</relationshipLabel>
+        <relationshipName>eOrders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Organization_Name__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>GAS application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the Organization for which you want to create an eOrder.</inlineHelpText>
+        <label>Organization Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>eOrders (Organization Name)</relationshipLabel>
+        <relationshipName>eOrders1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PO_Date__c</fullName>
+        <description>Purchase Order Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Date</inlineHelpText>
+        <label>PO Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PO_Number__c</fullName>
+        <description>Purchase Order Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Purchase Order Number</inlineHelpText>
+        <label>PO Number</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requested_Pickup_Date__c</fullName>
+        <description>Gas application.</description>
+        <externalId>false</externalId>
+        <label>Requested Pickup Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Requester__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName &amp; " " &amp;  Owner:User.LastName</formula>
+        <label>Requester</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>The current state of the eOrder</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The current state of the eOrder</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <color>#0B6FCE</color>
+                    <default>true</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Activated</fullName>
+                    <color>#78C953</color>
+                    <default>false</default>
+                    <label>Activated</label>
+                </value>
+                <value>
+                    <fullName>Return Order Placed</fullName>
+                    <color>#CC33CC</color>
+                    <default>false</default>
+                    <label>Return Order Placed</label>
+                </value>
+                <value>
+                    <fullName>Order Placed</fullName>
+                    <color>#E27001</color>
+                    <default>false</default>
+                    <label>Order Placed</label>
+                </value>
+                <value>
+                    <fullName>Partial Order Received</fullName>
+                    <color>#F3D904</color>
+                    <default>false</default>
+                    <label>Partial Order Received</label>
+                </value>
+                <value>
+                    <fullName>Full Order Received</fullName>
+                    <color>#A845DC</color>
+                    <default>false</default>
+                    <label>Full Order Received</label>
+                </value>
+                <value>
+                    <fullName>Order Closed</fullName>
+                    <color>#A53711</color>
+                    <default>false</default>
+                    <label>Order Closed</label>
+                </value>
+                <value>
+                    <fullName>Return Order Closed</fullName>
+                    <color>#333333</color>
+                    <default>false</default>
+                    <label>Return Order Closed</label>
+                </value>
+                <value>
+                    <fullName>Archived</fullName>
+                    <default>false</default>
+                    <label>Archived</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Quantity</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Contract_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract__r.Vendor__r.Name</formula>
+        <label>Vendor Contract Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Vendor_Name__r.Id</formula>
+        <label>Vendor Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Name__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Choose the Vendor for which you want to create an eOrder</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the Vendor for which you want to create an eOrder</inlineHelpText>
+        <label>Vendor Name</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>GAS Vendors</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>eOrders</relationshipLabel>
+        <relationshipName>eOrders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Data on orders placed in some context, initially orders for gas cylinders in the GAS application, but available for other uses, too.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>eOrder</label>
+    <nameField>
+        <displayFormat>EPA-EO-{000000000}</displayFormat>
+        <label>eOrder ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>eOrders</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Vendor_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Vendor_Contract_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Vendor_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Vendor_Contract_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>Activated_eOrders</fullName>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>Order_Effective_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Activated</value>
+        </filters>
+        <label>GAS Activated eOrders</label>
+    </listViews>
+    <listViews>
+        <fullName>Archived_eOrders</fullName>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>Order_Effective_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Archive__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>GAS Archived eOrders</label>
+    </listViews>
+    <listViews>
+        <fullName>Closed_eOrders</fullName>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>Order_Effective_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Order Closed</value>
+        </filters>
+        <label>GAS Closed eOrders</label>
+    </listViews>
+    <listViews>
+        <fullName>Draft_eOrders</fullName>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>Order_Effective_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Draft</value>
+        </filters>
+        <label>GAS Draft eOrders</label>
+    </listViews>
+    <listViews>
+        <fullName>Full_Order_Received_eOrders</fullName>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>Order_Effective_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Full Order Received</value>
+        </filters>
+        <label>GAS Full Order Received eOrders</label>
+    </listViews>
+    <listViews>
+        <fullName>GAS_All_eOrders</fullName>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>Order_Effective_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>GAS All eOrders</label>
+    </listViews>
+    <listViews>
+        <fullName>Partial_Order_Received_eOrders</fullName>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Status__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>Order_Effective_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Partial Order Received</value>
+        </filters>
+        <label>GAS Partial Order Received eOrders</label>
+    </listViews>
+    <recordTypes>
+        <fullName>GAS_eOrder_Admin</fullName>
+        <active>true</active>
+        <description>Create eOrders to request cylinders from Vendors</description>
+        <label>GAS eOrder Admin</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Activated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Archived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Full Order Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Placed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Order Received</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>GAS_eOrder_Return</fullName>
+        <active>true</active>
+        <description>Create eOrders to return empty cylinders</description>
+        <label>GAS eOrder Return</label>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Activated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Archived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Order Placed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return Order Closed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>ORDGAS_Check_Archive</fullName>
+        <active>true</active>
+        <description>GAS application.</description>
+        <errorConditionFormula>OR(
+AND(
+RecordType.DeveloperName ='GAS_eOrder_Admin',
+NOT(TEXT( Status__c)='Order Closed'),
+ISCHANGED( Archive__c )),
+AND(
+RecordType.DeveloperName ='GAS_eOrder_Return',
+NOT(TEXT( Status__c)='Return Order Closed'),
+ISCHANGED( Archive__c ))
+
+)</errorConditionFormula>
+        <errorDisplayField>Archive__c</errorDisplayField>
+        <errorMessage>The eOrder request can be archived only after the order request is fulfilled.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Generate_PDF</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Generate eOrder</masterLabel>
+        <openType>newWindow</openType>
+        <page>EOrderPage</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_eOrder_Return</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Generate eOrder Return</masterLabel>
+        <openType>newWindow</openType>
+        <page>EOrderReturnPage</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
+</CustomObject>

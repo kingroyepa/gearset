@@ -1,0 +1,3 @@
+<p>Your {!Forms__c.Form_Type_Name__c} Form approval has been reassigned.</p>
+
+<p>{!Forms__c.Last_Approval_Reassignment__c}</p>

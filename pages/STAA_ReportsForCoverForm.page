@@ -1,0 +1,582 @@
+<!--
+Name: STAA_ReportsForCoverForm
+
+======================================================
+======================================================
+Purpose:
+-------
+Created this page to generate STAA reports for the specified Cover form
+======================================================
+======================================================
+History
+-------
+VERSION AUTHOR        DATE      DETAIL              FEATURES/CSR/TTP
+1.0 -   Mounika Suram 6/28/2018 INITIAL DEVELOPMENT 
+2.0 -   Mounika Suram 7/6/2018  Changing the Pagelayout
+***********************************************************************
+action="{!saveAttachment}"
+-->
+<apex:page standardController="Cover_Form__c" extensions="STAA_ReportsForCoverForm" showHeader="false" sidebar="false" 
+           standardStylesheets="false"  applyBodyTag="false" applyHtmlTag="false" docType="html-5.0"       
+           >
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!$Resource.ORDGAS_190063}"/>
+            <style>
+                .info{
+                border:0 ! important;
+                padding: 10px 10px 10px 10px ! important;
+                width: 100%;
+                }
+                .info td{
+                padding: 10px 0px 0px 10px ! important;
+                border:0 ! important;
+                }
+               
+                .title {
+                 font-weight:bold;
+                 padding-top: 5px;
+                 padding-bottom: 5px;
+                 padding-right:5px;                
+                }
+                #form-title{
+                text-align:right;}
+
+                .button-ok {
+                position: relative;
+                display: inline-block;
+                padding: 0;
+                background: transparent;
+                background-clip: border-box;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                line-height: 1.875rem;
+                text-decoration: none;
+                color: #0070d2;
+                -webkit-appearance: none;
+                white-space: normal;
+                user-select: none;
+                font-family: Arial, Helvetica, sans-serif;
+
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-align: center;
+                vertical-align: middle;
+                border: 1px solid #dddbda;
+                transition: border 0.15s linear;
+                border-color: #dddbda;
+                background-color: white;
+                font-size: .8125rem;
+                }
+                
+                .buttonlist-right {
+                text-align: right;
+                }
+                
+            </style>
+            <apex:form >
+                <apex:actionFunction name="saveAttachment" action="{!saveAttachment}" rerender="allPanel"/>
+                <script>
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById("okbutton").style.display = "block";
+                }, false);
+                
+                function GeneratePdf()
+                {
+                    //alert("*********Calling saveAttachment from GeneratePdf");
+                //document.getElementById("okbutton").style.display = "none";
+                //document.getElementById("okbutton").style.visibility = "hidden";
+               
+                saveAttachment();
+                //document.getElementById("okbutton").style.display = "none";
+                    //alert("*********Called saveAttachment from GeneratePdf");
+                
+                    
+                };
+                </script>
+
+            </apex:form>
+            
+        </head>
+
+        <!-- To display the error messages -->
+        <apex:pageMessages />
+        
+        <body>
+            <apex:variable value="{!1}" var="authorNum"/>
+            <apex:variable value="{!1}" var="publicationNum"/>
+            <apex:outputPanel >
+                <!-- EPA Logo Header Start -->
+                <table id="toptable" width="100%" border="1">
+                    <!--EPA Logo Header Start-->
+                    <tr >
+                        <td>
+                            <table id="toptableheader" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="20%">
+                                        <div style="padding:10px"><apex:image url="{!$Resource.EPAlogo_black}" height="55px"/></div>
+                                    </td>
+                                    <td width="60%" style="text-align:right ! important;" valign="bottom">
+                                        <div id="form-title">United States Environmental Protection Agency<br/> Washington, DC 20460
+                                        </div>
+                                    </td>
+                                  </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--EPA Logo Header End-->
+                    <!--Subtitle Start-->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td >
+                                        
+                                        <div class="slds-scope buttonlist-right" id="okbutton" style="display:none;">
+                                            <apex:form >
+
+                                                <apex:outputLink styleClass="button-ok" style="margin:0 auto;" onclick="GeneratePdf();" value="{!URLFOR($Action.Cover_Form__c.View,Cover_Form__c.id)}" target="_parent"> OK </apex:outputLink>
+                                                &nbsp;
+                                                <apex:outputLink styleClass="button-ok" style="margin:0 auto;" value="{!URLFOR($Action.Cover_Form__c.View,Cover_Form__c.id)}" target="_parent">Cancel</apex:outputLink>
+
+                                            </apex:form>
+
+                                        </div>
+                                        <div id="subtitle-text">STAA REPORT FOR THE SCIENTIST NOMINATIONS</div>
+                                    </td>
+                                </tr>
+                               
+                            </table>
+                        </td>
+                    </tr>
+                    <!--Subtitle End--> 
+                    <!--CoverForm General Info Start-->
+                    <tr>
+                        <td>                             
+                             <table class="info" >
+                                 <tr class="title"> <td>                                     
+                                    General Information: </td></tr>
+                                 <tr>
+                                     <td width="30%" >
+                                         Nomination ID/App ID:
+                                     </td>
+                                     <td >
+                                         {!Cover_Form__c.Nomination_ID__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Research Category Primary:
+                                     </td>
+                                     <td >
+                                         {!Cover_Form__c.Primary_Research_Category__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Research Category Secondary:
+                                     </td>
+                                     <td >
+                                         {!Cover_Form__c.Secondary_Research_Category__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Laboratory/Office Name:
+                                     </td>
+                                     <td >
+                                         {!Cover_Form__c.Laboratory_Office_Name__c}
+                                     </td>
+                                 </tr>
+                                 <tr >
+                                     <td >
+                                         Nomination Entered By:
+                                     </td>
+                                     <td >
+                                         {!Cover_Form__c.CreatedBy.Name}
+                                     </td>
+                                 </tr>
+                            </table>
+                             <table class= "info">
+                                 <tr><td style="width:100%;text-align:left;padding: 5px,0px,0px,0px;">Eligibility Checklist:</td></tr>
+                                 
+                                 <tr>
+                                     <td style="width:100%;text-align:left;padding: 5px,0px,0px,0px;">
+                                         {! IF(Cover_Form__c.Eligibility_Criteria_1__c, '[Y]', '[N]')}  The nominated publication(s) has not been submitted to a previous STAA competition.
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td style="text-align:left;padding: 5px,0px,0px,0px;">
+                                         {! IF(Cover_Form__c.Eligibility_Criteria_2__c, '[Y]', '[N]')}  The nominated publication(s) was published on or before January 1, 2017 and on or after January 1,2012
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td style="text-align:left;padding: 5px,0px,0px,0px;">
+                                         {! IF(Cover_Form__c.Eligibility_Criteria_3__c, '[Y]', '[N]')}  The principal author was an EPA employee or a PHS employee assigned to EPA when the research was
+                                         performed
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td style="text-align:left;padding: 5px,0px,0px,0px;">
+                                         {! IF(Cover_Form__c.Eligibility_Criteria_4__c, '[Y]', '[N]')}  The EPA authors (includes PHS employees assigned to EPA) contributed collectively a minimum of 50% toward the
+                                         publication(s)
+                                     </td>
+                                 </tr>
+                            </table>
+                            <table class= "info">
+                              
+                                <tr >
+                                    <td width="30%" >
+                                        Nominating Official Name:
+                                    </td>
+                                    <td >
+                                        {!Cover_Form__c.Nominating_Official__r.Name}
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                        Nominating Official Title:
+                                    </td>
+                                    <td >
+                                        {!Cover_Form__c.Nominating_Official__r.Title}
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                        Nominating OfficialEmail:
+                                    </td>
+                                    <td >
+                                        {!Cover_Form__c.Nominating_Official__r.Email}
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                        STAA Coordinator Name:
+                                    </td>
+                                    <td >
+                                        {!Cover_Form__c.STAA_Coordinator__r.Name}
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                        STAA Coordinator Email:
+                                    </td>
+                                    <td >
+                                        {!Cover_Form__c.STAA_Coordinator__r.Email}
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                            <br/>
+                            <table class= "info">
+                                  <apex:form >
+                                 <tr><td style="text-align:left;padding: 5px,0px,0px,0px;">Justifications:</td></tr>
+                                <tr >
+                                    <td width="40%" >
+                                        
+                                     Justification 1:       
+                                        
+                                    </td>
+                                    <td >
+                                        <apex:outputField value="{!Cover_Form__c.Justification_1__c}"  />
+                                        
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                         Justification 2A:
+                                    </td>
+                                    <td >
+                                         <apex:outputField value="{!Cover_Form__c.Justification_2A__c}"  />
+                                        
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                         Justification 2B:
+                                    </td>
+                                    <td >
+                                         <apex:outputField value="{!Cover_Form__c.Justification_2B__c}"  />
+                                         
+                                        
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                         Justification 2C:
+                                    </td>
+                                    <td >
+                                        <apex:outputField value="{!Cover_Form__c.Justification_2C__c}"  />
+                                        
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                         Justification 2D:
+                                    </td>
+                                    <td >
+                                        <apex:outputField value="{!Cover_Form__c.Justification_2D__c}"  />
+                                        
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                         Justification 2E:
+                                    </td>
+                                    <td >
+                                        <apex:outputField value="{!Cover_Form__c.Justification_2E__c}"  />
+                                        
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                         Justification 3A:
+                                    </td>
+                                    <td >
+                                        <apex:outputField value="{!Cover_Form__c.Justification_3A__c}"  />
+                                        
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >
+                                         Justification 3B:
+                                    </td>
+                                    <td >
+                                        <apex:outputField value="{!Cover_Form__c.Justification_3B__c}"  />
+                                        
+                                    </td>
+                                </tr>
+                               </apex:form>
+                            </table>
+                            <br/>
+                            
+                        </td>
+                    </tr> 
+                    <!--CoverForm General Info End-->
+                    <!--Subtitle Start-->
+                    
+                    <tr>
+                        
+                        <td>
+                           
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td ><div id="subtitle-text">AUTHORS</div></td>
+                                </tr>
+                            </table>
+                        </td>
+                           
+                    </tr>
+                       
+                    <!--Subtitle End--> 
+                    <!--Authors Information Start-->
+                    
+                        <tr>
+                        
+                            <td>
+                                
+                                <apex:repeat value="{!authors}" var="author">
+                                 <table class="info">
+                                     <tr class="title"><td>{!IF(author.Pricipal_Author__c,"Principal Author", "Contributing Author")}</td></tr>
+                                     <tr>
+                                         <td width="30%" >
+                                             Author Name:
+                                         </td>
+                                         <td width="30%" >
+                                             {!author.Name}
+                                         </td>
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             Professional Title:
+                                         </td>
+                                         <td  >
+                                             {!author.Position_Title__c}
+                                         </td>
+                                         <td  >Salutation:</td>
+                                         <td  > {!author.Salutation}</td>
+                                     </tr>
+                                     <tr >
+                                         <td width="30%" >
+                                             Email:
+                                         </td>
+                                         <td width="30%" >
+                                             {!author.Email}
+                                         </td>
+                                         <td width="20%">Organization:</td>
+                                         <td width="20%"  > {!author.Organization__c}</td>
+                                     </tr>
+                                     <tr >
+                                         <td > Mailing Address:</td>
+                                     </tr>
+                                     <tr >
+                                         <td width="30%" >
+                                             Street Line 1:
+                                         </td>
+                                         <td width="30%">
+                                             {!author.MailingStreet}
+                                         </td>
+                                         
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             City:
+                                         </td>
+                                         <td >
+                                             {!author.MailingCity}
+                                         </td>
+                                         
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             Zip Code:
+                                         </td>
+                                         <td >
+                                             {!author.MailingPostalCode}
+                                         </td>
+                                         <td > State:</td>
+                                         <td  > {!author.MailingState}</td>
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             At time of research was:
+                                         </td>
+                                         <td >
+                                             {!IF(author.non_EPA_Personnel__c,"Non EPA Personnel", "EPA Employee")}
+                                         </td>
+                                         
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             Separation Date:
+                                         </td>
+                                         <td >
+                                             {!author.Seperation_Date__c}
+                                         </td>
+                                         
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             % of Effort:
+                                         </td>
+                                         <td >
+                                             {!author.of_Total_Effort__c}
+                                         </td>
+                                         
+                                     </tr>
+                                </table>
+                                    <br/>   
+                                <apex:variable var="authorNum" value="{!authorNum + 1}"/>
+                                </apex:repeat>
+                                  
+                            </td>
+                              
+                        </tr>   
+                     
+                    <!--Authors Information End-->
+                    <!--Subtitle Start -->
+                   
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td ><div id="subtitle-text">PUBLICATIONS</div></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--Subtitle End--> 
+                    <!--Publications Information Start-->
+                    
+                        <tr>
+                            <td>
+                                
+                                <apex:repeat value="{!publications}" var="publication">                      
+                                 <table class= "info">
+                                     <tr class="title"><td>Publication {!publicationNum}:</td></tr>
+                                     <tr >
+                                         <td  >
+                                             Publication Title:
+                                         </td>
+                                         <td >
+                                             {!publication.Publication_Title__c}
+                                         </td>
+                                         
+                                     </tr>
+                                    
+                                     <tr >
+                                         <td >
+                                             Publication Date:
+                                         </td>
+                                         <td >
+                                             {!publication.Publication_Date__c}
+                                         </td>
+                                         
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             Journal/Publication Method:
+                                         </td>
+                                         <td >
+                                             {!publication.Journal_Publication_Method__c}
+                                         </td>
+                                         
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             All Author(s):
+                                         </td>
+                                         <td >
+                                             {!publication.Contributing_Authors__c}
+                                         </td>
+                                         
+                                     </tr>
+                                     
+                                     <tr >
+                                         <td >
+                                             Volume:
+                                         </td>
+                                         <td >
+                                             {!publication.Volume__c}
+                                         </td>
+                                         <td >Number:</td>
+                                         <td  > {!publication.Number__c}</td>
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             Pages:
+                                         </td>
+                                         <td >
+                                             {!publication.Pages__c}
+                                         </td>
+                                         <td >Immediately Index:</td>
+                                         <td  > Immediately Index:</td>
+                                     </tr>
+                                     <tr >
+                                         <td >
+                                             Citation ½ Life:
+                                         </td>
+                                         <td >
+                                             {!publication.Citation_Of_Life__c}
+                                         </td>
+                                         <td >Impact Factor:</td>
+                                         <td  > {!publication.Impact_Factor__c}</td>
+                                     </tr>
+                                     
+                                </table>
+                                 <br/>    
+                                <apex:variable var="publicationNum" value="{!publicationNum + 1}"/>
+                                </apex:repeat>
+                               
+                            </td>
+                        </tr>   
+                   
+                    <!--Publications Information End-->
+                </table>
+            </apex:outputPanel>            
+        </body>
+    </html>  
+    
+</apex:page>

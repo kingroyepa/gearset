@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?><SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AAT_SITL_Support_Group_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>AAT SITL Support Group Sharing</label>
+        <sharedTo>
+            <group>App_Approval_SITL_Support</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Application Review Process Tool</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BAP_Provisioning</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>BAP Provisioning</label>
+        <sharedTo>
+            <group>BAP_Admins</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BAP Provisioning</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Public_Notice_Super_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Public Notice - Super Users</description>
+        <label>Public Notice - Super Users</label>
+        <sharedTo>
+            <group>Public_Notice_Super_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Public Notice Posting Request</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Purchase_Card_Provisioning_Team_Share</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Purchase Card Provisioning Team Share</label>
+        <sharedTo>
+            <group>Purchase_Card_Team</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Purchase Card: Cancellation Check or Card,Purchase Card: Change Cardholder AO,Purchase Card: Change Monthly Limit,Purchase Card: Change Name on Card/Check,Purchase Card: Change Contact Information</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Purchase Card: Change Suspension of Card/Check,Purchase Card: New Convenience Check,Purchase Card: New Approving Official (AO),Purchase Card: New Purchase Card</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_AAT_with_Local_SITLs</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share AAT with Local SITLs</label>
+        <sharedTo>
+            <group>App_Approval_All_Local_SITLs</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Application Review Process Tool</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_All_SF_182_Records_with_HQ</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share All SF-182 Records with HQ</description>
+        <label>Share All SF-182 Records with HQ</label>
+        <sharedTo>
+            <group>SF_182_HQ_Office_of_Human_Resources</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SF-182</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Sandbox_List</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share Sandbox List with everyone</description>
+        <label>Share Sandbox List</label>
+        <sharedTo>
+            <role>EPA_Enterprise</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BAP Provisioning</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Form_Type__c</field>
+            <operation>equals</operation>
+            <value>Developer Sandbox</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_BAP_Support</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share with BAP Support</description>
+        <label>Share with BAP Support</label>
+        <sharedTo>
+            <group>BAP_Support</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>EPA-100,SF-182,TCTO Request,EPA-3160-6v5,ORD-111,BAP Provisioning,EPA-3160-6v5_old_delete</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>e450_App_Admins</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share e450 forms with e450 admins</description>
+        <label>e450 - App Admins</label>
+        <sharedTo>
+            <group>e450_Admins</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>OGE-450</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

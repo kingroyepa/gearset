@@ -1,0 +1,18 @@
+Dear {!Forms__c.Type_1_Owner_Contact__c},
+<br><br>
+{!User.Name} has request changes or clarification to your e450 report as part of their review.
+<br><br>
+Note from your reviewer: {!ApprovalRequest.Comments}
+<br><br>
+When you open your report, requests for changes to line items will in the reportable information sections for each type of interest reported. These will appear in the fields alongside each line item. They may be requests for further information or corrections to incorrectly reported line items. Please access your report  going into the <a href="https://forms.epa.gov/">EPA Business Application Platform</a> and selecting “My Forms”, make the requested changes or clarifications, and then re-submit your form.
+<br><br>
+<b>Questions</b><br>
+If you have questions about the changes or clarifications being requested, then please check out the <a href="https://epafedtalent.ibc.doi.gov/course/view.php?id=10609">e450 training materials</a> available in FedTalent. You may also contact the reviewer with questions directly.
+<br><br>
+<b>Troubleshooting</b><br>
+If you have any technical issues with the application, then please contact <a href="mailto:e450TechSupport@epa.gov">e450 Tech Support</a>.
+<br><br>
+Thank you for filing your report and for your continued attention to ethics issues. 
+<br><br>
+Regards,<br>
+Your EPA Ethics Officials

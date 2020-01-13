@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Create Jira stating that a BAP request has been approved.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BAP Provisioning Request Form Approved Jira</name>
+    <style>none</style>
+    <subject>BAP {!Forms__c.Form_Type__c} Request - {!Forms__c.HR_Organization__c}</subject>
+    <textOnly>{!Forms__c.Form_Type__c} Request Created By {!Forms__c.CreatedBy}
+Submitted on behalf of: {!Forms__c.Submitted_on_Behalf_Of__c}
+Type: {!Forms__c.Form_Type__c}
+Quantity: {!Forms__c.Quantity__c}
+BAPM Approval Link: {!Forms__c.Link}
+Form Status: {!Forms__c.Form_Status__c}
+Date: {!Forms__c.Expire_Date__c}
+Description:
+
+
+Approver Info: Approved By: {!ApprovalRequest.Process_Approver}
+Approver Comments: {!ApprovalRequest.Comments}
+
+Deployment Info (if any):
+Source: {!Forms__c.Deployment_Source_Sandbox_Name__c} - {!Forms__c.Deployment_Source_Sandbox__c}
+Destination: {!Forms__c.Deployment_Destination__c}
+Changeset name: {!Forms__c.Deployment_Changset_Name__c}
+
+User activation Info (if any):
+Authorization Reason: {!Forms__c.Authorization_Reason__c}
+Role: {!Forms__c.Role__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

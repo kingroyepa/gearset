@@ -1,0 +1,3 @@
+A new purchase card provisioning request for {!Forms__c.Purchase_Card_Request_Type__c}  has been submitted and it is waiting for your approval. <br/><br/>
+
+Please click the following link to access the form for approval. {!Forms__c.Link}

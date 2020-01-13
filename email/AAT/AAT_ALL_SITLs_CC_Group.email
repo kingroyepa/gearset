@@ -1,0 +1,16 @@
+Note: A copy of the message sent to all SITLs is below. No action is required by you.<br><br><hr><br>
+An Application Review form has been approved by the Local SITL and submitted to all SITLs. Please review the application to determine if your program or region has a duplicate application. Then, within five (5) business days of receipt of this message, please select one of these options on the form:<br>
+&nbsp;&nbsp;&nbsp;1.  I don’t have a duplicate application, please proceed.<br>
+&nbsp;&nbsp;&nbsp;2.  I don't have a duplicate application and want to be on the Review Group.<br>
+&nbsp;&nbsp;&nbsp;3.  I have a potential duplicate application and want to be on the Review Group.  <br><br>
+If you do not respond in that timeframe then we will assume that you don't have a duplication application. You may record comments if you so desire. The Review Group will then have ten (10) business days to come to consensus about how to proceed with developing this application or to reject it. If the Review Group does not come to consensus in that timeframe then the CIO will work with the Review Group and others to determine how to proceed. Note: This email was sent to all SITLs for action. You are receiving this notification as a courtesy.<br><br>
+<b>To access the form use this link:</b> {!Forms__c.Link}<br><br>
+Application Review Form Summary:<br><br>
+- &nbsp;&nbsp;Application Name: {!Forms__c.Application_Name__c}<br>
+- &nbsp;&nbsp;Application Owner: {!Forms__c.Application_Owner__c}<br>
+- &nbsp;&nbsp;Form number: {!Forms__c.Name}<br>
+- &nbsp;&nbsp;Application Description: {!Forms__c.Application_Description__c}<br>
+- &nbsp;&nbsp;Approval Status: {!Forms__c.Approval_Step__c}<br><br>
+For more information about the Application Review Process and detailed guidance go to https://usepa.sharepoint.com/:u:/r/sites/oei_Work/ODSTA/AppGov/SitePages/Process%20Overview.aspx?csf=1&e=x91vhQ. <br><br>
+End of Message<br><br>
+Email template #7

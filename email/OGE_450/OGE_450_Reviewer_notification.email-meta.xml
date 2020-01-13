@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OGE-450 Reviewer notification</name>
+    <style>none</style>
+    <subject>OGE 450 Report for your review</subject>
+    <textOnly>An OGE 450 report has been submitted for your review. {!Forms__c.Type_1_Owner_Contact__c} form {!Forms__c.Form_Record_Name__c} is in your queue.
+
+Previous Approver Comments (if any):
+{!ApprovalRequest.Comments}
+
+The financial disclosure process is critical to ensuring that your employees are carrying out their duties without financial conflicts of interest or losses of impartiality. Your role as reviewer is important and not undertaken lightly. You are not merely a “rubber stamp.”
+
+e450 Review Training
+Whether you’re a first-time reviewer, or an experienced reviewer who is new to the Business Application Platform process, please refer to the e450 training materials available for reviewers in FedTalent.
+
+Troubleshooting
+If you have any technical issues while using the system, please contact e450 Tech Support. If you have any questions about how to review the report or resolve conflicts, then please contact ethics@epa.gov
+
+Thank you for doing your part to sustain EPA’s ethical culture.
+
+Regards,
+OGC Ethics</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

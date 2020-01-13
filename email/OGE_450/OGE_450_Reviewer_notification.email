@@ -1,0 +1,17 @@
+An OGE 450 report has been submitted for your review. <a href="{!Forms__c.Link}">{!Forms__c.Type_1_Owner_Contact__c} form {!Forms__c.Form_Record_Name__c}</a> is in your queue.<br><br>
+
+Previous Approver Comments (if any):<br>
+{!ApprovalRequest.Comments}<br><br>
+
+The financial disclosure process is critical to ensuring that your employees are carrying out their duties without financial conflicts of interest or losses of impartiality. Your role as reviewer is important and not undertaken lightly. You are not merely a “rubber stamp.”<br><br>
+
+<b>e450 Review Training</b><br>
+Whether you’re a first-time reviewer, or an experienced reviewer who is new to the Business Application Platform process, please refer to the <a href="https://epafedtalent.ibc.doi.gov/course/view.php?id=10613">e450 training materials</a> available for reviewers in FedTalent.<br><br>
+
+<b>Troubleshooting</b><br>
+If you have any technical issues while using the system, please contact <a href="mailto:e450TechSupport@epa.gov">e450 Tech Support</a>. If you have any questions about how to review the report or resolve conflicts, then please contact <a href="mailto:ethics@epa.gov">ethics@epa.gov</a><br><br>
+ 
+Thank you for doing your part to sustain EPA’s ethical culture.<br><br>
+
+Regards,<br>
+OGC Ethics

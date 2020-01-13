@@ -1,0 +1,7 @@
+Hi,
+
+One of your employees, {!Award__c.Emp_Name__c}, has been nominated for an award by {!Award__c.Requesting_Official_Supervisor__c}. Since the requesting official is outside your organization, your approval is needed.
+
+Please click on the link below to approve the award. If you have any questions or problems, please contact your OARS-HRD representative.
+
+Link to approval: {!ApprovalRequest.Internal_URL}
