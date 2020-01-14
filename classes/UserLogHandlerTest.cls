@@ -24,10 +24,13 @@ public with sharing class UserLogHandlerTest {
         // query for test data to pass to queueable class
         List<user> uId = [select id from user where alias in ('TestU1','TestU2')];
         // Create our Queueable instance
-        UserLogHandler updater = new UserLogHandler(uId);
+        UserLogHandler updater = new UserLogHandler(uId, null, 'test');
+        UserLogHandler updater2 = new UserLogHandler(uId,'Freeze', 'test');
+
         // startTest/stopTest block to force async processes to run
         Test.startTest();        
         System.enqueueJob(updater);
+        System.enqueueJob(updater2);
         Test.stopTest();        
     }
 }
