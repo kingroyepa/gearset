@@ -901,7 +901,7 @@ CASE( MONTH(TODAY()),
         <object>Order_Request__c</object>
         <outputAssignments>
             <assignToReference>vOwner_id</assignToReference>
-            <field>OwnerId</field>
+            <field>Unauthenticated_Owner__c</field>
         </outputAssignments>
     </recordLookups>
     <recordUpdates>
@@ -955,7 +955,13 @@ CASE( MONTH(TODAY()),
         </inputAssignments>
         <object>Line_Item__c</object>
     </recordUpdates>
-    <startElementReference>Get_Accounting_Lines_from_PCORS</startElementReference>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Accounting_Lines_from_PCORS</targetReference>
+        </connector>
+    </start>
     <status>Active</status>
     <textTemplates>
         <description>Email template for fault messages</description>
