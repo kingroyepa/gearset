@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+﻿<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <help><!-- Please enter the Allowance Holder Responsibility Center for the outside funding document. --></help>
         <label><!-- AHRC (O) --></label>
@@ -5989,17 +5989,7 @@
             <section>Part III: Outside Positions</section>
         </sections>
     </layouts>
-    <layouts>
-        <layout>PCOR Items Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label><!-- Item Details --></label>
-            <section>Item Details</section>
-        </sections>
-    </layouts>
+    
     <layouts>
         <layout>Proposed Hours</layout>
         <sections>

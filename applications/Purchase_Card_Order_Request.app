@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
-        <actionName>Tab</actionName>
-        <content>PCOR_Home</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>PCOR_Funding_Record_Page</content>
@@ -38,84 +30,84 @@
     <navType>Standard</navType>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>EPA_License_Record_Page</content>
+        <content>SF_182</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>EPA_Agreement__c</pageOrSobjectType>
-        <recordType>EPA_Agreement__c.FTTA_License</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>EPA_License_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>EPA_Agreement__c</pageOrSobjectType>
-        <recordType>EPA_Agreement__c.FTTA_License</recordType>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.SF_182</recordType>
         <type>Flexipage</type>
         <profile>EPA Starter</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>EPA_License_Record_Page</content>
+        <content>SF_182</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>EPA_Agreement__c</pageOrSobjectType>
-        <recordType>EPA_Agreement__c.FTTA_License</recordType>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.SF_182</recordType>
         <type>Flexipage</type>
         <profile>EPA Full</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Record_Keeping</content>
+        <content>SF_182</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Application__c</pageOrSobjectType>
-        <recordType>Application__c.Software_Application</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Record_Keeping</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Application__c</pageOrSobjectType>
-        <recordType>Application__c.Software_Application</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Record_Keeping</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Application__c</pageOrSobjectType>
-        <recordType>Application__c.Software_Application</recordType>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.SF_182</recordType>
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>TQB_LOI_Page_Layout</content>
+        <content>Application_Review_Process_Tool</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Candidate_Application__c</pageOrSobjectType>
-        <recordType>Candidate_Application__c.Letter_of_Intent_LOI</recordType>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.Application_Review_Process_Tool</recordType>
         <type>Flexipage</type>
-        <profile>Admin</profile>
+        <profile>EPA Full</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>TQB_LOI_Page_Layout</content>
+        <content>Application_Review_Process_Tool</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Candidate_Application__c</pageOrSobjectType>
-        <recordType>Candidate_Application__c.Letter_of_Intent_LOI</recordType>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.Application_Review_Process_Tool</recordType>
         <type>Flexipage</type>
         <profile>EPA Starter</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>TQB_LOI_Page_Layout</content>
+        <content>Application_Review_Process_Tool</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Candidate_Application__c</pageOrSobjectType>
-        <recordType>Candidate_Application__c.Letter_of_Intent_LOI</recordType>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.Application_Review_Process_Tool</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>EPA_3160_6</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.EPA3160_6v5</recordType>
         <type>Flexipage</type>
         <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>EPA_3160_6</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.EPA3160_6v5</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>EPA_3160_6</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.EPA3160_6v5</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -218,6 +210,87 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
+        <content>Public_Notice_Posting_Request</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.Public_Notice_Posting_Request</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Public_Notice_Posting_Request</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.Public_Notice_Posting_Request</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Public_Notice_Posting_Request</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.Public_Notice_Posting_Request</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ORD_111</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.ORD_111</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ORD_111</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.ORD_111</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>ORD_111</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.ORD_111</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>FTTA_Royalties</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
+        <recordType>Accounting_Line__c.FTTA_Royalties</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>FTTA_Royalties</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
+        <recordType>Accounting_Line__c.FTTA_Royalties</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>FTTA_Royalties</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
+        <recordType>Accounting_Line__c.FTTA_Royalties</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
         <content>BAPM</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Forms__c</pageOrSobjectType>
@@ -254,6 +327,33 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
+        <content>Record_Keeping</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Application__c</pageOrSobjectType>
+        <recordType>Application__c.Software_Application</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Record_Keeping</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Application__c</pageOrSobjectType>
+        <recordType>Application__c.Software_Application</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Record_Keeping</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Application__c</pageOrSobjectType>
+        <recordType>Application__c.Software_Application</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
         <content>EPA_Agreement_Record_Page</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>EPA_Agreement__c</pageOrSobjectType>
@@ -276,6 +376,114 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>EPA_Agreement__c</pageOrSobjectType>
         <recordType>EPA_Agreement__c.FTTA_EPA_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>EPA_License_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>EPA_Agreement__c</pageOrSobjectType>
+        <recordType>EPA_Agreement__c.FTTA_License</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>EPA_License_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>EPA_Agreement__c</pageOrSobjectType>
+        <recordType>EPA_Agreement__c.FTTA_License</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>TQB_LOI_Page_Layout</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Candidate_Application__c</pageOrSobjectType>
+        <recordType>Candidate_Application__c.Letter_of_Intent_LOI</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>EPA_License_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>EPA_Agreement__c</pageOrSobjectType>
+        <recordType>EPA_Agreement__c.FTTA_License</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>TQB_LOI_Page_Layout</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Candidate_Application__c</pageOrSobjectType>
+        <recordType>Candidate_Application__c.Letter_of_Intent_LOI</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>TQB_LOI_Page_Layout</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Candidate_Application__c</pageOrSobjectType>
+        <recordType>Candidate_Application__c.Letter_of_Intent_LOI</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PCOR_Order_Request_Record</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Order_Request__c</pageOrSobjectType>
+        <recordType>Order_Request__c.Purchase_Card_Order_Request</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PCOR_Funding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
+        <recordType>Accounting_Line__c.PCORS_Funding</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PCOR_Funding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
+        <recordType>Accounting_Line__c.PCORS_Funding</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PCOR_Order_Request_Record</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Order_Request__c</pageOrSobjectType>
+        <recordType>Order_Request__c.Purchase_Card_Order_Request</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Starter</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PCOR_Funding_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
+        <recordType>Accounting_Line__c.PCORS_Funding</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PCOR_Order_Request_Record</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Order_Request__c</pageOrSobjectType>
+        <recordType>Order_Request__c.Purchase_Card_Order_Request</recordType>
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
@@ -308,28 +516,28 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>EPA_3160_6</content>
+        <content>EPA_100</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.EPA3160_6v5</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>EPA_3160_6</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.EPA3160_6v5</recordType>
+        <recordType>Forms__c.EPA_100</recordType>
         <type>Flexipage</type>
         <profile>EPA Starter</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>EPA_3160_6</content>
+        <content>EPA_100</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.EPA3160_6v5</recordType>
+        <recordType>Forms__c.EPA_100</recordType>
+        <type>Flexipage</type>
+        <profile>EPA Full</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>EPA_100</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Forms__c</pageOrSobjectType>
+        <recordType>Forms__c.EPA_100</recordType>
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
@@ -357,222 +565,6 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Candidate_Application__c</pageOrSobjectType>
         <recordType>Candidate_Application__c.Candidate_Package</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FTTA_Royalties</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
-        <recordType>Accounting_Line__c.FTTA_Royalties</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FTTA_Royalties</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
-        <recordType>Accounting_Line__c.FTTA_Royalties</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FTTA_Royalties</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
-        <recordType>Accounting_Line__c.FTTA_Royalties</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>SF_182</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.SF_182</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>SF_182</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.SF_182</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>EPA_100</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.EPA_100</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>ORD_111</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.ORD_111</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>ORD_111</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.ORD_111</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>ORD_111</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.ORD_111</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>SF_182</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.SF_182</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>EPA_100</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.EPA_100</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>EPA_100</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.EPA_100</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Application_Review_Process_Tool</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.Application_Review_Process_Tool</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Application_Review_Process_Tool</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.Application_Review_Process_Tool</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Application_Review_Process_Tool</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.Application_Review_Process_Tool</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Public_Notice_Posting_Request</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.Public_Notice_Posting_Request</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Public_Notice_Posting_Request</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.Public_Notice_Posting_Request</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Public_Notice_Posting_Request</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Forms__c</pageOrSobjectType>
-        <recordType>Forms__c.Public_Notice_Posting_Request</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>PCOR_Order_Request_Record</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Order_Request__c</pageOrSobjectType>
-        <recordType>Order_Request__c.Purchase_Card_Order_Request</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>PCOR_Funding_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
-        <recordType>Accounting_Line__c.PCORS_Funding</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>PCOR_Funding_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
-        <recordType>Accounting_Line__c.PCORS_Funding</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Full</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>PCOR_Funding_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Accounting_Line__c</pageOrSobjectType>
-        <recordType>Accounting_Line__c.PCORS_Funding</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>PCOR_Order_Request_Record</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Order_Request__c</pageOrSobjectType>
-        <recordType>Order_Request__c.Purchase_Card_Order_Request</recordType>
-        <type>Flexipage</type>
-        <profile>EPA Starter</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>PCOR_Order_Request_Record</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Order_Request__c</pageOrSobjectType>
-        <recordType>Order_Request__c.Purchase_Card_Order_Request</recordType>
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>

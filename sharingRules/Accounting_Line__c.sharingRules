@@ -26,18 +26,4 @@
             <value>FTTA Royalties</value>
         </criteriaItems>
     </sharingCriteriaRules>
-    <sharingCriteriaRules>
-        <fullName>Pcor_Funding</fullName>
-        <accessLevel>Edit</accessLevel>
-        <description>PCOR Application.</description>
-        <label>Pcor Funding</label>
-        <sharedTo>
-            <group>PCORS_App_Admins</group>
-        </sharedTo>
-        <criteriaItems>
-            <field>RecordTypeId</field>
-            <operation>equals</operation>
-            <value>PCORS Funding</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
 </SharingRules>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+﻿<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <label><!-- Additional Information --></label>
         <name>Additional_Product_Information__c</name>
@@ -1027,45 +1027,7 @@
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <layouts>
-        <layout>PCOR Request Layout</layout>
-        <sections>
-            <label><!-- Approver List (Select the approvers below) --></label>
-            <section>Approver List (Select the approvers below)</section>
-        </sections>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label><!-- Green Purchase Details (if applicable) --></label>
-            <section>Green Purchase Details (if applicable)</section>
-        </sections>
-        <sections>
-            <label><!-- Mandatory Sources (Check sources considered for purchase)* at least one required --></label>
-            <section>Mandatory Sources (Check sources considered for purchase)* at least one required</section>
-        </sections>
-        <sections>
-            <label><!-- Order Details (To be completed by cardholder after request is approved) --></label>
-            <section>Order Details (To be completed by cardholder after request is approved)</section>
-        </sections>
-        <sections>
-            <label><!-- Order Request Information --></label>
-            <section>Order Request Information</section>
-        </sections>
-        <sections>
-            <label><!-- Ship To Details (Enter the shipping details below) --></label>
-            <section>Ship To Details (Enter the shipping details below)</section>
-        </sections>
-        <sections>
-            <label><!-- System Messages --></label>
-            <section>System Messages</section>
-        </sections>
-        <sections>
-            <label><!-- Vendor Details (Enter the vendor details below) --></label>
-            <section>Vendor Details (Enter the vendor details below)</section>
-        </sections>
-    </layouts>
+    
     <quickActions>
         <label><!-- Approval Checks --></label>
         <name>Approval_Checks</name>

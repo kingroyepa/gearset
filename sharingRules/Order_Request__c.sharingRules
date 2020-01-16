@@ -13,32 +13,4 @@
             <value>GAS Order Request</value>
         </criteriaItems>
     </sharingCriteriaRules>
-    <sharingCriteriaRules>
-        <fullName>PCORS_Order_Request</fullName>
-        <accessLevel>Edit</accessLevel>
-        <description>Read/Edit access.</description>
-        <label>PCORS Order Request</label>
-        <sharedTo>
-            <group>PCORS_App_Admins</group>
-        </sharedTo>
-        <criteriaItems>
-            <field>RecordTypeId</field>
-            <operation>equals</operation>
-            <value>Purchase Card Order Request</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
-    <sharingCriteriaRules>
-        <fullName>PCORS_Order_Request_for_Approvers</fullName>
-        <accessLevel>Edit</accessLevel>
-        <description>Access to Order Request Edits for Approvers.</description>
-        <label>PCORS Order Request for Approvers</label>
-        <sharedTo>
-            <group>PCORS_App_Approvers</group>
-        </sharedTo>
-        <criteriaItems>
-            <field>RecordTypeId</field>
-            <operation>equals</operation>
-            <value>Purchase Card Order Request</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
 </SharingRules>

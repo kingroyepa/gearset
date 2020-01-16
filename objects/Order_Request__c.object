@@ -1943,6 +1943,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <description>PCOR Application. Created to Capture the IT Official as the approver.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Required for IT Purchases</inlineHelpText>
         <label>IMO/IT  Reviewer</label>
         <referenceTo>User</referenceTo>
         <relationshipName>Order_Requests2</relationshipName>
@@ -2039,7 +2040,7 @@
 "- Updated validation rules"</defaultValue>
         <description>PCORS 1.5.1, Displays PCORS messages</description>
         <externalId>false</externalId>
-        <inlineHelpText>PCORS 1.5.1, Displays PCORS messages</inlineHelpText>
+        <inlineHelpText>Displays PCORS messages</inlineHelpText>
         <label>Messages</label>
         <length>1000</length>
         <trackHistory>false</trackHistory>
@@ -2597,6 +2598,65 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>Items_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>PCORS 1.5, 12.20.19</description>
+        <externalId>false</externalId>
+        <label>Item(s) Received</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Order_Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>PCOR application.</description>
+        <externalId>false</externalId>
+        <label>Parent Order Request</label>
+        <referenceTo>Order_Request__c</referenceTo>
+        <relationshipLabel>Amendment/s</relationshipLabel>
+        <relationshipName>Order_Requests</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Receipt_Comments__c</fullName>
+        <description>PCORS 1.5, 12.20.19</description>
+        <externalId>false</externalId>
+        <label>Receipt Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Receipt_Date__c</fullName>
+        <description>PCORS 1.5, 12.20.19</description>
+        <externalId>false</externalId>
+        <label>Receipt Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Receipt_Reviewer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>PCORS 1.5, 12.20.19</description>
+        <externalId>false</externalId>
+        <label>Receipt Reviewer</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Order_Request_receiptrev</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
@@ -2638,10 +2698,10 @@
     <visibility>Public</visibility>
     <listViews>
         <fullName>All_Requests</fullName>
-        <columns>Card_Holder__c</columns>
         <columns>Office_Lab__c</columns>
         <columns>Branch__c</columns>
         <columns>CREATED_DATE</columns>
+        <columns>RECORDTYPE</columns>
         <columns>NAME</columns>
         <columns>Requester__c</columns>
         <columns>Request_Status__c</columns>
@@ -2653,14 +2713,9 @@
         <filters>
             <field>RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Order_Request__c.Purchase_Card_Order_Request</value>
+            <value>Order_Request__c.PCOR_Amendment,Order_Request__c.Purchase_Card_Order_Request</value>
         </filters>
-        <filters>
-            <field>NAME</field>
-            <operation>equals</operation>
-            <value>EPA-OR-000005878</value>
-        </filters>
-        <label>All PCORS Requests</label>
+        <label>PCORS All Requests</label>
     </listViews>
     <listViews>
         <fullName>Approved_Gas_Order_Requests</fullName>
@@ -2811,11 +2866,11 @@
         <columns>Request_Status__c</columns>
         <columns>Vendor_Name__c</columns>
         <columns>Order_Request_Total__c</columns>
-        <filterScope>Everything</filterScope>
+        <filterScope>Mine</filterScope>
         <filters>
-            <field>Card_Holder__c</field>
+            <field>Office_Lab__c</field>
             <operation>equals</operation>
-            <value>David Burden</value>
+            <value>OCSPP-OPP-ITRMD</value>
         </filters>
         <label>PCORS Order Requests</label>
     </listViews>
@@ -2891,7 +2946,10 @@
     <listViews>
         <fullName>test</fullName>
         <columns>NAME</columns>
-        <filterScope>Mine</filterScope>
+        <columns>Stage__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <label>test</label>
     </listViews>
     <listViews>
@@ -2902,6 +2960,155 @@
         <columns>DCN__c</columns>
         <filterScope>Mine</filterScope>
         <label>test 2</label>
+    </listViews>
+    <listViews>
+        <fullName>Copy_of_PCORS_Draft_Requests</fullName>
+        <columns>Office_Lab__c</columns>
+        <columns>Branch__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Request_Status__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>FCO__c</columns>
+        <columns>Order_Request_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order_Request__c.PCOR_Amendment,Order_Request__c.Purchase_Card_Order_Request</value>
+        </filters>
+        <filters>
+            <field>Request_Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Approval</value>
+        </filters>
+        <label>PCORS Pending Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>PCORS_Approved_Requests</fullName>
+        <columns>Office_Lab__c</columns>
+        <columns>Branch__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Request_Status__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>FCO__c</columns>
+        <columns>Order_Request_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order_Request__c.PCOR_Amendment,Order_Request__c.Purchase_Card_Order_Request</value>
+        </filters>
+        <filters>
+            <field>Request_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filters>
+        <label>PCORS Approved Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>PCORS_Awaiting_Funding_Requests</fullName>
+        <columns>Office_Lab__c</columns>
+        <columns>Branch__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Request_Status__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>FCO__c</columns>
+        <columns>Order_Request_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order_Request__c.PCOR_Amendment,Order_Request__c.Purchase_Card_Order_Request</value>
+        </filters>
+        <filters>
+            <field>Request_Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Funding</value>
+        </filters>
+        <label>PCORS Awaiting Funding Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>PCORS_Completed_Requests</fullName>
+        <columns>Office_Lab__c</columns>
+        <columns>Branch__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Request_Status__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>FCO__c</columns>
+        <columns>Order_Request_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order_Request__c.PCOR_Amendment,Order_Request__c.Purchase_Card_Order_Request</value>
+        </filters>
+        <filters>
+            <field>Request_Status__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </filters>
+        <label>PCORS Completed Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>PCORS_Draft_Requests</fullName>
+        <columns>Office_Lab__c</columns>
+        <columns>Branch__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Requester__c</columns>
+        <columns>Request_Status__c</columns>
+        <columns>Assigned_to__c</columns>
+        <columns>Vendor_Name__c</columns>
+        <columns>FCO__c</columns>
+        <columns>Order_Request_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order_Request__c.PCOR_Amendment,Order_Request__c.Purchase_Card_Order_Request</value>
+        </filters>
+        <filters>
+            <field>Request_Status__c</field>
+            <operation>equals</operation>
+            <value>Draft</value>
+        </filters>
+        <label>PCORS Draft Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>PCOR_Amendments</fullName>
+        <columns>NAME</columns>
+        <columns>Branch__c</columns>
+        <columns>Request_Status__c</columns>
+        <columns>Requester__c</columns>
+        <columns>Card_Holder__c</columns>
+        <columns>DCN__c</columns>
+        <columns>Description__c</columns>
+        <columns>FCO__c</columns>
+        <columns>Order_Request_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Order_Request__c.PCOR_Amendment</value>
+        </filters>
+        <label>PCORS Amendments</label>
     </listViews>
     <recordTypes>
         <fullName>GAS_Order_Request</fullName>
@@ -5127,6 +5334,1120 @@
             </values>
         </picklistValues>
     </recordTypes>
+    <recordTypes>
+        <fullName>PCOR_Amendment</fullName>
+        <active>true</active>
+        <description>Amendments for Purchase Card Order Requests</description>
+        <label>PCOR Amendment</label>
+        <picklistValues>
+            <picklist>Delivery_facilities__c</picklist>
+            <values>
+                <fullName>HSF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Page Rd</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RTP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EPEAT__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Facility_Location__c</picklist>
+            <values>
+                <fullName>101</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Annex - A045</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg A - 164 Shop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg A - 165</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg A - 280C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 151A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 154</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 175</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 251</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 254A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 255 SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 261A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 261C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 263A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 266A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 266B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 266C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 275A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 278</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 278C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 280</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 280A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 284A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 286A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 287A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 289</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 291A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 299B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 299C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 352</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 353</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 358A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 360A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 363 A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 363A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 363B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 376B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 378B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 381A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 381B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 384</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 385A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 399B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 399C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 453</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 454A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 461A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 465A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 467</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 467A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 475A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 477</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 480B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 480C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 484</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 485A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 488A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 489A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 499A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 499B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 499C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 551A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 553A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 555A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 559C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 561A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 566A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 575A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 579A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 584</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 585A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 587</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 588</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 588A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 589A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 599B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - 599C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - SC 299</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - SC 399</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - SC 499</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg B - SC 599</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D %E2%80%93 281A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D %E2%80%93 358</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D %E2%80%93 550C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D %E2%80%93 599B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D %E2%80%93 599C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 260A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 265A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 351</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 353A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 376A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 379 A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 399A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 399B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 399C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 455</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 455A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 465</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 484A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 487A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 499B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg D - 499C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg E %E2%80%93 180H</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg E %E2%80%93 257C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bldg E %E2%80%93 260A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 201</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 204</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 207</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 209</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 215</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 237</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 243</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 245</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 249</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 303</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 304</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 305</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 315</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 337</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 343</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 403</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 409</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 411</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 414</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 415</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 439</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 441</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 89</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 94</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 95</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - 96</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSF - B25A</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Type__c</picklist>
+            <values>
+                <fullName>Close Scrutiny Purchases</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health %26 Safety Related Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT%2FE%26IT Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid Advertisement for Personnel Recruitment Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Protective Services %26 Equipment Purchase</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Shipping_State__c</picklist>
+            <values>
+                <fullName>AK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Archived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full Order Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Order</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Order Fulfilled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Placed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial Order Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Approved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vendor_State__c</picklist>
+            <values>
+                <fullName>AK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <validationRules>
         <fullName>ORDGAS_Check_Archive</fullName>
         <active>true</active>
@@ -5239,10 +6560,13 @@ ISBLANK( GP_Other__c )
         <active>true</active>
         <description>PCOR Application. Created to check if It “IMO/IT Reviewer” is selected when “IT/E&amp;IT” purchase type is selected.</description>
         <errorConditionFormula>AND(
-RecordType.DeveloperName =='Purchase_Card_Order_Request', 
+ OR(
+ RecordType.DeveloperName =='Purchase_Card_Order_Request',
+ RecordType.DeveloperName =='PCOR_Amendment'
+ ), 
  ISBLANK(IT_Official__c),
  TEXT(Request_Type__c) =='IT/E&amp;IT Purchase'
-  )</errorConditionFormula>
+ )</errorConditionFormula>
         <errorDisplayField>IT_Official__c</errorDisplayField>
         <errorMessage>Select IMO/IT Reviewer.</errorMessage>
     </validationRules>
@@ -5254,7 +6578,10 @@ RecordType.DeveloperName =='Purchase_Card_Order_Request',
 AND( 
 $Profile.Name &lt;&gt; 'System Administrator',
 NOT($Permission.PCORS_Admin_Access ), 
-RecordType.DeveloperName = 'Purchase_Card_Order_Request' ,  
+OR(
+ RecordType.DeveloperName =='Purchase_Card_Order_Request',
+ RecordType.DeveloperName =='PCOR_Amendment'
+ ),   
 OR(
 ISPICKVAL(PRIORVALUE(Request_Status__c),'Complete')), 
 OR(
@@ -5327,7 +6654,10 @@ TRUE,FALSE)</errorConditionFormula>
         <errorConditionFormula>AND(
 $Profile.Name &lt;&gt; 'System Administrator',
 NOT($Permission.PCORS_Admin_Access ),
-RecordType.DeveloperName = 'Purchase_Card_Order_Request' ,
+OR(
+ RecordType.DeveloperName =='Purchase_Card_Order_Request',
+ RecordType.DeveloperName =='PCOR_Amendment'
+ ),
 NOT(ISPICKVAL(Request_Status__c,'Approved')),
 ISCHANGED( Request_Completed__c )
 )</errorConditionFormula>
@@ -5351,8 +6681,10 @@ NOT(REGEX(Vendor_Phone__c ,"(\\D?[0-9]{3}\\D?)[\\s][0-9]{3}-[0-9]{4}"))
         <fullName>PCOR_Validate_Dates_Entered</fullName>
         <active>true</active>
         <description>PCOR Application. Created to prevent the users from entering the dates before the request is approved.</description>
-        <errorConditionFormula>IF( RecordType.DeveloperName = 'Purchase_Card_Order_Request'  , 
-
+        <errorConditionFormula>IF( OR(
+ RecordType.DeveloperName =='Purchase_Card_Order_Request',
+ RecordType.DeveloperName =='PCOR_Amendment'
+ ),
 AND(
 NOT(ISPICKVAL(PRIORVALUE(Request_Status__c),'Approved')),
 OR(
@@ -5371,7 +6703,10 @@ ISCHANGED(  Date_Received__c )
         <active>true</active>
         <description>PCOR Application Created to validate the website.</description>
         <errorConditionFormula>AND(
-RecordType.DeveloperName ='Purchase_Card_Order_Request',
+OR(
+ RecordType.DeveloperName =='Purchase_Card_Order_Request',
+ RecordType.DeveloperName =='PCOR_Amendment'
+ ),
 International_Addresses__c,
 ISBLANK(International_Addresses_Text__c ) 
 )</errorConditionFormula>
@@ -5382,10 +6717,13 @@ ISBLANK(International_Addresses_Text__c )
         <fullName>PCOR_Validate_MandatorySources</fullName>
         <active>true</active>
         <description>PCOR Application. Created  to check if atleast one mandatory source is selected.</description>
-        <errorConditionFormula>AND(RecordType.DeveloperName =='Purchase_Card_Order_Request',
+        <errorConditionFormula>AND(
+OR(
+ RecordType.DeveloperName =='Purchase_Card_Order_Request',
+ RecordType.DeveloperName =='PCOR_Amendment'
+ ),
 NOT(ISNEW()),
 NOT(OR(
-Mandatory_Source_EPA__c ,
 EPA_Store_Stock_Supply__c ,
 JWOD_Programs_NB_NISH__c ,
 GSA_GSA_Advantage_General_Services__c ,
@@ -5456,7 +6794,10 @@ true,false)</errorConditionFormula>
         <active>true</active>
         <description>PCOR Application Created to validate the website.</description>
         <errorConditionFormula>AND(
-RecordType.DeveloperName ='Purchase_Card_Order_Request',
+OR(
+ RecordType.DeveloperName =='Purchase_Card_Order_Request',
+ RecordType.DeveloperName =='PCOR_Amendment'
+ ),
 NOT(ISBLANK(Website__c )),
 NOT(BEGINS(Website__c , "https://")),
 NOT(BEGINS(Website__c , "http://")),
@@ -5474,6 +6815,17 @@ SAM_Link__c
 )</errorConditionFormula>
         <errorDisplayField>SAM_Link__c</errorDisplayField>
         <errorMessage>System of Award Management field is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Receipt_Date_Mandatory</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+RecordType.DeveloperName ='Purchase_Card_Order_Request',
+Items_Received__c= TRUE,
+ISBLANK((Receipt_Date__c )
+))</errorConditionFormula>
+        <errorDisplayField>Receipt_Date__c</errorDisplayField>
+        <errorMessage>Please select Receipt Date, since you have checked Items Received</errorMessage>
     </validationRules>
     <webLinks>
         <fullName>GetPrintableView</fullName>
@@ -5533,5 +6885,24 @@ SAM_Link__c
         <showsLocation>false</showsLocation>
         <showsStatus>false</showsStatus>
         <url>https://usepa.sharepoint.com/sites/oei_Community/BAP/Shared%20Documents/Application%20Information/PCORS/PCORS-User-Guide.pdf</url>
+    </webLinks>
+    <webLinks>
+        <fullName>PCOR_User_Guide</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>PCOR User Guide</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://usepa.sharepoint.com/sites/oei_Community/BAP/Shared%20Documents/User%20Guides/PCORS%20User%20Guide.pdf</url>
     </webLinks>
 </CustomObject>

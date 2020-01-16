@@ -65,20 +65,6 @@
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
-        <fullName>PCORS_Line_Items</fullName>
-        <accessLevel>Read</accessLevel>
-        <description>Read Access</description>
-        <label>PCORS Line Items</label>
-        <sharedTo>
-            <group>PCORS_App_Admins</group>
-        </sharedTo>
-        <criteriaItems>
-            <field>RecordTypeId</field>
-            <operation>equals</operation>
-            <value>PCOR Items</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
-    <sharingCriteriaRules>
         <fullName>Purchase_Card_Provisioning_Team_Share</fullName>
         <accessLevel>Edit</accessLevel>
         <label>Purchase Card Provisioning Team Share</label>

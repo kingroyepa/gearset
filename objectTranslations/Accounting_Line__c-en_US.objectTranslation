@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+﻿<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <label><!-- Amount --></label>
         <name>Amount__c</name>
@@ -160,13 +160,7 @@
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <layouts>
-        <layout>PCORS Funding Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
+    
     <recordTypes>
         <label><!-- FTTA Royalties --></label>
         <name>FTTA_Royalties</name>

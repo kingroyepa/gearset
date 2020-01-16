@@ -6157,6 +6157,10 @@
         <recordType>eOrders__c.GAS_eOrder_Return</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Forms__c.Application_Approval</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <tabSettings>
         <tab>Accounting_Line__c</tab>
         <visibility>Visible</visibility>

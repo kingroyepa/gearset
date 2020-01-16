@@ -126,6 +126,10 @@
         <object>Forms__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Forms__c.Application_Approval</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <tabSettings>
         <tab>Forms__c</tab>
         <visibility>Visible</visibility>

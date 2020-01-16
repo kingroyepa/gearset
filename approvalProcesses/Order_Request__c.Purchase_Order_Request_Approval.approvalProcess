@@ -449,7 +449,7 @@
         <criteriaItems>
             <field>Order_Request__c.RecordType</field>
             <operation>equals</operation>
-            <value>Purchase Card Order Request</value>
+            <value>Purchase Card Order Request,PCOR Amendment</value>
         </criteriaItems>
     </entryCriteria>
     <finalApprovalActions>
