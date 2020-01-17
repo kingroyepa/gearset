@@ -49,4 +49,18 @@
             <value>56E - IO-AA,561,56D - TATD,56A - IO-DC,56H - ASD,56C - CD,56F - TCD</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ELMS_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>ELMS Reporting &amp; Tracking</description>
+        <label>ELMS - Users</label>
+        <sharedTo>
+            <group>ELMS_Superusers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ELMSTAR Idea Implemented,ELMSTAR Deployment,ELMSTAR Process Improvement</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
 </SharingRules>

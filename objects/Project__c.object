@@ -144,6 +144,11 @@
         <fields>GLLA_Project_Name__c</fields>
         <label>GLLA</label>
     </compactLayouts>
+    <compactLayouts>
+        <fullName>ELMS</fullName>
+        <fields>Process__c</fields>
+        <label>ELMS</label>
+    </compactLayouts>
     <fields>
         <fullName>AHRC__c</fullName>
         <externalId>false</externalId>
@@ -1186,10 +1191,1424 @@
         <trackTrending>false</trackTrending>
         <type>Currency</type>
     </fields>
+    <fields>
+        <fullName>Archive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicator of whether this record should be omitted from reports and views of active records.  2019.12.27 T.Hinds.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicator of whether this record should be omitted from reports and views of active records</inlineHelpText>
+        <label>Archive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>At_Least_25_Improved__c</fullName>
+        <description>At least 25% improvement, ELMS, 8.2019</description>
+        <externalId>false</externalId>
+        <formula>if(Improvement_Pct__c &gt;= 0.25,true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Indicates whether the Improvement % is at least 25%</inlineHelpText>
+        <label>At Least 25% Improved</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>At_Least_25_Percent_Improved__c</fullName>
+        <businessStatus>Hidden</businessStatus>
+        <description>At least 25% Improvement, ELMS, 8.2019.  Deprecated 2019.11.26, T.Hinds.</description>
+        <externalId>false</externalId>
+        <formula>if(Baseline_Metric__c=0,0,(Baseline_Metric__c - Current_State_Metric__c )/Baseline_Metric__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Was at least 25% improved, but no longer in use.</inlineHelpText>
+        <label>At Least 25% Improved? (Deprecated)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Attachment_Count__c</fullName>
+        <description>ELMSTAR,10/2019, Count of attachments to record</description>
+        <externalId>false</externalId>
+        <label>Attachment Count</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attachment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ELMSTAR,10/2019,Indicates whether there are any attachments.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>You must save a process before files can be attached to it.  This field will indicate whether any files have ever been attached to the record.</inlineHelpText>
+        <label>Attachment</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Baseline_Metric__c</fullName>
+        <description>Baseline Metric , ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Baseline value of a metric, expressed in the unit identified in the Unit field, for comparison with the Current State Metric</inlineHelpText>
+        <label>Baseline Metric</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_State_Metric__c</fullName>
+        <description>Current State Metric , ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current value of a metric, expressed in the unit identified in the Unit field, for comparison with the Baseline Metric</inlineHelpText>
+        <label>Current State Metric</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_State_Units__c</fullName>
+        <description>Current State Units, ELMS, 8.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the unit of measurement for the current state data (i.e., days, cases, error rate, reports, etc.)?</inlineHelpText>
+        <label>Current State Unit</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Added__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>Date Added, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the record was created</inlineHelpText>
+        <label>Date Added</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Implemented__c</fullName>
+        <description>Date the idea was implemented (different than already-existing field Date Completed), ELMSTAR, 2019.11.26, T.Hinds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the idea was implemented</inlineHelpText>
+        <label>Date Implemented</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description_of_Idea__c</fullName>
+        <description>Description of the employee idea for improvement, ELMSTAR, 2019.11.26, T.Hinds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of employee idea for improvement</inlineHelpText>
+        <label>Description of Idea</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EPA_Owner_Office_or_Region__c</fullName>
+        <description>Office or Region (i.e., Company Name) of EPA Owner, ELMSTAR, 2019.11.26, T.Hinds</description>
+        <externalId>false</externalId>
+        <formula>EPA_Owner__r.Company_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Office or Region of the EPA Owner</inlineHelpText>
+        <label>EPA Owner Office or Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EPA_Owner_Organization__c</fullName>
+        <description>Name of the organization of the EPA Owner, ELMSTAR, 2019.11.26, T.Hinds</description>
+        <externalId>false</externalId>
+        <formula>EPA_Owner__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of the detailed-level organization of the EPA Owner</inlineHelpText>
+        <label>EPA Owner Organization</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EPA_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Owner of the process (in an ELMS Deployment or Process Improvement submission) OR person responsible for the idea (in an Idea Implemented submission), ELMSTAR, 2019.12.27, T.Hinds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Owner of the process (in an ELMS Deployment or Process Improvement submission) OR person responsible for the idea (in an Idea Implemented submission)</inlineHelpText>
+        <label>EPA Owner</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>ProcessOwner</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EPA_Program_Area__c</fullName>
+        <description>EPA Program Area, ELMS, 7.2019, but removed from ELMS page layouts 2019.11.23 by T.Hinds per REQ030, so the field may be able to be dropped.</description>
+        <externalId>false</externalId>
+        <label>EPA Program/Area</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Air</fullName>
+                    <default>false</default>
+                    <label>Air</label>
+                </value>
+                <value>
+                    <fullName>Chemical Safety &amp; Pollution Prevention</fullName>
+                    <default>false</default>
+                    <label>Chemical Safety &amp; Pollution Prevention</label>
+                </value>
+                <value>
+                    <fullName>Cross-Program</fullName>
+                    <default>false</default>
+                    <label>Cross-Program</label>
+                </value>
+                <value>
+                    <fullName>Geographic</fullName>
+                    <default>false</default>
+                    <label>Geographic</label>
+                </value>
+                <value>
+                    <fullName>Management</fullName>
+                    <default>false</default>
+                    <label>Management</label>
+                </value>
+                <value>
+                    <fullName>RCRA</fullName>
+                    <default>false</default>
+                    <label>RCRA</label>
+                </value>
+                <value>
+                    <fullName>Superfund</fullName>
+                    <default>false</default>
+                    <label>Superfund</label>
+                </value>
+                <value>
+                    <fullName>Water</fullName>
+                    <default>false</default>
+                    <label>Water</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>First_Generation_Flow_Board_Posted__c</fullName>
+        <description>Flow Board Posted, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First generation elements include Title, Process Owner, Process Steps, Timeframes, Proxy Cards, Behind Schedule Line, Tick Sheet, Standard Work.</inlineHelpText>
+        <label>First Generation Flow Board Posted?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>YesNoPickList</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Have_4_huddles_occurred__c</fullName>
+        <description>Have at least 4 huddles occurred, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Have 4 or more huddles occurred?</inlineHelpText>
+        <label>Have At Least 4 Huddles Occurred?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>YesNoPickList</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Implementing_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Manager responsible for implementation, ELMSTAR, 2019.11.26, T.Hinds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Manager responsible for implementation</inlineHelpText>
+        <label>Implementing Manager</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Implementing Manager)</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Improvement_Amount__c</fullName>
+        <description>Current State Metric minus Baseline Metric (i.e., the change from the Baseline Metric to the Current State Metric) expressed as a positive if its sign matches the Improvement Direction or a negative if its sign is opposite to the Improvement Direction</description>
+        <externalId>false</externalId>
+        <formula>IF(
+    ISPICKVAL(Improvement_Direction__c, "Decrease"),
+    Baseline_Metric__c - Current_State_Metric__c,
+    Current_State_Metric__c - Baseline_Metric__c
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Current State Metric minus Baseline Metric (i.e., the change from the Baseline Metric to the Current State Metric) expressed as a positive if its sign matches the Improvement Direction or a negative if its sign is opposite to the Improvement Direction</inlineHelpText>
+        <label>Improvement Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Improvement_Direction__c</fullName>
+        <description>Indication of whether improvement means an increase or a decrease from the Baseline Metric to the Current State Metric, ELMSTAR, 2019.11.26 T.Hinds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indication of whether improvement means an increase or a decrease from the Baseline Metric to the Current State Metric</inlineHelpText>
+        <label>Improvement Direction</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                    <label>Increase</label>
+                </value>
+                <value>
+                    <fullName>Decrease</fullName>
+                    <default>false</default>
+                    <label>Decrease</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Improvement_Pct__c</fullName>
+        <description>Improvement from Baseline Metric to Current State Metric expressed as a percentage of the Baseline Metric</description>
+        <externalId>false</externalId>
+        <formula>Improvement_Amount__c /  Baseline_Metric__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Improvement from Baseline Metric to Current State Metric expressed as a percentage of the Baseline Metric</inlineHelpText>
+        <label>Improvement %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Location_of_Visual_Management_Boards__c</fullName>
+        <description>Location of Visual Management Boards, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <label>Location of Visual Management Boards</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Month_Added__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(year(Date_Added__c)) &amp; '.' &amp; lpad(text(month(Date_Added__c)),2,'0')</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month Added</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_People_Huddling__c</fullName>
+        <description>Number of People Huddling, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <label>Number of People Huddling</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Work_Units_Trained__c</fullName>
+        <description>Number of Work Units Trained, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <label>Number of Work Units Trained</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Problem_Solving_Tool__c</fullName>
+        <description>Other Problem Solving Tool, ELMS, 8.2019</description>
+        <externalId>false</externalId>
+        <label>Other Problem Solving Tools Used</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Performance_Board_Posted__c</fullName>
+        <description>Performance Board Posted, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First generation elements include Title, Process Owner, Standard Work, 1 Thing To Get Better At, 1 Metric (related to the 1 thing to get better at), Action Registry, Huddle Attendance Sheet.</inlineHelpText>
+        <label>First Gen. Performance Board Posted?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>YesNoPickList</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Problem_Solving_Tool__c</fullName>
+        <description>Problem Solving Tool , ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Problem solving or ELMS tool(s) used. Select all that apply. If Other, fill in 'Other Problem Solving Tools Used'.</inlineHelpText>
+        <label>Problem solving or ELMS Tool(s) Used</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A3</fullName>
+                    <default>false</default>
+                    <label>A3</label>
+                </value>
+                <value>
+                    <fullName>Kaizen DMAIC</fullName>
+                    <default>false</default>
+                    <label>Kaizen DMAIC</label>
+                </value>
+                <value>
+                    <fullName>Fishbone Diagram</fullName>
+                    <default>false</default>
+                    <label>Fishbone Diagram</label>
+                </value>
+                <value>
+                    <fullName>5 Whys</fullName>
+                    <default>false</default>
+                    <label>5 Whys</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Flow Board</fullName>
+                    <default>false</default>
+                    <label>Flow Board</label>
+                </value>
+                <value>
+                    <fullName>Pulse Board</fullName>
+                    <default>false</default>
+                    <label>Pulse Board</label>
+                </value>
+                <value>
+                    <fullName>4 Square</fullName>
+                    <default>false</default>
+                    <label>4 Square</label>
+                </value>
+                <value>
+                    <fullName>Countermeasure Worksheet</fullName>
+                    <default>false</default>
+                    <label>Countermeasure Worksheet</label>
+                </value>
+                <value>
+                    <fullName>Action Registry</fullName>
+                    <default>false</default>
+                    <label>Action Registry</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Process__c</fullName>
+        <description>Process name, ELMS, 8.2019, modified to Process Title by T.Hinds 2019.11.23 for ELMS</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Title or name of the process</inlineHelpText>
+        <label>Process Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Region__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Program/Region, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <label>Program/Region</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>"HR Org"</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>ProjectsRegions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Standard_Work_for_the_Process__c</fullName>
+        <description>Standard Work for the Process, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is standard work in place for the process?</inlineHelpText>
+        <label>Is Standard Work in Place?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>YesNoPickList</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State_and_Tribal_Involvement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>State and Tribal Involvement, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <label>State and Tribal Involvement</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Unit__c</fullName>
+        <description>Unit for the Baseline Metric and Current State Metric, ELMS, 2019.11.26 T.Hinds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unit of measurement for the baseline metric and current state metric (i.e., days, cases, error rate, reports, etc.)</inlineHelpText>
+        <label>Unit</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visual_Management_Used__c</fullName>
+        <description>Visual Management, ELMS, 7.2019</description>
+        <externalId>false</externalId>
+        <label>Visual Management Used?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>YesNoPickList</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Was_the_Problem_Solving_Corps_Used__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicator whether the Problem Solving Corps was used.  2019.12.27 T.Hinds</description>
+        <externalId>false</externalId>
+        <label>Was the Problem Solving Corps Used?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Area__c</fullName>
+        <description>EPA Area, ELMS, 7.2019, but removed from Deployment page layout 2019.11.23 by T.Hinds per REQ022, so the field may be able to be dropped.</description>
+        <externalId>false</externalId>
+        <label>Area</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <controllingField>EPA_Program_Area__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>General Air</fullName>
+                    <default>false</default>
+                    <label>General Air</label>
+                </value>
+                <value>
+                    <fullName>Core Air Quality Program</fullName>
+                    <default>false</default>
+                    <label>Core Air Quality Program</label>
+                </value>
+                <value>
+                    <fullName>State Implementation Plans (SIPs)</fullName>
+                    <default>false</default>
+                    <label>State Implementation Plans (SIPs)</label>
+                </value>
+                <value>
+                    <fullName>Air Inspections and Enforcement</fullName>
+                    <default>false</default>
+                    <label>Air Inspections and Enforcement</label>
+                </value>
+                <value>
+                    <fullName>Risk Management Programs</fullName>
+                    <default>false</default>
+                    <label>Risk Management Programs</label>
+                </value>
+                <value>
+                    <fullName>Ambient Radiation Monitoring</fullName>
+                    <default>false</default>
+                    <label>Ambient Radiation Monitoring</label>
+                </value>
+                <value>
+                    <fullName>Radioanalytical and Mixed Waste Analyses</fullName>
+                    <default>false</default>
+                    <label>Radioanalytical and Mixed Waste Analyses</label>
+                </value>
+                <value>
+                    <fullName>Radiological Emergency Response</fullName>
+                    <default>false</default>
+                    <label>Radiological Emergency Response</label>
+                </value>
+                <value>
+                    <fullName>Radiation Emergency Planning, Response and Preparedness/Homeland</fullName>
+                    <default>false</default>
+                    <label>Radiation Emergency Planning, Response and Preparedness/Homeland</label>
+                </value>
+                <value>
+                    <fullName>Radiation Tribal Training and Air Monitoring Support</fullName>
+                    <default>false</default>
+                    <label>Radiation Tribal Training and Air Monitoring Support</label>
+                </value>
+                <value>
+                    <fullName>Superfund and Regional Site Support</fullName>
+                    <default>false</default>
+                    <label>Superfund and Regional Site Support</label>
+                </value>
+                <value>
+                    <fullName>Mobile Source Regulatory and Policy Development and Implementation</fullName>
+                    <default>false</default>
+                    <label>Mobile Source Regulatory and Policy Development and Implementation</label>
+                </value>
+                <value>
+                    <fullName>Certification, Registrations and Compliance (Vehicles, Engines and Fuels)</fullName>
+                    <default>false</default>
+                    <label>Certification, Registrations and Compliance (Vehicles, Engines and Fuels)</label>
+                </value>
+                <value>
+                    <fullName>Engineering Design and Laboratory Testing</fullName>
+                    <default>false</default>
+                    <label>Engineering Design and Laboratory Testing</label>
+                </value>
+                <value>
+                    <fullName>Technical Assessment, Analysis and Modeling</fullName>
+                    <default>false</default>
+                    <label>Technical Assessment, Analysis and Modeling</label>
+                </value>
+                <value>
+                    <fullName>Transportation Partnership Programs</fullName>
+                    <default>false</default>
+                    <label>Transportation Partnership Programs</label>
+                </value>
+                <value>
+                    <fullName>International</fullName>
+                    <default>false</default>
+                    <label>International</label>
+                </value>
+                <value>
+                    <fullName>Air Quality Regulatory and Policy Development</fullName>
+                    <default>false</default>
+                    <label>Air Quality Regulatory and Policy Development</label>
+                </value>
+                <value>
+                    <fullName>Technical Assistance to States, Locals and Tribes for Air Quality Programs</fullName>
+                    <default>false</default>
+                    <label>Technical Assistance to States, Locals and Tribes for Air Quality Programs</label>
+                </value>
+                <value>
+                    <fullName>Air Quality Technical Assessment, Analysis, Monitoring and Modeling</fullName>
+                    <default>false</default>
+                    <label>Air Quality Technical Assessment, Analysis, Monitoring and Modeling</label>
+                </value>
+                <value>
+                    <fullName>Chemical Safety &amp; Pollution Prevention – multi-select drop-down</fullName>
+                    <default>false</default>
+                    <label>Chemical Safety &amp; Pollution Prevention – multi-select drop-down</label>
+                </value>
+                <value>
+                    <fullName>Toxics</fullName>
+                    <default>false</default>
+                    <label>Toxics</label>
+                </value>
+                <value>
+                    <fullName>Pesticides</fullName>
+                    <default>false</default>
+                    <label>Pesticides</label>
+                </value>
+                <value>
+                    <fullName>Toxics Risk Reduction &amp; Prevention/Toxic Release Inventory</fullName>
+                    <default>false</default>
+                    <label>Toxics Risk Reduction &amp; Prevention/Toxic Release Inventory</label>
+                </value>
+                <value>
+                    <fullName>General Cross-Program</fullName>
+                    <default>false</default>
+                    <label>General Cross-Program</label>
+                </value>
+                <value>
+                    <fullName>Legal Counsel (not civil or criminal enforcement)</fullName>
+                    <default>false</default>
+                    <label>Legal Counsel (not civil or criminal enforcement)</label>
+                </value>
+                <value>
+                    <fullName>Legal Counsel: Civil Enforcement</fullName>
+                    <default>false</default>
+                    <label>Legal Counsel: Civil Enforcement</label>
+                </value>
+                <value>
+                    <fullName>Legal Counsel: Criminal Enforcement</fullName>
+                    <default>false</default>
+                    <label>Legal Counsel: Criminal Enforcement</label>
+                </value>
+                <value>
+                    <fullName>Criminal Enforcement</fullName>
+                    <default>false</default>
+                    <label>Criminal Enforcement</label>
+                </value>
+                <value>
+                    <fullName>NEPA</fullName>
+                    <default>false</default>
+                    <label>NEPA</label>
+                </value>
+                <value>
+                    <fullName>Sustainability</fullName>
+                    <default>false</default>
+                    <label>Sustainability</label>
+                </value>
+                <value>
+                    <fullName>Tribal Coordination</fullName>
+                    <default>false</default>
+                    <label>Tribal Coordination</label>
+                </value>
+                <value>
+                    <fullName>Children’s Health</fullName>
+                    <default>false</default>
+                    <label>Children’s Health</label>
+                </value>
+                <value>
+                    <fullName>Congressional Affairs &amp; International Relations</fullName>
+                    <default>false</default>
+                    <label>Congressional Affairs &amp; International Relations</label>
+                </value>
+                <value>
+                    <fullName>Public Affairs</fullName>
+                    <default>false</default>
+                    <label>Public Affairs</label>
+                </value>
+                <value>
+                    <fullName>Environmental Justice</fullName>
+                    <default>false</default>
+                    <label>Environmental Justice</label>
+                </value>
+                <value>
+                    <fullName>Multimedia Inspections/Enforcement</fullName>
+                    <default>false</default>
+                    <label>Multimedia Inspections/Enforcement</label>
+                </value>
+                <value>
+                    <fullName>Investigations/Evaluations for OIG</fullName>
+                    <default>false</default>
+                    <label>Investigations/Evaluations for OIG</label>
+                </value>
+                <value>
+                    <fullName>EEO/Civil Rights</fullName>
+                    <default>false</default>
+                    <label>EEO/Civil Rights</label>
+                </value>
+                <value>
+                    <fullName>Laboratory Services</fullName>
+                    <default>false</default>
+                    <label>Laboratory Services</label>
+                </value>
+                <value>
+                    <fullName>Multi-Media Technical Services/Analysis</fullName>
+                    <default>false</default>
+                    <label>Multi-Media Technical Services/Analysis</label>
+                </value>
+                <value>
+                    <fullName>General Geographic</fullName>
+                    <default>false</default>
+                    <label>General Geographic</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: Chesapeake Bay</fullName>
+                    <default>false</default>
+                    <label>Geo Program: Chesapeake Bay</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: Great Lakes</fullName>
+                    <default>false</default>
+                    <label>Geo Program: Great Lakes</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: Gulf of Mexico</fullName>
+                    <default>false</default>
+                    <label>Geo Program: Gulf of Mexico</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: NW Forest</fullName>
+                    <default>false</default>
+                    <label>Geo Program: NW Forest</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: Puget Sound</fullName>
+                    <default>false</default>
+                    <label>Geo Program: Puget Sound</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: SF Bay</fullName>
+                    <default>false</default>
+                    <label>Geo Program: SF Bay</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: South Florida</fullName>
+                    <default>false</default>
+                    <label>Geo Program: South Florida</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: Southeast New England Program</fullName>
+                    <default>false</default>
+                    <label>Geo Program: Southeast New England Program</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: Long Island</fullName>
+                    <default>false</default>
+                    <label>Geo Program: Long Island</label>
+                </value>
+                <value>
+                    <fullName>Geo Program: Lake Champlain</fullName>
+                    <default>false</default>
+                    <label>Geo Program: Lake Champlain</label>
+                </value>
+                <value>
+                    <fullName>General Management</fullName>
+                    <default>false</default>
+                    <label>General Management</label>
+                </value>
+                <value>
+                    <fullName>Contracts Management</fullName>
+                    <default>false</default>
+                    <label>Contracts Management</label>
+                </value>
+                <value>
+                    <fullName>Facilities &amp; Operations</fullName>
+                    <default>false</default>
+                    <label>Facilities &amp; Operations</label>
+                </value>
+                <value>
+                    <fullName>Financial Management</fullName>
+                    <default>false</default>
+                    <label>Financial Management</label>
+                </value>
+                <value>
+                    <fullName>Fiscal Management</fullName>
+                    <default>false</default>
+                    <label>Fiscal Management</label>
+                </value>
+                <value>
+                    <fullName>Grants Management &amp; Interagency Agreements &amp; Administration</fullName>
+                    <default>false</default>
+                    <label>Grants Management &amp; Interagency Agreements &amp; Administration</label>
+                </value>
+                <value>
+                    <fullName>Human Resources</fullName>
+                    <default>false</default>
+                    <label>Human Resources</label>
+                </value>
+                <value>
+                    <fullName>Health &amp; Safety</fullName>
+                    <default>false</default>
+                    <label>Health &amp; Safety</label>
+                </value>
+                <value>
+                    <fullName>Immediate Office Support (NPM or Region)</fullName>
+                    <default>false</default>
+                    <label>Immediate Office Support (NPM or Region)</label>
+                </value>
+                <value>
+                    <fullName>Information Technology</fullName>
+                    <default>false</default>
+                    <label>Information Technology</label>
+                </value>
+                <value>
+                    <fullName>Information Management/FOIA/Records</fullName>
+                    <default>false</default>
+                    <label>Information Management/FOIA/Records</label>
+                </value>
+                <value>
+                    <fullName>Research Support/Information Management</fullName>
+                    <default>false</default>
+                    <label>Research Support/Information Management</label>
+                </value>
+                <value>
+                    <fullName>Planning</fullName>
+                    <default>false</default>
+                    <label>Planning</label>
+                </value>
+                <value>
+                    <fullName>General RCRA</fullName>
+                    <default>false</default>
+                    <label>General RCRA</label>
+                </value>
+                <value>
+                    <fullName>RCRA Permitting &amp; Corrective Action (Direct Implementation)</fullName>
+                    <default>false</default>
+                    <label>RCRA Permitting &amp; Corrective Action (Direct Implementation)</label>
+                </value>
+                <value>
+                    <fullName>RCRA State Program Development &amp; Oversight</fullName>
+                    <default>false</default>
+                    <label>RCRA State Program Development &amp; Oversight</label>
+                </value>
+                <value>
+                    <fullName>RCRA Inspections &amp; Enforcement</fullName>
+                    <default>false</default>
+                    <label>RCRA Inspections &amp; Enforcement</label>
+                </value>
+                <value>
+                    <fullName>RCRA Municipal Solid Waste &amp; Sustainable Materials Management</fullName>
+                    <default>false</default>
+                    <label>RCRA Municipal Solid Waste &amp; Sustainable Materials Management</label>
+                </value>
+                <value>
+                    <fullName>Underground Storage Tanks/Leaking Underground Storage Tanks</fullName>
+                    <default>false</default>
+                    <label>Underground Storage Tanks/Leaking Underground Storage Tanks</label>
+                </value>
+                <value>
+                    <fullName>General Superfund</fullName>
+                    <default>false</default>
+                    <label>General Superfund</label>
+                </value>
+                <value>
+                    <fullName>Brownfields</fullName>
+                    <default>false</default>
+                    <label>Brownfields</label>
+                </value>
+                <value>
+                    <fullName>Emergency Planning &amp; Community Right-to-Know Reporting</fullName>
+                    <default>false</default>
+                    <label>Emergency Planning &amp; Community Right-to-Know Reporting</label>
+                </value>
+                <value>
+                    <fullName>Emergency Planning, Emergency Response &amp; Preparedness/Homeland</fullName>
+                    <default>false</default>
+                    <label>Emergency Planning, Emergency Response &amp; Preparedness/Homeland</label>
+                </value>
+                <value>
+                    <fullName>Superfund Community Involvement</fullName>
+                    <default>false</default>
+                    <label>Superfund Community Involvement</label>
+                </value>
+                <value>
+                    <fullName>Federal Facilities</fullName>
+                    <default>false</default>
+                    <label>Federal Facilities</label>
+                </value>
+                <value>
+                    <fullName>Superfund Investigation &amp; Remedial Program</fullName>
+                    <default>false</default>
+                    <label>Superfund Investigation &amp; Remedial Program</label>
+                </value>
+                <value>
+                    <fullName>Superfund Enforcement</fullName>
+                    <default>false</default>
+                    <label>Superfund Enforcement</label>
+                </value>
+                <value>
+                    <fullName>Oil Enforcement</fullName>
+                    <default>false</default>
+                    <label>Oil Enforcement</label>
+                </value>
+                <value>
+                    <fullName>General Water</fullName>
+                    <default>false</default>
+                    <label>General Water</label>
+                </value>
+                <value>
+                    <fullName>Oil Spill Planning, Prevention &amp; Response</fullName>
+                    <default>false</default>
+                    <label>Oil Spill Planning, Prevention &amp; Response</label>
+                </value>
+                <value>
+                    <fullName>Core Surface Water Quality Program</fullName>
+                    <default>false</default>
+                    <label>Core Surface Water Quality Program</label>
+                </value>
+                <value>
+                    <fullName>Groundwater/Safe Drinking Water Protection</fullName>
+                    <default>false</default>
+                    <label>Groundwater/Safe Drinking Water Protection</label>
+                </value>
+                <value>
+                    <fullName>Groundwater/Safe Drinking Water Act Enforcement</fullName>
+                    <default>false</default>
+                    <label>Groundwater/Safe Drinking Water Act Enforcement</label>
+                </value>
+                <value>
+                    <fullName>NPDES Permitting</fullName>
+                    <default>false</default>
+                    <label>NPDES Permitting</label>
+                </value>
+                <value>
+                    <fullName>CWA 404 Program</fullName>
+                    <default>false</default>
+                    <label>CWA 404 Program</label>
+                </value>
+                <value>
+                    <fullName>CWA 404 Program/NPDES Enforcement</fullName>
+                    <default>false</default>
+                    <label>CWA 404 Program/NPDES Enforcement</label>
+                </value>
+                <value>
+                    <fullName>Ocean Dumping Program</fullName>
+                    <default>false</default>
+                    <label>Ocean Dumping Program</label>
+                </value>
+                <value>
+                    <fullName>Water Security</fullName>
+                    <default>false</default>
+                    <label>Water Security</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>General Air</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Core Air Quality Program</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>State Implementation Plans (SIPs)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Air Inspections and Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Risk Management Programs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Ambient Radiation Monitoring</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Radioanalytical and Mixed Waste Analyses</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Radiological Emergency Response</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Radiation Emergency Planning, Response and Preparedness/Homeland</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Radiation Tribal Training and Air Monitoring Support</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Superfund and Regional Site Support</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Mobile Source Regulatory and Policy Development and Implementation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Certification, Registrations and Compliance (Vehicles, Engines and Fuels)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Engineering Design and Laboratory Testing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Technical Assessment, Analysis and Modeling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Transportation Partnership Programs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>International</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Air Quality Regulatory and Policy Development</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Technical Assistance to States, Locals and Tribes for Air Quality Programs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Air</controllingFieldValue>
+                <valueName>Air Quality Technical Assessment, Analysis, Monitoring and Modeling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chemical Safety &amp; Pollution Prevention</controllingFieldValue>
+                <valueName>Chemical Safety &amp; Pollution Prevention – multi-select drop-down</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chemical Safety &amp; Pollution Prevention</controllingFieldValue>
+                <valueName>Toxics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chemical Safety &amp; Pollution Prevention</controllingFieldValue>
+                <valueName>Pesticides</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chemical Safety &amp; Pollution Prevention</controllingFieldValue>
+                <valueName>Toxics Risk Reduction &amp; Prevention/Toxic Release Inventory</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>General Cross-Program</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Legal Counsel (not civil or criminal enforcement)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Legal Counsel: Civil Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Legal Counsel: Criminal Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Criminal Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>NEPA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Sustainability</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Tribal Coordination</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Children’s Health</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Congressional Affairs &amp; International Relations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Public Affairs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Environmental Justice</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Multimedia Inspections/Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Investigations/Evaluations for OIG</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>EEO/Civil Rights</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Laboratory Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cross-Program</controllingFieldValue>
+                <valueName>Multi-Media Technical Services/Analysis</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>General Geographic</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: Chesapeake Bay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: Great Lakes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: Gulf of Mexico</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: NW Forest</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: Puget Sound</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: SF Bay</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: South Florida</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: Southeast New England Program</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: Long Island</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Geographic</controllingFieldValue>
+                <valueName>Geo Program: Lake Champlain</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>General Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Contracts Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Facilities &amp; Operations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Financial Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Fiscal Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Grants Management &amp; Interagency Agreements &amp; Administration</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Human Resources</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Health &amp; Safety</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Immediate Office Support (NPM or Region)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Information Technology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Information Management/FOIA/Records</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Research Support/Information Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Management</controllingFieldValue>
+                <valueName>Planning</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCRA</controllingFieldValue>
+                <valueName>General RCRA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCRA</controllingFieldValue>
+                <valueName>RCRA Permitting &amp; Corrective Action (Direct Implementation)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCRA</controllingFieldValue>
+                <valueName>RCRA State Program Development &amp; Oversight</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCRA</controllingFieldValue>
+                <valueName>RCRA Inspections &amp; Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCRA</controllingFieldValue>
+                <valueName>RCRA Municipal Solid Waste &amp; Sustainable Materials Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCRA</controllingFieldValue>
+                <valueName>Underground Storage Tanks/Leaking Underground Storage Tanks</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>General Water</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>Oil Spill Planning, Prevention &amp; Response</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>Core Surface Water Quality Program</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>Groundwater/Safe Drinking Water Protection</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>Groundwater/Safe Drinking Water Act Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>NPDES Permitting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>CWA 404 Program</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>CWA 404 Program/NPDES Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>Ocean Dumping Program</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Water</controllingFieldValue>
+                <valueName>Water Security</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>General Superfund</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>Brownfields</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>Emergency Planning &amp; Community Right-to-Know Reporting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>Emergency Planning, Emergency Response &amp; Preparedness/Homeland</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>Superfund Community Involvement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>Federal Facilities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>Superfund Investigation &amp; Remedial Program</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>Superfund Enforcement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Superfund</controllingFieldValue>
+                <valueName>Oil Enforcement</valueName>
+            </valueSettings>
+        </valueSet>
+        <visibleLines>8</visibleLines>
+    </fields>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Project information.  Used initially for categorizations of spending in DCR and description of activities in GLLA.</description>
+    <description>The Project__c custom object is used to create and maintain OAR/OTAQ - specific categorizations of spending. These categorization schemas are used for both budgeting/planning and monitoring spending based on the unique business needs of OAR/OTAQ.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -1466,6 +2885,85 @@
         <sharedTo>
             <group>DCR_OAR_OTAQ</group>
         </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ELMSTAR_Deployment_Tracking</fullName>
+        <columns>NAME</columns>
+        <columns>Process__c</columns>
+        <columns>EPA_Owner_Organization__c</columns>
+        <columns>Date_Added__c</columns>
+        <columns>Attachment__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Project__c.ELMSTAR_Deployment_Tracking</value>
+        </filters>
+        <label>ELMSTAR Deployments</label>
+    </listViews>
+    <listViews>
+        <fullName>ELMSTAR_Deployments_for_R10</fullName>
+        <columns>NAME</columns>
+        <columns>Process__c</columns>
+        <columns>EPA_Owner_Organization__c</columns>
+        <columns>Date_Added__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Project__c.ELMSTAR_Deployment_Tracking,Project__c.ELMSTAR_Process_Improvement</value>
+        </filters>
+        <filters>
+            <field>EPA_Owner_Office_or_Region__c</field>
+            <operation>equals</operation>
+            <value>R10</value>
+        </filters>
+        <label>ELMSTAR Deployments for R10</label>
+    </listViews>
+    <listViews>
+        <fullName>ELMSTAR_Ideas_Implemented</fullName>
+        <columns>NAME</columns>
+        <columns>Description_of_Idea__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Project__c.ELMSTAR_Idea_Implemented</value>
+        </filters>
+        <label>ELMSTAR Ideas Implemented</label>
+    </listViews>
+    <listViews>
+        <fullName>ELMSTAR_Process_Improvements</fullName>
+        <columns>NAME</columns>
+        <columns>Process__c</columns>
+        <columns>Improvement_Pct__c</columns>
+        <columns>EPA_Owner_Office_or_Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Project__c.ELMSTAR_Process_Improvement</value>
+        </filters>
+        <label>ELMSTAR Process Improvements</label>
+    </listViews>
+    <listViews>
+        <fullName>ELMS_Reporting_Tracking</fullName>
+        <columns>NAME</columns>
+        <columns>Process__c</columns>
+        <columns>Description_of_Idea__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Project__c.ELMSTAR_Deployment_Tracking,Project__c.ELMSTAR_Idea_Implemented,Project__c.ELMSTAR_Process_Improvement</value>
+        </filters>
+        <label>ELMSTAR All</label>
     </listViews>
     <recordTypes>
         <fullName>DCR_Project_Record_Type</fullName>
@@ -2804,6 +4302,2936 @@
             </values>
             <values>
                 <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ELMSTAR_Deployment_Tracking</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>ELMS</compactLayoutAssignment>
+        <description>EPA Lean Management System (ELMS) Deployment</description>
+        <label>ELMSTAR Deployment</label>
+        <picklistValues>
+            <picklist>AHRC__c</picklist>
+            <values>
+                <fullName>561</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56A - IO-DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56C - CD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56D - TATD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56E - IO-AA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56F - TCD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56H - ASD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58 %E2%80%93 OAP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58A - IO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58C - SPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58D - CAMD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58E - CPPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58F - CCD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Area__c</picklist>
+            <values>
+                <fullName>Air Inspections and Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Quality Regulatory and Policy Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Quality Technical Assessment%2C Analysis%2C Monitoring and Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ambient Radiation Monitoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brownfields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CWA 404 Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CWA 404 Program%2FNPDES Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certification%2C Registrations and Compliance %28Vehicles%2C Engines and Fuels%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemical Safety %26 Pollution Prevention %E2%80%93 multi-select drop-down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Children%E2%80%99s Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Congressional Affairs %26 International Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contracts Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Core Air Quality Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Core Surface Water Quality Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Criminal Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EEO%2FCivil Rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency Planning %26 Community Right-to-Know Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency Planning%2C Emergency Response %26 Preparedness%2FHomeland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering Design and Laboratory Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental Justice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities %26 Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Federal Facilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fiscal Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Air</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Cross-Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Geographic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General RCRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Superfund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Water</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Chesapeake Bay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Great Lakes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Gulf of Mexico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Lake Champlain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Long Island</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A NW Forest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Puget Sound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A SF Bay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A South Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Southeast New England Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grants Management %26 Interagency Agreements %26 Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groundwater%2FSafe Drinking Water Act Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groundwater%2FSafe Drinking Water Protection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health %26 Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Immediate Office Support %28NPM or Region%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Management%2FFOIA%2FRecords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investigations%2FEvaluations for OIG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laboratory Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel %28not civil or criminal enforcement%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel%3A Civil Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel%3A Criminal Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Source Regulatory and Policy Development and Implementation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Media Technical Services%2FAnalysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multimedia Inspections%2FEnforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPDES Permitting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ocean Dumping Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Spill Planning%2C Prevention %26 Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pesticides</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Affairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Inspections %26 Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Municipal Solid Waste %26 Sustainable Materials Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Permitting %26 Corrective Action %28Direct Implementation%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA State Program Development %26 Oversight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiation Emergency Planning%2C Response and Preparedness%2FHomeland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiation Tribal Training and Air Monitoring Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radioanalytical and Mixed Waste Analyses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiological Emergency Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Research Support%2FInformation Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Management Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Implementation Plans %28SIPs%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Community Involvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Investigation %26 Remedial Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund and Regional Site Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Assessment%2C Analysis and Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Assistance to States%2C Locals and Tribes for Air Quality Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toxics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toxics Risk Reduction %26 Prevention%2FToxic Release Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation Partnership Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tribal Coordination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underground Storage Tanks%2FLeaking Underground Storage Tanks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water Security</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Area_of_Concern__c</picklist>
+            <values>
+                <fullName>All AOCs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ashtabula River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Buffalo River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clinton River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuyahoga River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deer Lake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detroit River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eighteenmile Creek%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fox River%2FGreen Bay%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grand Calumet River%2FIndiana Harbor Canal%2C IN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kalamazoo River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manistique River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maumee River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Menominee River%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Milwaukee Estuary%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muskegon Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Niagara River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oswego River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presque Isle Bay%2C PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>River Raisin%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rochester Embayment%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rouge River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Saginaw River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sheboygan River%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Clair River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Lawrence River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Louis River%2C MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Mary%27s River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Torch Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waukegon Harbor%2C IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>White Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contractor__c</picklist>
+            <values>
+                <fullName>CH2M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EA_Engineering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EPA_Program_Area__c</picklist>
+            <values>
+                <fullName>Air</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemical Safety %26 Pollution Prevention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross-Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geographic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>First_Generation_Flow_Board_Posted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_4_huddles_occurred__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Improvement_Direction__c</picklist>
+            <values>
+                <fullName>Decrease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Location_State__c</picklist>
+            <values>
+                <fullName>AK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Performance_Board_Posted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Problem_Solving_Tool__c</picklist>
+            <values>
+                <fullName>4 Square</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Whys</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Action Registry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Countermeasure Worksheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fishbone Diagram</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flow Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kaizen DMAIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pulse Board</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Standard_Work_for_the_Process__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Visual_Management_Used__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ELMSTAR_Idea_Implemented</fullName>
+        <active>true</active>
+        <description>Idea implemented</description>
+        <label>ELMSTAR Idea Implemented</label>
+        <picklistValues>
+            <picklist>AHRC__c</picklist>
+            <values>
+                <fullName>561</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56A - IO-DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56C - CD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56D - TATD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56E - IO-AA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56F - TCD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56H - ASD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58 %E2%80%93 OAP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58A - IO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58C - SPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58D - CAMD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58E - CPPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58F - CCD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Area__c</picklist>
+            <values>
+                <fullName>Air Inspections and Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Quality Regulatory and Policy Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Quality Technical Assessment%2C Analysis%2C Monitoring and Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ambient Radiation Monitoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brownfields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CWA 404 Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CWA 404 Program%2FNPDES Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certification%2C Registrations and Compliance %28Vehicles%2C Engines and Fuels%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemical Safety %26 Pollution Prevention %E2%80%93 multi-select drop-down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Children%E2%80%99s Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Congressional Affairs %26 International Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contracts Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Core Air Quality Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Core Surface Water Quality Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Criminal Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EEO%2FCivil Rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency Planning %26 Community Right-to-Know Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency Planning%2C Emergency Response %26 Preparedness%2FHomeland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering Design and Laboratory Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental Justice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities %26 Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Federal Facilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fiscal Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Air</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Cross-Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Geographic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General RCRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Superfund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Water</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Chesapeake Bay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Great Lakes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Gulf of Mexico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Lake Champlain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Long Island</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A NW Forest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Puget Sound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A SF Bay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A South Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Southeast New England Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grants Management %26 Interagency Agreements %26 Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groundwater%2FSafe Drinking Water Act Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groundwater%2FSafe Drinking Water Protection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health %26 Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Immediate Office Support %28NPM or Region%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Management%2FFOIA%2FRecords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investigations%2FEvaluations for OIG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laboratory Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel %28not civil or criminal enforcement%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel%3A Civil Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel%3A Criminal Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Source Regulatory and Policy Development and Implementation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Media Technical Services%2FAnalysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multimedia Inspections%2FEnforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPDES Permitting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ocean Dumping Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Spill Planning%2C Prevention %26 Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pesticides</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Affairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Inspections %26 Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Municipal Solid Waste %26 Sustainable Materials Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Permitting %26 Corrective Action %28Direct Implementation%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA State Program Development %26 Oversight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiation Emergency Planning%2C Response and Preparedness%2FHomeland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiation Tribal Training and Air Monitoring Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radioanalytical and Mixed Waste Analyses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiological Emergency Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Research Support%2FInformation Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Management Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Implementation Plans %28SIPs%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Community Involvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Investigation %26 Remedial Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund and Regional Site Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Assessment%2C Analysis and Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Assistance to States%2C Locals and Tribes for Air Quality Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toxics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toxics Risk Reduction %26 Prevention%2FToxic Release Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation Partnership Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tribal Coordination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underground Storage Tanks%2FLeaking Underground Storage Tanks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water Security</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Area_of_Concern__c</picklist>
+            <values>
+                <fullName>All AOCs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ashtabula River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Buffalo River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clinton River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuyahoga River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deer Lake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detroit River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eighteenmile Creek%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fox River%2FGreen Bay%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grand Calumet River%2FIndiana Harbor Canal%2C IN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kalamazoo River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manistique River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maumee River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Menominee River%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Milwaukee Estuary%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muskegon Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Niagara River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oswego River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presque Isle Bay%2C PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>River Raisin%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rochester Embayment%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rouge River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Saginaw River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sheboygan River%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Clair River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Lawrence River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Louis River%2C MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Mary%27s River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Torch Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waukegon Harbor%2C IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>White Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contractor__c</picklist>
+            <values>
+                <fullName>CH2M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EA_Engineering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EPA_Program_Area__c</picklist>
+            <values>
+                <fullName>Air</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemical Safety %26 Pollution Prevention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross-Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geographic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>First_Generation_Flow_Board_Posted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_4_huddles_occurred__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Improvement_Direction__c</picklist>
+            <values>
+                <fullName>Decrease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Location_State__c</picklist>
+            <values>
+                <fullName>AK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Performance_Board_Posted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Problem_Solving_Tool__c</picklist>
+            <values>
+                <fullName>4 Square</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Whys</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Action Registry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Countermeasure Worksheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fishbone Diagram</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flow Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kaizen DMAIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pulse Board</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Standard_Work_for_the_Process__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Visual_Management_Used__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ELMSTAR_Process_Improvement</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>ELMS</compactLayoutAssignment>
+        <description>ELMSTAR Process Improvement</description>
+        <label>ELMSTAR Process Improvement</label>
+        <picklistValues>
+            <picklist>AHRC__c</picklist>
+            <values>
+                <fullName>561</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56A - IO-DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56C - CD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56D - TATD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56E - IO-AA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56F - TCD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56H - ASD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58 %E2%80%93 OAP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58A - IO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58C - SPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58D - CAMD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58E - CPPD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58F - CCD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Area__c</picklist>
+            <values>
+                <fullName>Air Inspections and Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Quality Regulatory and Policy Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Air Quality Technical Assessment%2C Analysis%2C Monitoring and Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ambient Radiation Monitoring</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brownfields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CWA 404 Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CWA 404 Program%2FNPDES Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certification%2C Registrations and Compliance %28Vehicles%2C Engines and Fuels%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemical Safety %26 Pollution Prevention %E2%80%93 multi-select drop-down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Children%E2%80%99s Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Congressional Affairs %26 International Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contracts Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Core Air Quality Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Core Surface Water Quality Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Criminal Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EEO%2FCivil Rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency Planning %26 Community Right-to-Know Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency Planning%2C Emergency Response %26 Preparedness%2FHomeland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering Design and Laboratory Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental Justice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities %26 Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Federal Facilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fiscal Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Air</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Cross-Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Geographic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General RCRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Superfund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Water</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Chesapeake Bay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Great Lakes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Gulf of Mexico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Lake Champlain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Long Island</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A NW Forest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Puget Sound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A SF Bay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A South Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geo Program%3A Southeast New England Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grants Management %26 Interagency Agreements %26 Administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groundwater%2FSafe Drinking Water Act Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groundwater%2FSafe Drinking Water Protection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health %26 Safety</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Immediate Office Support %28NPM or Region%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Management%2FFOIA%2FRecords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investigations%2FEvaluations for OIG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laboratory Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel %28not civil or criminal enforcement%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel%3A Civil Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Counsel%3A Criminal Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Source Regulatory and Policy Development and Implementation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Media Technical Services%2FAnalysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multimedia Inspections%2FEnforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NEPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPDES Permitting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ocean Dumping Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oil Spill Planning%2C Prevention %26 Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pesticides</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Affairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Inspections %26 Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Municipal Solid Waste %26 Sustainable Materials Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA Permitting %26 Corrective Action %28Direct Implementation%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA State Program Development %26 Oversight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiation Emergency Planning%2C Response and Preparedness%2FHomeland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiation Tribal Training and Air Monitoring Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radioanalytical and Mixed Waste Analyses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiological Emergency Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Research Support%2FInformation Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Management Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Implementation Plans %28SIPs%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Community Involvement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Enforcement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund Investigation %26 Remedial Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund and Regional Site Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Assessment%2C Analysis and Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Assistance to States%2C Locals and Tribes for Air Quality Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toxics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toxics Risk Reduction %26 Prevention%2FToxic Release Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation Partnership Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tribal Coordination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underground Storage Tanks%2FLeaking Underground Storage Tanks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water Security</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Area_of_Concern__c</picklist>
+            <values>
+                <fullName>All AOCs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ashtabula River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Buffalo River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clinton River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuyahoga River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deer Lake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detroit River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eighteenmile Creek%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fox River%2FGreen Bay%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grand Calumet River%2FIndiana Harbor Canal%2C IN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kalamazoo River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manistique River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maumee River%2C OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Menominee River%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Milwaukee Estuary%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muskegon Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Niagara River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oswego River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presque Isle Bay%2C PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>River Raisin%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rochester Embayment%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rouge River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Saginaw River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sheboygan River%2C WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Clair River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Lawrence River%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Louis River%2C MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St%2E Mary%27s River%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Torch Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waukegon Harbor%2C IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>White Lake%2C MI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contractor__c</picklist>
+            <values>
+                <fullName>CH2M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EA_Engineering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EPA_Program_Area__c</picklist>
+            <values>
+                <fullName>Air</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemical Safety %26 Pollution Prevention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross-Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geographic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superfund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>First_Generation_Flow_Board_Posted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_4_huddles_occurred__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Improvement_Direction__c</picklist>
+            <values>
+                <fullName>Decrease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Location_State__c</picklist>
+            <values>
+                <fullName>AK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NJ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WY</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Performance_Board_Posted__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Problem_Solving_Tool__c</picklist>
+            <values>
+                <fullName>4 Square</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Whys</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Action Registry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Countermeasure Worksheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fishbone Diagram</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flow Board</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kaizen DMAIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pulse Board</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Standard_Work_for_the_Process__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Visual_Management_Used__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
