@@ -3392,33 +3392,6 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Intermediate_Review_Method__c</picklist>
-            <values>
-                <fullName>1st Line Supervisor%2C ADEO%2C DEO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>1st Line Supervisor%2C DEO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2nd Line Supervisor%2C ADEO%2C DEO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>2nd Line Supervisor%2C DEO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ADEO%2C DEO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>DEO Only</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>Ownership</picklist>
             <values>
                 <fullName>Other</fullName>

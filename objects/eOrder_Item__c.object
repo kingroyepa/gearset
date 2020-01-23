@@ -405,7 +405,7 @@
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Specific or detailed items within an order tracked in the eOrders document, initially for the GAS application.  (Similar to Line Items, into which this item might be merged someday.)</description>
+    <description>Custom Object to track GAS Acquisition System.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>

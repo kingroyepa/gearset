@@ -71,7 +71,7 @@
         <thead>
         <tr>
         <th>
-        <div title="Category Number"><div class="delivery-table-label">Product No.</div></div>
+        <div title="Category Number"><div class="delivery-table-label">Category No.</div></div>
         </th>
         <th>
         <div title="Quantity"><div class="delivery-table-label">Qty</div></div>
@@ -83,19 +83,7 @@
         <div title="Status"><div class="delivery-table-label">Status</div></div>
         </th>
         <th>
-        <div title="Date Received"><div class="delivery-table-label">Date Ordered</div></div>
-        </th>
-        <th>
-        <div title="Product Description"><div class="delivery-table-label">Product Description</div></div>
-        </th>
-        <th>
-        <div title="Delivery Date"><div class="delivery-table-label">Delivery Date</div></div>
-        </th>
-        <th>
-        <div title="Requestor"><div class="delivery-table-label">Requestor</div></div>
-        </th>
-        <th>
-        <div title="Unit Price"><div class="delivery-table-label">Unit Price/Cost</div></div>
+        <div title="Date Received"><div class="delivery-table-label">Date Received</div></div>
         </th>
         </tr>
         </thead>
@@ -116,25 +104,11 @@
                 </div>
                 </td> 
                 <td data-label="Status">
-                <div class="delivery-table-data" title="Status">Ordered</div>
+                <div class="delivery-table-data" title="Status">{!line.Status__c}</div>
                 </td>                   
                 <td data-label="Date Received">
                 <div class="delivery-table-data" title="date"><apex:outputText value="{0,date,MM/dd/yy}"> <apex:param value="{!TODAY()}" /> </apex:outputText></div>
-                </td>
-                 <td data-label="Product Description">
-                <div class="delivery-table-data" title="Product Description">{!line.Product_Description__c}</div>
-                </td> 
-                 <td data-label="Delivery Date">
-                 <div class="delivery-table-data" title="Delivery Date"><apex:outputText value="{0,date,MM/dd/yy}"> <apex:param value="{!line.eOrder__r.Order_Delivery_Date__c}" /> </apex:outputText></div>
-                </td> 
-                <td data-label="Requester">
-                <div class="delivery-table-data" title="Requester">{!line.Order_Request__r.Requester__c}</div>
-                </td> 
-                 <td data-label="Price">
-                <div class="delivery-table-data" title="Price">
-                <apex:outputText value="{0, Number, Currency}"><apex:param value="{!line.Product_List_Price__c}" /></apex:outputText>
-                </div>
-                </td>            
+                </td>           
             </tr>
         </apex:repeat>
     </tbody>

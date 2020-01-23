@@ -37,17 +37,27 @@ Public Class ORDGAS_190063savePDFTest{
         ApexPages.CurrentPage().getParameters().put('id',acc.id);
         Apexpages.StandardController sc = new Apexpages.StandardController(acc);
         ORDGAS_190063savePDF ext = new ORDGAS_190063savePDF(sc);
-        ext.organizationName = 'OEI';
-        ext.orgNames.add(ext.organizationName);    
-        ext.saveAttachement();        
+        ext.saveAttachement();
+        ext.organizationName = request.Requester_Org__c;
         ext.getEordersForOrg();
         ext.Cancel();
         ext.redirectToPDFPage();
+         
+        /*ContentVersion contentVersion = new ContentVersion(); 
+        contentVersion.Title = 'Test ContentVersion File - '; 
+        contentVersion.PathOnClient = contentVersion.Title; 
+        Blob bodyBlob = EncodingUtil.base64Decode('TestFileData');
+        contentVersion.VersionData = bodyBlob; 
+        contentVersion.IsMajorVersion = false;
+        contentVersion.origin = 'H';
+        //contentVersion.ContentDocumentId = contentVersionId; 
+        
+          */
         test.StopTest();
         }
     }
     static testMethod void afterUpdate(){
-        User u =[select id from user where UserName='GAS5@test.org'];
+         User u =[select id from user where UserName='GAS5@test.org'];
         system.runas(u){
         test.StartTest();
         account acc= new account();
@@ -63,10 +73,8 @@ Public Class ORDGAS_190063savePDFTest{
         eorder.Status__c  = 'Draft';
         insert eorder;
         
-        String fileName = '1900-63 - ' + acc.Name + ' - ' + system.Now() +'.pdf';    
-            
         ContentVersion contentVersion = new ContentVersion(); 
-        contentVersion.Title = fileName; 
+        contentVersion.Title = 'Quote_'+acc.Id + '.pdf'; 
         contentVersion.PathOnClient = contentVersion.Title; 
         Blob bodyBlob = EncodingUtil.base64Decode('TestFileData');
         contentVersion.VersionData = bodyBlob; 
@@ -74,7 +82,7 @@ Public Class ORDGAS_190063savePDFTest{
         contentVersion.origin = 'H';
         insert contentVersion;
         //test.StartTest();
-        ApexPages.CurrentPage().getParameters().put('id',acc.Id);
+        ApexPages.CurrentPage().getParameters().put('id',acc.id);
         Apexpages.StandardController sc = new Apexpages.StandardController(acc);
         ORDGAS_190063savePDF ext = new ORDGAS_190063savePDF(sc);
         ext.saveAttachement();
@@ -123,14 +131,13 @@ Public Class ORDGAS_190063savePDFTest{
     {
         // Create a sample form statement object and then submit it for approval.
             
-        Profile p = [SELECT Id FROM Profile WHERE Name='Standard User'];
+        Profile p = [SELECT Id FROM Profile WHERE Name='System Administrator'];
 		
         // Create User Record
         User u = new User(Alias = 'standt', Email='standarduser@testorg.com',
         EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
         LocaleSidKey='en_US', ProfileId = p.Id,
         TimeZoneSidKey='America/Los_Angeles',
-        department = 'OEI',
         UserName='GAS5@test.org');
         insert u;
 

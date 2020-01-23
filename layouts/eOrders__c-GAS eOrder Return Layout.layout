@@ -30,10 +30,6 @@
                 <behavior>Edit</behavior>
                 <field>Requested_Pickup_Date__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Archive__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -149,10 +145,9 @@
     <relatedLists>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>Product_Description__c</fields>
+        <fields>Product__c</fields>
         <fields>Quantity__c</fields>
         <fields>Total_Price__c</fields>
-        <fields>Product__c</fields>
         <relatedList>eOrder_Item__c.eOrder__c</relatedList>
     </relatedLists>
     <relatedLists>

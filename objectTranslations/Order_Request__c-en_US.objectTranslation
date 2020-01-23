@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+﻿<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <label><!-- Additional Information --></label>
         <name>Additional_Product_Information__c</name>
@@ -1088,10 +1088,7 @@
         <label><!-- Purchase Card Order Request --></label>
         <name>Purchase_Card_Order_Request</name>
     </recordTypes>
-    <validationRules>
-        <errorMessage><!-- The order request can be archived only after the order request is fulfilled. --></errorMessage>
-        <name>ORDGAS_Check_Archive</name>
-    </validationRules>
+    
     <validationRules>
         <errorMessage><!-- Delivery Date for Human Studies Facility is only on Wednesdays --></errorMessage>
         <name>ORDGAS_Limit_Delivery_Days_HSF</name>

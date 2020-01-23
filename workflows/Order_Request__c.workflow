@@ -111,17 +111,6 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
-        <fullName>ORDGAS_Set_Status_to_Archive_for_Order</fullName>
-        <description>Gas Aplication</description>
-        <field>Stage__c</field>
-        <literalValue>Archived</literalValue>
-        <name>ORDGAS- Set Status to Archive for Order</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
         <fullName>ORD_GASRejected_Set_Stage_to_New_Order</fullName>
         <field>Stage__c</field>
         <literalValue>New Order</literalValue>
@@ -627,30 +616,5 @@
         </criteriaItems>
         <description>needs to automatically check Green Purchase box if EPEAT = Yes</description>
         <triggerType>onAllChanges</triggerType>
-    </rules>
-    <rules>
-        <fullName>ORDGAS_SET_STATUS_TO_ARCHIVE_FOR_ORDER</fullName>
-        <actions>
-            <name>ORDGAS_Set_Status_to_Archive_for_Order</name>
-            <type>FieldUpdate</type>
-        </actions>
-        <active>true</active>
-        <criteriaItems>
-            <field>Order_Request__c.RecordTypeId</field>
-            <operation>equals</operation>
-            <value>GAS Order Request</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Order_Request__c.Stage__c</field>
-            <operation>equals</operation>
-            <value>Order Fulfilled</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Order_Request__c.Archive__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </criteriaItems>
-        <description>Gas application</description>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>

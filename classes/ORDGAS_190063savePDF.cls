@@ -27,10 +27,14 @@ public class ORDGAS_190063savePDF {
         system.debug('organizationName = ' + organizationName);
         system.debug('id = ' + pageeOrd.id + '     id2' +pageeOrdId);
         if(organizationName != null && orgNames.contains(organizationName)){
-            eroderToDisplay = [ SELECT id, eOrder__r.Call_Number__c,Product__r.Name,Quantity__c,Product_List_Price__c,Total_Price__c,Order_Request__r.Requester_Org__c,Order_Request__r.Delivery_Date__c,X1900_63_Generated_Date__c from eOrder_Item__c where Vendor_Name__c = :pageeOrdId AND X1900_63__c = TRUE AND Status__c = 'Order Delivered' AND Order_Request__r.Requester_Org__c = :organizationName ];
+            eroderToDisplay = [
+                    SELECT id, eOrder__r.Call_Number__c,Product__r.Name,Quantity__c,Product_List_Price__c,Total_Price__c,Order_Request__r.Requester_Org__c,Order_Request__r.Delivery_Date__c,X1900_63_Generated_Date__c
+                    from eOrder_Item__c
+                    where Vendor_Name__c = :pageeOrdId AND X1900_63__c = TRUE AND Status__c = 'Order Delivered' AND Order_Request__r.Requester_Org__c = :organizationName
+            ];
         }
         else {
-            eroderToDisplay = [SELECT id , eOrder__r.Call_Number__c,eOrder__r.CreatedBy.Name,Product__r.Name,Quantity__c,Product_List_Price__c,Total_Price__c,Order_Request__r.Requester_Org__c,Order_Request__r.Requester__c,Order_Request__r.Delivery_Date__c,X1900_63_Generated_Date__c from eOrder_Item__c where Vendor_Name__c =:pageeOrdId AND X1900_63__c = TRUE AND Status__c = 'Order Delivered' ];
+            eroderToDisplay = [SELECT id , eOrder__r.Call_Number__c,Product__r.Name,Quantity__c,Product_List_Price__c,Total_Price__c,Order_Request__r.Requester_Org__c,Order_Request__r.Delivery_Date__c,X1900_63_Generated_Date__c from eOrder_Item__c where Vendor_Name__c =:pageeOrdId AND X1900_63__c = TRUE AND Status__c = 'Order Delivered' ];
         }
 
         system.debug('@@@'+eroderToDisplay);

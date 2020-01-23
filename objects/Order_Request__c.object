@@ -2663,29 +2663,6 @@
         <label>All PCORS Requests</label>
     </listViews>
     <listViews>
-        <fullName>Approved_Gas_Order_Requests</fullName>
-        <columns>NAME</columns>
-        <columns>Requester_Org__c</columns>
-        <columns>CREATEDBY_USER</columns>
-        <columns>Delivery_Date__c</columns>
-        <columns>Stage__c</columns>
-        <columns>Delivery_facilities__c</columns>
-        <columns>Facility_Location__c</columns>
-        <columns>CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>RECORDTYPE</field>
-            <operation>equals</operation>
-            <value>Order_Request__c.GAS_Order_Request</value>
-        </filters>
-        <filters>
-            <field>Stage__c</field>
-            <operation>equals</operation>
-            <value>Request Approved</value>
-        </filters>
-        <label>GAS Approved Orders</label>
-    </listViews>
-    <listViews>
         <fullName>Archived_Order_Requests</fullName>
         <columns>NAME</columns>
         <columns>Requester_Org__c</columns>
@@ -2730,15 +2707,6 @@
             <value>Full Order Received</value>
         </filters>
         <label>GAS Fully Received Orders</label>
-    </listViews>
-    <listViews>
-        <fullName>GAS_Admins_Order_Request</fullName>
-        <filterScope>Queue</filterScope>
-        <label>GAS Admins</label>
-        <queue>GAS_Admins</queue>
-        <sharedTo>
-            <allInternalUsers></allInternalUsers>
-        </sharedTo>
     </listViews>
     <listViews>
         <fullName>GAS_Order_All</fullName>
@@ -2820,75 +2788,6 @@
         <label>PCORS Order Requests</label>
     </listViews>
     <listViews>
-        <fullName>Partially_Received_Gas_Orders</fullName>
-        <columns>NAME</columns>
-        <columns>Requester_Org__c</columns>
-        <columns>CREATEDBY_USER</columns>
-        <columns>Delivery_Date__c</columns>
-        <columns>Stage__c</columns>
-        <columns>Delivery_facilities__c</columns>
-        <columns>Facility_Location__c</columns>
-        <columns>CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>RECORDTYPE</field>
-            <operation>equals</operation>
-            <value>Order_Request__c.GAS_Order_Request</value>
-        </filters>
-        <filters>
-            <field>Stage__c</field>
-            <operation>equals</operation>
-            <value>Partial Order Received</value>
-        </filters>
-        <label>GAS Partially Received Orders</label>
-    </listViews>
-    <listViews>
-        <fullName>Pending_Approval_Gas_Orders</fullName>
-        <columns>NAME</columns>
-        <columns>Requester_Org__c</columns>
-        <columns>CREATEDBY_USER</columns>
-        <columns>Delivery_Date__c</columns>
-        <columns>Stage__c</columns>
-        <columns>Delivery_facilities__c</columns>
-        <columns>Facility_Location__c</columns>
-        <columns>CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>RECORDTYPE</field>
-            <operation>equals</operation>
-            <value>Order_Request__c.GAS_Order_Request</value>
-        </filters>
-        <filters>
-            <field>Stage__c</field>
-            <operation>equals</operation>
-            <value>Pending Approval</value>
-        </filters>
-        <label>GAS Pending Approval Orders</label>
-    </listViews>
-    <listViews>
-        <fullName>Placed_Gas_Orders</fullName>
-        <columns>NAME</columns>
-        <columns>Requester_Org__c</columns>
-        <columns>CREATEDBY_USER</columns>
-        <columns>Delivery_Date__c</columns>
-        <columns>Stage__c</columns>
-        <columns>Delivery_facilities__c</columns>
-        <columns>Facility_Location__c</columns>
-        <columns>CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>RECORDTYPE</field>
-            <operation>equals</operation>
-            <value>Order_Request__c.GAS_Order_Request</value>
-        </filters>
-        <filters>
-            <field>Stage__c</field>
-            <operation>equals</operation>
-            <value>Order Placed</value>
-        </filters>
-        <label>GAS Placed Orders</label>
-    </listViews>
-    <listViews>
         <fullName>test</fullName>
         <columns>NAME</columns>
         <filterScope>Mine</filterScope>
@@ -2920,17 +2819,6 @@
             </values>
             <values>
                 <fullName>RTP</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>EPEAT__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -3756,10 +3644,6 @@
         </picklistValues>
         <picklistValues>
             <picklist>Stage__c</picklist>
-            <values>
-                <fullName>Archived</fullName>
-                <default>false</default>
-            </values>
             <values>
                 <fullName>Full Order Received</fullName>
                 <default>false</default>
@@ -5128,18 +5012,6 @@
         </picklistValues>
     </recordTypes>
     <validationRules>
-        <fullName>ORDGAS_Check_Archive</fullName>
-        <active>true</active>
-        <description>Gas application</description>
-        <errorConditionFormula>AND(
- RecordType.DeveloperName ='GAS_Order_Request',
- NOT(TEXT( Stage__c )='Order Fulfilled'),
- ISCHANGED( Archive__c )
-)</errorConditionFormula>
-        <errorDisplayField>Archive__c</errorDisplayField>
-        <errorMessage>The order request can be archived only after the order request is fulfilled.</errorMessage>
-    </validationRules>
-    <validationRules>
         <fullName>ORDGAS_Limit_Delivery_Days_HSF</fullName>
         <active>true</active>
         <errorConditionFormula>IF( RecordType.DeveloperName = 'GAS_Order_Request' &amp;&amp; TEXT(Delivery_facilities__c) = "HSF",
@@ -5189,11 +5061,9 @@ WEEKDAY( Delivery_Date__c ) = 7)
         <fullName>ORDGAS_Limit_Delivery_Days_Today</fullName>
         <active>true</active>
         <errorConditionFormula>IF(
-AND( 
-RecordType.DeveloperName = 'GAS_Order_Request',
-$Profile.Name &lt;&gt; 'System Administrator',
+AND( RecordType.DeveloperName = 'GAS_Order_Request',
 TEXT(Stage__c)='New Order',
-Delivery_Date__c &lt; TODAY()), 
+Delivery_Date__c &lt; TODAY()),
 
 TRUE,FALSE)</errorConditionFormula>
         <errorDisplayField>Delivery_Date__c</errorDisplayField>

@@ -27,10 +27,6 @@
                 <behavior>Readonly</behavior>
                 <field>Stage__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Archive__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -54,7 +50,7 @@
                 <field>Total_Quantity__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Order_Request_Total__c</field>
             </layoutItems>
         </layoutColumns>
@@ -175,10 +171,9 @@
     </quickActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Product_Description__c</fields>
-        <fields>Product_Size__c</fields>
-        <fields>Product_List_Price__c</fields>
         <fields>Product_Code__c</fields>
+        <fields>Product_Description__c</fields>
+        <fields>Product_List_Price__c</fields>
         <fields>Quantity__c</fields>
         <fields>Total_Price__c</fields>
         <relatedList>eOrder_Item__c.Order_Request__c</relatedList>
@@ -207,7 +202,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00ht0000002TV3D</masterLabel>
+        <masterLabel>00hr0000002T6w9</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

@@ -256,7 +256,7 @@
     </fields>
     <fields>
         <fullName>Organization_Name__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
+        <deleteConstraint>SetNull</deleteConstraint>
         <description>GAS application.</description>
         <externalId>false</externalId>
         <inlineHelpText>Choose the Organization for which you want to create an eOrder.</inlineHelpText>
@@ -376,11 +376,6 @@
                     <default>false</default>
                     <label>Return Order Closed</label>
                 </value>
-                <value>
-                    <fullName>Archived</fullName>
-                    <default>false</default>
-                    <label>Archived</label>
-                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -420,7 +415,7 @@
     </fields>
     <fields>
         <fullName>Vendor_Name__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
+        <deleteConstraint>SetNull</deleteConstraint>
         <description>Choose the Vendor for which you want to create an eOrder</description>
         <externalId>false</externalId>
         <inlineHelpText>Choose the Vendor for which you want to create an eOrder</inlineHelpText>
@@ -450,7 +445,7 @@
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Data on orders placed in some context, initially orders for gas cylinders in the GAS application, but available for other uses, too.</description>
+    <description>Custom Object to Capture Orders placed for GAS Order Management Application.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -568,7 +563,6 @@
         <columns>Requester__c</columns>
         <columns>Status__c</columns>
         <columns>Vendor_Name__c</columns>
-        <columns>Order_Effective_Date__c</columns>
         <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <label>GAS All eOrders</label>
@@ -598,10 +592,6 @@
             <picklist>Status__c</picklist>
             <values>
                 <fullName>Activated</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Archived</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -638,10 +628,6 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Archived</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Draft</fullName>
                 <default>true</default>
             </values>
@@ -655,24 +641,6 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <validationRules>
-        <fullName>ORDGAS_Check_Archive</fullName>
-        <active>true</active>
-        <description>GAS application.</description>
-        <errorConditionFormula>OR(
-AND(
-RecordType.DeveloperName ='GAS_eOrder_Admin',
-NOT(TEXT( Status__c)='Order Closed'),
-ISCHANGED( Archive__c )),
-AND(
-RecordType.DeveloperName ='GAS_eOrder_Return',
-NOT(TEXT( Status__c)='Return Order Closed'),
-ISCHANGED( Archive__c ))
-
-)</errorConditionFormula>
-        <errorDisplayField>Archive__c</errorDisplayField>
-        <errorMessage>The eOrder request can be archived only after the order request is fulfilled.</errorMessage>
-    </validationRules>
     <webLinks>
         <fullName>Generate_PDF</fullName>
         <availability>online</availability>

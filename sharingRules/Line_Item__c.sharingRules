@@ -51,20 +51,6 @@
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
-        <fullName>GAS_Cylinders</fullName>
-        <accessLevel>Edit</accessLevel>
-        <description>GAS application. Shares the cylinders with GAS application Admins.</description>
-        <label>GAS Cylinders</label>
-        <sharedTo>
-            <group>GAS_Application_Admin</group>
-        </sharedTo>
-        <criteriaItems>
-            <field>RecordTypeId</field>
-            <operation>equals</operation>
-            <value>GAS Cylinders Return,GAS Cylinders</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
-    <sharingCriteriaRules>
         <fullName>PCORS_Line_Items</fullName>
         <accessLevel>Read</accessLevel>
         <description>Read Access</description>

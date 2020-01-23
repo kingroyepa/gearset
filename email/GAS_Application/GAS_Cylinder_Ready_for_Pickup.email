@@ -56,6 +56,8 @@
 <p><span class="label-email-details">Product Name:</span> {!relatedTo.Product__r.Product_Name__c}</p>
 
 <p><span class="label-email-details">Product Size:</span> {!relatedTo.Product__r.Size__c}</p>
+
+<p><span class="label-email-details">Serial Number:</span> {!relatedTo.Serial_Number__c}</p>
 </div>
 
 <p>
