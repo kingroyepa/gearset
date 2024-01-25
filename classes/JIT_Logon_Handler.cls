@@ -8,7 +8,7 @@ global class JIT_Logon_Handler implements Auth.SamlJitHandler {
 
     global User createUser(Id samlSsoProviderId, Id communityId, Id portalId, String federationIdentifier, Map<String, String> attributes, String assertion) {
         return null;
-    }
+    } 
 
     global void updateUser(Id userId, Id samlSsoProviderId, Id communityId, Id portalId, String federationIdentifier, Map<String, String> attributes, String assertion) {
          // If user is frozen, unfreeze them
@@ -18,8 +18,9 @@ global class JIT_Logon_Handler implements Auth.SamlJitHandler {
             if (frzId.IsFrozen) {
                 frzId.IsFrozen = false;
                 update frzId;
+                // Store action in audit log
                 System.enqueueJob(new UserLogHandler(u,'Unfreeze','via JIT'));
             }
         }
     }
-}
+}   
